@@ -54,7 +54,6 @@
 /*SLIDE NAVIGATION*/
 #slide-navigation {
   height:100%;
-  /*width:85%;*/
   width:auto;
   position:fixed;
   z-index:1;
@@ -63,7 +62,7 @@
   background-color:#050609;
   overflow-x:hidden;
   overflow-y:auto;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
   padding:4% 1%;
 }
 #slide-nav .nav-link {
