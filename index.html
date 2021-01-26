@@ -186,6 +186,7 @@
     loadAnimation.style.display = "none";
     sectionBody.style.display = "block";
     setPageContentPos();
+    scrollReveal();
   }
 
   function setPageContentPos() {
@@ -260,37 +261,38 @@
 <script>
 
   /* Scroll Reveal */
+  function scrollReveal() {
+    $(function(){
 
-  $(function(){
+      window.sr = ScrollReveal();
+      sr.reveal("#illustration .right-content",{
+        origin:'right',
+        duration:500,
+        delay:800,
+        distance:'300px',
+        afterReveal: function(el) {
+          ScrollReveal().clean(el);
+        }
+      });
+      sr.reveal("#illustration .left-content",{
+        scale:1.5,
+        duration:500,
+        delay:500,
+        afterReveal: function(el) {
+          ScrollReveal().clean(el);
+        }
+      });
+      sr.reveal("#usp .usp-box",{
+        scale:0,
+        duration:500,
+        delay:200,
+        afterReveal: function(el) {
+          ScrollReveal().clean(el);
+        }
+      });
 
-    window.sr = ScrollReveal();
-    sr.reveal("#illustration .right-content",{
-      origin:'right',
-      duration:500,
-      delay:800,
-      distance:'300px',
-      afterReveal: function(el) {
-        ScrollReveal().clean(el);
-      }
     });
-    sr.reveal("#illustration .left-content",{
-      scale:1.5,
-      duration:500,
-      delay:500,
-      afterReveal: function(el) {
-        ScrollReveal().clean(el);
-      }
-    });
-    sr.reveal("#usp .usp-box",{
-      scale:0,
-      duration:500,
-      delay:200,
-      afterReveal: function(el) {
-        ScrollReveal().clean(el);
-      }
-    });
-
-  });
+  }
 
 </script>
 
