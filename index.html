@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Home | Alineter</title>
+
+  <meta link-colorarset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp">
+
+  <!-- FONT AWESOME LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- EXTERNAL CSS LINKS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<body>
+
+  <section id="loading">
+    <div class="position-static" id="loading-animation">
+      <div class="position-absolute cxy">
+        <div>
+          <img src="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp" class="img-fluid loading-img" alt="alineter logo">
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <section id="body">
+    
+
+    <section id="navigation">
+
+      <div class="container-fluid navigation-bar">
+        <div class="d-flex justify-content-between ml-2 mr-2">
+          <div class="nav-left">
+            <a href="#home">
+              <img src="images/logo.png" width=50 height=45 alt="alinter logo"/>
+            </a>
+          </div>
+          <div class="nav-center">
+            <div class="d-flex">
+              <a href="#home" class="nav-link active">Home</a>
+              <a href="#store" class="nav-link">Store</a>
+              <a href="#look-book" class="nav-link">Look Book</a>
+              <a href="#about-us" class="nav-link">About Us</a>
+            </div>
+          </div>
+          <div class="nav-right">
+            <div class="d-flex">
+              <a href="#login" class="nav-link">Log In</a>
+              <button type="button" class="btn slide-navigation-btn" onclick="opennav()"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="slide-navigation">
+
+      <div class="container-fluid slide-nav" id="slide-nav">
+        <h3 class="text-center text-light mr-2">Alineter</h3>
+        <div class="d-flex flex-column text-center mt-5">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#store" class="nav-link">Store</a>
+          <a href="#look-book" class="nav-link">Look Book</a>
+          <a href="#about-us" class="nav-link">About Us</a>
+          <a href="#home" class="nav-link">Contact Us</a>
+          <a href="#store" class="nav-link">FAQ</a>
+          <a href="#look-book" class="nav-link">Terms of Use</a>
+          <a href="#about-us" class="nav-link">Privacy Policy</a>
+          <a href="#home" class="nav-link">Log In</a>
+          <a href="#store" class="nav-link">Account</a>
+        </div>
+      </div>
+
+    </section>
+
+
+  </section>
+
+
+<script>
+
+  function opennav() {
+    document.getElementById("slide-navigation").style.left = "0";
+    document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","closenav()");
+  }
+  function closenav() {
+    document.getElementById("slide-navigation").style.left = "-85%";
+    document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","opennav()");
+  }
+
+</script>
+
+  <script>
+    // Loading Animation
+    const loadAnimation = document.getElementById("loading");
+    const sectionBody = document.getElementById("body");
+    setTimeout(showPage,1300);
+    function showPage() {
+      loadAnimation.style.display = "none";
+      sectionBody.style.display = "block";
+    }
+
+  </script>
+
+</body>
+
+</html>
+
