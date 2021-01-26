@@ -85,10 +85,16 @@
   height:auto;
   background:#050609;
 }
+.store-btn {
+	color:#EFCB68;
+	border-radius:6px;
+	border:1.3px solid #EFCB68;
+}
 .store-btn:hover {
-  opacity:0.8;
+	color:#000411;
+	background:#EFCB68;
 }
 .ripple-opacity:active {
-  opacity:0.5;
+  opacity:0.7;
   transition: opacity 0.2s;
 }
