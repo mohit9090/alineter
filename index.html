@@ -102,13 +102,13 @@
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
               <div class="position-relative cy">
                 <div class="p-3">
-                  <h1 class="display-3 text-uppercase color-orange" style="font-weight:400">Alineter</h1>
+                  <h1 class="display-3 text-uppercase color-orange" style="font-weight:400;font-family:calibri">Alineter</h1>
                 </div>
                 <div class="p-3">
                   <h4 class="text-light text-capitalize lead">Ready for every moment</h4>
                 </div>
                 <div class="p-3">
-                  <a href="#store" class="btn btn-lg bg-orange store-btn ripple-opacity">Store</a>
+                  <a href="#store" class="btn btn-lg bg-orange store-btn ripple-opacity">Store <i class="fa fa-angle-double-right ml-2"></i></a>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@
   // Loading Animation
   const loadAnimation = document.getElementById("loading");
   const sectionBody = document.getElementById("body");
-  setTimeout(showPage,1300);
+  setTimeout(showPage,10);
   function showPage() {
     loadAnimation.style.display = "none";
     sectionBody.style.display = "block";
