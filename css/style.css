@@ -1,8 +1,46 @@
 
+::selection {
+	background:#dc3545;
+	color:#FFF;
+}
+
 body {
 	padding:0;
 	margin:0;
 }
+
+/*Color Scheme*/
+.bg-purple {
+ background:#160C28;
+}
+.bg-white {
+ background:#E1EFE6;			
+}
+.bg-grey {
+ background:#AEB7B3;
+}
+.bg-orange {
+ background:#EFCB68;
+}
+.bg-black {
+ background:#000411;
+}
+.color-purple {
+ color:#160C28;
+}
+.color-white {
+ color:#E1EFE6;			
+}
+.color-grey {
+ color:#AEB7B3;
+}
+.color-orange {
+ color:#EFCB68;
+}
+.color-black {
+ color:#000411;
+}
+
 
 /* Centering Elements */
 .cxy {
@@ -22,8 +60,10 @@ body {
 .btn {
 	border:none;
 	outline:none;
+	transition:0.3s ease-in-out;
 }
 .btn:focus {
 	outline:none;
 	box-shadow:none;
 }
+

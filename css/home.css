@@ -1,10 +1,18 @@
 
 /* NAVIGATION */
 #navigation {
-	position:relative;
-	background:#EFCB68;
+	position:fixed;
+	width:100%;
+	z-index:1;
+	transition:0.2s ease-in-out;
 }
-#navigation .container-fluid{
+.navigation-bg-init {
+  background:#fafafa99;
+}
+.navigation-bg-scroll {
+background:#EFCB68
+}
+#navigation .container-fluid, #illustration .container-fluid{
 	padding:2%;
 }
 @media screen and (min-width:650px) {
@@ -19,6 +27,7 @@
 }	
 .navigation-bar .nav-link {
 	color:#000411;
+	font-weight:500
 }
 .navigation-bar .nav-link.active {
 	text-decoration:underline;
@@ -27,7 +36,20 @@
 	color:#160C28;
 	text-decoration:underline;
 }
-
+.alineter-logo {
+	transition:0.5s ease-in-out;
+}
+.alineter-logo:hover {
+	transform:rotateY(180deg);
+}
+.slide-navigation-btn {
+	background-position: center;
+  	transition: background 0.8s ease-in-out;
+}
+.slide-navigation-btn:active {
+  background:#E1EFE695;
+  transition: background 0.5s;
+}
 
 /*SLIDE NAVIGATION*/
 #slide-navigation {
@@ -44,5 +66,27 @@
   padding:4% 1%;
 }
 #slide-nav .nav-link {
+	border-radius:5px;
 	color:#EFCB68;
+	opacity:0.65;
+	transition:0.3s ease-in-out;
+}
+#slide-nav .nav-link:hover {
+	opacity:1;
+}
+#slide-nav .nav-link:active {
+  background:#E1EFE699;
+}
+
+/*Illustration*/
+#illustration {
+  height:auto;
+  background:#050609;
+}
+.store-btn:hover {
+  opacity:0.8;
+}
+.ripple-opacity:active {
+  opacity:0.5;
+  transition: opacity 0.2s;
 }
