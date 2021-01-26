@@ -17,7 +17,8 @@
   <link rel="icon" href="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp">
 
   <!-- SCROLL REVEAL LINK -->
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
   <!-- FONT AWESOME LINK -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -268,7 +269,6 @@
       duration:500,
       delay:800,
       distance:'300px',
-      mobile:false,
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -277,7 +277,6 @@
       scale:1.5,
       duration:500,
       delay:500,
-      mobile:true,
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -286,7 +285,6 @@
       scale:0,
       duration:500,
       delay:200,
-      mobile:true,
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -294,40 +292,7 @@
 
   });
 
-
-
 </script>
-
-<!-- $(function(){
-      window.sr = ScrollReveal();
-      scrollReveal();
-
-      function scrollReveal()
-      {
-        sr.reveal(".br-name-box",{
-        scale:0.01,
-        opacity:0.4,
-        duration:1000,
-        delay:400,
-        });
-        sr.reveal(".m-head-text",{
-          opacity:0.0,
-          duration:2500,
-          delay:800
-        }); 
-        sr.reveal(".get-started-btn",{
-          origin:'bottom',
-          duration:1800,
-          delay:780,
-          distance:'300px',
-        });
-        sr.reveal(".page-navigation",{
-          scale:0.0,
-          duration:1200,
-          delay:450
-        });
-      }
-    }); -->
 
 
 </body>
