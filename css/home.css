@@ -10,7 +10,7 @@
   background:#fafafa99;
 }
 .navigation-bg-scroll {
-background:#EFCB68
+  background:#EFCB68
 }
 #navigation .container-fluid, #illustration .container-fluid{
 	padding:2%;
@@ -73,6 +73,7 @@ background:#EFCB68
 }
 #slide-nav .nav-link:hover {
 	opacity:1;
+	transform:scale(1.1);
 }
 #slide-nav .nav-link:active {
   background:#E1EFE699;

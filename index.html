@@ -206,12 +206,14 @@
     document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","closenav()");
     document.querySelector(".slide-navigation-btn > i").classList.remove("fa-bars");
     document.querySelector(".slide-navigation-btn > i").classList.add("fa-close");
+    document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
   }
   function closenav() {
     document.getElementById("slide-navigation").style.left = "-85%";
     document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","opennav()");
     document.querySelector(".slide-navigation-btn > i").classList.remove("fa-close");
     document.querySelector(".slide-navigation-btn > i").classList.add("fa-bars");
+    document.body.style.backgroundColor = "#fff";
   }
 
 </script>
