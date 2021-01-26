@@ -37,15 +37,14 @@
   </section>
 
   <section id="body">
-    
+
 
     <section id="navigation" class="navigation-bg-init">
-
       <div class="container-fluid navigation-bar">
         <div class="d-flex justify-content-between ml-2 mr-2">
           <div class="nav-left">
             <a href="#home">
-              <img src="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp" class="alineter-logo" width=50 height=45 alt="alinter logo"/>
+              <img src="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp" class="alineter-logo" width=50 height=45 alt="alineter logo"/>
             </a>
           </div>
           <div class="nav-center">
@@ -64,15 +63,15 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <section id="slide-navigation">
-
-      <div class="container-fluid slide-nav" id="slide-nav">
-        <h3 class="text-center text-light">Alineter</h3>
-        <div class="d-flex flex-column align-items-center mt-5">
-          <!-- <a href="#home" class="nav-link">Home</a> -->
+      <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
+        <div class="d-flex flex-column align-items-left">
+          <div class="d-flex justify-content-between">
+            <h4 class="text-left text-light">Alineter</h4>
+            <button type="button" class="btn slide-navigation-btn text-light" onclick="closenav()"><i class="fa fa-angle-left"></i></button>
+          </div>
           <a href="#store" class="nav-link">Store</a>
           <a href="#look-book" class="nav-link">Look Book</a>
           <a href="#about-us" class="nav-link">About Us</a>
@@ -85,7 +84,6 @@
           <a href="#store" class="nav-link">Account</a>
         </div>
       </div>
-
     </section>
 
     <section id="page-content" class="position-relative">
@@ -93,7 +91,6 @@
 
       <!-- ILLUSTRATION -->
       <section id="illustration" class="w-100">
-
         <div class="container pt-5 pb-5">
           <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
@@ -102,10 +99,10 @@
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
               <div class="position-relative cy">
                 <div class="p-3">
-                  <h1 class="display-3 text-uppercase color-orange" style="font-weight:400;font-family:calibri">Alineter</h1>
+                  <h1 class="display-4 text-uppercase color-orange" style="font-weight:400">Alineter</h1>
                 </div>
                 <div class="p-3">
-                  <h4 class="text-light text-capitalize lead">Ready for every moment</h4>
+                  <h5 class="text-light text-capitalize lead">Ready for every moment</h5>
                 </div>
                 <div class="p-3">
                   <a href="#store" class="btn btn-lg bg-orange store-btn ripple-opacity">Store <i class="fa fa-angle-double-right ml-2"></i></a>
@@ -114,8 +111,8 @@
             </div>
           </div>
         </div>
-
       </section>
+
 
 
       <!--Something-->
@@ -209,7 +206,7 @@
     document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
   }
   function closenav() {
-    document.getElementById("slide-navigation").style.left = "-85%";
+    document.getElementById("slide-navigation").style.left = "-100%";
     document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","opennav()");
     document.querySelector(".slide-navigation-btn > i").classList.remove("fa-close");
     document.querySelector(".slide-navigation-btn > i").classList.add("fa-bars");

@@ -54,7 +54,8 @@
 /*SLIDE NAVIGATION*/
 #slide-navigation {
   height:100%;
-  width:85%;
+  /*width:85%;*/
+  width:auto;
   position:fixed;
   z-index:1;
   top:0;
