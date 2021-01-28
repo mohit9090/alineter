@@ -235,10 +235,19 @@
 	background:rgba(22,12,40,0.95);
 }
 #testimonial-carousel {
-    background:linear-gradient(112deg, #ffffff 50%, antiquewhite 50%);
     max-width:900px;
     margin:auto;
     border-radius:3px;
+}
+@media screen and (max-width:600px) {
+	#testimonial-carousel {
+	   background:linear-gradient(90deg, #ffffff 50%, antiquewhite 50%);
+	}
+}
+@media screen and (min-width:600px) {
+	#testimonial-carousel {
+	   background:linear-gradient(115deg, #ffffff 50%, antiquewhite 50%);
+	}
 }
 #testimonial .carousel-caption {
     position:initial;
@@ -291,8 +300,4 @@
 
 .carousel-control-next {
     justify-content:flex-end
-}
-#testimonial a[href="#testimonial-carousel"] > i{
-	background:rgba(22,12,40,0.7);
-	padding:1.2rem;
 }
