@@ -348,7 +348,7 @@
 		display:block;
 	}
 }
-#newsletter-subscribe-lg #bottom{
+.newsletter-subscribe #bottom{
 	border-left:5px solid #6C63FF;
 }
 .newsletter-subscribe .input-s-1 {
