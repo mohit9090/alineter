@@ -25,8 +25,58 @@
 
   <!-- EXTERNAL CSS LINKS -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="css/home.css">
+
+  <style type="text/css">
+
+    /* Loading Animation */
+
+    .loading-img {
+      animation-name:animate;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out; 
+    }
+
+    @keyframes animate {
+      0% {
+        opacity:1;
+      }
+      50% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    section#body {
+      display:none;
+      -webkit-animation-name: increaseOpacity;
+      -webkit-animation-duration:1.3s;
+      animation-name: increaseOpacity;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+    }
+
+    @-webkit-keyframes increaseOpacity {
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+    @keyframes increaseOpacity { 
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+
+  </style>
 
 
 
@@ -320,7 +370,7 @@
               </div>
             </div>
             <div class="col-6 right-content">
-              <img src="images/newsletter-subscribe.png" id="email-illustration" class="img-fluid"/>
+              <img src="images/newsletter-subscribe.png" id="email-illustration" class="img-fluid position-relative cy"/>
             </div>
           </div>
         </div>
@@ -372,7 +422,7 @@
   // Loading Animation
   const loadAnimation = document.getElementById("loading");
   const sectionBody = document.getElementById("body");
-  setTimeout(activate,10);
+  setTimeout(activate,800);
 
   function activate() {
     showPage();
@@ -515,7 +565,7 @@
       sr.reveal("#newsletter-subscribe-lg .newsletter-content",{
         scale:1.2,
         duration:800,
-        delay:300,
+        delay:200,
         afterReveal: function(el) {
           ScrollReveal().clean(el);
         }
@@ -523,7 +573,7 @@
       sr.reveal("#email-illustration",{
         scale:0,
         duration:1000,
-        delay:300,
+        delay:200,
         afterReveal: function(el) {
           ScrollReveal().clean(el);
         }
