@@ -7,10 +7,10 @@
 	transition:0.2s ease-in-out;
 }
 .navigation-bg-init {
-  background:#fafafa99;
+  background:#050609;
 }
 .navigation-bg-scroll {
-  background:#EFCB68
+  background:#EFCB68;
 }
 #navigation .container-fluid, #illustration .container-fluid{
 	padding:2%;
@@ -25,15 +25,22 @@
 		display:none;
 	}
 }	
-.navigation-bar .nav-link {
+.navigation-bg-init .nav-link {
+	color:#AEB7B3;
+}
+.navigation-bg-scroll .nav-link {
 	color:#000411;
-	font-weight:500
 }
-.navigation-bar .nav-link.active {
-	text-decoration:underline;
+.navigation-bg-init .slide-navigation-btn {
+	color:#EFCB68;
 }
-.navigation-bar .nav-link:hover {
-	color:#160C28;
+.navigation-bg-scroll .slide-navigation-btn {
+	color:#23001E90;
+}
+.navigation-bar .nav-link {
+	font-weight:550;
+}
+.navigation-bar .nav-link.active, .nav-link:hover {
 	text-decoration:underline;
 }
 .alineter-logo {
@@ -43,7 +50,6 @@
 	transform:rotateY(180deg);
 }
 .slide-navigation-btn {
-	background-position: center;
   	transition: background 0.8s ease-in-out;
 }
 .slide-navigation-btn:active {
@@ -87,7 +93,7 @@
 #illustration {
   height:auto;
   background:#050609;
-  padding:4% 2%;
+  padding:1% 2% 4%;
 }
 .store-btn {
 	color:#EFCB68;
@@ -341,6 +347,9 @@
 	#newsletter-subscribe-sm {
 		display:block;
 	}
+}
+#newsletter-subscribe-lg #bottom{
+	border-left:5px solid #6C63FF;
 }
 .newsletter-subscribe .input-s-1 {
 	font-family:calibri;

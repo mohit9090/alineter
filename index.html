@@ -14,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <!-- FAVICON -->
-  <link rel="icon" href="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp">
+  <link rel="icon" href="images/alineter-b.png">
 
   <!-- SCROLL REVEAL LINK -->
   <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
@@ -102,7 +102,7 @@
         <div class="d-flex justify-content-between ml-2 mr-2">
           <div class="nav-left">
             <a href="#home">
-              <img src="https://static.wixstatic.com/media/3d1534_107cc404858348398f4390fd8aceb0f5~mv2.png/v1/fill/w_90,h_90,al_c,q_85,usm_0.66_1.00_0.01/alineter%20sq%20logo-16.webp" class="alineter-logo" width=50 height=45 alt="alineter logo"/>
+              <img src="images/alineter-w.png" class="alineter-logo" id="nav-brand-logo" width=50 height=45 alt="alineter logo"/>
             </a>
           </div>
           <div class="nav-center">
@@ -391,10 +391,10 @@
               <form method="post">
                 <div class="d-flex flex-column">
                   <div class="row m-2">
-                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 pr-1">
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 pr-lg-1">
                       <input type="name" name="subscriber-name" class="input-s-1 w-100" placeholder="Name" spellcheck="false" autocomplete="off" />
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 pl-1">
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 pl-lg-1">
                       <input type="email" name="subscriber-email" class="input-s-1 w-100" placeholder="Email" spellcheck="false" autocomplete="off" />
                     </div>
                   </div>
@@ -422,7 +422,7 @@
   // Loading Animation
   const loadAnimation = document.getElementById("loading");
   const sectionBody = document.getElementById("body");
-  setTimeout(activate,800);
+  setTimeout(activate,10);
 
   function activate() {
     showPage();
@@ -451,27 +451,30 @@
 
   const page_content = document.getElementById("page-content");
   const navigation = document.getElementById("navigation");
+  const navBrand = document.getElementById("nav-brand-logo");
 
   /* Change BG of navbar on scrolling */
   $(function(){
     var scrollTop = $(window).scrollTop();
-    changeBG(scrollTop);
+    changeNavBg(scrollTop);
   }); 
 
   $(window).scroll(function(){
       var scrollTop = $(window).scrollTop();
-      changeBG(scrollTop);
+      changeNavBg(scrollTop);
   });
 
-  function changeBG(st) {
+  function changeNavBg(st) {
     // let navHeight = navigation.offsetHeight - 10;
-      if (st > 20) {
+      if (st > 25) {
         navigation.classList.remove("navigation-bg-init");
         navigation.classList.add("navigation-bg-scroll");
+        navBrand.setAttribute("src","images/alineter-b.png");
       }
       else {
         navigation.classList.remove("navigation-bg-scroll");
         navigation.classList.add("navigation-bg-init");
+        navBrand.setAttribute("src","images/alineter-w.png");
       }
   }
 
