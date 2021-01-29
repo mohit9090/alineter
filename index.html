@@ -355,10 +355,10 @@
                     <div class="d-flex flex-column">
                       <div class="row m-2">
                         <div class="col-lg-6 p-0 pr-lg-1">
-                          <input type="name" name="subscriber-name" class="input-s-1 w-100" placeholder="Name" spellcheck="false" autocomplete="off" />
+                          <input type="name" name="subscriber-name" class="input-s-1 w-100 name-0" placeholder="Name" data-num="0" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
                         </div>
                         <div class="col-lg-6 p-0 pl-lg-1">
-                          <input type="email" name="subscriber-email" class="input-s-1 w-100" placeholder="Email" spellcheck="false" autocomplete="off" />
+                          <input type="email" name="subscriber-email" class="input-s-1 w-100 email-0" placeholder="Email" data-num="0" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
                         </div>
                       </div>
                       <div class="align-self-end mr-2">
@@ -392,10 +392,10 @@
                 <div class="d-flex flex-column">
                   <div class="row m-2">
                     <div class="col-lg-6 col-md-6 col-sm-12 p-0 pr-lg-1">
-                      <input type="name" name="subscriber-name" class="input-s-1 w-100" placeholder="Name" spellcheck="false" autocomplete="off" />
+                      <input type="name" name="subscriber-name" class="input-s-1 w-100 name-1" placeholder="Name" data-num="1" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 p-0 pl-lg-1">
-                      <input type="email" name="subscriber-email" class="input-s-1 w-100" placeholder="Email" spellcheck="false" autocomplete="off" />
+                      <input type="email" name="subscriber-email" class="input-s-1 w-100 email-1" placeholder="Email" data-num="1" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
                     </div>
                   </div>
                   <div class="align-self-end mr-2">
@@ -409,9 +409,6 @@
       </section>
 
       <br><br>
-
-
-
 
 
     </section><!--Page Content-->
@@ -504,6 +501,42 @@
     document.querySelector(".slide-navigation-btn > i").classList.add("fa-bars");
   }
 
+</script>
+
+
+<script>
+  /* Check is the input tag is filled or not and fill the alternate section either smaller form or larger form*/
+  function isFilled(this_obj,data_num,inp_type) {
+    data_num = parseInt(data_num);
+    if(this_obj.value === "") {
+      if(inp_type === "name") {
+        fillAlternateName(this_obj,data_num);
+      }
+      else {
+        fillAlternateEmail(this_obj,data_num);
+      }
+      this_obj.classList.remove("filled");
+    }
+    else {
+      if(inp_type === "name") {
+        fillAlternateName(this_obj,data_num);
+      }
+      else {
+        fillAlternateEmail(this_obj,data_num);
+      }
+      this_obj.classList.add("filled");     
+    }
+  }
+  function fillAlternateName(this_obj,data_num) {
+    let fillAlternate = document.querySelector(".input-s-1.name-"+Number(!data_num));
+    fillAlternate.value = this_obj.value;
+    fillAlternate.classList.add("filled");
+  }
+  function fillAlternateEmail(this_obj,data_num) {
+    let fillAlternate = document.querySelector(".input-s-1.email-"+Number(!data_num));
+    fillAlternate.value = this_obj.value;
+    fillAlternate.classList.add("filled");
+  }
 </script>
 
 

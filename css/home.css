@@ -326,7 +326,6 @@
 
 
 
-
 /* Newsletter */
 .newsletter-subscribe {
 	padding:3% 2%;
@@ -361,14 +360,17 @@
 	text-align:center;
 	transition:0.3s;
 }
+.newsletter-subscribe .input-s-1.filled {
+	color:#6C63FF;
+}
 .newsletter-subscribe .input-s-1::placeholder {
 	color:#AEB7B380;
 	transition:0.3s;
 }
 .newsletter-subscribe .input-s-1:focus {
-	color:#400011;
+	color:#6C63FF;
 	outline:none;
-	border-bottom:2px solid #160C28;
+	border-bottom:2px solid #6C63FF;
 }
 .newsletter-subscribe .input-s-1:focus::placeholder {
 	color:#AEB7B3;
