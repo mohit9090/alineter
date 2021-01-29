@@ -46,7 +46,7 @@
 
   <section id="body">
 
-
+    <!-- NAVIGATION BAR SECTION -->
     <section id="navigation" class="navigation-bg-init">
       <div class="container-fluid navigation-bar">
         <div class="d-flex justify-content-between ml-2 mr-2">
@@ -74,6 +74,7 @@
       </div>
     </section>
 
+    <!-- SLIDE NAVIGATION SECTION -->
     <section id="slide-navigation">
       <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
         <div class="d-flex flex-column align-items-left">
@@ -98,7 +99,7 @@
     <section id="page-content" class="position-relative">
 
 
-      <!-- ILLUSTRATION -->
+      <!-- ILLUSTRATION SECTION-->
       <section id="illustration" class="w-100">
         <div class="container pt-3 pb-3">
           <div class="row">
@@ -124,7 +125,7 @@
 
 
 
-      <!-- USP -->
+      <!-- USP SECTION-->
       <section id="usp" class="w-100 position-relative">
         <div class="container-fluid">
           <div class="row">
@@ -160,7 +161,7 @@
 
       
 
-      <!-- Models -->
+      <!-- MODELS SECTION-->
       <section id="models" class="w-100">
         <div class="parallax">
         </div>
@@ -168,14 +169,14 @@
 
 
 
-      <!-- Products Quick View -->
+      <!-- PRODUCTS QUICK VIEW SECTION -->
       <section id="product-quick-view" class="w-100">
          <div class="container-fluid">  
           <div class="d-flex justify-content-around">
 
             <!-- Left Scroll -->
             <div class="my-auto scroll-vertical">
-              <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon fa-3x"></i></button>
+              <button type="button" class="btn scroll-btn ripple-opacity" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon fa-3x"></i></button>
             </div>
 
             <div class="d-flex q-product-box" id="q-product-box">
@@ -212,7 +213,7 @@
 
             <!-- Right Scroll -->
             <div class="my-auto scroll-vertical">
-              <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon fa-3x"></i></button>
+              <button type="button" class="btn scroll-btn ripple-opacity" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon fa-3x"></i></button>
             </div>
 
           </div>
@@ -244,9 +245,12 @@
       </section>
 
 
+
+      <!-- TESTIMONIALS SECTION -->
       <section id="testimonial" class="w-100">
         <div class="container-fluid">
           <div class="container">
+            <h3 class="heading text-center"><span class="text-light">Customer <span class="text-warning">Reviews</span></h3>
             <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -282,6 +286,82 @@
         </div>
       </section>
 
+      <br><br><br>
+
+      <!-- NEWSLETTER SUBSCIBE SECTION -->
+      <section id="newsletter-subscribe-lg" class="w-100 newsletter-subscribe">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6 left-content">
+              <div class="d-flex flex-column newsletter-content position-relative cy">
+                <div id="top">
+                  <h2 class="medium-title font-weight-bold">Get the latest trends in your inbox every month</h2>
+                </div>
+                <div id="middle">
+                  <p class="smaller-title text-muted">Subscribe and receive our newsletter to follow the news about our latest products and fashion trends</p>
+                </div>
+                <div id="bottom" class="shadow rounded p-1 pb-2">
+                  <form method="post">
+                    <div class="d-flex flex-column">
+                      <div class="row m-2">
+                        <div class="col-lg-6 p-0 pr-lg-1">
+                          <input type="name" name="subscriber-name" class="input-s-1 w-100" placeholder="Name" spellcheck="false" autocomplete="off" />
+                        </div>
+                        <div class="col-lg-6 p-0 pl-lg-1">
+                          <input type="email" name="subscriber-email" class="input-s-1 w-100" placeholder="Email" spellcheck="false" autocomplete="off" />
+                        </div>
+                      </div>
+                      <div class="align-self-end mr-2">
+                        <button type="submit" name="subscribe" class="btn bg-purple text-light ripple-opacity">Subscribe</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 right-content">
+              <img src="images/newsletter-subscribe.png" id="email-illustration" class="img-fluid"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER SUBSCIBE SECTION -->
+      <section id="newsletter-subscribe-sm" class="w-100 newsletter-subscribe">
+        <div class="container-fluid">
+          <div class="d-flex flex-column newsletter-content text-center">
+            <div id="top">
+              <i class="fa fa-envelope-open-o color-purple" style="font-size:3rem;"></i>
+            </div><br>
+            <div id="middle">
+              <h2 class="small-title font-weight-bold">Subscribe to our Newsletter</h2>
+              <p class="smaller-title text-muted">Subscribe and receive our newsletter to follow the news about our latest products and fashion trends</p>
+            </div>
+            <div id="bottom">
+              <form method="post">
+                <div class="d-flex flex-column">
+                  <div class="row m-2">
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 pr-1">
+                      <input type="name" name="subscriber-name" class="input-s-1 w-100" placeholder="Name" spellcheck="false" autocomplete="off" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 pl-1">
+                      <input type="email" name="subscriber-email" class="input-s-1 w-100" placeholder="Email" spellcheck="false" autocomplete="off" />
+                    </div>
+                  </div>
+                  <div class="align-self-end mr-2">
+                    <button type="submit" name="subscribe" class="btn bg-purple text-light ripple-opacity">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><br>
+
+
+
 
 
     </section><!--Page Content-->
@@ -292,7 +372,7 @@
   // Loading Animation
   const loadAnimation = document.getElementById("loading");
   const sectionBody = document.getElementById("body");
-  setTimeout(activate,1300);
+  setTimeout(activate,10);
 
   function activate() {
     showPage();
@@ -313,39 +393,6 @@
         page_content.style.top = navHeight+"px";
     });
   }
-
-
-  // function toggleScrollBtn() {
-  //   /* Hide or Show the Scroll Button as per needed */
-  //   var ovc = document.getElementsByClassName("overflowX-content");
-  //   for(i=0;i<ovc.length;i++) {
-  //     let displayWidth = ovc[i].offsetWidth;
-  //     let actualWidth = ovc[i].scrollWidth;
-  //     if(displayWidth < actualWidth) {
-  //       //activate scroll button
-  //       let scrollBtn = document.getElementsByClassName("scroll-vertical");
-  //       for(j=0;j<scrollBtn.length;j++) {
-  //         if(scrollBtn[j].getAttribute("data-scroll") === ovc[i].getAttribute("data-self")) {
-  //           scrollBtn[j].style.display = "block";
-  //         }
-  //       }
-  //     }
-  //     else {
-  //       //deactivate scroll button
-  //       let scrollBtn = document.getElementsByClassName("scroll-vertical");
-  //       for(j=0;j<scrollBtn.length;j++) {
-  //         if(scrollBtn[j].getAttribute("data-scroll") === ovc[i].getAttribute("data-self")) {
-  //           scrollBtn[j].style.display = "none";
-  //         }
-  //       }
-  //     }
-  //   }
-  // } 
-  // $(window).resize(function(){
-  //   toggleScrollBtn();
-  // });
-  
-
 
 </script>
 
@@ -455,12 +502,28 @@
           ScrollReveal().clean(el);
         }
       });
-      sr.reveal("#testimonial #testimonial-carousel",{
-        origin:"top",
-        distance:"50px",
+      // sr.reveal("#testimonial #testimonial-carousel",{
+      //   origin:"top",
+      //   distance:"50px",
+      //   duration:800,
+      //   delay:500,
+      //   mobile:false,
+      //   afterReveal: function(el) {
+      //     ScrollReveal().clean(el);
+      //   }
+      // });
+      sr.reveal("#newsletter-subscribe-lg .newsletter-content",{
+        scale:1.2,
         duration:800,
-        delay:500,
-        mobile:false,
+        delay:300,
+        afterReveal: function(el) {
+          ScrollReveal().clean(el);
+        }
+      });
+      sr.reveal("#email-illustration",{
+        scale:0,
+        duration:1000,
+        delay:300,
         afterReveal: function(el) {
           ScrollReveal().clean(el);
         }
@@ -474,3 +537,36 @@
 </body>
 
 </html>
+
+  
+ <!--  <script>
+  function toggleScrollBtn() {
+    /* Hide or Show the Scroll Button as per needed */
+    var ovc = document.getElementsByClassName("overflowX-content");
+    for(i=0;i<ovc.length;i++) {
+      let displayWidth = ovc[i].offsetWidth;
+      let actualWidth = ovc[i].scrollWidth;
+      if(displayWidth < actualWidth) {
+        //activate scroll button
+        let scrollBtn = document.getElementsByClassName("scroll-vertical");
+        for(j=0;j<scrollBtn.length;j++) {
+          if(scrollBtn[j].getAttribute("data-scroll") === ovc[i].getAttribute("data-self")) {
+            scrollBtn[j].style.display = "block";
+          }
+        }
+      }
+      else {
+        //deactivate scroll button
+        let scrollBtn = document.getElementsByClassName("scroll-vertical");
+        for(j=0;j<scrollBtn.length;j++) {
+          if(scrollBtn[j].getAttribute("data-scroll") === ovc[i].getAttribute("data-self")) {
+            scrollBtn[j].style.display = "none";
+          }
+        }
+      }
+    }
+  } 
+  $(window).resize(function(){
+    toggleScrollBtn();
+  });
+  </script> -->

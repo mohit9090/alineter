@@ -80,6 +80,10 @@ body {
 .small-title {
 	font-size:1.5rem;
 }
+.smaller-title {
+	font-size:1rem;
+	font-family:calibri;
+}
 .big-title, .small-title, .medium-title{
 	font-family: "Times New Roman", Times, serif;
 }
