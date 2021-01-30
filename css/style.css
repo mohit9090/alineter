@@ -89,4 +89,16 @@ body {
 }
 
 
-  
+/* Ripple Effect */
+.ripple-opacity-l:active {
+  opacity:0.7;
+  transition: opacity 0.2s;
+}
+.ripple-opacity-d:active {
+  opacity:0.9;
+  transition: opacity 0.2s;
+}
+.ripple-bg:active {
+	background:#E1EFE650;
+	transition:background 0.1s;
+}

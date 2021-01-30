@@ -10,7 +10,7 @@
   background:#050609;
 }
 .navigation-bg-scroll {
-  background:#EFCB68;
+  background:#FFC107;
 }
 #navigation .container-fluid, #illustration .container-fluid{
 	padding:2%;
@@ -52,10 +52,6 @@
 .slide-navigation-btn {
   	transition: background 0.8s ease-in-out;
 }
-.slide-navigation-btn:active {
-  background:#E1EFE695;
-  transition: background 0.5s;
-}
 
 
 
@@ -66,7 +62,7 @@
   position:fixed;
   z-index:3;
   top:0;
-  left:-85%;
+  left:-100%;
   background-color:#050609;
   overflow-x:hidden;
   overflow-y:auto;
@@ -83,13 +79,10 @@
 	opacity:1;
 	transform:scale(1.1);
 }
-#slide-nav .nav-link:active {
-  background:#E1EFE699;
-}
 
 
 
-/* Illustration */
+/* ILLUSTRATION */
 #illustration {
   height:auto;
   background:#050609;
@@ -104,10 +97,7 @@
 	color:#000411;
 	background:#EFCB68;
 }
-.ripple-opacity:active {
-  opacity:0.7;
-  transition: opacity 0.2s;
-}
+
 
 
 
@@ -117,21 +107,26 @@
 }
 .usp-box {
   text-align:center;
-  padding: 4.5%;
+  padding:4.5%;
+}
+.usp-title {
+	color:#9da1a5;
 }
 .usp-text {
 	font-family:calibri;
 }
-.icon {
-  color:#a1a7ad;
+#usp .icon {
   margin-bottom: 1rem;
 }
-.icon:hover {
-  color: #899199;
+#usp .usp-text, .icon {
+	color:#dddddd;
+}
+#usp .icon:hover {
+  color: #A1A7AD90;
 }
 
 
-/* Models */
+/* MODELS */
 #models {
   height:65vh;
 }
@@ -146,7 +141,7 @@
 
 
 
-/* product-quick-view */
+/* PRODUCT-QUICK-VIEW */
 #product-quick-view {
 	padding:4% 0;
 }
@@ -233,7 +228,7 @@
 
 
 
-/* Testimonials */
+/* TESTIMONIALS */
 #testimonial {
 	padding:3% 0;
 	background:rgba(22,12,40,0.95);
@@ -326,7 +321,7 @@
 
 
 
-/* Newsletter */
+/* NEWSLETTER */
 .newsletter-subscribe {
 	padding:3% 2%;
 	border:5px solid rgba(22,12,40,0.7);
@@ -375,3 +370,58 @@
 .newsletter-subscribe .input-s-1:focus::placeholder {
 	color:#AEB7B3;
 }
+
+
+
+
+/* FOOTER */
+.scroll-horizontal.to-top > .btn {
+	color:#fff;
+	background:#160C28;
+	width:80px;
+	border-radius:100px 100px 0 0;
+	transition:0.2s
+}
+.link {
+	color:#E1EFE6;
+	transition:0.5s;
+}
+.links__contact-us .link:hover {
+	color:#6C63FF;
+	text-decoration:none
+}
+.company-address {
+	font-style:italic;
+	color:antiquewhite;
+}
+.social-link:not(:last-child) {
+	margin-right:3%;
+}
+.fa-google {
+ 	color:#EA4638;
+}
+.fa-facebook {
+ 	color:#38529A;
+}
+.fa-instagram {
+ 	color:#E67135;	
+}
+.fa-twitter {
+ 	color:#1C9CEA;
+}
+.social-link {
+	padding:6px;
+	border-radius:2px;
+}
+.social-link > i {
+	transition:0.5s;
+}
+.social-link:hover > i {
+	color:#EFCB68;
+}
+.company-direction-map {
+	width:100%;
+	height:70vh;
+}
+
+
