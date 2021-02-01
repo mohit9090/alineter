@@ -425,3 +425,7 @@
 }
 
 
+
+.scroll-reveal-content {
+	overflow:hidden;
+}
