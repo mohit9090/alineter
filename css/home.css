@@ -1,86 +1,4 @@
 
-/* NAVIGATION */
-#navigation {
-	position:fixed;
-	width:100%;
-	z-index:2;
-	transition:0.2s ease-in-out;
-}
-.navigation-bg-init {
-  background:#050609;
-}
-.navigation-bg-scroll {
-  background:#FFC107;
-}
-#navigation .container-fluid, #illustration .container-fluid{
-	padding:2%;
-}
-@media screen and (min-width:720px) {
-	.nav-center {
-		display:block;
-	}
-}
-@media screen and (max-width:720px) {
-	.nav-center {
-		display:none;
-	}
-}	
-.navigation-bg-init .nav-link {
-	color:#AEB7B3;
-}
-.navigation-bg-scroll .nav-link {
-	color:#000411;
-}
-.navigation-bg-init .slide-navigation-btn {
-	color:#EFCB68;
-}
-.navigation-bg-scroll .slide-navigation-btn {
-	color:#23001E90;
-}
-.navigation-bar .nav-link {
-	font-weight:550;
-}
-.navigation-bar .nav-link.active, .nav-link:hover {
-	text-decoration:underline;
-}
-.alineter-logo {
-	transition:0.5s ease-in-out;
-}
-.alineter-logo:hover {
-	transform:rotateY(180deg);
-}
-.slide-navigation-btn {
-  	transition: background 0.8s ease-in-out;
-}
-
-
-
-/* SLIDE NAVIGATION */
-#slide-navigation {
-  height:100%;
-  width:auto;
-  position:fixed;
-  z-index:3;
-  top:0;
-  left:-100%;
-  background-color:#050609;
-  overflow-x:hidden;
-  overflow-y:auto;
-  transition: 0.5s ease-in-out;
-  padding:4% 1%;
-}
-#slide-nav .nav-link {
-	border-radius:5px;
-	color:#EFCB68;
-	opacity:0.65;
-	transition:0.3s ease-in-out;
-}
-#slide-nav .nav-link:hover {
-	opacity:1;
-	transform:scale(1.1);
-}
-
-
 
 /* ILLUSTRATION */
 #illustration {
@@ -130,13 +48,8 @@
 #models {
   height:65vh;
 }
-.parallax {
-  height: 100%; 
+#models .parallax {
   background-image: url('../images/men-fashion-4.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
@@ -342,90 +255,16 @@
 		display:block;
 	}
 }
-.newsletter-subscribe #bottom{
+.newsletter-subscribe .newsletter-subscribe-form{
 	border-left:5px solid #6C63FF;
-}
-.newsletter-subscribe .input-s-1 {
-	font-family:calibri;
-	color:#AEB7B3;
-	padding:4%;
-	border:0;
-	border-bottom:2px solid #AEB7B3;
-	border-radius:2px;
-	text-align:center;
-	transition:0.3s;
 }
 .newsletter-subscribe .input-s-1.filled {
 	color:#6C63FF;
 }
-.newsletter-subscribe .input-s-1::placeholder {
-	color:#AEB7B380;
-	transition:0.3s;
-}
 .newsletter-subscribe .input-s-1:focus {
 	color:#6C63FF;
-	outline:none;
-	border-bottom:2px solid #6C63FF;
-}
-.newsletter-subscribe .input-s-1:focus::placeholder {
-	color:#AEB7B3;
+	border-color:#6C63FF;
 }
 
 
 
-
-/* FOOTER */
-.scroll-horizontal.to-top > .btn {
-	color:#fff;
-	background:#160C28;
-	width:80px;
-	border-radius:100px 100px 0 0;
-	transition:0.2s
-}
-.link {
-	color:#E1EFE6;
-	transition:0.5s;
-}
-.links__contact-us .link:hover {
-	color:#6C63FF;
-	text-decoration:none
-}
-.company-address {
-	font-style:italic;
-	color:antiquewhite;
-}
-.social-link:not(:last-child) {
-	margin-right:3%;
-}
-.fa-google {
- 	color:#EA4638;
-}
-.fa-facebook {
- 	color:#38529A;
-}
-.fa-instagram {
- 	color:#E67135;	
-}
-.fa-twitter {
- 	color:#1C9CEA;
-}
-.social-link {
-	padding:6px;
-	border-radius:2px;
-}
-.social-link > i {
-	transition:0.5s;
-}
-.social-link:hover > i {
-	color:#EFCB68;
-}
-.company-direction-map {
-	width:100%;
-	height:70vh;
-}
-
-
-
-.scroll-reveal-content {
-	overflow:hidden;
-}

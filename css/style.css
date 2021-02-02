@@ -102,3 +102,30 @@ body {
 	background:#E1EFE650;
 	transition:background 0.1s;
 }
+
+
+/*Overlay Effect*/
+#overlay-effect {
+	width:0;
+	height:100%;
+	position:fixed;
+	background:rgba(0, 0, 0, 0.5);
+	z-index:3;
+	transition:width 0.5s;
+}
+
+
+/* Scroll Reveal */
+.scroll-reveal-content {
+	overflow:hidden;
+}
+
+
+/* Parallax */
+.parallax {
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

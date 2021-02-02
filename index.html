@@ -17,7 +17,6 @@
   <link rel="icon" href="images/alineter-b.png">
 
   <!-- SCROLL REVEAL LINK -->
-  <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
   <!-- FONT AWESOME LINK -->
@@ -25,6 +24,9 @@
 
   <!-- EXTERNAL CSS LINKS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/input-styles.css">
   <link rel="stylesheet" href="css/home.css">
 
   <style type="text/css">
@@ -78,6 +80,33 @@
 
   </style>
 
+  <script>
+    // Loading Animation
+    // Things to get activated while page loads
+    
+    $(window).on("load",function(){
+      activate();
+    });
+
+    function activate() {
+      showPage();
+      setPageContentPos();
+      scrollReveal();
+    }
+
+    function showPage() {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("body").style.display = "block";
+    }
+    function setPageContentPos() {
+      /* Set the Top Position of #page-content on load */
+      $(function(){
+          let navHeight = document.getElementById("navigation").offsetHeight;
+          page_content.style.top = navHeight+"px";
+      });
+    }
+  </script>
+
 
 
 </head>
@@ -101,17 +130,26 @@
       <div class="container-fluid navigation-bar">
         <div class="d-flex justify-content-between ml-1 mr-1">
           <div class="nav-left">
-            <a href="#home">
+            <a href="index.html">
               <img src="images/alineter-w.png" class="alineter-logo" id="nav-brand-logo" width=50 height=45 alt="alineter logo"/>
             </a>
           </div>
           <div class="nav-center">
             <div class="d-flex">
-              <a href="#home" class="nav-link active">Home</a>
+              <a href="index.html" class="nav-link active">Home</a>
               <a href="#store" class="nav-link">Store</a>
               <a href="#look-book" class="nav-link">Look Book</a>
               <a href="#about-us" class="nav-link">About Us</a>
-              <a href="#about-us" class="nav-link">FAQ</a>
+              <div class="dropdown">
+                <button class="btn nav-link dropdown-toggle" type="button" data-toggle="dropdown">
+                  Contact Us
+                </button>
+                <div class="dropdown-menu pt-2 pb-2" >
+                  <a class="dropdown-item" href="contact.html">Contact Us</a>
+                  <a class="dropdown-item" href="#">FAQ</a>
+                </div>
+              </div>
+              <!-- <a href="#about-us" class="nav-link">FAQ</a> -->
             </div>
           </div>
           <div class="nav-right">
@@ -124,13 +162,16 @@
       </div>
     </section>
 
+    <section id="overlay-effect" onclick="closenav()">
+    </section>
+
     <!-- SLIDE NAVIGATION SECTION -->
     <section id="slide-navigation">
       <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
         <div class="d-flex flex-column align-items-left">
           <div class="d-flex justify-content-between">
             <h4 class="text-left text-light medium-title">Alineter</h4>
-            <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
+            <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title ripple-bg" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
           </div>
           <a href="#store" class="nav-link ripple-bg">Store</a>
           <a href="#look-book" class="nav-link ripple-bg">Look Book</a>
@@ -153,10 +194,10 @@
       <section id="illustration" class="w-100 scroll-reveal-content">
         <div class="container pt-3 pb-3">
           <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 text-center left-content">
+            <div class="col-lg-6 col-md-12 col-sm-12 text-center left-content reveal__scale-down">
               <img src="images/men-fashion.jpg" class="img-fluid"/>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 text-center right-content">
+            <div class="col-lg-6 col-md-12 col-sm-12 text-center right-content reveal__from-right">
               <div class="position-relative cy">
                 <div class="p-3">
                   <h1 class="text-uppercase color-orange big-title" style="font-weight:400">Alineter</h1>
@@ -180,25 +221,25 @@
         <div class="container-fluid">
           <div class="row">
 
-            <div class="usp-box mx-auto col-lg-3 col-md-6 col-sm-6">
+            <div class="usp-box mx-auto col-lg-3 col-md-6 col-sm-6 reveal__scale-up">
               <i class="icon fa fa-check-circle fa-4x"></i>
               <h3 class="small-title usp-title font-weight-bold">Easy to use.</h3>
               <p class="usp-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
             </div>
 
-            <div class="usp-box mx-auto col-lg-3 col-md-6 col-sm-6">
+            <div class="usp-box mx-auto col-lg-3 col-md-6 col-sm-6 reveal__scale-up">
               <i class="icon fa fa-bullseye fa-4x"></i>
               <h3 class="small-title usp-title font-weight-bold">Elite Clientele</h3>
               <p class="usp-text">Lorem Ipsum is simply dummy text of the printing.</p>
             </div>
 
-            <div class="usp-box mx-auto col-lg-3 col-md-6 col-sm-6">
+            <div class="usp-box mx-auto col-lg-3 col-md-6 col-sm-6 reveal__scale-up">
               <i class="icon fa fa-heart fa-4x"></i>
               <h3 class="small-title usp-title font-weight-bold">Guaranteed to work.</h3>
               <p class="usp-text">Lorem Ipsum is simply dummy text</p>
             </div>
 
-            <div class="usp-box col-lg-3 col-md-6 col-sm-6">
+            <div class="usp-box col-lg-3 col-md-6 col-sm-6 reveal__scale-up">
               <i class="icon fa fa-truck fa-4x"></i>
               <h3 class="small-title usp-title font-weight-bold">Safe Package</h3>
               <p class="usp-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
@@ -342,7 +383,7 @@
       <section id="newsletter-subscribe-lg" class="w-100 newsletter-subscribe scroll-reveal-content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-6 left-content">
+            <div class="col-6 left-content reveal__scale-down">
               <div class="d-flex flex-column newsletter-content position-relative cy">
                 <div id="top">
                   <h2 class="medium-title font-weight-bold">Get the latest trends in your inbox every month</h2>
@@ -350,7 +391,7 @@
                 <div id="middle">
                   <p class="smaller-title text-muted">Subscribe and receive our newsletter to follow the news about our latest products and fashion trends</p>
                 </div>
-                <div id="bottom" class="shadow rounded p-1 pb-2">
+                <div id="bottom" class="shadow rounded p-1 pb-2 newsletter-subscribe-form">
                   <form method="post">
                     <div class="d-flex flex-column">
                       <div class="row m-2">
@@ -369,7 +410,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 right-content">
+            <div class="col-6 right-content reveal__from-right">
               <img src="images/newsletter-subscribe.png" id="email-illustration" class="img-fluid position-relative cy"/>
             </div>
           </div>
@@ -377,9 +418,9 @@
       </section>
 
       <!-- NEWSLETTER SUBSCIBE SECTION -->
-      <section id="newsletter-subscribe-sm" class="w-100 newsletter-subscribe">
+      <section id="newsletter-subscribe-sm" class="w-100 newsletter-subscribe scroll-reveal-content">
         <div class="container-fluid">
-          <div class="d-flex flex-column newsletter-content text-center">
+          <div class="d-flex flex-column newsletter-content text-center reveal__opacity">
             <div id="top">
               <i class="fa fa-envelope-open-o color-purple" style="font-size:3rem;"></i>
             </div><br>
@@ -387,7 +428,7 @@
               <h2 class="small-title font-weight-bold">Subscribe to our Newsletter</h2>
               <p class="smaller-title text-muted">Subscribe and receive our newsletter to follow the news about our latest products and fashion trends</p>
             </div>
-            <div id="bottom" class="shadow rounded p-1 pb-2">
+            <div id="bottom" class="shadow rounded p-1 pb-2 newsletter-subscribe-form">
               <form method="post">
                 <div class="d-flex flex-column">
                   <div class="row m-2">
@@ -416,6 +457,14 @@
             <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" onmouseenter="this.style.color='#FFC107'" onmouseleave="this.style.color='#fff'"><i class="fa fa-arrow-up"></i></button>
         </div>
       </div>
+
+      <script>
+        /* Slide the page back to top */
+        function slideUp() {
+          let windowHeight = $(window).height();
+          $("html,body").animate({scrollTop:-windowHeight},1000);
+        }
+      </script>
 
       <section id="footer" class="w-100 bg-purple">
         <footer class="text-white text-center text-lg-start pt-4">
@@ -490,96 +539,15 @@
 
   </section><!--Body-->
 
-<script>
-  // Loading Animation
-  const loadAnimation = document.getElementById("loading");
-  const sectionBody = document.getElementById("body");
-  setTimeout(activate,800);
 
-  function activate() {
-    showPage();
-    setPageContentPos();
-    scrollReveal();
-    // toggleScrollBtn();
-  }
-
-  function showPage() {
-    loadAnimation.style.display = "none";
-    sectionBody.style.display = "block";
-  }
-
-  function setPageContentPos() {
-    /* Set the Top Position of #page-content on load */
-    $(function(){
-        let navHeight = navigation.offsetHeight;
-        page_content.style.top = navHeight+"px";
-    });
-  }
-
-</script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/slide-nav-toggle.js"></script>
+<script type="text/javascript" src="js/scroll-reveal.js"></script>
 
 
 <script>
-
-  const page_content = document.getElementById("page-content");
-  const navigation = document.getElementById("navigation");
-  const navBrand = document.getElementById("nav-brand-logo");
-
-  /* Change BG of navbar on scrolling */
-  $(function(){
-    var scrollTop = $(window).scrollTop();
-    changeNavBg(scrollTop);
-  }); 
-
-  $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-      changeNavBg(scrollTop);
-  });
-
-  function changeNavBg(st) {
-    // let navHeight = navigation.offsetHeight - 10;
-      if (st > 25) {
-        navigation.classList.remove("navigation-bg-init");
-        navigation.classList.add("navigation-bg-scroll");
-        // navBrand.setAttribute("src","images/alineter-b.png");
-      }
-      else {
-        navigation.classList.remove("navigation-bg-scroll");
-        navigation.classList.add("navigation-bg-init");
-        // navBrand.setAttribute("src","images/alineter-w.png");
-      }
-  }
-
-  /* Set the Top Position of #page-content on resize */
-  $(function(){
-    $(window).resize(function() {
-      let navHeight = navigation.offsetHeight;
-      page_content.style.top = navHeight+"px";
-    });
-  });
-
-</script>
-
-
-<script>
-  /* Open and Close Sliding Navbar */
-  function opennav() {
-    document.getElementById("slide-navigation").style.left = "0";
-    document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","closenav()");
-    document.querySelector(".slide-navigation-btn > i").classList.remove("fa-bars");
-    document.querySelector(".slide-navigation-btn > i").classList.add("fa-close");
-  }
-  function closenav() {
-    document.getElementById("slide-navigation").style.left = "-100%";
-    document.getElementsByClassName("slide-navigation-btn")[0].setAttribute("onclick","opennav()");
-    document.querySelector(".slide-navigation-btn > i").classList.remove("fa-close");
-    document.querySelector(".slide-navigation-btn > i").classList.add("fa-bars");
-  }
-
-</script>
-
-
-<script>
+  //SPECIFIC FOR HOME PAGE
   /* Check is the input tag is filled or not and fill the alternate section either smaller form or larger form*/
   function isFilled(this_obj,data_num,inp_type) {
     data_num = parseInt(data_num);
@@ -614,95 +582,6 @@
   }
 </script>
 
-
-<script>
-  /* Scroll Content in X direction */
-  function scrollX(this_obj) {
-    let scroll = this_obj.getAttribute("data-scroll");
-    let scrollDirection = this_obj.getAttribute("scroll-direction");
-    if(scrollDirection === "right") {
-      $("#"+scroll).animate({scrollLeft:"+=200px"},500);
-    }
-    else {
-      $("#"+scroll).animate({scrollLeft:"-=200px"},500);
-    }           
-  }
-</script>
-
-<script>
-  /* Slide the page back to top */
-  function slideUp() {
-    let windowHeight = $(window).height();
-    $("html,body").animate({scrollTop:-windowHeight},1000);
-  }
-</script>
-
-
-
-<script>
-
-  /* Scroll Reveal */
-  function scrollReveal() {
-    $(function(){
-      window.sr = ScrollReveal();
-      sr.reveal("#illustration .right-content",{
-        origin:'top',
-        duration:1000,
-        delay:600,
-        distance:'50px',
-        mobile:false,
-        afterReveal: function(el) {
-          ScrollReveal().clean(el);
-        }
-      });
-      sr.reveal("#illustration .right-content",{
-        scale:0,
-        duration:800,
-        delay:200,
-        distance:'50px',
-        desktop:false,
-        afterReveal: function(el) {
-          ScrollReveal().clean(el);
-        }
-      });
-      sr.reveal("#illustration .left-content",{
-        scale:1.5,
-        duration:500,
-        delay:500,
-        mobile:false,
-        afterReveal: function(el) {
-          ScrollReveal().clean(el);
-        }
-      });
-      sr.reveal("#usp .usp-box",{
-        scale:0,
-        duration:400,
-        delay:200,
-        afterReveal: function(el) {
-          ScrollReveal().clean(el);
-        }
-      });
-      sr.reveal("#newsletter-subscribe-lg .newsletter-content",{
-        scale:1.5,
-        duration:800,
-        delay:200,
-        afterReveal: function(el) {
-          ScrollReveal().clean(el);
-        }
-      });
-      sr.reveal("#email-illustration",{
-        origin:"right",
-        distance:"200px",
-        duration:900,
-        delay:200,
-        afterReveal: function(el) {
-          ScrollReveal().clean(el);
-        }
-      });
-    });
-  }
-
-</script>
 
  <!-- <script>
   function toggleScrollBtn() {

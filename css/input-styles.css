@@ -1,0 +1,24 @@
+
+/* Style #1 */
+.input-s-1 {
+	font-family:calibri;
+	padding:4%;
+	border:0;
+	border-bottom-width:2px;
+	border-style:solid;
+	border-color:#AEB7B3;
+	text-align:center;
+	transition:0.3s;
+}
+.input-s-1::placeholder {
+	color:#AEB7B395;
+	transition:0.3s;
+}
+.input-s-1:focus {
+	outline:none;
+	border-bottom-width:2px; 
+	border-style:solid;
+}
+.input-s-1:focus::placeholder {
+	color:#AEB7B3;
+}
