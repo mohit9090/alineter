@@ -61,8 +61,8 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__opacity",{
       opacity:0,
-      duration:1500,
-      delay:400,
+      duration:1800,
+      delay:200,
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }

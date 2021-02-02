@@ -1,0 +1,52 @@
+
+
+/* ABOUT US */
+section#about-us, section#directors {
+	padding:4.5% 2%;
+}
+#head .body {
+	font-family:calibri;
+}
+.big-title, .medium-title, .small-title {
+	color:#F45C24;
+}
+@media screen and (max-width:760px) {
+	.big-title {
+		font-size:3rem;
+	}
+}
+
+
+/* DIRECTORS */
+.profile-cards .profile-card {
+	width:22rem;
+} 
+.profile-cards .director-name {
+
+}
+.profile-cards .director-designation {
+	font-style:italic;
+	color:#AEB7B3;
+}
+.profile-cards .director-bio {
+	color:#6C757D;
+}
+
+
+/* SMALL DESCRIPTION SECTION */
+#small-description {
+	padding:5.4% 4%;
+}
+#small-description .small-descp-text {
+	color:#AEB7B3;
+}
+@media screen and (min-width:764px) {
+	#small-description .small-descp-box {
+		width:80%;
+	}
+}
+@media screen and (max-width:764px) {
+	#small-description .small-descp-box {
+		width:100%;
+	}
+}

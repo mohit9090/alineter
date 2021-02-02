@@ -27,8 +27,8 @@
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/input-styles.css">
-  <link rel="stylesheet" href="css/contact.css">
-  
+  <link rel="stylesheet" href="css/about.css">
+
 
   <style type="text/css">
 
@@ -84,7 +84,7 @@
   <script>
     // Loading Animation
     // Things to get activated while page loads
-    setTimeout(activate,100);
+    setTimeout(activate,10);
     function activate() {
       showPage();
       setPageContentPos();
@@ -185,85 +185,73 @@
 
     <section id="page-content" class="position-relative">
 
-      
-      <section id="contact-us" class="w-100">
-        <div class="container-fluid map-holder reveal__opacity scroll-reveal-content">
-          <div class="container w-100 h-100 rounded shadow">
-            <div class="row h-100 contact-us-content">
-              <div class="col-lg-6 col-md-12 left-content reveal__from-left scroll-reveal-content rounded-left text-left">
-                <div class="position-relative d-flex flex-column cy" style="padding:5%">
-                  <div class="address-box" id="top">
-                    <div class="row">
-                      <div class="col-2">
-                        <i class="fa fa-map-marker fa-2x text-light" ></i>
-                      </div>
-                      <div class="col-10">
-                        <div class="d-flex flex-column">
-                          <h2 class="small-title text-light">Address</h2>
-                          <small class="color-grey font-weight-bold">1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd, Bhubaneswar, Odisha 751003</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div><br>
-                  <div class="telephone-box" id="middle">
-                    <div class="row">
-                      <div class="col-2">
-                        <i class="fa fa-phone fa-2x text-light" ></i>
-                      </div>
-                      <div class="col-10">
-                        <div class="d-flex flex-column">
-                          <h2 class="small-title text-light">Lets Talk</h2>
-                          <small class="font-weight-bold"><a href="tel:0674224567" class="link ripple-bg">0674-224567</a></small>
-                        </div>
-                      </div>
-                    </div>
-                  </div><br>
-                  <div class="mail-box" id="bottom">
-                    <div class="row">
-                      <div class="col-2">
-                        <i class="fa fa-envelope fa-2x text-light" ></i>
-                      </div>
-                      <div class="col-10">
-                        <h2 class="small-title text-light">General Support</h2>
-                        <small class="font-weight-bold"><a href="mailto:alineter@support.com" class="link ripple-bg">alineter@support.com</a></small>
-                      </div>
-                    </div>
-                  </div>
+
+
+      <!-- ABOUT US -->
+      <section id="about-us" class="w-100 scroll-reveal-content">
+        <div class="container-fluid w-100">
+          <div class="row h-100">
+            <div class="col-lg-6 col-md-12 text-lg-left text-md-center text-sm-center">
+              <div class="position-relative cy d-flex flex-column reveal__opacity">
+                <div class="head">
+                  <h2 class="big-title">About</h2>
+                </div>
+                <div class="body">
+                  <p class="text-muted about-us-content">
+                    ALINETER is a clothing brand started by two enthusiastic individuals which is registered under the name of Alineter Lifestyle Industry Pvt. Ltd.<br><br>This company is started with a vision of making something different in the sector of fashion and lifestyle. We are taking fashion to the next level by bringing the all moment wear.<br><br>We all love to adapt a new style every day. ALINETER is your go-to source for styles influenced by the latest fashions with an added flair. We aim to inspire our customers to be the best version of themselves and to be confident in their own skin - and of course, their outfits.<br>We invite you to browse our site to find just what you have been looking for. Look good, feel good, shop ALINETER today.
+                  </p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-12 col-sm-12 right-content reveal__from-right scroll-reveal-content rounded-right text-center">
-                <div class="position-relative d-flex flex-column cy" style="padding:5%">
-                  <div class="head" id="top">
-                    <h2 class="small-title font-weight-bold">Send Us A Message</h2>
-                  </div><br>
-                  <div class="message-form-box" id="bottom">
-                    <form method="post">
-                      <div class="d-flex flex-column">
-                        <div>
-                          <input type="text" name="mailer-name" class="input-s-2 w-100" placeholder="Your Name" spellcheck="false" autocomplete="off" onchange="isFilled(this)"/>
-                        </div><br>
-                        <div>
-                          <input type="email" name="mailer-email" class="input-s-2 w-100" placeholder="Your Email Address" spellcheck="false" autocomplete="off" onchange="isFilled(this)"/>
-                        </div><br>
-                        <div>
-                          <input type="text" name="mail-subject" class="input-s-2 w-100" placeholder="Subject of your Email" spellcheck="false" autocomplete="off" onchange="isFilled(this)"/>
-                        </div><br>
-                        <div>
-                          <textarea class="textarea-s-1 w-100" name="mail-content" spellcheck="false" rows=3 placeholder="Write Your Message Here...." onchange="isFilled(this)"></textarea>
-                        </div><br>
-                        <div class="align-self-center mr-2">
-                          <button type="submit" name="send-message" class="btn bg-purple text-light ripple-opacity-l">Send Message</button>
-                      </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 d-md-none d-lg-block reveal__from-right">
+              <div class="position-relative cy">
+                <img src="images/team-illustration.png" class="img-fluid"/>
               </div>
             </div>
           </div>
         </div>
+      </section> 
+
+
+
+      <!-- DIRECTORS SECTION -->
+      <section id="directors" class="w-100 scroll-reveal-content">
+        <div class="container-fluid w-100">
+          <h2 class="big-title text-center reveal__opacity">Directors</h2><br><br>
+          <div class="profile-cards">
+            <div class="row p-0 h-100">
+              <div class="col-lg-6 col-md-6 col-sm-12 pt-3 pb-3 reveal__opacity">
+                <div class="card profile-card position-relative cx shadow border-0 rounded">
+                  <img class="card-img-top profile-card-img reveal__scale-up" src="https://static.wixstatic.com/media/3d1534_60d0c8b0b7604a2cb5923795f4315a8f~mv2.jpg/v1/fill/w_452,h_450,al_c,q_80,usm_0.66_1.00_0.01/IMG20200130210217_edited.webp" alt="Card image cap">
+                  <div class="card-body profile-card-body text-center">
+                    <h2 class="small-title director-name reveal__opacity">Rahul Kishor Parida</h2>
+                    <p class="director-designation reveal__opacity">Managing Director</p>
+                    <p class="director-bio text-left reveal__opacity">I have always wanted to make something for which I wanted to be known for. I have developed madness for fashion. So, the clothing industry was my go to. We want to make such products that the users will fall in love with.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 pt-3 pb-3 reveal__opacity">
+                <div class="card profile-card position-relative cx shadow border-0 rounded">
+                  <img class="card-img-top profile-card-img reveal__scale-up" src="https://static.wixstatic.com/media/3d1534_8f16ff78865a4e84a697cc8e4f717759~mv2.jpg/v1/crop/x_25,y_19,w_510,h_510/fill/w_452,h_450,al_c,q_80,usm_0.66_1.00_0.01/IMG20200130210446_edited.webp" alt="Card image cap">
+                  <div class="card-body profile-card-body text-center">
+                    <h2 class="small-title director-name reveal__opacity">Pratyush Kumar Satapathy</h2>
+                    <p class="director-designation reveal__opacity">Director</p>
+                    <p class="director-bio text-left reveal__opacity">As a guy coming from the field of graphic designing, I aim to incorporate such designs to the products we make. This is my love for fashion and clothing which has got me going to make something different.<br>“When there is goodwill, there is empathy”</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+
+
+
+      <!-- SMALL DESCP SECTION -->
+      <section id="small-description" class="w-100 scroll-reveal-content">
+        <div class="container small-descp-box text-center reveal__opacity">
+          <p class="lead small-descp-text">As amazing as this clothing industry is, we feel that it lacks some spice. We strive to bring changes for the betterment in the world of clothing. We want to set a new trend through our personalized designs. We want to bring more affordable products that won’t make a dent in the customer’s pocket but will give that ever wanted satisfaction and comfort from our range of t-shirts. We aim to offer eye-catchy designs and make products for all age groups.</p>
+        </div>
       </section>
-      
 
 
       <!-- FOOTER -->
@@ -360,20 +348,6 @@
 <script type="text/javascript" src="js/scroll-xy.js"></script>
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
-
-
-<script>
-  //SPECIFIC FOR CONTACT PAGE
-  /* Check is the input tag is filled or not */
-  function isFilled(this_obj) {
-    if(this_obj.value === "") {
-      this_obj.classList.remove("filled");
-    }
-    else {
-      this_obj.classList.add("filled");
-    }
-  }
-</script>
 
 
 </body>
