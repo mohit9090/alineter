@@ -1,16 +1,23 @@
 
-/* Style #1 */
-.input-s-1 {
+/* Common Frame on Input Tag */
+
+.input-s-1, .input-s-2, .textarea-s-1  {
 	font-family:calibri;
 	padding:4%;
 	border:0;
-	border-bottom-width:2px;
 	border-style:solid;
 	border-color:#AEB7B3;
-	text-align:center;
 	transition:0.3s;
 }
-.input-s-1::placeholder {
+
+
+
+/*Input Style #1 */
+.input-s-1 {
+	border-bottom-width:2px;
+	text-align:center;
+}
+.input-s-1::placeholder, .input-s-2::placeholder , .textarea-s-1::placeholder{
 	color:#AEB7B395;
 	transition:0.3s;
 }
@@ -19,6 +26,27 @@
 	border-bottom-width:2px; 
 	border-style:solid;
 }
-.input-s-1:focus::placeholder {
+.input-s-1:focus::placeholder, .input-s-2:focus::placeholder, .textarea-s-1:focus::placeholder{
 	color:#AEB7B3;
 }
+
+
+
+/* Input Style #2 */
+.input-s-2 {
+	border-width:2px;
+	border-radius:3px;
+}
+.input-s-2:focus, .textarea-s-1:focus {
+	outline:none;
+	border-width:2px; 
+	border-style:solid;
+}
+
+
+/* Textarea Style #1 */
+.textarea-s-1 {
+	border-width:2px;
+	border-radius:3px;
+}
+

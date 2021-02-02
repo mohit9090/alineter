@@ -258,6 +258,9 @@
 .newsletter-subscribe .newsletter-subscribe-form{
 	border-left:5px solid #6C63FF;
 }
+.newsletter-subscribe .input-s-1 {
+	background:transparent;
+}
 .newsletter-subscribe .input-s-1.filled {
 	color:#6C63FF;
 }

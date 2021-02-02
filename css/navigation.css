@@ -45,10 +45,10 @@
 .dropdown .dropdown-item:hover {
 	background:#EFCB68;
 }
-.dropdown .dropdown-item:active {
+/*.dropdown .dropdown-item:active {
 	background:#AEB7B3;
 	transition:background 0.3s;
-}
+}*/
 .alineter-logo {
 	transition:0.5s ease-in-out;
 }

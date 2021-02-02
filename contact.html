@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Home | Alineter</title>
+
+  <meta link-colorarset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000411">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="images/alineter-b.png">
+
+  <!-- SCROLL REVEAL LINK -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  <!-- FONT AWESOME LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- EXTERNAL CSS LINKS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/input-styles.css">
+  <link rel="stylesheet" href="css/contact.css">
+  
+
+  <style type="text/css">
+
+    /* Loading Animation */
+
+    .loading-img {
+      animation-name:animate;
+      animation-duration: 0.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out; 
+    }
+
+    @keyframes animate {
+      0% {
+        opacity:1;
+      }
+      50% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    section#body {
+      display:none;
+      -webkit-animation-name: increaseOpacity;
+      -webkit-animation-duration:1.3s;
+      animation-name: increaseOpacity;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+    }
+
+    @-webkit-keyframes increaseOpacity {
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+    @keyframes increaseOpacity { 
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+
+  </style>
+
+  <script>
+    // Loading Animation
+    // Things to get activated while page loads
+    setTimeout(activate,100);
+    function activate() {
+      showPage();
+      setPageContentPos();
+      scrollReveal();
+    }
+    function showPage() {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("body").style.display = "block";
+    }
+    function setPageContentPos() {
+      /* Set the Top Position of #page-content on load */
+      $(function(){
+          let navHeight = document.getElementById("navigation").offsetHeight;
+          page_content.style.top = navHeight+"px";
+      });
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+
+  <section id="loading">
+    <div class="position-static" id="loading-animation">
+      <div class="position-absolute cxy">
+        <div>
+          <img src="images/alineter-b.png" class="img-fluid loading-img" width=90 height=90 alt="alineter logo">
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <section id="body">
+
+    <!-- NAVIGATION BAR SECTION -->
+    <section id="navigation" class="navigation-bg-init">
+      <div class="container-fluid navigation-bar">
+        <div class="d-flex justify-content-between ml-1 mr-1">
+          <div class="nav-left">
+            <a href="index.html">
+              <img src="images/alineter-w.png" class="alineter-logo" id="nav-brand-logo" width=50 height=45 alt="alineter logo"/>
+            </a>
+          </div>
+          <div class="nav-center">
+            <div class="d-flex">
+              <a href="index.html" class="nav-link active">Home</a>
+              <a href="#store" class="nav-link">Store</a>
+              <a href="#look-book" class="nav-link">Look Book</a>
+              <a href="#about-us" class="nav-link">About Us</a>
+              <div class="dropdown">
+                <button class="btn nav-link dropdown-toggle" type="button" data-toggle="dropdown">
+                  Contact Us
+                </button>
+                <div class="dropdown-menu pt-2 pb-2" >
+                  <a class="dropdown-item" href="contact.html">Contact Us</a>
+                  <a class="dropdown-item" href="#">FAQ</a>
+                </div>
+              </div>
+              <!-- <a href="#about-us" class="nav-link">FAQ</a> -->
+            </div>
+          </div>
+          <div class="nav-right">
+            <div class="d-flex">
+              <a href="#login" class="nav-link">Log In</a>
+              <button type="button" class="btn slide-navigation-btn ripple-bg" onclick="opennav()"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overlay-effect" onclick="closenav()">
+    </section>
+
+    <!-- SLIDE NAVIGATION SECTION -->
+    <section id="slide-navigation">
+      <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
+        <div class="d-flex flex-column align-items-left">
+          <div class="d-flex justify-content-between">
+            <h4 class="text-left text-light medium-title">Alineter</h4>
+            <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title ripple-bg" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
+          </div>
+          <a href="#store" class="nav-link ripple-bg">Store</a>
+          <a href="#look-book" class="nav-link ripple-bg">Look Book</a>
+          <a href="#about-us" class="nav-link ripple-bg">About Us</a>
+          <a href="#home" class="nav-link ripple-bg">Contact Us</a>
+          <a href="#store" class="nav-link ripple-bg">FAQ</a>
+          <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
+          <a href="#look-book" class="nav-link ripple-bg">Terms of Use</a>
+          <a href="#about-us" class="nav-link ripple-bg">Privacy Policy</a>
+          <a href="#home" class="nav-link ripple-bg">Log In</a>
+          <a href="#store" class="nav-link ripple-bg">Account</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-content" class="position-relative">
+
+      
+      <section id="contact-us" class="w-100">
+        <div class="container-fluid map-holder reveal__opacity scroll-reveal-content">
+          <div class="container w-100 h-100 rounded shadow">
+            <div class="row h-100 contact-us-content">
+              <div class="col-lg-6 col-md-12 left-content reveal__from-left scroll-reveal-content rounded-left text-left">
+                <div class="position-relative d-flex flex-column cy" style="padding:5%">
+                  <div class="address-box" id="top">
+                    <div class="row">
+                      <div class="col-2">
+                        <i class="fa fa-map-marker fa-2x text-light" ></i>
+                      </div>
+                      <div class="col-10">
+                        <div class="d-flex flex-column">
+                          <h2 class="small-title text-light">Address</h2>
+                          <small class="color-grey font-weight-bold">1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd, Bhubaneswar, Odisha 751003</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="telephone-box" id="middle">
+                    <div class="row">
+                      <div class="col-2">
+                        <i class="fa fa-phone fa-2x text-light" ></i>
+                      </div>
+                      <div class="col-10">
+                        <div class="d-flex flex-column">
+                          <h2 class="small-title text-light">Lets Talk</h2>
+                          <small class="font-weight-bold"><a href="tel:0674224567" class="link ripple-bg">0674-224567</a></small>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="mail-box" id="bottom">
+                    <div class="row">
+                      <div class="col-2">
+                        <i class="fa fa-envelope fa-2x text-light" ></i>
+                      </div>
+                      <div class="col-10">
+                        <h2 class="small-title text-light">General Support</h2>
+                        <small class="font-weight-bold"><a href="mailto:alineter@support.com" class="link ripple-bg">alineter@support.com</a></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 right-content reveal__from-right scroll-reveal-content rounded-right text-center">
+                <div class="position-relative d-flex flex-column cy" style="padding:5%">
+                  <div class="head" id="top">
+                    <h2 class="small-title font-weight-bold">Send Us A Message</h2>
+                  </div><br>
+                  <div class="message-form-box" id="bottom">
+                    <form method="post">
+                      <div class="d-flex flex-column">
+                        <div>
+                          <input type="text" name="mailer-name" class="input-s-2 w-100" placeholder="Your Name" spellcheck="false" autocomplete="off" onchange="isFilled(this)"/>
+                        </div><br>
+                        <div>
+                          <input type="email" name="mailer-email" class="input-s-2 w-100" placeholder="Your Email Address" spellcheck="false" autocomplete="off" onchange="isFilled(this)"/>
+                        </div><br>
+                        <div>
+                          <input type="text" name="mail-subject" class="input-s-2 w-100" placeholder="Subject of your Email" spellcheck="false" autocomplete="off" onchange="isFilled(this)"/>
+                        </div><br>
+                        <div>
+                          <textarea class="textarea-s-1 w-100" name="mail-content" spellcheck="false" rows=3 placeholder="Write Your Message Here...." onchange="isFilled(this)"></textarea>
+                        </div><br>
+                        <div class="align-self-center mr-2">
+                          <button type="submit" name="send-message" class="btn bg-purple text-light ripple-opacity-l">Send Message</button>
+                      </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <!-- FOOTER -->
+      <!-- Button to Scroll Up -->
+      <div class="container text-center">
+        <div class="scroll-horizontal to-top">
+            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" onmouseenter="this.style.color='#FFC107'" onmouseleave="this.style.color='#fff'"><i class="fa fa-arrow-up"></i></button>
+        </div>
+      </div>
+
+      <script>
+        /* Slide the page back to top */
+        function slideUp() {
+          let windowHeight = $(window).height();
+          $("html,body").animate({scrollTop:-windowHeight},1000);
+        }
+      </script>
+
+      <section id="footer" class="w-100 bg-purple">
+        <footer class="text-white text-center text-lg-start pt-4">
+          <div class="container p-3 footer-content">
+            <div class="row">
+              <div class="col-lg-4 short-info text-left p-4">
+                <div class="d-flex short-info-head">
+                  <img src="images/alineter-w.png" alt="alineter logo" width=45 height=45 class="img-fluid alineter-logo"/>
+                  <h2 class="small-title align-self-end text-uppercase text-warning">Alineter</h2>
+                </div>
+                <div class="short-info-body">
+                  <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
+                </div>
+              </div>
+              <div class="col-lg-8 p-4 links__contact-us">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 text-left p-3 link-section">
+                    <h4 class="small-title text-warning">Quick Links</h4>
+                    <div class="d-flex justify-content-start mr-5">
+                      <div class="d-flex flex-column text-left links-left">
+                        <a href="#" class="link ripple-opacity-l">Customer Service</a>
+                        <a href="#" class="link ripple-opacity-l">Reviews</a>
+                        <a href="#" class="link ripple-opacity-l">Terms & Condition</a>
+                        <a href="#" class="link ripple-opacity-l">Privacy Policy</a>
+                        <a href="#" class="link ripple-opacity-l">Contribute</a>
+                      </div>
+                      <div class="d-flex flex-column text-left links-right ml-5">
+                        <a href="#" class="link ripple-opacity-l">Gallery</a>
+                        <a href="#" class="link ripple-opacity-l">Write About Us</a>
+                        <a href="#" class="link ripple-opacity-l">Services</a>
+                        <a href="#" class="link ripple-opacity-l">About Us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 text-left p-3 contact-us">
+                    <div class="d-flex flex-column">
+                      <h4 class="small-title text-warning">Contact Us</h4>
+                      <p class="company-address">1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd, Bhubaneswar, Odisha 751003</p>
+                      <a class="link company-mail ripple-opacity-l" href="mailto:alineter@support.com">Mail : alineter@support.com</a>
+                      <a class="link company-tel ripple-opacity-l" href="tel:123456789">Telephone : 0674-222555</a>
+                      <div class="d-flex social-media-handle mt-2">
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-google"></i></a>
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-twitter"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-5 mb-3 company-direction-map">
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=1136/8591,%20PATITAPABAN%20NAGAR,%20CANAL%20ROAD,%20Kalpana%20Rd,%20Bhubaneswar,%20Odisha%20751003&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                  <a href="https://fmovies2.org"></a><br>
+                  <style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style>
+                  <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            <small class="font-weight-bold">© 2020 Copyright:&nbsp;<a class="text-light" href="#alineter" onmouseenter="this.style.textDecoration='none'">alineter.com</a></small>
+          </div>
+        </footer>
+      </section>
+
+
+    </section><!--Page Content-->
+
+  </section><!--Body-->
+
+
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/slide-nav-toggle.js"></script>
+<script type="text/javascript" src="js/scroll-reveal.js"></script>
+
+
+<script>
+  //SPECIFIC FOR CONTACT PAGE
+  /* Check is the input tag is filled or not */
+  function isFilled(this_obj) {
+    if(this_obj.value === "") {
+      this_obj.classList.remove("filled");
+    }
+    else {
+      this_obj.classList.add("filled");
+    }
+  }
+</script>
+
+
+</body>
+</html>
+

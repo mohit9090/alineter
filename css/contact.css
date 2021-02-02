@@ -1,0 +1,50 @@
+
+/* CONTACT US SECTION */
+section#contact-us{
+	padding:4% 2%;
+}
+#contact-us .map-holder {
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:100%;
+	height:auto;
+}
+@media screen and (min-width:534px) {
+	#contact-us .map-holder {
+		padding:6%;
+		background-image:url("../images/map-view-2.png");
+	}
+	.contact-us-content .right-content {
+		background:#FFFFFF;
+	}
+}
+@media screen and (max-width:534px) {
+	#contact-us .map-holder {
+		padding:0;
+		background-image:none;
+	}
+	.contact-us-content .right-content {
+		background:#FAEBD770;
+		border:0.1px solid #AEB7B3;
+	}
+}
+.contact-us-content .left-content {
+	background-image:url("../images/black-texture-1.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.contact-us-content .link {
+	color:#EFCB68;
+	transition:0.3s;
+}
+.contact-us-content .link:hover {
+	color:#AEB7B3;
+	text-decoration:none;
+}
+.message-form-box .input-s-2:focus, .textarea-s-1:focus {
+	color:#160C28;
+	border-color:#160C28;
+}
+.message-form-box .input-s-2.filled, .textarea-s-1.filled {
+	border-color:#FFC107;
+}
