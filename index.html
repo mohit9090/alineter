@@ -84,9 +84,7 @@
     // Loading Animation
     // Things to get activated while page loads
     
-    $(window).on("load",function(){
-      activate();
-    });
+    setTimeout(activate,10);
 
     function activate() {
       showPage();
@@ -107,8 +105,7 @@
     }
   </script>
 
-
-
+ 
 </head>
 
 <body>
@@ -192,7 +189,21 @@
 
       <!-- ILLUSTRATION SECTION-->
       <section id="illustration" class="w-100 scroll-reveal-content">
-        
+        <div class="container-fluid w-50 h-100 float-left reveal__from-left" style="background:rgba(0,0,0,0.6);overflow-y:auto;/*Hide the scroll bar*/">
+          <div class="position-relative bg- cxy" >
+            <div class="d-flex flex-column text-center">
+              <div class="p-3 ">
+                <h2 class="big-title color-orange">Alineter</h2>
+              </div>
+              <div class="p-3">
+                <h5 class="text-light text-capitalize lead">Ready for every moment</h5>
+              </div>
+              <div class="p-3 ">
+                <a href="#store" class="btn btn-lg store-btn ripple-opacity-l">Store <i class="fa fa-angle-double-right ml-2"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>  
       </section>
 
 

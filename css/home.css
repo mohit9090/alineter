@@ -3,8 +3,31 @@
 /* ILLUSTRATION */
 #illustration {
   height:auto;
-  background:#050609;
-  padding:1% 2% 4%;
+  background-image:url('../images/men-fashion-6-lg.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  padding:0;
+}
+@media screen and (min-width:800px) {
+	#illustration {
+		height:75vh;
+	}
+}
+@media screen and (max-width:800px) and (min-width:660px) {
+	#illustration {
+		height:65vh;
+	}
+}
+@media screen and (max-width:660px) and (min-width:530px) {
+	#illustration {
+		height:55vh;
+	}
+}
+@media screen and (max-width:530px) {
+	#illustration {
+		height:50vh;
+	}
 }
 .store-btn {
 	color:#EFCB68;
