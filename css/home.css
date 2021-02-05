@@ -29,6 +29,25 @@
 		height:50vh;
 	}
 }
+.illustration-box::-webkit-scrollbar {
+	display:none;
+}
+.illustration-box {
+	background:rgba(0,0,0,0.6);
+	overflow-y:auto;	
+	-ms-overflow-style:none;
+  	scrollbar-width:none; 
+}
+@media screen and (min-width:650px) {
+	#illustration .illustration-box{
+		width:50%;
+	}
+}
+@media screen and (max-width:650px) {
+	#illustration .illustration-box{
+		width:100%;
+	}
+}
 .store-btn {
 	color:#EFCB68;
 	border-radius:6px;
