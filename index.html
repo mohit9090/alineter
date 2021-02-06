@@ -60,7 +60,6 @@
       animation-duration: 0.5s;
       animation-timing-function: ease-in;
     }
-
     @-webkit-keyframes increaseOpacity {
       from {
         opacity:0 
@@ -91,7 +90,7 @@
 
     function activate() {
       showPage();
-      setPageContentPos();
+      // setPageContentPos();
       scrollReveal();
     }
 
@@ -126,38 +125,41 @@
   <section id="body">
 
     <!-- NAVIGATION BAR SECTION -->
-    <section id="navigation" class="navigation-bg-init">
+    <section id="navigation" class="navigation-bg-init scroll-reveal-content">
       <div class="container-fluid navigation-bar">
         <div class="d-flex justify-content-between ml-1 mr-1">
+
           <div class="nav-left">
-            <a href="index.html">
-              <img src="images/alineter-w.png" class="alineter-logo" id="nav-brand-logo" width=50 height=45 alt="alineter logo"/>
-            </a>
-          </div>
-          <div class="nav-center">
             <div class="d-flex">
-              <a href="index.html" class="nav-link active">Home</a>
-              <a href="#store" class="nav-link">Store</a>
-              <a href="#look-book" class="nav-link">Look Book</a>
-              <a href="about.html" class="nav-link">About Us</a>
-              <div class="dropdown">
-                <button class="btn nav-link dropdown-toggle" type="button" data-toggle="dropdown">
-                  Contact Us
-                </button>
-                <div class="dropdown-menu pt-2 pb-2" >
-                  <a class="dropdown-item" href="contact.html">Contact Us</a>
-                  <a class="dropdown-item" href="#">FAQ</a>
-                </div>
+              <div class="nav-left-main">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="store.html" class="nav-link">Store</a>
+                <a href="look-book.html" class="nav-link">Look Book</a>
               </div>
-              <!-- <a href="#about-us" class="nav-link">FAQ</a> -->
+              <div class="nav-left-comp">
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+              </div>
             </div>
           </div>
+
           <div class="nav-right">
             <div class="d-flex">
-              <a href="#login" class="nav-link">Log In</a>
-              <button type="button" class="btn slide-navigation-btn ripple-bg" onclick="opennav()"><i class="fa fa-bars"></i></button>
+              <div class="nav-right-comp">
+                <a href="#login" class="nav-link">Log In</a>
+              </div>
+              <div class="nav-right-main">
+                <button type="button" class="btn slide-navigation-btn ripple-bg" onclick="opennav()">
+                  <div class="d-flex flex-column">
+                    <img src="images/alineter-w.png" class="nav-alineter-logo" id="nav-brand-logo" width=35 height=35 alt="alineter logo"/>
+                    <i class="fa fa-ellipsis-h nav-slide-icon"></i>
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -173,11 +175,12 @@
             <h4 class="text-left text-light medium-title">Alineter</h4>
             <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title ripple-bg" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
           </div>
-          <a href="#store" class="nav-link ripple-bg">Store</a>
-          <a href="#look-book" class="nav-link ripple-bg">Look Book</a>
-          <a href="#about-us" class="nav-link ripple-bg">About Us</a>
-          <a href="#home" class="nav-link ripple-bg">Contact Us</a>
-          <a href="#store" class="nav-link ripple-bg">FAQ</a>
+          <a href="index.html" class="nav-link active ripple-bg">Home</a>
+          <a href="store.html" class="nav-link ripple-bg">Store</a>
+          <a href="look-book.html" class="nav-link ripple-bg">Look Book</a>
+          <a href="about.html" class="nav-link ripple-bg">About Us</a>
+          <a href="contact.html" class="nav-link ripple-bg">Contact Us</a>
+          <a href="faq.html" class="nav-link ripple-bg">FAQ</a>
           <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
           <a href="#look-book" class="nav-link ripple-bg">Terms of Use</a>
           <a href="#about-us" class="nav-link ripple-bg">Privacy Policy</a>
@@ -188,7 +191,6 @@
     </section>
 
     <section id="page-content" class="position-relative">
-
 
       <!-- ILLUSTRATION SECTION-->
       <section id="illustration" class="w-100 scroll-reveal-content">

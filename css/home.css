@@ -9,24 +9,19 @@
   background-position:center;
   padding:0;
 }
-@media screen and (min-width:800px) {
+@media screen and (min-width:530px) {
 	#illustration {
-		height:75vh;
+		height:100vh;
 	}
 }
-@media screen and (max-width:800px) and (min-width:660px) {
+@media screen and (max-width:530px) and (min-width:400px){
 	#illustration {
-		height:65vh;
+		height:80vh;
 	}
 }
-@media screen and (max-width:660px) and (min-width:530px) {
+@media screen and (max-width:400px){
 	#illustration {
-		height:55vh;
-	}
-}
-@media screen and (max-width:530px) {
-	#illustration {
-		height:50vh;
+		height:70vh;
 	}
 }
 .illustration-box::-webkit-scrollbar {
@@ -34,7 +29,7 @@
 }
 .illustration-box {
 	background:rgba(0,0,0,0.6);
-	overflow-y:auto;	
+	overflow:auto;	
 	-ms-overflow-style:none;
   	scrollbar-width:none; 
 }

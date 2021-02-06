@@ -1,4 +1,9 @@
 
+/*Specific for this page*/
+.navigation-bg-init {
+  background:rgba(0, 0, 0, 1);
+}
+
 /* CONTACT US SECTION */
 section#contact-us{
 	padding:4% 2%;

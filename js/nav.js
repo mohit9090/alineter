@@ -27,11 +27,3 @@ function changeNavBg(st) {
       // navBrand.setAttribute("src","images/alineter-w.png");
     }
 }
-
-/* Set the Top Position of #page-content on resize */
-$(function(){
-  $(window).resize(function() {
-    let navHeight = navigation.offsetHeight;
-    page_content.style.top = navHeight+"px";
-  });
-  });
