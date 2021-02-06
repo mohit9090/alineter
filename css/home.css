@@ -2,12 +2,14 @@
 
 /* ILLUSTRATION */
 #illustration {
+	padding:0;
   height:auto;
   background-image:url('../images/men-fashion-6-lg.jpg');
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
-  padding:0;
+  /*For parallax effect
+  background-attachment:fixed;*/
 }
 @media screen and (min-width:530px) {
 	#illustration {
@@ -78,15 +80,6 @@
 }
 #usp .icon:hover {
   color: #A1A7AD90;
-}
-
-
-/* MODELS */
-#models {
-  height:65vh;
-}
-#models .parallax {
-  background-image: url('../images/men-fashion-4.jpg');
 }
 
 
