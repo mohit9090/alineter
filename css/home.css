@@ -60,11 +60,13 @@
 
 /* USP */
 #usp {
-	padding:2% 2%;
+	padding:4% 0%;
 }
 .usp-box {
   text-align:center;
-  padding:4.5%;
+  background:transparent;
+  border:0;
+  padding:0;
 }
 .usp-title {
 	color:#9da1a5;
@@ -72,15 +74,41 @@
 .usp-text {
 	font-family:calibri;
 }
-#usp .icon {
-  margin-bottom: 1rem;
-}
 #usp .usp-text, .icon {
 	color:#dddddd;
 }
 #usp .icon:hover {
   color: #A1A7AD90;
 }
+@media screen and (min-width:638px) {
+	.usp-box {
+		width:25%;
+	} 
+	.usp-box .icon {
+		font-size:5.5vw;
+	}
+	.usp-title {
+		font-size:2.5vw;
+	}
+	.usp-text {
+		font-size:1.2vw;
+	}
+}
+@media screen and (max-width:638px) {
+	.usp-box {
+		width:50%;
+	} 
+	.usp-box .icon {
+		font-size:12vw;
+	}	
+	.usp-title {
+		font-size:4vw;
+	}
+	.usp-text {
+		font-size:2.3vw;
+	}
+}
+
 
 
 
@@ -112,6 +140,7 @@
 .q-product-card:hover {
 	border-bottom:3px solid #400011;
 	color:#400111;
+	transform:scale(1.05,1.05)
 }
 @media screen and (max-width:300px) {
 	.q-product-card {
