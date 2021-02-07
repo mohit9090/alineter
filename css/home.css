@@ -70,6 +70,7 @@
 }
 .usp-title {
 	color:#9da1a5;
+	font-family: "Times New Roman", Times, serif;
 }
 .usp-text {
 	font-family:calibri;
@@ -140,7 +141,7 @@
 .q-product-card:hover {
 	border-bottom:3px solid #400011;
 	color:#400111;
-	transform:scale(1.05,1.05)
+	transform:scale(1.05,1.05);
 }
 @media screen and (max-width:300px) {
 	.q-product-card {
@@ -197,6 +198,7 @@
 .scroll-btn:hover > i {
 	color:#AEB7B3;
 }
+
 
 
 
@@ -293,17 +295,28 @@
 
 
 
+
 /* NEWSLETTER */
+@media screen and (min-width:700px) {
+	.newsletter-box {
+		width:75%;
+	}
+}
+@media screen and (max-width:700px) {
+	.newsletter-box {
+		width:100%;
+	}
+}
 .newsletter-subscribe {
 	padding:3% 2%;
 	border:5px solid rgba(22,12,40,0.7);
 }
 @media screen and (min-width:860px) {
 	#newsletter-subscribe-lg {
-		display:block;
+		display:none;
 	}
 	#newsletter-subscribe-sm {
-		display:none;
+		display:block;
 	}
 }
 @media screen and (max-width:860px) {

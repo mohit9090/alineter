@@ -44,8 +44,8 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__scale-up",{
       scale:0,
-      duration:900,
-      delay:400,
+      duration:700,
+      delay:200,
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -61,7 +61,7 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__opacity",{
       opacity:0,
-      duration:1800,
+      duration:1600,
       delay:200,
       afterReveal: function(el) {
         ScrollReveal().clean(el);
