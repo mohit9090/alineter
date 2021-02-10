@@ -2,29 +2,7 @@
 
 /* ILLUSTRATION */
 #illustration {
-	padding:0;
-  height:auto;
   background-image:url('../images/men-fashion-6-lg.jpg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  /*For parallax effect
-  background-attachment:fixed;*/
-}
-@media screen and (min-width:530px) {
-	#illustration {
-		height:100vh;
-	}
-}
-@media screen and (max-width:530px) and (min-width:400px){
-	#illustration {
-		height:80vh;
-	}
-}
-@media screen and (max-width:400px){
-	#illustration {
-		height:70vh;
-	}
 }
 .illustration-box::-webkit-scrollbar {
 	display:none;
@@ -141,7 +119,7 @@
 .q-product-card:hover {
 	border-bottom:3px solid #400011;
 	color:#400111;
-	transform:scale(1.05,1.05);
+	transform:scale(1.02,1.02);
 }
 @media screen and (max-width:300px) {
 	.q-product-card {

@@ -1,8 +1,18 @@
 
-/*Specific for this page*/
-.navigation-bg-init {
-  background:rgba(0, 0, 0, 1);
+
+/* ILLUSTRATION */
+#illustration {
+  background-image:url('../images/contact-us-2-sm.jpg');
 }
+.illustration-box {
+	width:100%;
+	background:rgba(0,0,0,0.6);
+	overflow:auto;	
+	-ms-overflow-style:none;
+  	scrollbar-width:none; 
+}
+
+
 
 /* CONTACT US SECTION */
 section#contact-us{
@@ -17,10 +27,11 @@ section#contact-us{
 @media screen and (min-width:534px) {
 	#contact-us .map-holder {
 		padding:6%;
-		background-image:url("../images/map-view-2.png");
+		/*background-image:url("../images/map-view-2.png");*/
+		background:rgba(0,0,0,0.05);
 	}
 	.contact-us-content .right-content {
-		background:#FFFFFF;
+		background:#FFF;
 	}
 }
 @media screen and (max-width:534px) {
@@ -29,7 +40,8 @@ section#contact-us{
 		background-image:none;
 	}
 	.contact-us-content .right-content {
-		background:#FAEBD770;
+		/*background:#FAEBD770;*/
+		background:rgba(0,0,0,0.03);
 		border:0.1px solid #AEB7B3;
 	}
 }

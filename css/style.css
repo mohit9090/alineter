@@ -104,6 +104,50 @@ body {
 }
 
 
+
+/* Illustration */
+#illustration {
+  padding:0;
+  height:auto;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+/* Small Illustration */
+@media screen and (min-width:530px) {
+	#illustration.min {
+		height:60vh;
+	}
+}
+@media screen and (max-width:530px) and (min-width:400px){
+	#illustration.min {
+		height:50vh;
+	}
+}
+@media screen and (max-width:400px){
+	#illustration.min {
+		height:40vh;
+	}
+}
+/* Large Illustration */
+@media screen and (min-width:530px) {
+	#illustration.max {
+		height:100vh;
+	}
+}
+@media screen and (max-width:530px) and (min-width:400px){
+	#illustration.max {
+		height:80vh;
+	}
+}
+@media screen and (max-width:400px){
+	#illustration.max {
+		height:70vh;
+	}
+}
+
+
+
 /*Overlay Effect*/
 #overlay-effect {
 	width:0%;

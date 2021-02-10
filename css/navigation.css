@@ -72,9 +72,10 @@
 	color:#EFCB68;
 }
 
+
 /* SLIDE NAVIGATION */
 #slide-navigation {
-  height:100%;
+  height:100vh;
   width:auto;
   position:fixed;
   z-index:4;
