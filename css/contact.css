@@ -6,57 +6,40 @@
 }
 .illustration-box {
 	width:100%;
-	background:rgba(0,0,0,0.6);
-	overflow:auto;	
-	-ms-overflow-style:none;
-  	scrollbar-width:none; 
 }
 
 
 
 /* CONTACT US SECTION */
-section#contact-us{
+section#contact-us, section#reach-us{
 	padding:4% 2%;
 }
-#contact-us .map-holder {
-	background-repeat:no-repeat;
-	background-size:cover;
-	width:100%;
-	height:auto;
+.contact-us-box {
+	border:2px dashed #160C28;
 }
-@media screen and (min-width:534px) {
-	#contact-us .map-holder {
-		padding:6%;
-		/*background-image:url("../images/map-view-2.png");*/
-		background:rgba(0,0,0,0.05);
+@media screen and (min-width:680px) {
+	.contact-us-box {
+		width:50%;
 	}
-	.contact-us-content .right-content {
-		background:#FFF;
+	.reach-us-box {
+		width:70%;
 	}
 }
-@media screen and (max-width:534px) {
-	#contact-us .map-holder {
-		padding:0;
-		background-image:none;
+@media screen and (max-width:680px) and (min-width:480px) {
+	.contact-us-box {
+		width:70%;
 	}
-	.contact-us-content .right-content {
-		/*background:#FAEBD770;*/
-		background:rgba(0,0,0,0.03);
-		border:0.1px solid #AEB7B3;
+	.reach-us-box {
+		width:80%;
 	}
 }
-.contact-us-content .left-content {
-	background-image:url("../images/black-texture-1.jpg");
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-.contact-us-content .link {
-	color:#EFCB68;
-	transition:0.3s;
-}
-.contact-us-content .link:hover {
-	color:#AEB7B3;
-	text-decoration:none;
+@media screen and (max-width:480px) {
+	.contact-us-box {
+		width:90%;
+	}
+	.reach-us-box {
+		width:100%;
+	}
 }
 .message-form-box .input-s-2:focus, .textarea-s-1:focus {
 	color:#160C28;
@@ -64,4 +47,17 @@ section#contact-us{
 }
 .message-form-box .input-s-2.filled, .textarea-s-1.filled {
 	border-color:#160C28;
+}
+.reach-us-content .left-content {
+	background-image:url("../images/black-texture-1.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.reach-us-content .link {
+	color:#EFCB68;
+	transition:0.3s;
+}
+.reach-us-content .link:hover {
+	color:#AEB7B3;
+	text-decoration:none;
 }

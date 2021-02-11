@@ -1,9 +1,15 @@
 
 
-/*Specific for this page*/
-.navigation-bg-init {
-  background:rgba(0, 0, 0, 1);
+/* ILLUSTRATION */
+#illustration {
+  background-image:url('../images/about-us-1.jpg');
 }
+.illustration-box {
+	width:100%;
+	background:rgba(0,0,0,0.4)
+}
+
+
 
 
 /* ABOUT US */

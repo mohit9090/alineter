@@ -87,7 +87,7 @@
     setTimeout(activate,100);
     function activate() {
       showPage();
-      setPageContentPos();
+      // setPageContentPos();
       scrollReveal();
     }
     function showPage() {
@@ -103,12 +103,12 @@
     }
   </script>
 
-  <script>
+  <!-- <script>
     /*In every Page except home page*/
     $(window).on("resize",function() {
       setPageContentPos()
     })
-  </script>
+  </script> -->
 
 
 </head>
@@ -194,7 +194,14 @@
     </section>
 
     <section id="page-content" class="position-relative">
+      
 
+      <!-- ILLUSTRATION SECTION-->
+      <section id="illustration" class="w-100 min scroll-reveal-content">
+        <div class="container-fluid illustration-box h-100 float-left reveal__opacity">
+        
+        </div>  
+      </section>
 
 
       <!-- ABOUT US -->

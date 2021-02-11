@@ -113,6 +113,12 @@ body {
   background-size:cover;
   background-position:center;
 }
+.illustration-box {
+	background:rgba(0,0,0,0.6);
+	overflow:auto;	
+	-ms-overflow-style:none;
+  	scrollbar-width:none; 
+}
 /* Small Illustration */
 @media screen and (min-width:530px) {
 	#illustration.min {
