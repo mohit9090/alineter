@@ -156,12 +156,12 @@ body {
 
 /*Overlay Effect*/
 #overlay-effect {
-	width:0%;
+	width:0;
 	height:100%;
 	position:fixed;
 	background:rgba(34, 24, 51,0.4);
 	z-index:3;
-	transition:width 0.4s;
+	transition:width 0.2s;
 }
 
 

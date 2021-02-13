@@ -246,6 +246,9 @@
         </div>
       </section>
 
+      <div class="container">
+        <hr>
+      </div>
 
 
       <!-- PRODUCTS QUICK VIEW SECTION -->
@@ -309,7 +312,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <div class="card q-product-card shadow" style="width:100%">
+                <div class="card q-product-card shadow">
                   <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail">
                 </div>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -324,54 +327,155 @@
       </section>
 
 
-
       <!-- TESTIMONIALS SECTION -->
       <section id="testimonial" class="w-100">
-        <div class="container-fluid">
-          <div class="container">
-            <h3 class="heading text-center"><span class="text-light">Customer <span class="text-warning">Reviews</span></h3>
-            <p class="small-title text-center text-light">Overall Rating : 4.5 ❤</p>
-            <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="carousel-caption color-purple">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s </p> 
-                    <img src="https://i.imgur.com/lE89Aey.jpg">
-                    <div id="image-caption color-purple">Nick Doe</div>
+        <div class="container-fluid testimonial-box scroll-reveal-content">
+          <div class="d-flex justify-content-start reveal__opacity">
+
+            <div class="mr-5">
+              <div class="position-relative cy text-center">
+                <div class="d-flex">
+                  <i class="fa fa-quote-left mr-4 reveal__from-left"></i>
+                  <div class="d-flex flex-column align-self-center">
+                    <h4 class="heading">Customer Reviews</h4>
+                    <div class="d-flex overall-rating">
+                      <i class="fa fa-star rating-icon lg"></i>
+                      <i class="fa fa-star rating-icon lg"></i>
+                      <i class="fa fa-star rating-icon lg"></i>
+                      <i class="fa fa-star rating-icon lg"></i>
+                      <i class="fa fa-star-half-o rating-icon lg"></i>
+                    </div>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <div class="carousel-caption color-purple">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> 
-                    <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid">
-                    <div id="image-caption color-purple">Cromption Greves</div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="carousel-caption color-purple">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p> 
-                    <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid">
-                    <div id="image-caption color-purple">Harry Mon</div>
-                  </div>
-                </div>
-              </div> 
-              <a class="carousel-control-prev btn" href="#testimonial-carousel" data-slide="prev">
-                <i class='fa fa-arrow-left color-purple'></i>
-              </a>
-              <a class="carousel-control-next btn " href="#testimonial-carousel" data-slide="next"> 
-                <i class='fa fa-arrow-right color-purple'></i>
-              </a>
+              </div>
             </div>
+
+            <div class="review-section first">
+              <div class="mr-2 review-box">
+                <div class="card review-card border-0">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-column">
+                        <small class="text-muted reviewer-name">Davis Henry</small>
+                        <div class="d-flex">
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star-o rating-icon sm"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid rounded-circle reviwer-img" width=50 height=50/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Vertical Seperator-->
+              <div class="mr-2" style="width:4px height:100%;border:0.7px solid #dc3545;border-radius:3px">
+              </div>
+
+              <div class="review-box">
+                <div class="card review-card border-0">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-column">
+                        <small class="text-muted reviewer-name">Harry Mon</small>
+                        <div class="d-flex">
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star-half-o rating-icon sm"></i>
+                          <i class="fa fa-star-o rating-icon sm"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="https://i.imgur.com/lE89Aey.jpg" class="img-fluid rounded-circle" width=50 height=50/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Horizontal Seperator-->
+            <!-- <div class="mr-2" style="width:4px height:100%;border:0.7px solid #dc3545;border-radius:3px">
+            </div> -->
+
+            <div class="review-section second">
+              <div class="mr-2 review-box">
+                <div class="card review-card border-0">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-column">
+                        <small class="text-muted reviewer-name">Caye Henry</small>
+                        <div class="d-flex">
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star-o rating-icon sm"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="https://i.imgur.com/QptVdsp.jpg" class="img-fluid rounded-circle" width=50 height=50/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content, Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!--Vertical Seperator-->
+              <div class="mr-2" style="width:4px height:100%;border:0.7px solid #dc3545;border-radius:3px">
+              </div>
+
+              <div class="review-box">
+                <div class="card review-card border-0">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-column">
+                        <small class="text-muted reviewer-name">Danis Joe</small>
+                        <div class="d-flex">
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star rating-icon sm"></i>
+                          <i class="fa fa-star-half-o rating-icon sm"></i>
+                          <i class="fa fa-star-o rating-icon sm"></i>
+                        </div>
+                      </div>
+                      <div>
+                        <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
+
       <br><br><br>
 
 
-
       <!-- NEWSLETTER SUBSCIBE SECTION -->
-      <section id="newsletter-subscribe-lg" class="w-100 newsletter-subscribe scroll-reveal-content">
+      <!-- <section id="newsletter-subscribe-lg" class="w-100 newsletter-subscribe scroll-reveal-content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-6 left-content reveal__scale-down">
@@ -406,7 +510,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- NEWSLETTER SUBSCIBE SECTION -->
       <section id="newsletter-subscribe-sm" class="w-100 newsletter-subscribe scroll-reveal-content">

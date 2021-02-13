@@ -16,6 +16,7 @@ section#contact-us, section#reach-us{
 }
 .contact-us-box {
 	border:2px dashed #160C28;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 @media screen and (min-width:680px) {
 	.contact-us-box {

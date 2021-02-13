@@ -84,7 +84,7 @@
   background-color:#050609;
   overflow-x:hidden;
   overflow-y:auto;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   padding:4% 1%;
 }
 #slide-navigation::-webkit-scrollbar {
