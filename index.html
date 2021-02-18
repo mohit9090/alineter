@@ -83,10 +83,11 @@
     // Loading Animation
     // Things to get activated while page loads
     
-    // $(window).on("load",function() {
-    //   activate();
-    // })
-    setTimeout(activate,200);
+    $(window).on("load",function() {
+      activate();
+    })
+
+    // setTimeout(activate,1000);
 
     function activate() {
       showPage();
