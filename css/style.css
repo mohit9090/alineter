@@ -114,39 +114,33 @@ body {
   background-position:center;
 }
 .illustration-box {
-	background:rgba(0,0,0,0.6);
+	background:rgba(0,0,0,0.6);/*Default value*/
 	overflow:auto;	
 	-ms-overflow-style:none;
   	scrollbar-width:none; 
 }
-/* Small Illustration */
+/* Small Illustration and Large Illustration */
+/* min->small, max->large */
 @media screen and (min-width:530px) {
 	#illustration.min {
 		height:60vh;
+	}
+	#illustration.max {
+		height:100vh;
 	}
 }
 @media screen and (max-width:530px) and (min-width:400px){
 	#illustration.min {
 		height:50vh;
 	}
-}
-@media screen and (max-width:400px){
-	#illustration.min {
-		height:40vh;
-	}
-}
-/* Large Illustration */
-@media screen and (min-width:530px) {
-	#illustration.max {
-		height:100vh;
-	}
-}
-@media screen and (max-width:530px) and (min-width:400px){
 	#illustration.max {
 		height:80vh;
 	}
 }
 @media screen and (max-width:400px){
+	#illustration.min {
+		height:40vh;
+	}
 	#illustration.max {
 		height:70vh;
 	}

@@ -6,7 +6,7 @@
 }
 .illustration-box {
 	width:100%;
-	background:rgba(0,0,0,0.4)
+	background:rgba(0,0,0,0.5)
 }
 
 
@@ -22,6 +22,21 @@ section#about-us, section#directors {
 .big-title, .medium-title, .small-title {
 	color:#F45C24;
 }
+@media screen and (min-width:1000px){
+	.about-us-box {
+		width:60%;
+	}
+}
+@media screen and (min-width:520px) and (max-width:1000px) {
+	.about-us-box {
+		width:70%;
+	}
+}
+@media screen and (max-width:520px) {
+	.about-us-box {
+		width:100%;
+	}
+}
 @media screen and (max-width:760px) {
 	.big-title {
 		font-size:3rem;
@@ -29,12 +44,11 @@ section#about-us, section#directors {
 }
 
 
+
 /* DIRECTORS */
 .profile-cards .profile-card {
 	width:22rem;
-} 
-.profile-cards .director-name {
-
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 0px;
 }
 .profile-cards .director-designation {
 	font-style:italic;
@@ -46,7 +60,7 @@ section#about-us, section#directors {
 
 
 /* SMALL DESCRIPTION SECTION */
-#small-description {
+/*#small-description {
 	padding:5.4% 4%;
 }
 #small-description .small-descp-text {
@@ -79,4 +93,4 @@ section#about-us, section#directors {
 .shop-btn:active {
 	background:#F45C2490;
 	transition:background 0.3s;
-}
+}*/
