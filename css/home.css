@@ -49,8 +49,10 @@
 }
 .usp-text {
 	font-family:calibri;
+	font-weight:700;
+	color:#A1A7AD90;
 }
-#usp .usp-text, .icon {
+#usp, .icon {
 	color:#dddddd;
 }
 #usp .icon:hover {
@@ -67,7 +69,7 @@
 		font-size:2.5vw;
 	}
 	.usp-text {
-		font-size:1.2vw;
+		font-size:1.3vw;
 	}
 }
 @media screen and (max-width:638px) {
@@ -81,7 +83,7 @@
 		font-size:4vw;
 	}
 	.usp-text {
-		font-size:2.3vw;
+		font-size:3vw;
 	}
 }
 

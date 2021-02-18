@@ -15,6 +15,7 @@ section#contact-us, section#reach-us{
 	padding:4% 2%;
 }
 .contact-us-box {
+	background:#E1EFE640;
 	border:2px dashed #160C28;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
