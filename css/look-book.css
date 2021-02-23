@@ -1,0 +1,75 @@
+
+
+/* ILLUSTRATION */
+#illustration {
+  background-image:url('../images/blog-illus.jpg');
+}
+.illustration-box {
+	width:100%;
+}
+
+
+/* BLOGS SECTION */
+#blogs {
+	padding:5% 1%;
+}
+.blog {
+	position:relative;
+	width:100%;
+	height:320px;
+	overflow:hidden;
+	border-radius:7px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.blog.bg-1 {
+	background:linear-gradient(to right,#ee0979,#ff6a00);/*orange*/
+}
+.blog.bg-2 {
+	background:linear-gradient(to right,#41295a,#2F0743);/*purple*/
+}
+.blog.bg-3 {
+	background:linear-gradient(to right,#00c3ff,#ffff1c);/*light green*/
+}
+.blog.bg-4 {
+	background:linear-gradient(to right,#ff7e5f,#feb47b);/*light orange*/
+}
+.blog-overlay {
+	position:absolute;
+	width:100%;
+	height:100%;
+	bottom:-81.56%;
+	background-color:rgba(0,0,0,0.8);
+	transition:bottom 0.5s ease;
+}
+.blog.enable-hover:hover .blog-overlay {
+	transition-delay:0.5s;
+	bottom:0;
+}
+.blog-image > img {
+	width:100%;
+	height:100%;
+}
+.blog-top, .blog-bottom {
+	padding:3%;
+	position:absolute;
+	left:0;
+}
+.blog-title > h5 {
+	line-height:1.7;
+}
+.blog-top {
+	top:0;
+}
+.blog-bottom {
+	bottom:0;
+}
+
+
+/*
+Transition
+#ee0979->#ff6a00 orange
+#41295a->#2F0743 purple
+#00c3ff->#ffff1c green
+#ff7e5f->#feb47b light orange
+
+*/

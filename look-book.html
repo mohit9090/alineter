@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Look Book | Alineter</title>
+
+  <meta link-colorarset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000411">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="images/alineter-b.png">
+
+  <!-- SCROLL REVEAL LINK -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  <!-- FONT AWESOME LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- EXTERNAL CSS LINKS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/input-styles.css">
+  <link rel="stylesheet" href="css/look-book.css">
+
+  <style type="text/css">
+
+    /* Loading Animation */
+
+    .loading-img {
+      animation-name:animate;
+      animation-duration: 0.8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out; 
+    }
+
+    @keyframes animate {
+      0% {
+        opacity:1;
+      }
+      50% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    section#body {
+      display:none;
+      -webkit-animation-name: increaseOpacity;
+      -webkit-animation-duration:1.3s;
+      animation-name: increaseOpacity;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+    }
+
+    @-webkit-keyframes increaseOpacity {
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+    @keyframes increaseOpacity { 
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+
+  </style>
+
+  <script>
+    // Loading Animation
+    // Things to get activated while page loads
+    setTimeout(activate,10);
+    function activate() {
+      showPage();
+      // setPageContentPos();
+      scrollReveal();
+    }
+    function showPage() {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("body").style.display = "block";
+    }
+    function setPageContentPos() {
+      /* Set the Top Position of #page-content on load */
+      $(function(){
+          let navHeight = document.getElementById("navigation").offsetHeight;
+          page_content.style.top = navHeight+"px";
+      });
+    }
+  </script>
+
+<!--   <script>
+    /*In every Page except home page*/
+    $(window).on("resize",function() {
+      setPageContentPos()
+    })
+  </script> -->
+
+
+
+</head>
+
+<body>
+
+  <section id="loading">
+    <div class="position-static" id="loading-animation">
+      <div class="position-absolute cxy">
+        <div>
+          <img src="images/alineter-b.png" class="img-fluid loading-img" width=90 height=90 alt="alineter logo">
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <section id="body">    
+
+    <!-- NAVIGATION BAR SECTION -->
+    <section id="navigation" class="navigation-bg-init scroll-reveal-content">
+      <div class="container-fluid navigation-bar">
+        <div class="d-flex justify-content-between ml-1 mr-1">
+
+          <div class="nav-left">
+            <div class="d-flex">
+              <div class="nav-left-main">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="store.html" class="nav-link">Store</a>
+                <a href="look-book.html" class="nav-link active">Look Book</a>
+              </div>
+              <div class="nav-left-comp">
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav-right">
+            <div class="d-flex">
+              <div class="nav-right-comp">
+                <a href="#login" class="nav-link">Log In</a>
+              </div>
+              <div class="nav-right-main">
+                <button type="button" class="btn slide-navigation-btn ripple-bg" onclick="opennav()">
+                  <div class="d-flex flex-column">
+                    <img src="images/alineter-w.png" class="nav-alineter-logo" id="nav-brand-logo" width=35 height=35 alt="alineter logo"/>
+                    <i class="fa fa-ellipsis-h nav-slide-icon"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="overlay-effect" onclick="closenav()">
+    </section>
+
+    <!-- SLIDE NAVIGATION SECTION -->
+    <section id="slide-navigation">
+      <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
+        <div class="d-flex flex-column align-items-left">
+          <div class="d-flex justify-content-between">
+            <h4 class="text-left text-light medium-title">Alineter</h4>
+            <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title ripple-bg" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
+          </div>
+          <a href="index.html" class="nav-link ripple-bg">Home</a>
+          <a href="store.html" class="nav-link ripple-bg">Store</a>
+          <a href="look-book.html" class="nav-link ripple-bg active">Look Book</a>
+          <a href="about.html" class="nav-link ripple-bg">About Us</a>
+          <a href="contact.html" class="nav-link ripple-bg">Contact Us</a>
+          <a href="faq.html" class="nav-link ripple-bg">FAQ</a>
+          <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
+          <a href="#look-book" class="nav-link ripple-bg">Terms of Use</a>
+          <a href="#about-us" class="nav-link ripple-bg">Privacy Policy</a>
+          <a href="#home" class="nav-link ripple-bg">Log In</a>
+          <a href="#store" class="nav-link ripple-bg">Account</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-content" class="position-relative">
+
+
+      <!-- ILLUSTRATION SECTION-->
+      <section id="illustration" class="w-100 min scroll-reveal-content">
+        <div class="container-fluid illustration-box h-100 float-left reveal__opacity">
+        
+        </div>  
+      </section>
+
+
+
+      <!-- BLOGS SECTION -->
+      <section id="blogs" class="w-100 scroll-reveal-content">
+        <div class="container-fluid p-0">
+          <div class="blogs">
+            <div class="row">
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-1 reveal__opacity">
+                  <!--on mobile remove the class enable-hover-->
+                  <a href="#blog-2198" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/men-fashion-2.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-2 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/fashion-illustration.png" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimess</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-3 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/blog-img-1.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy in websites</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-4 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/blog-img-2.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-1 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/blog-img-3.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-1 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <!-- <img src="images/blog-img-4.jpg" class="img-fluid"/> -->
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummys</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-3 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <!-- <img src="images/" class="img-fluid"/> -->
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-2 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/blog-img-4.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-2 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <!-- <img src="images/blog-img-4.jpg" class="img-fluid"/> -->
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+                <div class="blog enable-hover bg-2 reveal__opacity">
+                  <a href="#blog-8518" class="stretched-link"></a>
+                  <div class="blog-image position-relative cy text-center">
+                    <img src="images/men-fashion-3.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="blog-overlay">
+                    <div class="blog-top">
+                      <div class="blog-title">
+                        <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                      </div>
+                    </div>
+                    <div class="blog-bottom">
+                      <div class="blog-short-text">
+                        <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
+                      </div>
+                      <div class="blog-author">
+                        <div class="d-flex justify-content-end">
+                          <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+
+      <!-- FOOTER -->
+      <!-- Button to Scroll Up -->
+      <div class="container text-center">
+        <div class="scroll-horizontal to-top">
+            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" onmouseenter="this.style.color='#FFC107'" onmouseleave="this.style.color='#fff'"><i class="fa fa-arrow-up"></i></button>
+        </div>
+      </div>
+
+      <script>
+        /* Slide the page back to top */
+        function slideUp() {
+          let windowHeight = $(window).height();
+          $("html,body").animate({scrollTop:-windowHeight},1000);
+        }
+      </script>
+
+      <section id="footer" class="w-100 bg-purple">
+        <footer class="text-white text-center text-lg-start pt-4">
+          <div class="container p-3 footer-content">
+            <div class="row">
+              <div class="col-lg-4 short-info text-left p-4">
+                <div class="d-flex short-info-head">
+                  <img src="images/alineter-w.png" alt="alineter logo" width=45 height=45 class="img-fluid alineter-logo"/>
+                  <h2 class="small-title align-self-end text-uppercase text-warning">Alineter</h2>
+                </div>
+                <div class="short-info-body">
+                  <small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</small>
+                </div>
+              </div>
+              <div class="col-lg-8 p-4 links__contact-us">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 text-left p-3 link-section">
+                    <h4 class="small-title text-warning">Quick Links</h4>
+                    <div class="d-flex justify-content-start mr-5">
+                      <div class="d-flex flex-column text-left links-left">
+                        <a href="#" class="link ripple-opacity-l">Customer Service</a>
+                        <a href="#" class="link ripple-opacity-l">Reviews</a>
+                        <a href="#" class="link ripple-opacity-l">Terms & Condition</a>
+                        <a href="#" class="link ripple-opacity-l">Privacy Policy</a>
+                        <a href="#" class="link ripple-opacity-l">Contribute</a>
+                      </div>
+                      <div class="d-flex flex-column text-left links-right ml-5">
+                        <a href="#" class="link ripple-opacity-l">Gallery</a>
+                        <a href="#" class="link ripple-opacity-l">Write About Us</a>
+                        <a href="#" class="link ripple-opacity-l">Services</a>
+                        <a href="#" class="link ripple-opacity-l">About Us</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 text-left p-3 contact-us">
+                    <div class="d-flex flex-column">
+                      <h4 class="small-title text-warning">Contact Us</h4>
+                      <p class="company-address">1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd, Bhubaneswar, Odisha 751003</p>
+                      <a class="link company-mail ripple-opacity-l" href="mailto:alineter@support.com">Mail : alineter@support.com</a>
+                      <a class="link company-tel ripple-opacity-l" href="tel:123456789">Telephone : 0674-222555</a>
+                      <div class="d-flex social-media-handle mt-2">
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-google"></i></a>
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="social-link small-title ripple-bg"><i class="fa fa-twitter"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            <small class="font-weight-bold">© 2020 Copyright:&nbsp;<a class="text-light" href="#alineter" onmouseenter="this.style.textDecoration='none'">alineter.com</a></small>
+          </div>
+        </footer>
+      </section>
+
+
+    </section><!--Page Content-->
+
+  </section><!--Body-->
+
+
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/slide-nav-toggle.js"></script>
+<script type="text/javascript" src="js/scroll-reveal.js"></script>
+
+
+</body>
+</html>
+
