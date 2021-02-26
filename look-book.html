@@ -211,13 +211,26 @@
           <div class="blogs">
             <div class="row">
 
-              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+              <!-- blog is trending when they cross 1k views -->
+
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4 mostViewed-blog">
                 <div class="blog enable-hover bg-1 reveal__opacity">
                   <!--on mobile remove the class enable-hover-->
                   <a href="#blog-2198" class="stretched-link"></a>
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/men-fashion-2.jpg" class="img-fluid"/>
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                  </div>
+
+                  <div class="mostViewedFlag w-100">
+                    <div class="p-2 float-right rounded">
+                      <i class="fa fa-flag-o text-warning"></i>
+                      <!-- <i class="fa fa-hand-peace-o text-warning"></i> -->
+                    </div>
+                  </div>
+
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -228,21 +241,45 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- John Doe</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>2.4K</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>785</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
+
 
               <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
                 <div class="blog enable-hover bg-2 reveal__opacity">
                   <a href="#blog-8518" class="stretched-link"></a>
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/fashion-illustration.png" class="img-fluid"/>
+                  </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimess</h5>
                   </div>
                   <div class="blog-overlay">
                     <div class="blog-top">
@@ -254,11 +291,30 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>24</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>0</strong> Like</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -270,6 +326,9 @@
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/blog-img-1.jpg" class="img-fluid"/>
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy in websites</h5>
+                  </div>
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -280,9 +339,27 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
+                        </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>0</strong> View</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>0</strong> Like</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
                         </div>
                       </div>
                     </div>
@@ -290,12 +367,23 @@
                 </div>
               </div>
 
-              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4 mostViewed-blog">
                 <div class="blog enable-hover bg-4 reveal__opacity">
                   <a href="#blog-8518" class="stretched-link"></a>
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/blog-img-2.jpg" class="img-fluid"/>
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum</h5>
+                  </div>
+
+                  <div class="mostViewedFlag w-100">
+                    <div class="p-2 float-right rounded">
+                      <i class="fa fa-flag-o text-warning"></i>
+                      <!-- <i class="fa fa-hand-peace-o text-warning"></i> -->
+                    </div>
+                  </div>
+
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -306,21 +394,44 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>1.8K</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>378</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
 
+
               <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
-                <div class="blog enable-hover bg-1 reveal__opacity">
+                <div class="blog enable-hover bg-4 reveal__opacity">
                   <a href="#blog-8518" class="stretched-link"></a>
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/blog-img-3.jpg" class="img-fluid"/>
+                  </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
                   </div>
                   <div class="blog-overlay">
                     <div class="blog-top">
@@ -332,11 +443,30 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>120</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>30</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -348,6 +478,9 @@
                   <div class="blog-image position-relative cy text-center">
                     <!-- <img src="images/blog-img-4.jpg" class="img-fluid"/> -->
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummys</h5>
+                  </div>
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -358,22 +491,52 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>120</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>30</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4 mostViewed-blog">
                 <div class="blog enable-hover bg-3 reveal__opacity">
                   <a href="#blog-8518" class="stretched-link"></a>
                   <div class="blog-image position-relative cy text-center">
                     <!-- <img src="images/" class="img-fluid"/> -->
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known</h5>
+                  </div>
+
+                  <div class="mostViewedFlag w-100">
+                    <div class="p-2 float-right rounded">
+                      <i class="fa fa-flag-o text-warning"></i>
+                      <!-- <i class="fa fa-hand-peace-o text-warning"></i> -->
+                    </div>
+                  </div>
+
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -384,11 +547,30 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>3.2K</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>30</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -400,6 +582,9 @@
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/blog-img-4.jpg" class="img-fluid"/>
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                  </div>
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -410,11 +595,30 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>120</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>30</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -426,6 +630,9 @@
                   <div class="blog-image position-relative cy text-center">
                     <!-- <img src="images/blog-img-4.jpg" class="img-fluid"/> -->
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text</h5>
+                  </div>
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -436,22 +643,52 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>120</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>30</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4">
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-5 pl-4 pr-4 mostViewed-blog">
                 <div class="blog enable-hover bg-2 reveal__opacity">
                   <a href="#blog-8518" class="stretched-link"></a>
                   <div class="blog-image position-relative cy text-center">
                     <img src="images/men-fashion-3.jpg" class="img-fluid"/>
                   </div>
+                  <div class="display-blog-title">
+                    <h5 class="text-light font-weight-bold">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in websites</h5>
+                  </div>
+
+                  <div class="mostViewedFlag w-100">
+                    <div class="p-2 float-right rounded">
+                      <i class="fa fa-flag-o text-warning"></i>
+                      <!-- <i class="fa fa-hand-peace-o text-warning"></i> -->
+                    </div>
+                  </div>
+
                   <div class="blog-overlay">
                     <div class="blog-top">
                       <div class="blog-title">
@@ -462,11 +699,30 @@
                       <div class="blog-short-text">
                         <p class="text-light lead">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in...</p>
                       </div>
-                      <div class="blog-author">
+                      <!-- <div class="blog-author">
                         <div class="d-flex justify-content-end">
                           <small class="font-italic color-grey">- Jenny Christiana</small>
                         </div>
+                      </div> -->
+
+                      <div class="blog-reward d-flex justify-content-between">
+                        <div class="d-flex blog-viewsLike">
+                          <div class="d-flex blog-views">
+                            <i class="fa fa-eye text-warning"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>4.5K</strong> Views</small>
+                          </div>&nbsp;&nbsp;
+                          <div class="d-flex blog-likes">
+                            <i class="fa fa-heart text-danger"></i>
+                            &nbsp;
+                            <small class="text-light font-italic"><strong>30</strong> Likes</small>
+                          </div>
+                        </div>
+                        <div class="d-flex blog-author">
+                          <small class="font-italic color-grey">- John Doe</small>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -476,8 +732,7 @@
             </div>
           </div>
         </div>
-      </section>
-      
+      </section> 
 
 
 

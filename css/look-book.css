@@ -9,6 +9,7 @@
 }
 
 
+
 /* BLOGS SECTION */
 #blogs {
 	padding:5% 1%;
@@ -16,33 +17,78 @@
 .blog {
 	position:relative;
 	width:100%;
-	height:320px;
 	overflow:hidden;
-	border-radius:7px;
+	border-radius:6px;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+@media screen and (min-height:450px) {
+	.blog {
+		height:320px;
+	}
+}
+@media screen and (max-width:450px) and (min-height:400px) {
+	.blog {
+		height:250px;
+	}
+}
+@media screen and (max-width:400px) {
+	.blog {
+		height:220px;
+	}
+}
 .blog.bg-1 {
-	background:linear-gradient(to right,#ee0979,#ff6a00);/*orange*/
+	background:linear-gradient(120deg,#ee0979 60%,#ff6a00 40%);/*orange*/
 }
 .blog.bg-2 {
-	background:linear-gradient(to right,#41295a,#2F0743);/*purple*/
+	background:linear-gradient(-120deg,#41295a 60%,#2F0743 40%);/*purple*/
 }
 .blog.bg-3 {
-	background:linear-gradient(to right,#00c3ff,#ffff1c);/*light green*/
+	background:linear-gradient(220deg,#00c3ff 80%,#ffff1c 20%);/*light green*/
 }
 .blog.bg-4 {
-	background:linear-gradient(to right,#ff7e5f,#feb47b);/*light orange*/
+	background:linear-gradient(320deg,#ff7e5f 50%,#feb47b 50%);/*light orange*/
+}
+.display-blog-title, .mostViewedFlag, .blog-overlay {
+	position:absolute;
+}
+.display-blog-title, .blog-overlay {
+	width:100%;
+	background:rgba(34, 24, 51,0.5);
+}
+.display-blog-title {
+	padding:3%;
+	bottom:0;
+	opacity:1;
+}
+.mostViewedFlag {
+	top:5px;
+	right:5px;
+	/*opacity:1;*/
+}
+.mostViewedFlag > div {
+	width:auto;
+	background:rgba(34, 24, 51,0.75);
 }
 .blog-overlay {
-	position:absolute;
-	width:100%;
 	height:100%;
-	bottom:-81.56%;
-	background-color:rgba(0,0,0,0.8);
-	transition:bottom 0.5s ease;
+	bottom:-100%;
+	background:rgba(34, 24, 51,0.8);
+}
+.display-blog-title, .mostViewedFlag, .blog-overlay {
+	transition:0.35s ease;	
+}
+.blog.enable-hover:hover .blog-overlay, .display-blog-title  {
+	transition-delay:0.5s;
+}
+.blog.enable-hover:hover .display-blog-title {
+	opacity:0;
+}
+.blog.enable-hover:hover .mostViewedFlag {
+	transition-delay:0.7s;
+	/*opacity:0;*/
+	right:calc(-32px + -5px);/*width of trending flag box + right position of block*/
 }
 .blog.enable-hover:hover .blog-overlay {
-	transition-delay:0.5s;
 	bottom:0;
 }
 .blog-image > img {
@@ -63,6 +109,7 @@
 .blog-bottom {
 	bottom:0;
 }
+
 
 
 /*

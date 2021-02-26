@@ -123,7 +123,7 @@ body {
 /* min->small, max->large */
 @media screen and (min-width:530px) {
 	#illustration.min {
-		height:60vh;
+		height:45vh;
 	}
 	#illustration.max {
 		height:100vh;
@@ -131,7 +131,7 @@ body {
 }
 @media screen and (max-width:530px) and (min-width:400px){
 	#illustration.min {
-		height:50vh;
+		height:40vh;
 	}
 	#illustration.max {
 		height:80vh;
@@ -139,7 +139,7 @@ body {
 }
 @media screen and (max-width:400px){
 	#illustration.min {
-		height:40vh;
+		height:30vh;
 	}
 	#illustration.max {
 		height:70vh;
