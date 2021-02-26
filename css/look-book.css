@@ -21,12 +21,17 @@
 	border-radius:6px;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-@media screen and (min-height:450px) {
+@media screen and (min-width:1400px) {
+	.blog {
+		height:500px;
+	}
+}
+@media screen and (max-width:1400px) and (min-width:1100px) {
 	.blog {
 		height:320px;
 	}
 }
-@media screen and (max-width:450px) and (min-height:400px) {
+@media screen and (max-width:1100px) and (min-width:400px) {
 	.blog {
 		height:250px;
 	}
