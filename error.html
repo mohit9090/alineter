@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Page not found 404 - Alineter</title>
+
+  <meta link-colorarset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000411">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="images/alineter-b.png">
+
+  <!-- SCROLL REVEAL LINK -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  <!-- FONT AWESOME LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- EXTERNAL CSS LINKS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/error.css">
+
+
+</head>
+
+<body>
+
+  <section id="body">    
+
+    <section id="page-content" class="position-relative">
+
+
+      <!-- ERROR SECTION -->
+      <section id="error-wrapper" class="w-100">
+        <div class="container-fluid">
+          <div class="error">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 error-catch">
+                <div class="d-flex flex-column cy position-relative">
+                  <h1 class="display-1 font-weight-bold text-light error-code">404</h1>
+                  <h1 class="display-4 color-orange">Oops!</h1>
+                  <br>
+                  <p class="color-grey error-text">You may have picked the wrong door because I haven't been able to lay my eye on the page you've been searching for.</p>
+                  <br>
+                  <a href="index.html" class="btn btn-success error-btn btn-lg">Take me Home</a>
+                </div>  
+              </div>
+              <div class="col-lg-6 col-md-6 error-graphics">
+                <div class="position-relative cy">
+                  <img src="images/robot.png" class=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </section>
+
+
+      <!--Copyright Section-->
+      <section class="copyright-wrapper">
+        <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            <small class="font-weight-bold">© <span id="copyright-year"></span> Copyright:&nbsp;<a class="text-light" href="index.html" onmouseenter="this.style.textDecoration='none'">alineter.com</a></small>
+        </div>
+        <script>
+          let year=new Date().getFullYear();document.getElementById("copyright-year").innerHTML=year;
+        </script>
+      </section>
+      
+
+
+
+    </section><!--Page Content-->
+
+  </section><!--Body-->
+
+
+</body>
+</html>
+

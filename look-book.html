@@ -83,7 +83,7 @@
   <script>
     // Loading Animation
     // Things to get activated while page loads
-    setTimeout(activate,10);
+    setTimeout(activate,250);
     function activate() {
       showPage();
       // setPageContentPos();
@@ -805,9 +805,14 @@
             </div>
           </div>
           <!-- Copyright -->
-          <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.3)">
-            <small class="font-weight-bold">© 2020 Copyright:&nbsp;<a class="text-light" href="#alineter" onmouseenter="this.style.textDecoration='none'">alineter.com</a></small>
-          </div>
+          <section class="copyright-wrapper">
+            <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+                <small class="font-weight-bold">© <span id="copyright-year"></span> Copyright:&nbsp;<a class="text-light" href="index.html" onmouseenter="this.style.textDecoration='none'">alineter.com</a></small>
+            </div>
+            <script>
+              let year=new Date().getFullYear();document.getElementById("copyright-year").innerHTML=year;
+            </script>
+          </section>
         </footer>
       </section>
 
