@@ -1,0 +1,154 @@
+
+#navigation .container-fluid {
+	padding:1%
+}
+
+/*SIGNUP SECTION*/
+#sign-up > .container-fluid {
+	padding:4% 1%;
+}
+.signup-wrapper {
+	height:auto;
+	padding:3% 2%;
+	border:1.4px solid #bbbbbb;
+	background-color:rgba(255,255,255,1);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	overflow:hidden;
+	position:relative;
+}
+@media screen and (min-width:850px) {
+	.signup-wrapper {
+		width:50%;
+	}
+}
+@media screen and (min-width:700px) and (max-width:850px) {
+	.signup-wrapper {
+		width:60%;
+	}
+}
+@media screen and (min-width:550px) and (max-width:700px) {
+	.signup-wrapper {
+		width:80%;
+	}
+}
+@media screen and (max-width:550px) {
+	.signup-wrapper {
+		width:100%;
+	}
+}
+.after-registration {
+	display:none;
+}
+.tab {
+	display:none;
+}
+/*Common for all Tabs*/
+.input-s-2 {
+	font-size:1.1rem;
+}
+.input-s-2:disabled, .input-s-2:disabled ~ div .toggle-pwd:not(.correct):not(.incorrect){
+	cursor:not-allowed;
+	color:#AEB7B3;
+	border-color:#AEB7B360;
+}
+.input-s-2:focus, .input-s-2:focus ~ div .toggle-pwd:not(.correct):not(.incorrect), .textarea-s-1:focus {
+	border-color:#160C2886;
+}
+.input-s-2:focus ~ div .toggle-pwd {
+	color:#160C2899;
+}
+/*Tab-2*/
+.input-s-2.password {
+	border-right:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0
+}
+.btn.toggle-pwd {
+	color:#AEB7B3;
+	border-width:2px 2px 2px 0;
+	border-style:solid;
+	border-color:#AEB7B3;
+	border-radius:3px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	transition:0.3s;
+	z-index:0;
+}
+.input-s-2.correct, .btn.toggle-pwd.correct, .textarea-s-1.correct {
+	background:rgba(140, 255, 218,0.1);	
+	border-color:rgba(140, 255, 218,1);
+}
+.input-s-2.incorrect, .btn.toggle-pwd.incorrect, .textarea-s-1.incorrect  {
+	background:rgba(236, 88, 88, 0.1);
+	border-color:rgba(236, 88, 88, 1);
+}
+.pwd-requirement.fulfilled::after {
+	font-family: "FontAwesome";
+   	content: "\f058";
+	margin-left:8px;
+	color:#000;
+	color:inherit;
+}
+.pwd-requirement.not-fulfilled::after {
+	font-family: "FontAwesome";
+	content:"\f05c";
+	margin-left:8px;
+	color:#000;
+	color:inherit;
+}
+.pwd-requirement.fulfilled {
+	color:#26e24f;
+}
+.pwd-requirement.not-fulfilled {
+	color:#ea4638;
+}
+/*Tab-3*/
+.textarea-s-1::placeholder {
+	color:#AEB7B360;
+}
+.textarea-s-1:focus::placeholder {
+	color:#AEB7B390;
+}
+.prevNextBtn {
+	border-radius:0;
+}
+.prevNextBtn:disabled {
+	cursor:not-allowed;
+}
+.prevNextBtn#prevBtn {
+	background:rgba(56, 82, 154, 0.8);
+	color:#fff
+}
+.prevNextBtn#prevBtn:hover {
+	background:rgba(56, 82, 154, 1);
+}
+.prevNextBtn#nextBtn {
+	background:rgba(144, 238, 144, 0.8);
+}
+.prevNextBtn#nextBtn:not(:disabled):hover{
+	background:rgba(144, 238, 144, 1);
+}
+.step {
+    display: inline-block;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;  
+	border-radius: 50%;
+	opacity: 0.35;
+	transition:0.3s;
+}
+.step.active {
+  opacity: 1;
+  transform:scale(1.4);
+}
+.step.finish-correct {
+  background-color:#4CAF50;
+}
+.step.finish-incorrect {
+	background-color:#ff4c68;
+}
+
+
+
