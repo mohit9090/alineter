@@ -421,15 +421,17 @@
           if(currentTab >= tab.length) {
             slideUp();
             toggleVisibility(afterRegistration, registrationForm);
-            var userInputFields = document.querySelectorAll("user-input");
+            var userInputFields = document.querySelectorAll(".user-input");
             var correctInputFields = document.querySelectorAll(".user-input.correct");
             if (userInputFields.length != correctInputFields.length) {
               setTimeout(function() {
                 toggleVisibility(registrationForm, afterRegistration);
                 reset();
-              },1000);
+              },500);
             } else {
-              document.getElementById("user-registration-form").submit();
+              setTimeout(function() {
+                registrationForm.submit();
+              }, 1000);
             }         
           }
 
