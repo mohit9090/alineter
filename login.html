@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-  <title>OTP Verification | Alineter</title>
+  <title>Login | Alineter</title>
 
   <meta link-colorarset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -209,32 +209,31 @@
       </style>
 
       
-      <!-- VERIFY OTP SECTION -->
+      <!-- LOGIN SECTION -->
       <section id="verify-otp" class="w-100">
         <div class="container wrapper">
           <div class="card mx-auto shadow verification-card" style="">
             <div class="card-header text-center border-0">
-              <img src="images/verification.png" class="img-fluid" width=130 height=130>
-              <p class="card-title lead">Enter the OTP sent to <strong>youremail@abc.com</strong></p>
+              <img src="images/login.png" class="img-fluid" width=130 height=130>
+              <h4 class="small-title">Login</h4>
             </div>
-            <div class="card-body mx-auto">
-              <form method="post" action=".">
-                <div class="form-group">
-                  <div class="d-flex flex-column">
-                    <input type="number" class="input-s-1 otp-input" name="otp" id="otp-input" required autocomplete="off" onkeypress="return !(this.value.length > 4)"><br>
-                    <small class="text-muted text-center">Dont receive the OTP? <a href="#" class="card-link"><strong>Resend OTP</strong></a></small><br>
-                    <button type="button" class="btn verify-btn ripple-opacity-l">Verify</button>
+            <div class="card-body w-100 rounded" style="border-top:3px solid #EFCB68;">
+              <div class="wrapper text-center mx-auto p-2">
+                <form method="post" action=".">
+                  <div class="form-group">
+                    <input type="text" class="input-s-1 w-100 email-input" name="otp" id="otp-input" required autocomplete="off" spellcheck="false" placeholder="Email or Mobile number" style="padding:1%">
+                  </div><br>
+                  <div class="form-group">
+                    <input type="password" class="input-s-1 w-100 pwd-input" name="otp" id="otp-input" required autocomplete="off" placeholder="Password" style="padding:1%">
                   </div>
-                </div>
-              </form>
-            </div>
-            <div class="card-footer text-center border-0">
-              <hr>
-              <div class="d-flex justify-content-center mt-4">
-                <p class="mr-4"><mark><b>For Trial*</b></mark></p>
-                <a href="set-profile-pic.html" class="btn btn-success mr-2">Verification Success</a>
-                <a href="#message-modal" data-toggle="modal" class="btn btn-danger ml-2">Verification Failure</a>
+                  <div class="form-group">
+                    <button type="submit" class="btn verify-btn float-right w-50">Login</button>
+                  </div>
+                </form>
               </div>
+            </div>
+            <div class="card-footer">
+              <small class="float-right"><a href="signup.html" class="card-link" style="letter-spacing:1.1px">Don't have an account?&nbsp;No Worries</a></small>
             </div>
           </div>
         </div>
