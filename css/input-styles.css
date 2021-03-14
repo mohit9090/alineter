@@ -42,19 +42,19 @@ input[type=number] {
 
 /* Input Style #2 */
 .input-s-2 {
-	border-width:2px;
+	border-width:0.5px;
 	border-radius:3px;
 }
 .input-s-2:focus, .textarea-s-1:focus {
 	outline:none;
-	border-width:2px; 
+	border-width:0.5px; 
 	border-style:solid;
 }
 
 
 /* Textarea Style #1 */
 .textarea-s-1 {
-	border-width:2px;
+	border-width:0.5px;
 	border-radius:3px;
 }
 
