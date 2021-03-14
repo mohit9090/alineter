@@ -146,7 +146,7 @@
               </div>
               <div class="nav-left-comp">
                 <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link active">Contact Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
               </div>
             </div>
@@ -186,7 +186,7 @@
           <a href="index.html" class="nav-link ripple-bg">Home</a>
           <a href="store.html" class="nav-link ripple-bg">Store</a>
           <a href="look-book.html" class="nav-link ripple-bg">Look Book</a>
-          <a href="about.html" class="nav-link active ripple-bg">About Us</a>
+          <a href="about.html" class="nav-link ripple-bg">About Us</a>
           <a href="contact.html" class="nav-link ripple-bg">Contact Us</a>
           <a href="faq.html" class="nav-link ripple-bg">FAQ</a>
           <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
@@ -261,7 +261,7 @@
                   <label for="user-password" class="font-weight-bold">Password</label>
                   <div class="d-flex">
                     <input type="password" class="input-s-2 w-100 user-input signup-input password user-input--tab1" name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3, 1)" data-tab="1">
-                    <div class="input-group-append">
+                    <div class="input-group-append" style="z-index:0">
                       <button type="button" class="btn toggle-pwd" id="toggleUserPwd" onclick="togglePwd(this, 'user-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
                   </div>
@@ -283,7 +283,7 @@
                   <label for="user-password" class="font-weight-bold">Recheck Password</label>
                   <div class="d-flex">
                     <input type="password" class="input-s-2 w-100 user-input signup-input password user-input--tab1" name="recheck-password" id="recheck-password" placeholder="Recheck Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
-                    <div class="input-group-append">
+                    <div class="input-group-append" style="z-index:0">
                       <button type="button" class="btn toggle-pwd" id="toggleRecheckPwd" onclick="togglePwd(this, 'recheck-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
                   </div>
@@ -302,21 +302,21 @@
                   <small class="help-text"></small>
                 </div>
 
-                <div class="d-flex mb-3 w-100">
-                  <div class="d-flex flex-column input-wrapper w-50 mr-2">
+                <div class="d-flex mb-3 w-100 justify-content-between">
+                  <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
                     <label for="user-city" class="font-weight-bold">City</label>
                     <input type="text" class="input-s-2 user-input signup-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
                     <small class="help-text"></small>
                   </div>
-                  <div class="d-flex flex-column input-wrapper w-50 ml-2">
+                  <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
                     <label for="user-pincode" class="font-weight-bold">Pincode</label>
                     <input type="text" class="input-s-2 user-input signup-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
                     <small class="help-text"></small>
                   </div>
                 </div>
 
-                <div class="d-flex mb-3 w-100">
-                  <div class="d-flex flex-column input-wrapper w-50 mr-2">
+                <div class="d-flex mb-3 w-100 justify-content-between">
+                  <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
                     <label for="user-state" class="font-weight-bold">State</label>
                     <select class="input-s-2 w-100 correct user-input signup-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
                       <option value="Odisha">Odisha</option>
@@ -326,7 +326,7 @@
                     </select>
                     <small class="help-text text-primary">Available States</small>
                   </div>
-                  <div class="d-flex flex-column input-wrapper w-50 ml-2">
+                  <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
                     <label for="user-country" class="font-weight-bold">Country</label>
                     <input type="text" class="input-s-2 user-input signup-input correct text-capitalize user-input--tab2" id="user-country" name="user-country" value="India" disabled>
                     <small class="help-text text-primary">We deliver only in India</small>
@@ -369,7 +369,7 @@
         const registrationForm = document.getElementById("user-registration-form");
         const afterRegistration = document.getElementById("after-registration");
 
-        var currentTab = 0; //default tab
+        var currentTab = 1; //default tab
 
         showTab(currentTab);
         sortStates();
@@ -407,6 +407,9 @@
           let tab = document.getElementsByClassName("tab");
           tab[currentTab].style.display = "none";
 
+          //Slide window to registrationForm on clicking nextPrev button 
+          document.getElementsByClassName('auth-wrapper')[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+
           //Evaluate Steps
           checkSteps(currentTab);
 
@@ -416,16 +419,17 @@
           /* if currentTab is more than number of tabs
           then submit the form */
           if(currentTab >= tab.length) {
-            slideUp();
             toggleVisibility(afterRegistration, registrationForm);
             var userInputFields = document.querySelectorAll(".user-input");
             var correctInputFields = document.querySelectorAll(".user-input.correct");
             if (userInputFields.length != correctInputFields.length) {
+              //some fields are still invalid
               setTimeout(function() {
                 toggleVisibility(registrationForm, afterRegistration);
                 reset();
               },800);
             } else {
+              //form is valid
               setTimeout(function() {
                 registrationForm.submit();
               }, 1000);
@@ -632,15 +636,14 @@
       <!-- Button to Scroll Up -->
       <div class="container text-center">
         <div class="scroll-horizontal to-top">
-            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" onmouseenter="this.style.color='#FFC107'" onmouseleave="this.style.color='#fff'"><i class="fa fa-arrow-up"></i></button>
+            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp(-$(window).height())" onmouseenter="this.style.color='#FFC107'" onmouseleave="this.style.color='#fff'"><i class="fa fa-arrow-up"></i></button>
         </div>
       </div>
 
       <script>
-        /* Slide the page back to top */
-        function slideUp() {
-          let windowHeight = $(window).height();
-          $("html,body").animate({scrollTop:-windowHeight},1000);
+        /* Slide the page back to specified position */
+        function slideUp(scrollUpto) {
+          $("html,body").animate({scrollTop:scrollUpto},500);
         }
       </script>
 

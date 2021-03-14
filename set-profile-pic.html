@@ -83,7 +83,7 @@
   <script>
     // Loading Animation
     // Things to get activated while page loads
-    setTimeout(activate,10);
+    setTimeout(activate,100);
     function activate() {
       showPage();
       setPageContentPos();
@@ -148,7 +148,7 @@
               </div>
               <div class="nav-left-comp">
                 <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link active">Contact Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
                 <a href="faq.html" class="nav-link">FAQ</a>
               </div>
             </div>
@@ -188,7 +188,7 @@
           <a href="index.html" class="nav-link ripple-bg">Home</a>
           <a href="store.html" class="nav-link ripple-bg">Store</a>
           <a href="look-book.html" class="nav-link ripple-bg">Look Book</a>
-          <a href="about.html" class="nav-link active ripple-bg">About Us</a>
+          <a href="about.html" class="nav-link ripple-bg">About Us</a>
           <a href="contact.html" class="nav-link ripple-bg">Contact Us</a>
           <a href="faq.html" class="nav-link ripple-bg">FAQ</a>
           <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
@@ -216,7 +216,7 @@
               </div>
             </div>
             <div class="card-body auth-wrapper mx-auto w-100">
-              <form method="get" action="set-profile-pic.html">
+              <form method="get" action="set-profile-pic.html" enctype="multipart/form-data">
                 <div class="d-flex">
                   <div class="custom-file d-flex mr-1">
                     <input type="file" class="custom-file-input" name="profile-img" id="profile-img" required onchange="return validateImage()">
@@ -237,7 +237,11 @@
 
       <script type="text/javascript">
 
-        function placeFilename(message) {
+        function placeFilename(message, fileExt) {
+          if(message.length > 15) {
+            let ext = fileExt
+            message = message.substr(0,12) + `<b>(${ext})</b>`;
+          }
           $(".custom-file-label").html(message);
         }
 
@@ -246,13 +250,14 @@
           const filePath = fileInput.value;
           const allowedExtension = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
           if(!allowedExtension.exec(filePath)) {
-            placeFilename("Invalid Format");
+            placeFilename("Invalid Format","");
             fileInput.value = "";
             return false;
           } else {
             //Preview Image
             var fileName = filePath.split("\\").pop();
-            placeFilename(fileName);
+            var fileExt = filePath.split(".")[1];
+            placeFilename(fileName, fileExt);
             if(fileInput.files && fileInput.files[0]) {
               var reader = new FileReader();
               reader.onload = function(e) {

@@ -86,6 +86,15 @@
 	display:none;
 }
 /*TAB-1, TAB-2, TAB-3*/
+.toggle-pwd {
+	border-width:0.4px 0.4px 0.4px 0;
+	border-style:solid;
+	border-color:#160C28;
+	border-radius:2px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	transition:0.3s;
+}
 .signup-input.correct, .toggle-pwd.correct {
 	background:rgba(140, 255, 218,0.1);	
 	border-color:rgba(140, 255, 218,1);
@@ -98,16 +107,6 @@
 	border-right:0;
 	border-top-right-radius:0;
 	border-bottom-right-radius:0
-}
-.btn.toggle-pwd {
-	border-width:0.4px 0.4px 0.4px 0;
-	border-style:solid;
-	border-color:#160C28;
-	border-radius:2px;
-	border-top-left-radius:0;
-	border-bottom-left-radius:0;
-	transition:0.3s;
-	z-index:0;
 }
 /*COMPONENTS*/
 /*step marker component*/
@@ -189,5 +188,5 @@
 	border-radius:50%;
 	border:0px solid #160C28;
 	overflow:hidden;
-	background:#F45C24;	
+	background:#EDEDED;	
 }
