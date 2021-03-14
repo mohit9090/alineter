@@ -58,3 +58,9 @@ input[type=number] {
 	border-radius:3px;
 }
 
+
+/*Change Background color in autofill textbox*/
+input:-webkit-autofill
+{
+ -webkit-box-shadow: 0 0 0 30px #F3FFFB inset !important;
+}
