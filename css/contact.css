@@ -15,7 +15,7 @@ section#contact-us, section#reach-us{
 	padding:4% 2%;
 }
 .contact-us-box {
-	background:#E1EFE640;
+	background:#FDFDFD;
 	border:2px dashed #160C28;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -43,12 +43,20 @@ section#contact-us, section#reach-us{
 		width:100%;
 	}
 }
-.message-form-box .input-s-2:focus, .textarea-s-1:focus {
-	color:#160C28;
-	border-color:#160C2886;
+.input-s-2, .textarea-s-1 {
+	border-color:#160C2890;
 }
-.message-form-box .input-s-2.filled, .textarea-s-1.filled {
+.input-s-2:focus, .textarea-s-1:focus {
+	color:#160C28;
 	border-color:#160C28;
+}
+.input-s-2.filled, .textarea-s-1.filled {
+	border-color:#160C28;
+	background:rgba(140, 255, 218,0.15);
+}
+.input-s-2.not-filled, .textarea-s-1.not-filled {
+	border-color:#160C28;
+	background:rgba(236, 88, 88, 0.1);
 }
 .reach-us-content .left-content {
 	background-image:url("../images/black-texture-1.jpg");
