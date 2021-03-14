@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/input-styles.css">
-  <link rel="stylesheet" href="css/verification.css">
+  <link rel="stylesheet" href="css/authenticate.css">
 
   <style type="text/css">
 
@@ -210,32 +210,32 @@
 
       
       <!-- VERIFY OTP SECTION -->
-      <section id="verify-otp" class="w-100">
-        <div class="container wrapper">
-          <div class="card mx-auto shadow verification-card" style="">
+      <section id="verify-otp" class="w-100 auth-section">
+        <div class="container auth-wrapper">
+          <div class="card auth-card border-0 mx-auto verification-card" style="">
             <div class="card-header text-center border-0">
               <img src="images/verification.png" class="img-fluid" width=130 height=130>
-              <p class="card-title lead">Enter the OTP sent to <strong>youremail@abc.com</strong></p>
+              <p class="card-title lead">Enter the OTP sent to <i><strong>youremail@abc.com</strong></i></p>
             </div>
-            <div class="card-body mx-auto">
+            <div class="card-body auth-wrapper mx-auto">
               <form method="post" action=".">
                 <div class="form-group">
                   <div class="d-flex flex-column">
-                    <input type="number" class="input-s-1 otp-input" name="otp" id="otp-input" required autocomplete="off" onkeypress="return !(this.value.length > 4)"><br>
+                    <input type="number" class="input-s-1 user-input otp-input" name="otp" id="otp-input" required autocomplete="off" onkeypress="return !(this.value.length > 4)"><br>
                     <small class="text-muted text-center">Dont receive the OTP? <a href="#" class="card-link"><strong>Resend OTP</strong></a></small><br>
-                    <button type="button" class="btn verify-btn ripple-opacity-l">Verify</button>
+                    <button type="button" class="btn auth-btn bg-inverse ripple-opacity-l">Verify</button>
                   </div>
                 </div>
               </form>
             </div>
-            <div class="card-footer text-center border-0">
+           <!--  <div class="card-footer text-center border-0">
               <hr>
               <div class="d-flex justify-content-center mt-4">
                 <p class="mr-4"><mark><b>For Trial*</b></mark></p>
                 <a href="set-profile-pic.html" class="btn btn-success mr-2">Verification Success</a>
                 <a href="#message-modal" data-toggle="modal" class="btn btn-danger ml-2">Verification Failure</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>

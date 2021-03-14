@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/input-styles.css">
-  <link rel="stylesheet" href="css/verification.css">
+  <link rel="stylesheet" href="css/authenticate.css">
 
   <style type="text/css">
 
@@ -204,18 +204,18 @@
 
       
       <!-- PROFILE PIC SECTION -->
-      <section id="profile-pic" class="w-100">
-        <div class="container wrapper">
-          <div class="card mx-auto shadow-sm border verification-card" style="">
+      <section id="profile-pic" class="w-100 auth-section">
+        <div class="container auth-wrapper">
+          <div class="card auth-card mx-auto border-0 verification-card" style="">
             <div class="card-header text-center border-0">
-              <h5 class="small-title">Change Profile Photo</h5>
+              <h3 class="page-title">Change Profile Photo</h3>
               <div class="pfImage shadow border-0 rounded pt-2 pb-2">
                 <div class="mx-auto">
                   <img src="images/avatar.png" class="img- position-relative cxy" id="display-pfImage" style="width:100px;height:100px;object-fit:cover;">
                 </div>
               </div>
             </div>
-            <div class="card-body mx-auto w-100">
+            <div class="card-body auth-wrapper mx-auto w-100">
               <form method="get" action="set-profile-pic.html">
                 <div class="d-flex">
                   <div class="custom-file d-flex mr-1">
@@ -223,7 +223,7 @@
                     <label class="custom-file-label" for="profile-img">No Image</label>
                   </div>
                   <div>
-                    <button type="submit" class="btn verify-btn">Done</button>
+                    <button type="submit" class="btn auth-btn bg-inverse">Done</button>
                   </div>
                 </div>
               </form>

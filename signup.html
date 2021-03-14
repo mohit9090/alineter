@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/navigation.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/input-styles.css">
-  <link rel="stylesheet" href="css/sign-up.css">
+  <link rel="stylesheet" href="css/authenticate.css">
 
   <style type="text/css">
 
@@ -202,9 +202,9 @@
 
 
       <!-- SIGNUP SECTION -->    
-      <section id="sign-up">
+      <section id="sign-up" class="w-100 auth-section">
         <div class="container-fluid w-100">
-          <div class="signup-wrapper mx-auto rounded">
+          <div class="auth-wrapper auth-card mx-auto border-0 rounded">
 
             <!-- After Registration --> 
             <div class="container text-center after-registration" id="after-registration">
@@ -215,27 +215,35 @@
 
             <form id="user-registration-form" action="verify-account.html" method="post">
 
-              <div class="mb-3">
-                <h2 style="font-family:Raleway" class="text-center">Registration</h2>
-              </div>
+              <div class="mb-3 d-flex flex-column justify-content-center">
+                <h2 class="text-center page-title">Registration</h2>
+                <!-- Circles which indicates the steps of the form: -->
+                <div >
+                  <div style="text-align:center">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                  </div>
+                </div>
+              </div><hr>
 
               <!-- Tab 1 -->
               <div class="tab form-group">
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-fName" class="font-weight-bold">First Name</label>
-                  <input type="text" class="input-s-2 w-100 user-input user-input--tab0" name="user-fName" id="user-fName" placeholder="Mohit" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
+                  <input type="text" class="input-s-2 w-100 user-input signup-input user-input--tab0" name="user-fName" id="user-fName" placeholder="Mohit" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-lName" class="font-weight-bold">Last Name</label>
-                  <input type="text" class="input-s-2 w-100 user-input user-input--tab0" name="user-lName" id="user-lName" placeholder="Kumar" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
+                  <input type="text" class="input-s-2 w-100 user-input signup-input user-input--tab0" name="user-lName" id="user-lName" placeholder="Kumar" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex flex-column input-wrapper">
                   <label for="user-mobileNum" class="font-weight-bold">Mobile Number</label>
-                  <input type="number" class="input-s-2 w-100 user-input user-input--tab0" name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1, 0)" data-tab="0">
+                  <input type="number" class="input-s-2 w-100 user-input signup-input user-input--tab0" name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1, 0)" data-tab="0">
                   <small class="help-text"></small>
                 </div>
               </div>
@@ -245,14 +253,14 @@
               <div class="tab form-group">
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-email" class="font-weight-bold">Email</label>
-                  <input type="email" class="input-s-2 w-100 user-input user-input--tab1" name="user-email" id="user-email" placeholder="mohit8756kumar@gmail.com" required spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 2, 1)" data-tab="1">
+                  <input type="email" class="input-s-2 w-100 user-input signup-input user-input--tab1" name="user-email" id="user-email" placeholder="mohit8756kumar@gmail.com" required spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 2, 1)" data-tab="1">
                   <small class="help-text"></small>
                 </div>
                 
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-password" class="font-weight-bold">Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 user-input password user-input--tab1" name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3, 1)" data-tab="1">
+                    <input type="password" class="input-s-2 w-100 user-input signup-input password user-input--tab1" name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3, 1)" data-tab="1">
                     <div class="input-group-append">
                       <button type="button" class="btn toggle-pwd" id="toggleUserPwd" onclick="togglePwd(this, 'user-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
@@ -274,7 +282,7 @@
                 <div class="d-flex flex-column input-wrapper">
                   <label for="user-password" class="font-weight-bold">Recheck Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 user-input password user-input--tab1" name="recheck-password" id="recheck-password" placeholder="Recheck Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
+                    <input type="password" class="input-s-2 w-100 user-input signup-input password user-input--tab1" name="recheck-password" id="recheck-password" placeholder="Recheck Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
                     <div class="input-group-append">
                       <button type="button" class="btn toggle-pwd" id="toggleRecheckPwd" onclick="togglePwd(this, 'recheck-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
@@ -290,19 +298,19 @@
 
                 <div class="d-flex flex-column input-wrapper mb-3">
                   <label for="user-street-address" class="font-weight-bold">Street Address</label>
-                  <textarea class="textarea-s-1 w-100 user-input user-input--tab2" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0, 2)"></textarea>
+                  <textarea class="textarea-s-1 w-100 user-input signup-input user-input--tab2" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0, 2)"></textarea>
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex mb-3 w-100">
                   <div class="d-flex flex-column input-wrapper w-50 mr-2">
                     <label for="user-city" class="font-weight-bold">City</label>
-                    <input type="text" class="input-s-2 user-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
+                    <input type="text" class="input-s-2 user-input signup-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
                     <small class="help-text"></small>
                   </div>
                   <div class="d-flex flex-column input-wrapper w-50 ml-2">
                     <label for="user-pincode" class="font-weight-bold">Pincode</label>
-                    <input type="text" class="input-s-2 user-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
+                    <input type="text" class="input-s-2 user-input signup-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
                     <small class="help-text"></small>
                   </div>
                 </div>
@@ -310,7 +318,7 @@
                 <div class="d-flex mb-3 w-100">
                   <div class="d-flex flex-column input-wrapper w-50 mr-2">
                     <label for="user-state" class="font-weight-bold">State</label>
-                    <select class="input-s-2 w-100 correct user-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
+                    <select class="input-s-2 w-100 correct user-input signup-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
                       <option value="Odisha">Odisha</option>
                       <option value="West Bengal">West Bengal</option>
                       <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -320,7 +328,7 @@
                   </div>
                   <div class="d-flex flex-column input-wrapper w-50 ml-2">
                     <label for="user-country" class="font-weight-bold">Country</label>
-                    <input type="text" class="input-s-2 user-input correct text-capitalize user-input--tab2" id="user-country" name="user-country" value="India" disabled>
+                    <input type="text" class="input-s-2 user-input signup-input correct text-capitalize user-input--tab2" id="user-country" name="user-country" value="India" disabled>
                     <small class="help-text text-primary">We deliver only in India</small>
                   </div>
                 </div>
@@ -339,24 +347,13 @@
               
               <div class="controller" id="controllers">
                 <div style="overflow:auto;">
-                  <div  style="float:right;">
-                    <button type="button" id="prevBtn" class="btn prevNextBtn mr-1 ripple-opacity-l" onclick="nextPrev(-1)">Previous</button>
-                    <button type="button" id="nextBtn" class="btn prevNextBtn ripple-opacity-l" onclick="nextPrev(1)">Next</button>
+                  <div style="float:right;">
+                    <button type="button" id="prevBtn" class="btn prevNextBtn auth-btn mr-1 ripple-opacity-l" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" class="btn prevNextBtn auth-btn ripple-opacity-l" onclick="nextPrev(1)">Next</button>
                   </div>
-                </div><br>
-                <!-- Circles which indicates the steps of the form: -->
-                <div class="d-flex justify-content-between">
-                  <div style="width:33%">
-
-                  </div>
-                  <div style="width:33%">
-                    <div style="text-align:center">
-                      <span class="step"></span>
-                      <span class="step"></span>
-                      <span class="step"></span>
-                    </div>
-                  </div>
-                  <div style="width:33%">
+                </div><hr>
+                <div class="d-flex justify-content-end">
+                  <div>
                     <small class="float-right"><a href="login.html" class="card-link">Already an User?</a></small>
                   </div>
                 </div>
@@ -427,7 +424,7 @@
               setTimeout(function() {
                 toggleVisibility(registrationForm, afterRegistration);
                 reset();
-              },500);
+              },800);
             } else {
               setTimeout(function() {
                 registrationForm.submit();

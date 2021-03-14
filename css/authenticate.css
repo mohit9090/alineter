@@ -1,0 +1,193 @@
+
+/*Authentication Section Padding*/
+.auth-section {
+	padding:5% 2%;
+}
+/*Responsive Wrapper*/
+@media screen and (min-width:850px) {
+	.auth-wrapper {
+		width:50%;
+	}
+}
+@media screen and (min-width:700px) and (max-width:850px) {
+	.auth-wrapper {
+		width:60%;
+	}
+}
+@media screen and (min-width:550px) and (max-width:700px) {
+	.auth-wrapper {
+		width:80%;
+	}
+}
+@media screen and (max-width:550px) {
+	.auth-wrapper {
+		width:100%;
+	}
+}
+
+/*GLOBAL CSS for Auth Section*/
+.auth-card {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#sign-up .auth-wrapper, 
+.verification-card .card-header, 
+.verification-card .card-footer {
+	background:#fff;
+}
+.page-title {
+	font-family:Raleway;
+}
+.auth-btn {
+	color:#f8f1f1;
+	border-radius:0;
+	border-width:0.5px;
+	border-style:solid;
+}
+.auth-btn:disabled {
+	cursor:not-allowed;
+}
+.auth-btn.bg-inverse {
+	border-color:#160C28;
+	color:#160C28;
+}
+.auth-btn.bg-inverse:hover {
+	background:#160C28;
+	color:#f8f1f1;
+}
+/*Input Fields*/ 
+.user-input {
+	font-size:1.1rem;
+	border-color:#160C28;
+	border-radius:2px;
+	padding:2%;
+	font-weight:lighter;
+	letter-spacing:1.1px;
+	word-spacing:1.8px;
+}
+.user-input.input-s-2,
+.user-input.textarea-s-1 {
+	border-width:0.4px;
+}
+.user-input:disabled,
+.signup-input.password:disabled ~ div .toggle-pwd:not(.correct):not(.incorrect){
+	cursor:not-allowed;
+	background:#160C2810;
+}
+
+
+
+/*Specific for SIGNUP SECTION*/
+#sign-up .auth-wrapper {
+	padding:3% 2%;
+	overflow:hidden;
+	position:relative;
+}
+.after-registration, .tab  {
+	display:none;
+}
+/*TAB-1, TAB-2, TAB-3*/
+.signup-input.correct, .toggle-pwd.correct {
+	background:rgba(140, 255, 218,0.1);	
+	border-color:rgba(140, 255, 218,1);
+}
+.signup-input.incorrect, .toggle-pwd.incorrect {
+	background:rgba(236, 88, 88, 0.1);
+	border-color:rgba(236, 88, 88, 1);
+}
+.signup-input.password {
+	border-right:0;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0
+}
+.btn.toggle-pwd {
+	border-width:0.4px 0.4px 0.4px 0;
+	border-style:solid;
+	border-color:#160C28;
+	border-radius:2px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	transition:0.3s;
+	z-index:0;
+}
+/*COMPONENTS*/
+/*step marker component*/
+.step {
+    display:inline-block;
+	height:10px;
+	width:10px;
+	margin:0 2px;
+	background-color:#19456B;
+	border:none;  
+	border-radius:50%;
+	opacity:0.35;
+	transition:0.3s;
+}
+.step.active {
+  opacity: 1;
+  transform:scale(1.4);
+}
+.step.finish-correct {
+  background-color:#16C79A;
+}
+.step.finish-incorrect {
+	background-color:#ff4c68;
+}
+/*password requirements component*/
+.pwd-requirement.fulfilled {
+	color:#16C79A;
+}
+.pwd-requirement.not-fulfilled {
+	color:#ea4638;
+}
+.pwd-requirement.fulfilled::after {
+	font-family: "FontAwesome";
+   	content: "\f058";
+	margin-left:8px;
+	color:inherit;
+}
+.pwd-requirement.not-fulfilled::after {
+	font-family: "FontAwesome";
+	content:"\f05c";
+	margin-left:8px;
+	color:inherit;
+}
+/*button component*/
+.prevNextBtn:hover {
+	opacity:0.84;
+	color:#f8f1f1;
+}
+#prevBtn {
+	border-color:#19456B;
+	background:#19456B;
+}
+#nextBtn {
+	border-color:#16C79A;
+	background:#16C79A;
+}
+
+/*Specific for SIGNIN SECTION*/
+
+
+/*Specific for VERIFICATION SECTION*/
+.otp-input {
+	font-size:1.6rem;
+	font-weight:bold;
+	letter-spacing:5px;
+	padding:1%;
+	opacity:0.5;
+}
+.otp-input:focus {
+	/*border-width:0 0 1.5px 0;*/
+	opacity:1;
+}
+
+
+/*Specific for PROFILEPIC SECTION*/
+.pfImage > div{
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	border:0px solid #160C28;
+	overflow:hidden;
+	background:#F45C24;	
+}

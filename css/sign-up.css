@@ -1,9 +1,8 @@
 
-#navigation .container-fluid {
+/*#navigation .container-fluid {
 	padding:1%
 }
 
-/*SIGNUP SECTION*/
 #sign-up > .container-fluid {
 	padding:4% 1%;
 }
@@ -41,29 +40,29 @@
 }
 .tab {
 	display:none;
-}
+}*/
 /*Common for all Tabs*/
-.input-s-2 {
+/*.input-s-2 {
 	font-size:1.1rem;
-}
-.input-s-2:disabled, .input-s-2:disabled ~ div .toggle-pwd:not(.correct):not(.incorrect){
+}*/
+/*.input-s-2:disabled, .input-s-2:disabled ~ div .toggle-pwd:not(.correct):not(.incorrect){
 	cursor:not-allowed;
 	color:#AEB7B3;
 	border-color:#AEB7B360;
-}
-.input-s-2:focus, .input-s-2:focus ~ div .toggle-pwd:not(.correct):not(.incorrect), .textarea-s-1:focus {
+}*/
+/*.input-s-2:focus, .input-s-2:focus ~ div .toggle-pwd:not(.correct):not(.incorrect), .textarea-s-1:focus {
 	border-color:#160C2886;
 }
 .input-s-2:focus ~ div .toggle-pwd {
 	color:#160C2899;
-}
+}*/
 /*Tab-2*/
-.input-s-2.password {
+/*.input-s-2.password {
 	border-right:0;
 	border-top-right-radius:0;
 	border-bottom-right-radius:0
-}
-.btn.toggle-pwd {
+}*/
+/*.btn.toggle-pwd {
 	color:#AEB7B3;
 	border-width:2px 2px 2px 0;
 	border-style:solid;
@@ -73,16 +72,16 @@
 	border-bottom-left-radius:0;
 	transition:0.3s;
 	z-index:0;
-}
-.input-s-2.correct, .btn.toggle-pwd.correct, .textarea-s-1.correct {
+}*/
+/*.input-s-2.correct, .btn.toggle-pwd.correct, .textarea-s-1.correct {
 	background:rgba(140, 255, 218,0.1);	
 	border-color:rgba(140, 255, 218,1);
 }
 .input-s-2.incorrect, .btn.toggle-pwd.incorrect, .textarea-s-1.incorrect  {
 	background:rgba(236, 88, 88, 0.1);
 	border-color:rgba(236, 88, 88, 1);
-}
-.pwd-requirement.fulfilled::after {
+}*/
+/*.pwd-requirement.fulfilled::after {
 	font-family: "FontAwesome";
    	content: "\f058";
 	margin-left:8px;
@@ -101,15 +100,16 @@
 }
 .pwd-requirement.not-fulfilled {
 	color:#ea4638;
-}
+}*/
 /*Tab-3*/
-.textarea-s-1::placeholder {
+/*.textarea-s-1::placeholder {
 	color:#AEB7B360;
 }
 .textarea-s-1:focus::placeholder {
 	color:#AEB7B390;
-}
-.prevNextBtn {
+}*/
+
+/*.prevNextBtn {
 	border-radius:0;
 }
 .prevNextBtn:disabled {
@@ -149,6 +149,6 @@
 .step.finish-incorrect {
 	background-color:#ff4c68;
 }
-
+*/
 
 
