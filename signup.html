@@ -369,7 +369,7 @@
         const registrationForm = document.getElementById("user-registration-form");
         const afterRegistration = document.getElementById("after-registration");
 
-        var currentTab = 1; //default tab
+        var currentTab = 0; //default tab
 
         showTab(currentTab);
         sortStates();
@@ -408,7 +408,7 @@
           tab[currentTab].style.display = "none";
 
           //Slide window to registrationForm on clicking nextPrev button 
-          document.getElementsByClassName('auth-wrapper')[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+          document.getElementsByClassName('auth-wrapper')[0].scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 
           //Evaluate Steps
           checkSteps(currentTab);
@@ -419,6 +419,7 @@
           /* if currentTab is more than number of tabs
           then submit the form */
           if(currentTab >= tab.length) {
+            slideUp(-$(window).height())
             toggleVisibility(afterRegistration, registrationForm);
             var userInputFields = document.querySelectorAll(".user-input");
             var correctInputFields = document.querySelectorAll(".user-input.correct");
