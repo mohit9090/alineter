@@ -2,13 +2,10 @@
 
 /* ILLUSTRATION */
 #illustration {
-  background-image:url('../images/men-fashion-6-lg.jpg');
+  background-image:url('../images/main-bg-img.webp');
 }
 .illustration-box::-webkit-scrollbar {
 	display:none;
-}
-.illustration-box {
-	background:rgba(0,0,0,0.6); 
 }
 @media screen and (min-width:650px) {
 	#illustration .illustration-box{

@@ -83,15 +83,15 @@
     // Loading Animation
     // Things to get activated while page loads
     
-    $(window).on("load",function() {
-      activate();
-    })
+    // $(window).on("load",function() {
+    //   activate();
+    // })
 
-    // setTimeout(activate,1000);
+    setTimeout(activate,100);
 
     function activate() {
       showPage();
-      // setPageContentPos();
+      setPageContentPos();
       scrollReveal();
     }
 
@@ -99,13 +99,21 @@
       document.getElementById("loading").style.display = "none";
       document.getElementById("body").style.display = "block";
     }
+
     function setPageContentPos() {
       /* Set the Top Position of #page-content on load */
       $(function(){
           let navHeight = document.getElementById("navigation").offsetHeight;
-          page_content.style.top = navHeight+"px";
+          document.getElementById("page-content").style.top = navHeight+"px";
       });
     }
+  </script>
+
+  <script>
+    /*In every Page except home page*/
+    $(window).on("resize",function() {
+      setPageContentPos()
+    })
   </script>
 
  
@@ -125,61 +133,56 @@
 
   <section id="body">
 
-    <!-- <section id="notification" class="w-100" style="position:sticky;top:0;left:0;z-index:999">
-      <div class="container-fluid w-100 p-0">
-        <div class="alert alert-info alert-dismissible fade show w-100 m-0 rounded-0" role="alert">
-          <div class="text-left pl-3">
-            <strong>Sale Sale!</strong> You should check out some branded shirt. <strong>Flat <mark>30& OFF</mark></strong>
+    <!-- NAVIGATION BAR SECTION -->   
+    <nav id="navigation" class="navbar fixed-top navigation-init">
+      <div class="nav-left">
+        <a href="index.html">
+          <div class="d-flex flex-column p-0 text-center">
+            <img src="images/alineter-b.png" id="brand-logo" width=50 height=50 alt="alineter logo"/>
+            <small class="logo-text">ALINETER</small>
           </div>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+        </a>
       </div>
-    </section> -->
-
-    <!-- NAVIGATION BAR SECTION -->
-    <section id="navigation" class="navigation-bg-init scroll-reveal-content">
-      <div class="container-fluid navigation-bar">
-        <div class="d-flex justify-content-between ml-1 mr-1">
-
-          <div class="nav-left">
-            <div class="d-flex">
-              <div class="nav-left-main">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="store.html" class="nav-link">Store</a>
-                <a href="look-book.html" class="nav-link">Look Book</a>
-              </div>
-              <div class="nav-left-comp">
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link">Contact Us</a>
-                <a href="faq.html" class="nav-link">FAQ</a>
-              </div>
+      <div class="nav-right ml-auto">
+        <ul class="d-flex my-auto" style="list-style:none">
+          <li class="nav-item show-on-lg item-1 my-auto">
+            <a href="store.html" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item show-on-lg item-2 my-auto">
+            <a href="look-book.html" class="nav-link">Look Book</a>
+          </li>
+          <li class="nav-item show-on-lg item-3 dropdown mr-2 my-auto">
+            <button class="nav-link dropdown-toggle btn" id="nav-about-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </button>
+            <div class="dropdown-menu shadow" aria-labelledby="nav-about-dropdown">
+              <a class="nav-link dropdown-item" href="about.html">About Us</a>
+              <a class="nav-link dropdown-item" href="contact.html">Contact Us</a>
+              <a class="nav-link dropdown-item" href="faq.html">FAQs</a>
+              <a class="nav-link dropdown-item" href="terms.html">Terms of Use</a>
+              <a class="nav-link dropdown-item" href="oerdering-term.html">Ordering Terms</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link dropdown-item dropdown-toggler" onclick="opennav()">More</a>
             </div>
-          </div>
-
-          <div class="nav-right">
-            <div class="d-flex">
-              <div class="nav-right-comp">
-                <a href="#login" class="nav-link">Log In</a>
-              </div>
-              <div class="nav-right-main">
-                <button type="button" class="btn slide-navigation-btn ripple-bg" onclick="opennav()">
-                  <div class="d-flex flex-column">
-                    <img src="images/alineter-w.png" class="nav-alineter-logo" id="nav-brand-logo" width=35 height=35 alt="alineter logo"/>
-                    <i class="fa fa-ellipsis-h nav-slide-icon"></i>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
+          </li>
+          <li class="nav-item mr-3 my-auto">
+            <a href="signup.html" class="btn btn-outline-richblack ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
+          </li>
+          <li class="nav-item show-on-sm ml-2 my-auto">
+            <button type="button" class="btn toggler-btn ripple-opacity-d" onclick="opennav()">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+            </button> 
+          </li>
+        </ul>
       </div>
-    </section>
+
+    </nav>
+
 
     <section id="overlay-effect" onclick="closenav()">
     </section>
+
 
     <!-- SLIDE NAVIGATION SECTION -->
     <section id="slide-navigation">
@@ -218,7 +221,7 @@
                 <h5 class="text-light text-capitalize lead font-weight-light">Ready for every moment</h5>
               </div>
               <div class="p-3 illustration-foot">
-                <a href="#store" class="btn btn-lg store-btn ripple-opacity-l">Store <i class="fa fa-angle-double-right ml-2"></i></a>
+                <a href="#store" class="btn store-btn ripple-opacity-l">Store <i class="fa fa-angle-double-right ml-2"></i></a>
               </div>
             </div>
           </div>

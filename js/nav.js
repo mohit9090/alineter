@@ -1,29 +1,23 @@
 
-const page_content = document.getElementById("page-content");
 const navigation = document.getElementById("navigation");
-const navBrand = document.getElementById("nav-brand-logo");
 
 /* Change BG of navbar on scrolling */
 $(function(){
   var scrollTop = $(window).scrollTop();
-  changeNavBg(scrollTop);
+  changeNavClass(scrollTop);
 }); 
 
 $(window).scroll(function(){
     var scrollTop = $(window).scrollTop();
-    changeNavBg(scrollTop);
+    changeNavClass(scrollTop);
 });
 
-function changeNavBg(st) {
-  // let navHeight = navigation.offsetHeight - 10;
-    if (st > 25) {
-      navigation.classList.remove("navigation-bg-init");
-      navigation.classList.add("navigation-bg-scroll");
-      // navBrand.setAttribute("src","images/alineter-b.png");
-    }
+
+function changeNavClass(st) {
+    if (st > 0) {
+      navigation.style.padding = "1.4% 1.2%";
+    } 
     else {
-      navigation.classList.remove("navigation-bg-scroll");
-      navigation.classList.add("navigation-bg-init");
-      // navBrand.setAttribute("src","images/alineter-w.png");
+      navigation.style.padding = "2.4% 5%";
     }
 }
