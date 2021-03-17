@@ -14,8 +14,8 @@ $(window).scroll(function(){
 
 
 function changeNavClass(st) {
-    if (st > 0) {
-      navigation.style.padding = "1.4% 1.2%";
+    if (st > 25) {
+      navigation.style.padding = "1.4%";
     } 
     else {
       navigation.style.padding = "2.4% 5%";

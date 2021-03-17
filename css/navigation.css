@@ -19,13 +19,11 @@
 	color:var(--main-primary);
 	font-weight:bold;
 	position:relative;
-	top:-10px;
-	font-size:0.55rem;
 	letter-spacing:1.2px;
 	transition:0.3s ease;
 }
 .navbar-brand:hover .logo-text {
-	color:var(--main-secondary);
+	color:var(--tertiary-orange);
 	text-decoration:none;
 }
 @media screen and (min-width:670px) {
@@ -56,20 +54,50 @@
 		display:none;
 	}
 }
+@media screen and (min-width:320px) {
+	.user-func,
+	#brand-logo {
+		display:block;
+	}
+	.logo-text {
+		top:-10px;
+		font-size:0.55rem;
+	}
+}
+@media screen and (max-width:320px) {
+	.user-func,
+	#brand-logo {
+		display:none;
+	}
+	.logo-text {
+		top:0;
+		font-size:0.7rem;
+	}
+}
 
 #navigation .nav-link {
 	color:var(--main-primary);
-	font-size:1.12rem;
-	font-weight:360;
+	font-size:1.1rem;
+	font-weight:365;
 	transition:0.3s ease-in-out;
 }
-#navigation .nav-link.dropdown-toggler {
+#navigation .nav-link.dropdown-item {
+	border:3px solid transparent;
+	font-size:0.85rem;
+}
+#navigation .nav-link.navbar-toggler {
 	color:var(--tertiary-blue);
 	cursor:pointer;
 }
+/*navlink when hovered*/
 #navigation .nav-link:hover {
 	background:rgba(1, 22, 39, 0.1);
 }
+#navigation .nav-link.dropdown-item:not(.navbar-toggler):hover {
+	/*all dropdown-link except navbar-toggler*/
+	border-color:transparent transparent transparent var(--tertiary-blue);
+}
+/*navlink when clicked*/
 #navigation .nav-link:active {
 	background:rgba(1, 22, 39, 0.2);
 	transition:background 0.3s;
@@ -119,6 +147,10 @@
 .toggler-btn:focus .bar-2 {
 	left:60%;       
 }
+/*Dropdown*/
+.dropdown:hover .dropdown-menu {
+	display:block;
+}
 
 
 
@@ -158,4 +190,3 @@
 	text-decoration:none;
 	opacity:1;
 }
-

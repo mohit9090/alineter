@@ -137,7 +137,7 @@
     <nav id="navigation" class="navbar fixed-top navigation-init">
       <div class="nav-left">
         <a href="index.html" class="navbar-brand">
-          <div class="d-flex flex-column p-0 text-center">
+          <div class="d-flex flex-column p-0 text-center align-items-center">
             <img src="images/alineter-b.png" id="brand-logo" width=50 height=50 alt="alineter logo"/>
             <small class="logo-text">ALINETER</small>
           </div>
@@ -145,36 +145,41 @@
       </div>
       <div class="nav-right ml-auto">
         <ul class="d-flex my-auto" style="list-style:none">
-          <li class="nav-item show-on-lg item-1 my-auto">
+          <li class="nav-item show-on-lg item-1 my-auto mr-1">
             <a href="store.html" class="nav-link">Store</a>
           </li>
-          <li class="nav-item show-on-lg item-2 my-auto">
+          <li class="nav-item show-on-lg item-2 my-auto mr-1">
             <a href="look-book.html" class="nav-link">Look Book</a>
           </li>
           <li class="nav-item show-on-lg item-3 dropdown mr-2 my-auto">
-            <button class="nav-link dropdown-toggle btn" id="nav-about-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              About
+            <button class="nav-link dropdown-toggler btn" id="about-section-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About&nbsp;<span class="fa fa-caret-down"></span>
             </button>
-            <div class="dropdown-menu shadow" aria-labelledby="nav-about-dropdown">
+            <div class="dropdown-menu shadow m-0" aria-labelledby="about-section-dropdown">
               <a class="nav-link dropdown-item" href="about.html">About Us</a>
               <a class="nav-link dropdown-item" href="contact.html">Contact Us</a>
               <a class="nav-link dropdown-item" href="faq.html">FAQs</a>
               <a class="nav-link dropdown-item" href="terms.html">Terms of Use</a>
               <a class="nav-link dropdown-item" href="oerdering-term.html">Ordering Terms</a>
               <div class="dropdown-divider"></div>
-              <a class="nav-link dropdown-item dropdown-toggler" onclick="opennav()">More</a>
+              <a class="nav-link dropdown-item navbar-toggler p-2 pl-3" onclick="opennav()">More</a>
             </div>
           </li>
-          <li class="nav-item mr-3 my-auto d-flex">
-            <a href="signup.html" class="btn btn-outline-richblack ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
-            <!-- <a href="" class="nav-link">
-              <span class="fa fa-user-circle-o"></span>
-            </a>
-            <a href="" class="nav-link">
-              <span class="fa fa-opencart text-blue">&nbsp;<span>0</span></span>
-            </a>
-          </li> -->
-          <li class="nav-item show-on-sm ml-2 my-auto">
+          <li class="nav-item mr-3 my-auto user-func">
+            <div class="d-flex">
+              <a href="signup.html" class="btn btn-outline-richblack ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
+
+              <!-- when user is logged in -->
+             <!--  <a href="" class="nav-link">
+                <span class="fa fa-user-circle-o" style="font-size:1.3rem"></span>
+              </a>
+
+              <a href="" class="nav-link">
+                <span class="fa fa-opencart text-blue">&nbsp;<span>0</span></span>
+              </a> -->
+            </div>
+          </li> 
+          <li class="nav-item show-on-sm my-auto">
             <button type="button" class="btn toggler-btn ripple-opacity-d" onclick="opennav()">
               <div class="bar bar-1"></div>
               <div class="bar bar-2"></div>
@@ -221,10 +226,10 @@
           <div class="position-relative cxy illustration-content">
             <div class="d-flex flex-column text-center">
               <div class="p-3 illustration-head">
-                <h2 class="text-mandarin text-uppercase font-weight-bold">Be Moment Ready</h2>
-              </div>
+                <h2 class="text-mandarin text-uppercase font-weight-bold">Be <span class="text-light">Moment</span> Ready</h2>
+              </div><br>
               <div class="p-3 illustration-foot">
-                <a href="store.html" class="btn store-btn ripple-opacity-l">Store <i class="fa fa-angle-double-right ml-2"></i></a>
+                <a href="store.html" class="btn store-btn ripple-opacity-l">Visit Store <i class="fa fa-angle-double-right ml-2"></i></a>
               </div>
             </div>
           </div>

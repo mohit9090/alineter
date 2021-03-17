@@ -30,9 +30,9 @@
 	}
 }
 .store-btn {
-	width:40%;
+	width:50%;
 	border-radius:100px;
-	padding:0.7rem 0;
+	padding:0.8rem 0;
 	font-size:1.12rem;
 	color:var(--tertiary-light);
 	background:var(--tertiary-orange);
