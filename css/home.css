@@ -7,6 +7,7 @@
 .illustration-box::-webkit-scrollbar {
 	display:none;
 }
+/*Responsive illustration Box*/
 @media screen and (min-width:650px) {
 	#illustration .illustration-box{
 		width:50%;
@@ -17,14 +18,30 @@
 		width:100%;
 	}
 }
+/*Responsive illustration head*/
+@media screen and (min-width:720px) {
+	.illustration-head h2 {
+		font-size:4.2rem;
+	}
+}
+@media screen and (max-width:720px) {
+	.illustration-head h2 {
+		font-size:3.5rem;
+	}
+}
 .store-btn {
-	color:#EFCB68;
-	border-radius:6px;
-	border:1.3px solid #EFCB68;
+	width:40%;
+	border-radius:100px;
+	padding:0.7rem 0;
+	font-size:1.12rem;
+	color:var(--tertiary-light);
+	background:var(--tertiary-orange);
+	border:1.3px solid var(--tertiary-orange);
 }
 .store-btn:hover {
-	color:#000411;
-	background:#EFCB68;
+	color:var(--tertiary-light);
+	border:1.3px solid var(--main-secondary);
+	background:var(--main-secondary);
 }
 
 

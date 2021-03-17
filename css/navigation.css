@@ -22,6 +22,11 @@
 	top:-10px;
 	font-size:0.55rem;
 	letter-spacing:1.2px;
+	transition:0.3s ease;
+}
+.navbar-brand:hover .logo-text {
+	color:var(--main-secondary);
+	text-decoration:none;
 }
 @media screen and (min-width:670px) {
 	.show-on-lg {
