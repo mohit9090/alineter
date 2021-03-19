@@ -270,7 +270,7 @@ body {
 	width:0;
 	height:100%;
 	position:fixed;
-	background:rgba(1, 22, 39, 0.5);
+	background:rgba(1, 22, 39, 0.75);
 	z-index:3;
 	transition:width 0.02s ease-in-out;
 }
