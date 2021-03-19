@@ -88,7 +88,7 @@
     
     function activate() {
       showPage();
-      // setPageContentPos();
+      setPageContentPos();
       scrollReveal();
     }
     function showPage() {
@@ -99,17 +99,17 @@
       /* Set the Top Position of #page-content on load */
       $(function(){
           let navHeight = document.getElementById("navigation").offsetHeight;
-          page_content.style.top = navHeight+"px";
+          document.getElementById("page-content").style.top = navHeight+"px";
       });
     }
   </script>
 
-  <!-- <script>
+  <script>
     /*In every Page except home page*/
     $(window).on("resize",function() {
       setPageContentPos()
     })
-  </script> -->
+  </script>
 
 
 </head>
@@ -128,68 +128,120 @@
 
   <section id="body">
 
-    <!-- NAVIGATION BAR SECTION -->
-    <section id="navigation" class="navigation-bg-init scroll-reveal-content">
-      <div class="container-fluid navigation-bar">
-        <div class="d-flex justify-content-between ml-1 mr-1">
-
-          <div class="nav-left">
-            <div class="d-flex">
-              <div class="nav-left-main">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="store.html" class="nav-link">Store</a>
-                <a href="look-book.html" class="nav-link">Look Book</a>
-              </div>
-              <div class="nav-left-comp">
-                <a href="about.html" class="nav-link active">About Us</a>
-                <a href="contact.html" class="nav-link">Contact Us</a>
-                <a href="faq.html" class="nav-link">FAQ</a>
-              </div>
-            </div>
+   <!--
+      ============ NAVIGATION BAR SECTION =============
+    -->   
+    <nav id="navigation" class="navbar fixed-top navigation-init">
+      <div class="nav-left">
+        <a href="index.html" class="navbar-brand">
+          <div class="d-flex flex-column p-0 text-center align-items-center">
+            <img src="images/alineter-b.png" id="brand-logo" width=50 height=50 alt="alineter logo"/>
+            <small class="logo-text">ALINETER</small>
           </div>
-
-          <div class="nav-right">
-            <div class="d-flex">
-              <div class="nav-right-comp">
-                <a href="#login" class="nav-link">Log In</a>
-              </div>
-              <div class="nav-right-main">
-                <button type="button" class="btn slide-navigation-btn ripple-bg" onclick="opennav()">
-                  <div class="d-flex flex-column">
-                    <img src="images/alineter-w.png" class="nav-alineter-logo" id="nav-brand-logo" width=35 height=35 alt="alineter logo"/>
-                    <i class="fa fa-ellipsis-h nav-slide-icon"></i>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        </a>
       </div>
-    </section>
+      <div class="nav-right ml-auto">
+        <ul class="d-flex my-auto" style="list-style:none">
+          <li class="nav-item show-on-lg item-1 my-auto mr-1">
+            <a href="store.html" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item show-on-lg item-2 my-auto mr-1">
+            <a href="look-book.html" class="nav-link">Look Book</a>
+          </li>
+          <li class="nav-item show-on-lg item-3 dropdown mr-2 my-auto">
+            <button class="nav-link dropdown-toggler btn" id="about-section-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About&nbsp;<span class="fa fa-caret-down"></span>
+            </button>
+            <div class="dropdown-menu shadow m-0" aria-labelledby="about-section-dropdown">
+              <a class="nav-link dropdown-item" href="about.html">About Us</a>
+              <a class="nav-link dropdown-item" href="contact.html">Contact Us</a>
+              <a class="nav-link dropdown-item" href="faq.html">FAQs</a>
+              <a class="nav-link dropdown-item" href="terms.html">Terms of Use</a>
+              <a class="nav-link dropdown-item" href="oerdering-term.html">Ordering Terms</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link dropdown-item navbar-toggler" onclick="opennav()"><span class="fa fa-ellipsis-v"></span>&nbsp;&nbsp;More</a>
+            </div>
+          </li>
+          <li class="nav-item mr-3 my-auto user-func">
+            <div class="d-flex">
+              <a href="signup.html" class="btn btn-outline-richblack ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
+
+              <!-- when user is logged in -->
+             <!--  <a href="" class="nav-link">
+                <span class="fa fa-user-circle-o" style="font-size:1.3rem"></span>
+              </a>
+
+              <a href="" class="nav-link">
+                <span class="fa fa-opencart text-mandarin">&nbsp;<span>0</span></span>
+              </a> -->
+            </div>
+          </li> 
+          <li class="nav-item show-on-sm my-auto">
+            <button type="button" class="btn toggler-btn ripple-opacity-d" onclick="opennav()">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+            </button> 
+          </li>
+        </ul>
+      </div>
+
+    </nav>
 
     <section id="overlay-effect" onclick="closenav()">
     </section>
 
-    <!-- SLIDE NAVIGATION SECTION -->
+    
+
+    <!--
+      ======== SLIDE NAVIGATION ==========
+    -->
     <section id="slide-navigation">
-      <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
-        <div class="d-flex flex-column align-items-left">
-          <div class="d-flex justify-content-between">
-            <h4 class="text-left text-light medium-title">Alineter</h4>
-            <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title ripple-bg" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
+      <div class="container-fluid w-100 h-100 position-relative">
+        <div class="slidenav-wrapper w-100">
+
+          <div class="user-section text-center sticky-top bg-richblack">
+
+            <div class="user-section-main">
+              <!--Nav Controller-->
+              <div class="nav-controller">
+                  <button onclick="closenav()" class="btn close-sidenav"><span class="fa fa-times"></span></button>
+              </div>
+
+              <div class="user-section-wrapper">
+                <div class="user-info d-flex">
+                  <div class="mr-3 my-auto pfimg-holder">
+                    <img src="./images/avatar.png" class="pfimg"/>
+                    <!-- <img src="./images/fashion-illustration.png" class="pfimg"/> -->
+                  </div>
+                  <div class="my-auto">
+                    <p class="lead text-cultured">Hey, User</p>
+                    <!-- <p class="lead text-cultured">Hey, Mohit</p> -->
+                  </div>
+                </div>
+                <div class="user-function">
+                  <div class="d-flex justify-content-between">
+                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-plus"></span>&nbsp;Create Account</a>
+                    <a href="#login" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+                    <!-- <a href="#my-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-user"></span>&nbsp;My Account</a>
+                    <a href="#logout" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Logout</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>        
+
+          <div class="site-links p-0 pb-5">
+            <a href="index.html" class="nav-link"><span class="fa fa-home"></span>&nbsp;&nbsp;Home</a>
+            <a href="store.html" class="nav-link"><span class="fa fa-shopping-bag"></span>&nbsp;&nbsp;Store</a>
+            <a href="look-book.html" class="nav-link"><span class="fa fa-picture-o"></span>&nbsp;&nbsp;Look Book</a>
+            <a href="about.html" class="nav-link"><span class="fa fa-address-card"></span>&nbsp;&nbsp;About Us</a>
+            <a href="contact.html" class="nav-link"><span class="fa fa-paper-plane"></span>&nbsp;&nbsp;Contact Us</a>
+            <a href="faq.html" class="nav-link"><span class="fa fa-question-circle"></span>&nbsp;&nbsp;FAQ</a>
+            <a href="#write-about-us" class="nav-link"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Write About Us</a>
+            <a href="#look-book" class="nav-link"><span class="fa fa-file"></span>&nbsp;&nbsp;Terms of Use</a>
+            <a href="#about-us" class="nav-link"><span class="fa fa-lock"></span>&nbsp;&nbsp;Privacy Policy</a>
           </div>
-          <a href="index.html" class="nav-link ripple-bg">Home</a>
-          <a href="store.html" class="nav-link ripple-bg">Store</a>
-          <a href="look-book.html" class="nav-link ripple-bg">Look Book</a>
-          <a href="about.html" class="nav-link active ripple-bg">About Us</a>
-          <a href="contact.html" class="nav-link ripple-bg">Contact Us</a>
-          <a href="faq.html" class="nav-link ripple-bg">FAQ</a>
-          <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
-          <a href="#look-book" class="nav-link ripple-bg">Terms of Use</a>
-          <a href="#about-us" class="nav-link ripple-bg">Privacy Policy</a>
-          <a href="#home" class="nav-link ripple-bg">Log In</a>
-          <a href="#store" class="nav-link ripple-bg">Account</a>
         </div>
       </div>
     </section>
@@ -198,10 +250,10 @@
       
 
       <!-- ILLUSTRATION SECTION-->
-      <section id="illustration" class="w-100 min scroll-reveal-content">
+      <!-- <section id="illustration" class="w-100 min scroll-reveal-content">
         <div class="container-fluid illustration-box h-100 float-left reveal__opacity">
         </div>  
-      </section>
+      </section> -->
 
 
       <!-- ABOUT US -->

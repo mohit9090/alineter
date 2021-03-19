@@ -75,37 +75,13 @@
 	}
 }
 
-#navigation .nav-link {
-	color:var(--main-primary);
-	font-size:1.1rem;
-	font-weight:365;
-	transition:0.3s ease-in-out;
+/* DROPDOWN */
+.dropdown:hover .dropdown-menu {
+	display:block;
 }
-#navigation .nav-link.dropdown-item {
-	border:3px solid transparent;
-	font-size:0.85rem;
-}
-#navigation .nav-link.navbar-toggler {
-	color:var(--tertiary-blue);
-	cursor:pointer;
-}
-/*navlink when hovered*/
-#navigation .nav-link:hover {
-	background:rgba(1, 22, 39, 0.1);
-}
-#navigation .nav-link.dropdown-item:not(.navbar-toggler):hover {
-	/*all dropdown-link except navbar-toggler*/
-	border-color:transparent transparent transparent var(--tertiary-blue);
-}
-/*navlink when clicked*/
-#navigation .nav-link:active {
-	background:rgba(1, 22, 39, 0.2);
-	transition:background 0.3s;
-}
-.slide-navigation-btn {
-  	transition: background 0.8s ease-in-out;
-}
-/*Navbar Toggler*/
+
+
+/* NAVBAR TOGGLER BUTTON */
 .toggler-btn {
   padding:1.3em;
   background:var(--tertiary-tiffany-blue);
@@ -147,27 +123,124 @@
 .toggler-btn:focus .bar-2 {
 	left:60%;       
 }
-/*Dropdown*/
-.dropdown:hover .dropdown-menu {
-	display:block;
+
+
+/* Navlinks CSS */
+#navigation .nav-link,
+.site-links .nav-link {
+	color:var(--main-primary);
+	font-size:1.1rem;
+	font-weight:365;
+	transition:0.3s ease-in-out;
+}
+#navigation .nav-link.dropdown-item,
+.site-links .nav-link {
+	border:3.5px solid transparent;
+	font-size:0.85rem;
+}
+.site-links .nav-link {
+	padding:0.9rem;
+	font-size:1.1rem;
+}
+#navigation .nav-link.navbar-toggler {
+	color:var(--tertiary-blue);
+	cursor:pointer;
+}
+
+/* Hovering Effects on Navlinks */
+#navigation .nav-link:hover,
+.site-links .nav-link:hover {
+	background:rgba(1, 22, 39, 0.1);
+}
+#navigation .nav-link.dropdown-item:not(.navbar-toggler):hover,
+.site-links .nav-link:hover {
+	/*
+		Hover effect on all dropdown-link except 
+		navbar-toggler inside dropdown content
+		Hover effect on site-links inside slide-navbar
+	*/
+	border-color:transparent transparent transparent var(--tertiary-blue);
+}
+#navigation .nav-link:active,
+.site-links .nav-link:active {
+	/* navlink when clicked */
+	background:rgba(1, 22, 39, 0.2);
+	transition:background 0.3s;
 }
 
 
 
 /* SLIDE NAVIGATION */
 #slide-navigation {
-  height:100vh;
-  width:auto;
+  height:100%;
+  min-width:285px;
   position:fixed;
   z-index:5;
   top:0;
   left:-100%;
-  background-color:#050609;
+  background-color:var(--tertiary-light);
   overflow-x:hidden;
   overflow-y:auto;
-  transition: 0.3s ease-in-out;
-  padding:4% 1%;
+  transition: 0.2s ease-in-out;
 }
+.slidenav-wrapper {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.slidenav-wrapper :is(.user-section) {
+	padding:0;
+}
+.user-section-main {
+	position:relative;
+}
+.user-section-main > .nav-controller {
+	position:absolute;
+	top:0;
+	right:0;
+}
+.nav-controller .close-sidenav {
+	color:var(--tertiary-light);
+	border-radius:50%;
+}
+.user-section-wrapper > .user-info {
+	padding:1.5rem 0.5rem;
+}
+.user-info .pfimg-holder {
+	width:45px;
+	height:45px;
+	border-radius:50%;
+	background:var(--main-secondary);
+}
+.pfimg-holder .pfimg {
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	object-fit:cover;
+}
+.user-function > div {
+	padding:0.6rem;
+	background:rgba(32, 164, 243, 0.1); 
+}
+/*user-function-link hover effects*/
+.user-function--link {
+	color:var(--tertiary-light);
+	opacity:0.8;
+	transition:0.3s ease;
+}
+.user-function--link:hover {
+	color:var(--tertiary-light);
+	opacity:1;
+	text-decoration:none;
+}
+/*set bg for fancy hover effect*/
+.user-function--link.fancy-effects.slide_line::after {
+	background:var(--tertiary-light);
+}
+
+
+/* ===== Hide Y-Axis Scrollbar ==== */
+/*
 #slide-navigation::-webkit-scrollbar {
     display:none;
 }
@@ -175,18 +248,5 @@
   -ms-overflow-style:none;
   scrollbar-width:none;  
 }
-#slide-nav .nav-link {
-	border-radius:5px;
-	color:#EFCB68;
-	transition:0.3s ease-in-out;
-}
-#slide-nav .nav-link:not(#slide-nav .nav-link.active) {
-	opacity:0.5;
-}
-#slide-nav .nav-link.active {
-	background:#E1EFE650;
-}
-#slide-nav .nav-link:hover:not(#slide-nav .nav-link.active) {
-	text-decoration:none;
-	opacity:1;
-}
+*/
+

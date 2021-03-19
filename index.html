@@ -133,7 +133,9 @@
 
   <section id="body">
 
-    <!-- NAVIGATION BAR SECTION -->   
+    <!-- 
+      ============ NAVIGATION BAR SECTION =========== 
+    -->   
     <nav id="navigation" class="navbar fixed-top navigation-init">
       <div class="nav-left">
         <a href="index.html" class="navbar-brand">
@@ -162,7 +164,7 @@
               <a class="nav-link dropdown-item" href="terms.html">Terms of Use</a>
               <a class="nav-link dropdown-item" href="oerdering-term.html">Ordering Terms</a>
               <div class="dropdown-divider"></div>
-              <a class="nav-link dropdown-item navbar-toggler p-2 pl-3" onclick="opennav()">More</a>
+              <a class="nav-link dropdown-item navbar-toggler p-2 pl-3" onclick="opennav()"><span class="fa fa-ellipsis-v"></span>&nbsp;&nbsp;More</a>
             </div>
           </li>
           <li class="nav-item mr-3 my-auto user-func">
@@ -170,13 +172,13 @@
               <a href="signup.html" class="btn btn-outline-richblack ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
 
               <!-- when user is logged in -->
-             <!--  <a href="" class="nav-link">
+              <!-- <a href="" class="nav-link">
                 <span class="fa fa-user-circle-o" style="font-size:1.3rem"></span>
               </a>
 
               <a href="" class="nav-link">
-                <span class="fa fa-opencart text-blue">&nbsp;<span>0</span></span>
-              </a> -->
+                <span class="fa fa-opencart text-mandarin">&nbsp;<span>0</span></span> -->
+              </a>
             </div>
           </li> 
           <li class="nav-item show-on-sm my-auto">
@@ -191,42 +193,80 @@
     </nav>
 
 
+    <!-- OVERLAY EFFECT -->
     <section id="overlay-effect" onclick="closenav()">
     </section>
 
 
-    <!-- SLIDE NAVIGATION SECTION -->
+
+    <!--
+      ======== SLIDE NAVIGATION ==========
+    -->
     <section id="slide-navigation">
-      <div class="container-fluid slide-nav pl-5 pr-5 position-relative cxy" id="slide-nav">
-        <div class="d-flex flex-column align-items-left">
-          <div class="d-flex justify-content-between">
-            <h4 class="text-left text-light medium-title">Alineter</h4>
-            <button type="button" class="btn slide-navigation-btn text-light ml-2 small-title ripple-bg" onclick="closenav()"><i class="fa fa-angle-double-left"></i></button>
+      <div class="container-fluid w-100 h-100 position-relative">
+        <div class="slidenav-wrapper w-100">
+
+          <div class="user-section text-center sticky-top bg-richblack">
+
+            <div class="user-section-main">
+              <!--Nav Controller-->
+              <div class="nav-controller">
+                  <button onclick="closenav()" class="btn close-sidenav"><span class="fa fa-times"></span></button>
+              </div>
+
+              <div class="user-section-wrapper">
+                <div class="user-info d-flex">
+                  <div class="mr-3 my-auto pfimg-holder">
+                    <img src="./images/avatar.png" class="pfimg"/>
+                    <!-- <img src="./images/fashion-illustration.png" class="pfimg"/> -->
+                  </div>
+                  <div class="my-auto">
+                    <p class="lead text-cultured">Hey, User</p>
+                    <!-- <p class="lead text-cultured">Hey, Mohit</p> -->
+                  </div>
+                </div>
+                <div class="user-function">
+                  <div class="d-flex justify-content-between">
+                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-plus"></span>&nbsp;Create Account</a>
+                    <a href="#login" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+                    <!-- <a href="#my-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-user"></span>&nbsp;My Account</a>
+                    <a href="#logout" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Logout</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>        
+
+          <div class="site-links p-0 pb-5">
+            <a href="index.html" class="nav-link"><span class="fa fa-home"></span>&nbsp;&nbsp;Home</a>
+            <a href="store.html" class="nav-link"><span class="fa fa-shopping-bag"></span>&nbsp;&nbsp;Store</a>
+            <a href="look-book.html" class="nav-link"><span class="fa fa-picture-o"></span>&nbsp;&nbsp;Look Book</a>
+            <a href="about.html" class="nav-link"><span class="fa fa-address-card"></span>&nbsp;&nbsp;About Us</a>
+            <a href="contact.html" class="nav-link"><span class="fa fa-paper-plane"></span>&nbsp;&nbsp;Contact Us</a>
+            <a href="faq.html" class="nav-link"><span class="fa fa-question-circle"></span>&nbsp;&nbsp;FAQ</a>
+            <a href="#write-about-us" class="nav-link"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Write About Us</a>
+            <a href="#look-book" class="nav-link"><span class="fa fa-file"></span>&nbsp;&nbsp;Terms of Use</a>
+            <a href="#about-us" class="nav-link"><span class="fa fa-lock"></span>&nbsp;&nbsp;Privacy Policy</a>
           </div>
-          <a href="index.html" class="nav-link active ripple-bg">Home</a>
-          <a href="store.html" class="nav-link ripple-bg">Store</a>
-          <a href="look-book.html" class="nav-link ripple-bg">Look Book</a>
-          <a href="about.html" class="nav-link ripple-bg">About Us</a>
-          <a href="contact.html" class="nav-link ripple-bg">Contact Us</a>
-          <a href="faq.html" class="nav-link ripple-bg">FAQ</a>
-          <a href="#write-about-us" class="nav-link ripple-bg">Write About Us</a>
-          <a href="#look-book" class="nav-link ripple-bg">Terms of Use</a>
-          <a href="#about-us" class="nav-link ripple-bg">Privacy Policy</a>
-          <a href="#home" class="nav-link ripple-bg">Log In</a>
-          <a href="#store" class="nav-link ripple-bg">Account</a>
         </div>
       </div>
     </section>
 
+
+
     <section id="page-content" class="position-relative">
 
-      <!-- ILLUSTRATION SECTION-->
+
+      <!-- 
+        ========== ILLUSTRATION SECTION =========== 
+      -->
       <section id="illustration" class="w-100 max scroll-reveal-content">
         <div class="container-fluid illustration-box h-100 float-left reveal__from-left">
           <div class="position-relative cxy illustration-content">
             <div class="d-flex flex-column text-center">
               <div class="p-3 illustration-head">
-                <h2 class="text-mandarin text-uppercase font-weight-bold">Be <span class="text-light">Moment</span> Ready</h2>
+                <h2 class="text-mandarin text-uppercase font-weight-bold">Be <span class="text-cultured">Moment</span> Ready</h2>
               </div><br>
               <div class="p-3 illustration-foot">
                 <a href="store.html" class="btn store-btn ripple-opacity-l">Visit Store <i class="fa fa-angle-double-right ml-2"></i></a>
@@ -237,7 +277,10 @@
       </section>
 
 
-      <!-- USP SECTION -->
+
+      <!--
+       ===============  USP SECTION =============== 
+      -->
       <section id="usp" class="w-100 position-relative scroll-reveal-content">
         <div class="container-fluid d-flex flex-wrap">
           <div class="card text-center usp-box reveal__scale-up">
@@ -276,7 +319,9 @@
       </div>
 
 
-      <!-- PRODUCTS QUICK VIEW SECTION -->
+      <!-- 
+        ============= PRODUCTS QUICK VIEW SECTION =============
+      -->
       <section id="product-quick-view" class="w-100">
          <div class="container-fluid">  
           <div class="d-flex justify-content-around">
@@ -352,7 +397,9 @@
       </section>
 
 
-      <!-- TESTIMONIALS SECTION -->
+      <!-- 
+        =========== TESTIMONIALS SECTION ===========
+      -->
       <section id="testimonial" class="w-100">
         <div class="container-fluid testimonial-box scroll-reveal-content">
           <div class="d-flex justify-content-start reveal__opacity">
@@ -499,45 +546,11 @@
       <br><br><br>
 
 
-      <!-- NEWSLETTER SUBSCIBE SECTION -->
-      <!-- <section id="newsletter-subscribe-lg" class="w-100 newsletter-subscribe scroll-reveal-content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-6 left-content reveal__scale-down">
-              <div class="d-flex flex-column newsletter-content position-relative cy">
-                <div id="top">
-                  <h2 class="medium-title font-weight-bold">Get the latest trends in your inbox every month</h2>
-                </div>
-                <div id="middle">
-                  <p class="smaller-title text-muted">Subscribe and receive our newsletter to follow the news about our latest products and fashion trends</p>
-                </div>
-                <div id="bottom" class="shadow rounded p-1 pb-2 newsletter-subscribe-form">
-                  <form method="post">
-                    <div class="d-flex flex-column">
-                      <div class="row m-2">
-                        <div class="col-lg-6 p-0 pr-lg-1">
-                          <input type="name" name="subscriber-name" class="input-s-1 w-100 name-0" placeholder="Name" data-num="0" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
-                        </div>
-                        <div class="col-lg-6 p-0 pl-lg-1">
-                          <input type="email" name="subscriber-email" class="input-s-1 w-100 email-0" placeholder="Email" data-num="0" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
-                        </div>
-                      </div>
-                      <div class="align-self-end mr-2">
-                        <button type="submit" name="subscribe" class="btn bg-purple text-light ripple-opacity-l">Subscribe</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 right-content reveal__from-right">
-              <img src="images/newsletter-subscribe.png" id="email-illustration" class="img-fluid position-relative cy"/>
-            </div>
-          </div>
-        </div>
-      </section> -->
 
-      <!-- NEWSLETTER SUBSCIBE SECTION -->
+
+      <!--
+       ========== NEWSLETTER SUBSCIBE SECTION  ========== 
+      -->
       <section id="newsletter-subscribe-sm" class="w-100 newsletter-subscribe scroll-reveal-content">
         <div class="container-fluid newsletter-box">
           <div class="d-flex flex-column newsletter-content text-center reveal__opacity">
@@ -666,37 +679,37 @@
 <script>
   //SPECIFIC FOR HOME PAGE
   /* Check is the input tag is filled or not and fill the alternate section either smaller form or larger form*/
-  function isFilled(this_obj,data_num,inp_type) {
-    data_num = parseInt(data_num);
-    if(this_obj.value === "") {
-      if(inp_type === "name") {
-        fillAlternateName(this_obj,data_num);
-      }
-      else {
-        fillAlternateEmail(this_obj,data_num);
-      }
-      this_obj.classList.remove("filled");
-    }
-    else {
-      if(inp_type === "name") {
-        fillAlternateName(this_obj,data_num);
-      }
-      else {
-        fillAlternateEmail(this_obj,data_num);
-      }
-      this_obj.classList.add("filled");     
-    }
-  }
-  function fillAlternateName(this_obj,data_num) {
-    let fillAlternate = document.querySelector(".input-s-1.name-"+Number(!data_num));
-    fillAlternate.value = this_obj.value;
-    fillAlternate.classList.add("filled");
-  }
-  function fillAlternateEmail(this_obj,data_num) {
-    let fillAlternate = document.querySelector(".input-s-1.email-"+Number(!data_num));
-    fillAlternate.value = this_obj.value;
-    fillAlternate.classList.add("filled");
-  }
+  // function isFilled(this_obj,data_num,inp_type) {
+  //   data_num = parseInt(data_num);
+  //   if(this_obj.value === "") {
+  //     if(inp_type === "name") {
+  //       fillAlternateName(this_obj,data_num);
+  //     }
+  //     else {
+  //       fillAlternateEmail(this_obj,data_num);
+  //     }
+  //     this_obj.classList.remove("filled");
+  //   }
+  //   else {
+  //     if(inp_type === "name") {
+  //       fillAlternateName(this_obj,data_num);
+  //     }
+  //     else {
+  //       fillAlternateEmail(this_obj,data_num);
+  //     }
+  //     this_obj.classList.add("filled");     
+  //   }
+  // }
+  // function fillAlternateName(this_obj,data_num) {
+  //   let fillAlternate = document.querySelector(".input-s-1.name-"+Number(!data_num));
+  //   fillAlternate.value = this_obj.value;
+  //   fillAlternate.classList.add("filled");
+  // }
+  // function fillAlternateEmail(this_obj,data_num) {
+  //   let fillAlternate = document.querySelector(".input-s-1.email-"+Number(!data_num));
+  //   fillAlternate.value = this_obj.value;
+  //   fillAlternate.classList.add("filled");
+  // }
 </script>
 
 
