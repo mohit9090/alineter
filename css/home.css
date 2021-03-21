@@ -49,7 +49,8 @@
 
 /* USP */
 #usp {
-	padding:var(--lg-padding);
+	/*padding:var(--lg-padding);*/
+	padding:5% 0%;
 }
 .usp-box {
 	border:0;
@@ -76,14 +77,19 @@
 		width:180px;
 	}
 }
-@media screen and (min-width:420px) and (max-width:599px) {
+@media screen and (min-width:330px) and (max-width:599px) {
 	.usp-box {
 		width:150px;
 	}
 }
-@media screen and (max-width:420px) {
+@media screen and (min-width:320px) and (max-width:330px) {
 	.usp-box {
-		width:130px;
+		width:160px;
+	}
+}
+@media screen and (max-width:320px) {
+	.usp-box {
+		width:128px;
 	}
 }
 .usp-box:hover {
