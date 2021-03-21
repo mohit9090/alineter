@@ -70,8 +70,50 @@
         ];
 
 
-  const icon_filler = document.getElementsByClassName("icon-filler");
+  const [run_man, truck, cotton_fabric, india, personalised] = usp_icons;
 
-  for(var i=0; i<icon_filler.length;i++) {
-    icon_filler[i].innerHTML = usp_icons[i];
-  }
+  const uspList = [
+    {
+      icon:run_man,
+      tag:'All Moment Ready',
+      textColor:'text-blue'
+    },
+    {
+      icon:truck,
+      tag:'Free shipping of all products',
+      textColor:'text-mandarin'
+    },
+    {
+      icon:cotton_fabric,
+      tag:'Moisturised cotton fabric',
+      textColor:'text-tiffany'
+    },
+    {
+      icon:india,
+      tag:'Made in India',
+      textColor:'text-mandarin'
+    },
+    {
+      icon:personalised,
+      tag:'Personalised modern designs',
+      textColor:'text-blue'
+    }
+  ]
+
+  uspList.map( usp => {
+    document.getElementById("usp-wrapper").innerHTML += `
+      <div class="card text-center usp-box reveal__scale-up mx-auto">
+        <div class="card-body">
+          <div class="my-auto">
+            <div class="mx-auto icon-filler">
+              <!--icon-->
+              ${usp.icon}
+            </div><br>
+            <small class="${usp.textColor} usp-tag">${usp.tag}</small>
+          </div>
+        </div>
+      </div>
+    `
+  });
+
+

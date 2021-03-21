@@ -50,7 +50,7 @@
 /* USP */
 #usp {
 	/*padding:var(--lg-padding);*/
-	padding:5% 0%;
+	padding:5% 0.5%;
 }
 .usp-box {
 	border:0;
@@ -94,6 +94,8 @@
 }
 .usp-box:hover {
 	background:#011627;
+	transition-delay:0.1s;
+	transform:translateY(-15px);
 }
 .icon-filler {
 	width:40%;
@@ -113,7 +115,7 @@
 	transition:0.3s ease;
 }
 .usp-box:hover :is(.usp-tag, .usp-icon) {
-	transition-delay:0.1s;
+	transition-delay:0.2s;
 	filter:grayscale(0);
 	cursor:default;
 }
