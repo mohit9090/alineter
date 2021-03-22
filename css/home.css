@@ -93,7 +93,7 @@
 	}
 }
 .usp-box:hover {
-	background:#011627;
+	background:var(--main-primary);
 	transition-delay:0.1s;
 	transform:translateY(-15px);
 }
@@ -130,9 +130,21 @@
 /* PRODUCT-QUICK-VIEW */
 #product-quick-view {
 	padding:var(--lg-padding);
+	/*padding:5% 0;*/
 	background-color:var(--tertiary-light);
-	background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+	/*background-image: url("https://www.transparenttextures.com/patterns/skulls.png");*/
+	/*background-image: url("https://www.transparenttextures.com/patterns/cubes.png");*/
+	/*background-image: url("https://www.transparenttextures.com/patterns/xv.png");*/
+	/*background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");*/
+	/*background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");*/
+	/*background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");*/
+	/*background-image: url("https://www.transparenttextures.com/patterns/padded.png");*/
+	position:relative;
+	/*z-index:0;*/
+
 }
+
 .q-product-box{
 	overflow-x:auto;
 }
@@ -226,19 +238,22 @@
 /* TESTIMONIALS */
 #testimonial {
 	padding:3% 0;
-	background:linear-gradient(110deg, #ffffff 33%, #000428 33%);
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	/*background-color:#000428;*/
+	background-color:var(--main-primary);
+	/*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/
+	position:relative;
+	z-index:1;
 }
-@media screen and (min-width:444px) {
-	#testimonial {
-		/*background:linear-gradient(110deg, #ffffff 33%, #000428 33%);*/
-	background:#000428;
-	}
-}
-@media screen and (max-width:444px) {
-	#testimonial {
-		background:#000428;
-	}
+#testimonial::after {
+	content:'';
+	top:0;
+	left:0;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+	z-index:-1;
+	opacity:0.2;
 }
 #testimonial .testimonial-box {
 	overflow-x:auto;
