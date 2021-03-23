@@ -307,22 +307,72 @@
   scrollbar-width:none;  
 }*/
 .fa-quote-left {
-	font-size:8rem;
+	/*font-size:3rem;*/
 	color:#F6F7F870;
 }
 #testimonial .heading {
 	font-family: "Times New Roman", Times, serif;
-	font-size:2.6rem;
+	/*font-size:1rem;*/
 	color:var(--tertiary-light);	
 }
 #testimonial .rating-icon {
-	color:#EFCB68;
+	color:var(--main-secondary);
 }
-#testimonial .rating-icon.lg {
-	font-size:2rem;
-}
-#testimonial .rating-icon.sm {
+/*.rating-icon.lg,
+.rating-count {
+	font-size:0.8rem;
+}*/
+.rating-icon.sm {
 	font-size:1rem;
+}
+/*Responsive testimonial header*/
+@media screen and (min-width:1300px){
+	.fa-quote-left {
+		font-size:10rem;
+	}
+	#testimonial .heading {
+		font-size:3rem;
+	}
+	.rating-icon.lg,
+	.rating-count {
+		font-size:1.8rem;
+	}
+}
+@media screen and (min-width:500px) and (max-width:1300px){
+	.fa-quote-left {
+		font-size:8rem;
+	}
+	#testimonial .heading {
+		font-size:2.4rem;
+	}
+	.rating-icon.lg,
+	.rating-count {
+		font-size:1.4rem;
+	}
+}
+@media screen and (min-width:315px) and (max-width:500px) {
+	.fa-quote-left {
+		font-size:4rem;
+	}
+	#testimonial .heading {
+		font-size:1.4rem;
+	}
+	.rating-icon.lg,
+	.rating-count {
+		font-size:1rem;
+	}
+}
+@media screen and (max-width:315px) {
+	.fa-quote-left {
+		font-size:3rem;
+	}
+	#testimonial .heading {
+		font-size:1rem;
+	}
+	.rating-icon.lg,
+	.rating-count {
+		font-size:0.8rem;
+	}
 }
 .review-box .card:hover {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
