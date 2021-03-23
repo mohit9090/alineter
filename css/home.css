@@ -295,25 +295,25 @@
 	z-index:-1;
 	opacity:0.4;
 }
-#testimonial .testimonial-box {
+/*#testimonial .testimonial-box {
 	overflow-x:auto;
 	padding:0 1%;
-}
-.testimonial-box::-webkit-scrollbar {
+}*/
+/*.testimonial-wrapper::-webkit-scrollbar {
     display:none;
 }
-.testimonial-box {
+.testimonial-wrapper {
   -ms-overflow-style:none;
   scrollbar-width:none;  
-}
+}*/
 .fa-quote-left {
 	font-size:8rem;
-	color:#F6F7F850;
+	color:#F6F7F870;
 }
 #testimonial .heading {
 	font-family: "Times New Roman", Times, serif;
-	font-size:2rem;
-	color:#AEB7B3;	
+	font-size:2.6rem;
+	color:var(--tertiary-light);	
 }
 #testimonial .rating-icon {
 	color:#EFCB68;

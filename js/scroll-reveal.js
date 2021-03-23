@@ -8,6 +8,7 @@ function scrollReveal() {
       duration:900,
       delay:400,
       mobile:false,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -18,6 +19,7 @@ function scrollReveal() {
       duration:900,
       delay:400,
       mobile:false,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -28,6 +30,7 @@ function scrollReveal() {
       duration:900,
       delay:400,
       mobile:false,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -38,6 +41,7 @@ function scrollReveal() {
       duration:900,
       delay:400,
       mobile:false,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -46,6 +50,7 @@ function scrollReveal() {
       scale:0,
       duration:700,
       delay:200,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -55,6 +60,7 @@ function scrollReveal() {
       duration:900,
       delay:400,
       mobile:false,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
@@ -63,6 +69,7 @@ function scrollReveal() {
       opacity:0,
       duration:1600,
       delay:200,
+      easing:'ease',
       afterReveal: function(el) {
         ScrollReveal().clean(el);
       }
