@@ -2,6 +2,7 @@
 
 /* ILLUSTRATION */
 #illustration {
+  background-color:var(--main-primary);
   background-image:url('../images/main-bg-img.webp');
 }
 .illustration-box::-webkit-scrollbar {
@@ -129,23 +130,13 @@
 
 /* PRODUCT-QUICK-VIEW */
 #product-quick-view {
-	padding:var(--lg-padding);
-	/*padding:5% 0;*/
+	padding:4% 0;
 	background-color:var(--tertiary-light);
 	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
-	/*background-image: url("https://www.transparenttextures.com/patterns/skulls.png");*/
-	/*background-image: url("https://www.transparenttextures.com/patterns/cubes.png");*/
-	/*background-image: url("https://www.transparenttextures.com/patterns/xv.png");*/
-	/*background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");*/
-	/*background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");*/
-	/*background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");*/
-	/*background-image: url("https://www.transparenttextures.com/patterns/padded.png");*/
 	position:relative;
-	/*z-index:0;*/
-
 }
-
 .q-product-box{
+	z-index:0;
 	overflow-x:auto;
 }
 .q-product-box::-webkit-scrollbar {
@@ -157,79 +148,130 @@
   scrollbar-width:none;  
 }
 .q-product-card {
-	color:#a1a7ad;
+	color:var(--tertiary-light);
 	padding:0;
 	border:0;
-	border-bottom:3px solid transparent;
 	transition:0.3s ease-in-out;
-}
-.q-product-box div:not(:last-child) {
-	padding-right:5%;
-}
-.q-product-card:hover {
-	border-bottom:3px solid #400011;
-	color:#400111;
+	position:relative;
 }
 .q-product-card > img {
-	transition:0.3s ease-in-out
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	transition:0.3s ease;
 }
 .q-product-card:hover > img {
-	filter:brightness(40%);
+	filter:brightness(70%);
 }
-@media screen and (max-width:300px) {
-	.q-product-card {
-		width:50vw;
+.q-product-card, 
+.q-product-card > img {
+	border-radius:0;
+}
+.q-product-body {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	padding:3.5% 0;
+	font-size:1.2rem;
+	background:rgba(1, 22, 39, 0.7);
+	opacity:0.7;
+	transition:0.3s ease;
+}
+.q-product-card:hover .q-product-body {
+	opacity:0.8;
+}
+.q-product-card.load-gradient {
+	background: linear-gradient(-45deg, #2EC4B6, #20A4F3);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
 	}
-	.q-product-body {
-		padding:1%;
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
-@media screen and (min-width:300px) and (max-width:680px) {
-	.q-product-card {
-		width:45vw;
-	}
-	.q-product-body {
-		padding:1%;
-	}
-}
-@media screen and (min-width:680px) and (max-width:1000px){
-	.q-product-card {
-		width:40vw;
-	}
-	.q-product-body {
-		padding:1%;
-	}
-}
-@media screen and (min-width:1000px) and (max-width:1100px){
-	.q-product-card {
-		width:35vw;
-	}
-	.q-product-body {
-		padding:2%;
-	}
-}
-@media screen and (min-width:1100px) and (max-width:1250px){
+/*
+  .q-product-card
+  ----------------
+  height: width - 7vw;
+*/
+@media screen and (min-width:1500px) {
 	.q-product-card {
 		width:30vw;
-	}
-	.q-product-body {
-		padding:2%;
+		height:23vw;
 	}
 }
-@media screen and (min-width:1250px){
+@media screen and (min-width:1272px) and (max-width:1500px) {
 	.q-product-card {
 		width:25vw;
+		height:18vw;
 	}
-	.q-product-body {
-		padding:2.5%;
+}
+@media screen and (min-width:992px) and (max-width:1272px) {
+	.q-product-card {
+		width:28vw;
+		height:21vw;
 	}
+}
+@media screen and (min-width:872px) and (max-width:992px) {
+	.q-product-card {
+		width:32vw;
+		height:25vw;
+	}
+}
+@media screen and (min-width:518px) and (max-width:872px) {
+	.q-product-card {
+		width:40vw;
+		height:33vw;
+	}
+}
+@media screen and (min-width:436px) and (max-width:518px) {
+	.q-product-card {
+		width:50vw;
+		height:43vw;
+	}
+}
+@media screen and (max-width:436px) {
+	.q-product-card {
+		width:58vw;
+		height:51vw;
+	}
+}
+/* scroll button for quick products */
+.scroll-vertical {
+	z-index:1;
+	height:100%;
+	position:absolute;
+	top:0;
+	padding-left:0.5rem;
+}
+.scroll-vertical.left {
+	left:0;
+}
+.scroll-vertical.right {
+	right:0;
+}
+.scroll-btn {
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	color:var(--tertiary-blue);
+	background:var(--tertiary-light);
+	border:3px solid var(--tertiary-blue);
 }
 .scroll-btn > i {
-	color:#E1EFE6;
-	transition:0.3s ease; 
-}
-.scroll-btn:hover > i {
-	color:#AEB7B3;
+	font-size:1.5rem;
 }
 
 
@@ -237,10 +279,8 @@
 
 /* TESTIMONIALS */
 #testimonial {
-	padding:3% 0;
-	/*background-color:#000428;*/
+	padding:var(--lg-padding);
 	background-color:var(--main-primary);
-	/*box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;*/
 	position:relative;
 	z-index:1;
 }
@@ -253,7 +293,7 @@
 	height:100%;
 	background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 	z-index:-1;
-	opacity:0.2;
+	opacity:0.4;
 }
 #testimonial .testimonial-box {
 	overflow-x:auto;
@@ -268,7 +308,7 @@
 }
 .fa-quote-left {
 	font-size:8rem;
-	color:#AEB7B330;
+	color:#F6F7F850;
 }
 #testimonial .heading {
 	font-family: "Times New Roman", Times, serif;

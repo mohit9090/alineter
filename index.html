@@ -6,7 +6,7 @@
 
   <meta link-colorarset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000411">
+  <meta name="theme-color" content="#EF7B45">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -227,7 +227,7 @@
                 </div>
                 <div class="user-function">
                   <div class="d-flex justify-content-between">
-                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-plus"></span>&nbsp;Create Account</a>
+                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-id-badge"></span>&nbsp;Create Account</a>
                     <a href="#login" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
                     <!-- <a href="#my-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-user"></span>&nbsp;My Account</a>
                     <a href="#logout" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Logout</a> -->
@@ -281,83 +281,6 @@
       <!--
        ===============  USP SECTION =============== 
       -->
-      <!-- <section id="usp" class="w-100 position-relative scroll-reveal-content">
-        <div class="container-fluid d-flex flex-wrap" id="usp-wrapper">
-          <div class="card text-center usp-box reveal__scale-up">
-            <i class="card-img-top icon fa fa-check-circle"></i>
-            <div class="card-body">
-              <h5 class="card-title usp-title">Easy to use</h5>
-              <p class="card-text usp-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-          <div class="card text-center usp-box reveal__scale-up">
-            <i class="card-img-top icon fa fa-bullseye"></i>
-            <div class="card-body">
-              <h5 class="card-title usp-title">Elite Clientele</h5>
-              <p class="card-text usp-text">Lorem Ipsum is simply dummy text of the printing.</p>
-            </div>
-          </div>
-          <div class="card text-center usp-box reveal__scale-up">
-            <i class="card-img-top icon fa fa-heart"></i>
-            <div class="card-body">
-              <h5 class="card-title usp-title">Guaranteed to work</h5>
-              <p class="card-text usp-text">Lorem Ipsum is simply dummy text</p>
-            </div>
-          </div>
-          <div class="card text-center usp-box reveal__scale-up">
-            <i class="card-img-top icon fa fa-truck"></i>
-            <div class="card-body">
-              <h5 class="card-title usp-title">Safe Package</h5>
-              <p class="card-text usp-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
-
-       <!-- <script type="text/javascript">
-        
-        const uspList = [
-          {
-            title:"Easy to use",
-            icon:"fa-check-circle",
-            content:"Lorem Ipsum is simply dummy text of the printing ndustry"
-          },
-          {
-            title:"Elite Clientele",
-            icon:"fa-bullseye",
-            content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-          },
-          {
-            title:"Guaranteed to work",
-            icon:"fa-heart",
-            content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-          },
-          {
-            title:"Safe Package",
-            icon:"fa-truck",
-            content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-          }
-        ];
-
-        uspList.map( usp => {
-          document.getElementById("usp-wrapper").innerHTML += `
-          <div class="card text-center usp-box reveal__scale-up">
-            <i class="card-img-top icon fa ${usp.icon}"></i>
-            <div class="card-body">
-              <h5 class="card-title usp-title">${usp.title}</h5>
-              <p class="card-text usp-text">${usp.content}</p>
-            </div>
-          </div>`
-        });
-
-      </script> -->
-
-
-      <!--
-       ===============  USP SECTION =============== 
-      -->
-
       <section id="usp" class="w-100 position-relative scroll-reveal-content">
         <div class="container-fluid d-flex flex-lg-nowrap flex-md-nowrap flex-sm-wrap flex-wrap p-0" id="usp-wrapper">
 
@@ -371,56 +294,87 @@
       <!-- 
         ============= PRODUCTS QUICK VIEW SECTION =============
       -->
-      <section id="product-quick-view" class="w-100">
+      <section id="product-quick-view" class="w-100 scroll-reveal-content">
+
+        <!-- Left Scroll -->
+        <div class="scroll-vertical left reveal__from-left">
+          <button type="button" class="btn scroll-btn ripple-opacity-l btn-outline-blue" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon"></i></button>
+        </div>
+
          <div class="container-fluid">  
           <div class="d-flex justify-content-around">
 
-            <!-- Left Scroll -->
-            <div class="my-auto scroll-vertical">
-              <button type="button" class="btn scroll-btn ripple-opacity-l" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon fa-3x"></i></button>
-            </div>
-
             <div class="d-flex q-product-box" id="q-product-box">
+
               <div class="p-4">
-                <div class="card q-product-card shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion.jpg" alt="product-short-detail">
+                <div class="card q-product-card load-gradient shadow">
+                  <img class="card-img-top q-product-image" src="images/men-fashion.jpg" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body">
-                    <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
                   </div>
                 </div>
               </div>
 
               <div class="p-4">
-                <div class="card q-product-card shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail">
+                <div class="card q-product-card load-gradient shadow">
+                  <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body">
-                    <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
                   </div>
                 </div>
               </div>
 
               <div class="p-4">
-                <div class="card q-product-card shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-1.jpg" alt="product-short-detail">
+                <div class="card q-product-card load-gradient shadow">
+                  <img class="card-img-top q-product-image" src="images/men-fashion-1.jpg" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body border-rounded">
-                    <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
                   </div>
                 </div>
               </div>
+
+              <div class="p-4">
+                <div class="card q-product-card load-gradient shadow">
+                  <img class="card-img-top q-product-image" src="images/fashion-illustration.png" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
+                  <div class="q-product-body border-rounded">
+                    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
-            <!-- Right Scroll -->
-            <div class="my-auto scroll-vertical">
-              <button type="button" class="btn scroll-btn ripple-opacity-l" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon fa-3x"></i></button>
-            </div>
 
           </div>
         </div>
 
-        <!--Model for quick product view-->
+        <!-- Right Scroll -->
+        <div class="scroll-vertical right reveal__from-right">
+          <button type="button" class="btn scroll-btn ripple-opacity-l btn-outline-blue" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon"></i></button>
+        </div>
+
+      </section>
+
+
+      <script type="text/javascript">
+          
+         function img_loaded(img) {
+          img.parentElement.classList.remove("load-gradient");
+         }
+
+         function img_unloaded(img) {
+          imgAltTag = img.getAttribute("alt");
+          imgErr = `Sorry Image (${imgAltTag}) not found `;
+          img.setAttribute("alt",imgErr);
+         }
+
+      </script>
+
+      <!--Model for quick product view-->
         <div class="modal fade" id="q-product-view" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -443,8 +397,6 @@
             </div>
           </div>
         </div>
-      </section>
-
 
       <!-- 
         =========== TESTIMONIALS SECTION ===========
