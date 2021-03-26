@@ -298,7 +298,7 @@
 
         <!-- Left Scroll -->
         <div class="scroll-vertical left reveal__from-left">
-          <button type="button" class="btn scroll-btn ripple-opacity-l btn-outline-blue" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon"></i></button>
+          <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon"></i></button>
         </div>
 
          <div class="container-fluid">  
@@ -308,7 +308,7 @@
 
               <div class="p-4">
                 <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion.jpg" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <img class="card-img-top q-product-image" src="images/men-fashion.jpg" alt="product-short-detail" onerror="img_unloaded(this)">
                   <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body">
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
@@ -318,7 +318,7 @@
 
               <div class="p-4">
                 <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail" onerror="img_unloaded(this)">
                   <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body">
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
@@ -328,7 +328,7 @@
 
               <div class="p-4">
                 <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-1.jpg" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <img class="card-img-top q-product-image" src="images/men-fashion-1.jpg" alt="product-short-detail" onerror="img_unloaded(this)">
                   <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body border-rounded">
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
@@ -338,7 +338,7 @@
 
               <div class="p-4">
                 <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/fashion-illustration.png" alt="product-short-detail" onload="img_loaded(this)" onerror="img_unloaded(this)">
+                  <img class="card-img-top q-product-image" src="images/fashion-illustration.png" alt="product-short-detail" onerror="img_unloaded(this)">
                   <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
                   <div class="q-product-body border-rounded">
                     <p class="card-text text-center"><i class="fa fa-eye"></i></p>
@@ -354,17 +354,13 @@
 
         <!-- Right Scroll -->
         <div class="scroll-vertical right reveal__from-right">
-          <button type="button" class="btn scroll-btn ripple-opacity-l btn-outline-blue" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon"></i></button>
+          <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon"></i></button>
         </div>
 
       </section>
 
 
       <script type="text/javascript">
-          
-         function img_loaded(img) {
-          img.parentElement.classList.remove("load-gradient");
-         }
 
          function img_unloaded(img) {
           imgAltTag = img.getAttribute("alt");
@@ -578,6 +574,11 @@
 
           </div>
 
+          <!-- Show More Button -->
+          <div class="container pt-5 text-center">
+            <a href="show-more-reviews.html" class="btn show-more-btn reveal__scale-up">Show More</a>
+          </div>
+
         </div>
       </section>
 
@@ -717,6 +718,8 @@
 
  <script type="text/javascript" src="js/customer-review.js"></script>
 
+ <script type="text/javascript" src="js/responsive-reviews.js"></script>
+
 
 <!-- <script>
   //SPECIFIC FOR HOME PAGE
@@ -809,355 +812,3 @@ ADDRESS OF ALINETER
       </div>
     </div>
   </div> -->
-
-
-        <!-- FOR 1,2,3 REVIEWS -->
-            <!-- <div class="d-flex flex-column p-0">
-
-              <div class="review-box wrapper">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">Danis Joe</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="review-box wrapper">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">Danis Joe</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
-
-                    Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div>
-              </div>
-
-            </div> -->
-
-
-
-
-
-            <!-- FOR 4 REVIEWS -->
-            <!-- <div class="row">
-
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="d-flex flex-column">
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="d-flex flex-column">
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-
-
-
-
-            <!-- FOR 5,6 REVIEWS -->
-             <!-- <div class="row">
-
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="d-flex flex-column">
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="d-flex flex-column">
-
-                  <div class="review-box w-100">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick exle</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="review-box w-100">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's contentquick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="d-flex flex-column">
-
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.rohit shetuick example text to build on the card title and make up the bulk of the card's content.rohit shet
-
-                        uick example text to build on the card title and make up the bulk of the card's content.rohit shet
-                      uick example text to build on the card title and make up the bulk of the card's content.rohit shettyu</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="review-box">
-                    <div class="card review-card border-0">
-                      <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-column">
-                            <small class="text-muted reviewer-name">Danis Joe</small>
-                            <div class="d-flex">
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star rating-icon sm"></i>
-                              <i class="fa fa-star-half-o rating-icon sm"></i>
-                              <i class="fa fa-star-o rating-icon sm"></i>
-                            </div>
-                          </div>
-                          <div>
-                            <img src="https://i.imgur.com/jQWThIn.jpg" class="img-fluid rounded-circle" width=50 height=50/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-body">
-                        <p class="card-text text-light reviewer-says">Some quick example text to build on the card title and make up the bulk of the card's content.Mohit kumar</p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div> -->

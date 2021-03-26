@@ -102,7 +102,7 @@
 
   uspList.map( usp => {
     document.getElementById("usp-wrapper").innerHTML += `
-      <div class="card text-center usp-box reveal__scale-up mx-auto">
+      <div class="card text-center usp-box reveal__opacity mx-auto">
         <div class="card-body">
           <div class="my-auto">
             <div class="mx-auto icon-filler">

@@ -14,7 +14,7 @@ const reviewers = [
 		name:"Caye Henry",
 		img:"https://i.imgur.com/QptVdsp.jpg",
 		review:{
-			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.",
+			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\n\nSome quick example text to build on the card title and make up the bulk of the card's content.",
 			rating:4.2
 		}
 	},
@@ -54,14 +54,13 @@ const reviewers = [
 
 ];
 
-
 const header = [
 	// Header Selection
 	/*
 	   if only 1,2 or 3 reviews are there 
 	*/
 	`
-	<div class="col-12">
+	<div class="col-12 col-reviews">
 		<div class="d-flex flex-column p-0">
 	`,
 	/*
@@ -69,7 +68,7 @@ const header = [
 	*/
 
 	`
-	<div class="col-lg-6 col-md-6 col-sm-12">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-reviews">
 		<div class="d-flex flex-column">
 	`,
 	/*
@@ -77,7 +76,7 @@ const header = [
 	*/
 
 	`
-	<div class="col-lg-4 col-md-6 col-sm-12">
+	<div class="col-lg-4 col-md-6 col-sm-12 col-reviews">
 		<div class="d-flex flex-column flex-grow">
 	`,
 
@@ -100,238 +99,99 @@ const [close_div] = footer;
 //Destructuring Reviewers
 const [firstReviewer, secondReviewer, thirdReviewer, fourthReviewer, fifthReviewer, sixthReviewer] = reviewers;
 
+const bg_color = ["blue", "mandarin", "tiffany", "vermillion"];
 
 
-function assignFunc(numOfReviews) {
-	if(numOfReviews == 1 || numOfReviews == 2 || numOfReviews ==3) {
 
-		var reviews = "";
 
-		reviewers.map( (reviewer) => {
-			if(reviewer !== null || reviewer !== undefined) {
-				reviews = reviews + open_div_1 + `<div class="review-box wrapper">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">${reviewer.name}</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
+function mapReviews(rev_set, additional_class) {
+	let reviews = ""
+	rev_set.map( (reviewer) => {
+		if(reviewer !== null || reviewer !== undefined) {
+			reviews = reviews + `<div class="review-box rounded ${additional_class} bg-${bg_color[Math.floor(Math.random()*4)]}">
+            <div class="card review-card border-0">
+              <div class="card-header">
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <small class="text-light reviewer-name">${reviewer.name}</small>
+                    <div class="d-flex">
+                      <i class="fa fa-star rating-icon sm"></i>
+                      <i class="fa fa-star rating-icon sm"></i>
+                      <i class="fa fa-star rating-icon sm"></i>
+                      <i class="fa fa-star-half-o rating-icon sm"></i>
+                      <i class="fa fa-star-o rating-icon sm"></i>
                     </div>
                   </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">${reviewer.review.content}</p>
+                  <div>
+                    <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
                   </div>
                 </div>
-              </div>` + close_div
-			}
-		});
+              </div>
+              <div class="card-body">
+                <p class="card-text text-cultured reviewer-says">${reviewer.review.content}</p>
+              </div>
+            </div>
+          </div>`
+		}
+	});
 
-		revContainer.innerHTML += reviews;
+	return reviews;
+}
+
+function recursiveMapping(set, times, open_div) {
+	for(var i=0; i<times; i++) {
+		let reviews = mapReviews(set[i], "w-100");
+		revContainer.innerHTML = revContainer.innerHTML + open_div + reviews + close_div;	
+	}
+}
+
+function constructReviews(numOfReviews) {
+	if(numOfReviews == 1 || numOfReviews == 2 || numOfReviews ==3) {
+		/*
+			Map All Reviews to a string reviews
+		*/
+		let reviews = mapReviews(reviewers, "wrapper");
+		/*
+			Display the string reviews in the markup document
+		*/
+		revContainer.innerHTML = revContainer.innerHTML + open_div_1 + reviews + close_div;
 
 	} else if(numOfReviews == 4) {
-
+		/* 
+			Four reviews will be divided into two sets
+		*/
 		let firstSet = [], secondSet = [];
 		
 		firstSet.push(firstReviewer, secondReviewer);
 		secondSet.push(thirdReviewer, fourthReviewer);
 
-		let reviews = "";
-
-		firstSet.map( (reviewer) =>{
-			if(reviewer !== null || reviewer !== undefined) {
-				reviews = reviews + `<div class="review-box w-100">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">${reviewer.name}</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">${reviewer.review.content}</p>
-                  </div>
-                </div>
-              </div>`
-			}
-		});
-
-		revContainer.innerHTML = revContainer.innerHTML + open_div_2 + reviews + close_div;
-
-		reviews = "";
-
-		secondSet.map( (reviewer) =>{
-			if(reviewer !== null || reviewer !== undefined) {
-				reviews = reviews + `<div class="review-box w-100">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">${reviewer.name}</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">${reviewer.review.content}</p>
-                  </div>
-                </div>
-              </div>`
-			}
-		});
-
-		revContainer.innerHTML = revContainer.innerHTML + open_div_2 + reviews + close_div;
-
+		let set = [firstSet, secondSet];
+		/*
+			Recursively map the sets to add reviews
+		*/
+		recursiveMapping(set, set.length, open_div_2);
 		
 	} else {
-		
+		/* 
+			Six reviews will be divided into three sets
+		*/
 		let firstSet = [], secondSet = [], thirdSet = [];
 		
 		firstSet.push(firstReviewer, secondReviewer);
 		secondSet.push(thirdReviewer, fourthReviewer);
 		thirdSet.push(fifthReviewer, sixthReviewer);
 
-		var reviews = "";	
+		let set = [firstSet, secondSet, thirdSet];
 
-		firstSet.map( (reviewer) =>{
-			if(reviewer !== null || reviewer !== undefined) {
-				reviews = reviews + `<div class="review-box w-100">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">${reviewer.name}</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">${reviewer.review.content}</p>
-                  </div>
-                </div>
-              </div>`
-			}
-		});
-
-		revContainer.innerHTML = revContainer.innerHTML + open_div_3 + reviews + close_div;
-
-		reviews = "";
-
-		secondSet.map( (reviewer) =>{
-			if(reviewer !== null || reviewer !== undefined) {
-				reviews = reviews + `<div class="review-box w-100">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">${reviewer.name}</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">${reviewer.review.content}</p>
-                  </div>
-                </div>
-              </div>`
-			}
-		});
-
-		revContainer.innerHTML = revContainer.innerHTML + open_div_3 + reviews + close_div;
-
-		reviews = "";
-
-		thirdSet.map( (reviewer) =>{
-			if(reviewer !== null || reviewer !== undefined) {
-				reviews = reviews + `<div class="review-box w-100">
-                <div class="card review-card border-0">
-                  <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-column">
-                        <small class="text-muted reviewer-name">${reviewer.name}</small>
-                        <div class="d-flex">
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star rating-icon sm"></i>
-                          <i class="fa fa-star-half-o rating-icon sm"></i>
-                          <i class="fa fa-star-o rating-icon sm"></i>
-                        </div>
-                      </div>
-                      <div>
-                        <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-light reviewer-says">${reviewer.review.content}</p>
-                  </div>
-                </div>
-              </div>`
-			}
-		});
-
-		revContainer.innerHTML = revContainer.innerHTML + open_div_3 + reviews + close_div;
+		recursiveMapping(set, set.length, open_div_3);
 
 	}
 }	
 
-
-function assignReview() {
+function displayReviews() {
 	const numOfReviews = reviewers.length;
-	// console.log(numOfReviews);
-	assignFunc(5);
-
-
+	constructReviews(numOfReviews);
 }
 
-assignReview()
 
-// hold = [assignReview];
-// hold[0].call();
+displayReviews();
