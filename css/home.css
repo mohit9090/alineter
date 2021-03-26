@@ -50,13 +50,13 @@
 
 /* USP */
 #usp {
-	/*padding:var(--lg-padding);*/
 	padding:5% 0.5%;
 }
 .usp-box {
-	border:0;
 	border-radius:5px;
+	border:0.05px solid rgba(1, 22, 39, 0.15);
 	transition:0.3s ease;
+	margin:0.5rem;
 }
 @media screen and (min-width:1300px) {
 	.usp-box {
@@ -96,7 +96,7 @@
 .usp-box:hover {
 	background:var(--main-primary);
 	transition-delay:0.1s;
-	transform:translateY(-15px);
+	transform:translateY(-10px);
 }
 .icon-filler {
 	width:40%;
@@ -303,17 +303,6 @@
 	z-index:-1;
 	opacity:0.4;
 }
-/*#testimonial .testimonial-box {
-	overflow-x:auto;
-	padding:0 1%;
-}*/
-/*.testimonial-wrapper::-webkit-scrollbar {
-    display:none;
-}
-.testimonial-wrapper {
-  -ms-overflow-style:none;
-  scrollbar-width:none;  
-}*/
 .fa-quote-left {
 	color:var(--tertiary-light);
 	opacity:0.5;
@@ -383,11 +372,11 @@
 }
 .review-card {
 	width:100%;
-	background:rgba(22,12,40,0.2);
+	background:rgba(22,12,40,0.3);
 	transition:0.3s ease;
 }
 .review-card:hover {
-	background-color:rgba(22,12,40,0.3);
+	background-color:rgba(22,12,40,0.2);
 }
 .reviewer-says {
 	white-space:pre-line;

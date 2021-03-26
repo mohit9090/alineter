@@ -15,7 +15,7 @@ const reviewers = [
 		img:"https://i.imgur.com/QptVdsp.jpg",
 		review:{
 			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\n\nSome quick example text to build on the card title and make up the bulk of the card's content.",
-			rating:4.2
+			rating:4.5
 		}
 	},
 	{
@@ -23,7 +23,7 @@ const reviewers = [
 		img:"https://i.imgur.com/lE89Aey.jpg",
 		review:{
 			content:"Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text.",
-			rating:3.8
+			rating:3
 		}
 	},
 	{
@@ -31,7 +31,7 @@ const reviewers = [
 		img:"https://i.imgur.com/QptVdsp.jpg",
 		review:{
 			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.",
-			rating:4.1
+			rating:4
 		}
 	},
 	{
@@ -40,7 +40,7 @@ const reviewers = [
 		review:{
 			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.",
 			
-			rating:4.3
+			rating:5
 		}
 	},
 	{
@@ -48,7 +48,7 @@ const reviewers = [
 		img:"https://i.imgur.com/QptVdsp.jpg",
 		review:{
 			content:"Some quick example text to build on the card title and make up the bulk of the card's mple text to build on the card title and make up the bulk of the card's mple text to build on the card title and make up the bulk of the card's content.",
-			rating:4
+			rating:2.5
 		}
 	}
 
@@ -99,28 +99,44 @@ const [close_div] = footer;
 //Destructuring Reviewers
 const [firstReviewer, secondReviewer, thirdReviewer, fourthReviewer, fifthReviewer, sixthReviewer] = reviewers;
 
-const bg_color = ["blue", "mandarin", "tiffany", "vermillion"];
+const bg_color = ["blue", "mandarin", "tiffany", "primary", "vermillion"];
 
 
+function addRatingStar(rating) {
+	let ratingIcon = "";
+	const fullStar = Math.floor(rating);
+	const halfStar = rating - fullStar;
+	const noStar = 5 - Math.ceil(rating);
+	
 
+	for(let i=0; i<fullStar; i++) {
+		ratingIcon += `<i class="fa fa-star rating-icon sm"></i>`;
+	}
+	for(let i=0; i<halfStar; i++) {
+		ratingIcon += `<i class="fa fa-star-half-o rating-icon sm"></i>`;
+	}
+	for(let i=0; i<noStar; i++) {
+		ratingIcon += `<i class="fa fa-star-o rating-icon sm"></i>`;
+	}
+
+	return ratingIcon
+}
 
 function mapReviews(rev_set, additional_class) {
 	let reviews = ""
 	rev_set.map( (reviewer) => {
 		if(reviewer !== null || reviewer !== undefined) {
-			reviews = reviews + `<div class="review-box rounded ${additional_class} bg-${bg_color[Math.floor(Math.random()*4)]}">
+			reviews = reviews + `<div class="review-box rounded ${additional_class} bg-${bg_color[Math.floor(Math.random()*5)]}">
             <div class="card review-card border-0">
               <div class="card-header">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex flex-column">
                     <small class="text-light reviewer-name">${reviewer.name}</small>
-                    <div class="d-flex">
-                      <i class="fa fa-star rating-icon sm"></i>
-                      <i class="fa fa-star rating-icon sm"></i>
-                      <i class="fa fa-star rating-icon sm"></i>
-                      <i class="fa fa-star-half-o rating-icon sm"></i>
-                      <i class="fa fa-star-o rating-icon sm"></i>
-                    </div>
+                    <div class="d-flex">` + 
+                    
+                    addRatingStar(reviewer.review.rating)
+
+                     + `</div>
                   </div>
                   <div>
                     <img src="${reviewer.img}" class="img-fluid rounded-circle" width=50 height=50/>
