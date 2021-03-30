@@ -6,7 +6,7 @@
 	transition:0.3s ease;
 }
 #navigation.navigation-init {
-	padding:var(--lg-padding-inverse);
+	padding:1.4%;
 }
 #navigation .nav-right {
 	-webkit-animation-name: increaseOpacity;

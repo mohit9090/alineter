@@ -2,15 +2,15 @@
 const navigation = document.getElementById("navigation");
 
 /* Change BG of navbar on scrolling */
-$(function(){
-  var scrollTop = $(window).scrollTop();
-  changeNavClass(scrollTop);
-}); 
+// $(function(){
+//   var scrollTop = $(window).scrollTop();
+//   changeNavClass(scrollTop);
+// }); 
 
-$(window).scroll(function(){
-    var scrollTop = $(window).scrollTop();
-    changeNavClass(scrollTop);
-});
+// $(window).scroll(function(){
+//     var scrollTop = $(window).scrollTop();
+//     changeNavClass(scrollTop);
+// });
 
 
 function changeNavClass(st) {
@@ -18,6 +18,6 @@ function changeNavClass(st) {
       navigation.style.padding = "1.4%";
     } 
     else {
-      navigation.style.padding = "2.4% 5%";
+      navigation.style.padding = "1.4%";
     }
 }
