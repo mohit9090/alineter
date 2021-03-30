@@ -4,8 +4,8 @@ function scrollReveal() {
     window.sr = ScrollReveal();
     sr.reveal(".reveal__from-left",{
       origin:"left",
-      distance:"200px",
-      duration:900,
+      distance:"100px",
+      duration:500,
       delay:400,
       mobile:false,
       easing:'ease',
@@ -15,8 +15,8 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__from-right",{
       origin:"right",
-      distance:"200px",
-      duration:900,
+      distance:"100px",
+      duration:500,
       delay:400,
       mobile:false,
       easing:'ease',
@@ -26,8 +26,8 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__from-top",{
       origin:"top",
-      distance:"200px",
-      duration:900,
+      distance:"100px",
+      duration:500,
       delay:400,
       mobile:false,
       easing:'ease',
@@ -37,8 +37,8 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__from-bottom",{
       origin:"bottom",
-      distance:"200px",
-      duration:900,
+      distance:"100px",
+      duration:500,
       delay:400,
       mobile:false,
       easing:'ease',
@@ -48,7 +48,7 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__scale-up",{
       scale:0,
-      duration:700,
+      duration:500,
       delay:200,
       easing:'ease',
       afterReveal: function(el) {
@@ -57,7 +57,7 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__scale-down",{
       scale:1.4,
-      duration:900,
+      duration:500,
       delay:400,
       mobile:false,
       easing:'ease',
@@ -67,7 +67,7 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__opacity",{
       opacity:0,
-      duration:1600,
+      duration:500,
       delay:200,
       easing:'ease',
       afterReveal: function(el) {
