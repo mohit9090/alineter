@@ -2,50 +2,136 @@
 
 /* FOOTER */
 .scroll-horizontal.to-top > .btn {
-	color:#fff;
-	background:#160C28;
+	color:var(--tertiary-light);
+	background:var(--main-primary);
 	width:80px;
 	border-radius:100px 100px 0 0;
-	transition:0.2s
+	position:relative;
+	top:13px;
 }
+.scroll-horizontal.to-top > .btn:hover {
+	color:var(--main-secondary);
+}
+#footer {
+	background:var(--main-primary);
+	position:relative;
+}
+#footer > .container-fluid {
+	padding:var(--lg-padding);
+}
+.col-footer {
+	margin:0;
+	margin-top:1.7rem;
+}
+.col-footer .section:not(:last-child) {
+	margin-bottom:1.3rem;
+}
+
+
+/*CTA*/
+.input-s-2 {
+	border-color:transparent;
+	border-radius:0;
+	color:var(--main-primary);
+	opacity:0.9;
+}
+.subscriber-email {
+	text-align:center;
+	padding:1.4%;
+	width:70%;
+}
+.input-s-2:focus {
+	opacity:1;
+}
+.subscribe-btn {
+	background:var(--tertiary-orange);
+	color:var(--tertiary-light);
+	font-weight:470;
+}
+.subscribe-btn:hover {
+	color:var(--tertiary-light);
+}
+.subscribe-btn:active {
+	opacity:0.7;
+}
+.subscriber-email.incorrect {
+	color:var(--tertiary-light);
+	background:rgba(236, 88, 88, 0.2);
+	border-color:rgba(236, 88, 88, 1);
+}
+.subscriber-email.correct {
+	color:var(--tertiary-light);
+	background:rgba(140, 255, 218,0.1);
+	border-color:rgba(140, 255, 218,1);
+}
+
+
+/*Footer Links*/
 #footer .link {
-	color:#E1EFE6;
-	transition:0.5s;
-}
-#footer .links__contact-us .link:hover {
-	color:#f45c24;
+	line-height:2px;
 	text-decoration:none;
 }
-#footer .company-address {
-	font-style:italic;
-	color:antiquewhite;
+#footer .link.s-1,
+#footer .link.s-3 {
+	color:var(--tertiary-light);
 }
-.social-link:not(:last-child) {
-	margin-right:3%;
+#footer .link.s-1:hover,
+#footer .link.s-2 {
+	color:var(--main-secondary);
 }
-.fa-google {
- 	color:#EA4638;
+#footer .link.s-2:hover,
+#footer .link.s-3:hover {
+	text-decoration:underline;
 }
-.fa-facebook {
+#footer .link:active {
+	background:rgba(32,164,243,0.1);
+	transition:background 0.3s ease;
+}
+
+
+/*Social Links*/
+.social-link {
+	padding:6px;
+	font-size:2rem;
+	opacity:1;
+}
+.social-link:hover {
+	opacity:0.7;
+}
+.fa-facebook-square {
  	color:#38529A;
 }
 .fa-instagram {
  	color:#E67135;	
 }
-.fa-twitter {
+.fa-twitter-square {
  	color:#1C9CEA;
 }
-.social-link {
-	padding:6px;
-	border-radius:2px;
+.fa-linkedin-square {
+	color:#0073B1;
 }
-.social-link > i {
-	transition:0.5s;
+.contact-us .fa {
+	transform:scale(1.2);
+	color:var(--main-secondary);
 }
-.social-link:hover > i {
-	color:#EFCB68;
+.payment-method img{
+	margin:0 1.1rem 0.1rem 0;
 }
-.company-direction-map {
-	width:100%;
-	height:70vh;
+
+
+/*Footer Copyright*/
+.copyright-wrapper {
+	padding:1%;
+	background:rgba(32,164,243,0.05);
+}
+.copyright-wrapper span:not(:last-child) {
+	margin-right:0.1rem;
+}
+
+
+/*Smooth Transition effect*/
+.scroll-horizontal.to-top > .btn, 
+#footer .link, 
+.subscribe-btn:active {
+	transition:0.3s ease;
 }
