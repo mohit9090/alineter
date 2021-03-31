@@ -87,6 +87,44 @@ body {
 	background:var(--tertiary-light);
 	color:var(--main-primary);
 }
+.btn-richblack {
+	border:1px solid var(--main-primary);
+	background:var(--main-primary);
+	color:var(--tertiary-light);
+}
+.btn-cultured {
+	border:1px solid var(--main-primary);
+	background:var(--tertiary-light);
+	color:var(--main-primary);
+}
+.btn-mandarin {
+	border:1px solid var(--main-secondary);
+	background:var(--main-secondary);
+	color:var(--tertiary-light);
+}
+.btn-blue {
+	border:1px solid var(--tertiary-blue);
+	background:var(--tertiary-blue);
+	color:var(--tertiary-light);
+}
+.btn-tiffany {
+	border:1px solid var(--tertiary-tiffany-blue);
+	background:var(--tertiary-tiffany-blue);
+	color:var(--tertiary-light);
+}
+.btn-vermillion {
+	border:1px solid var(--tertiary-orange);
+	background:var(--tertiary-orange);
+	color:var(--tertiary-light);
+}
+
+.btn-mandarin:hover,
+.btn-blue:hover,
+.btn-tiffany:hover,
+.btn-vermillion:hover {
+	color:var(--tertiary-light);
+	filter:brightness(110%);
+}
 
 
 /*Color Scheme*/

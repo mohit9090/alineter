@@ -3,52 +3,52 @@ const revContainer = document.querySelector("#reviews-container .row");
 
 const reviewers = [
 	{
-		name:"Mohit Kumar",
-		img:"https://i.imgur.com/jQWThIn.jpg",
-		review:{
-			content:"Some quick example text to build on the card title and make up the bulk of the card's content.",
-			rating:3.5
+		name : "Mohit Kumar",
+		img : "https://i.imgur.com/jQWThIn.jpg",
+		review : {
+			content : "Some quick example text to build on the card title and make up the bulk of the card's content.",
+			rating : 3.5
 		}
 	},
 	{
-		name:"Caye Henry",
-		img:"https://i.imgur.com/QptVdsp.jpg",
-		review:{
-			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\n\nSome quick example text to build on the card title and make up the bulk of the card's content.",
-			rating:4.5
+		name : "Caye Henry",
+		img : "https://i.imgur.com/QptVdsp.jpg",
+		review : {
+			content : "Some quick example text to build on the card title and make up the bulk of the card's content.\n\nSome quick example text to build on the card title and make up the bulk of the card's content.",
+			rating : 4.5
 		}
 	},
 	{
-		name:"Harry Mon",
-		img:"https://i.imgur.com/lE89Aey.jpg",
-		review:{
-			content:"Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text.",
-			rating:3
+		name : "Harry Mon",
+		img : "https://i.imgur.com/lE89Aey.jpg",
+		review : {
+			content : "Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text to build on the card title.Some quick example text.",
+			rating : 3
 		}
 	},
 	{
-		name:"Rohit Shetty",
-		img:"https://i.imgur.com/QptVdsp.jpg",
-		review:{
-			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.",
-			rating:4
+		name : "Rohit Shetty",
+		img : "https://i.imgur.com/QptVdsp.jpg",
+		review : {
+			content : "Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.",
+			rating : 4
 		}
 	},
 	{
-		name:"Thakur Singh",
-		img:"https://i.imgur.com/jQWThIn.jpg",
-		review:{
-			content:"Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.",
+		name : "Thakur Singh",
+		img : "https://i.imgur.com/jQWThIn.jpg",
+		review : {
+			content : "Some quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.\nSome quick example text to build on the card title and make up the bulk of the card's content.",
 			
-			rating:5
+			rating : 5
 		}
 	},
 	{
-		name:"Ashok Lokhandwala",
-		img:"https://i.imgur.com/QptVdsp.jpg",
-		review:{
-			content:"Some quick example text to build on the card title and make up the bulk of the card's mple text to build on the card title and make up the bulk of the card's mple text to build on the card title and make up the bulk of the card's content.",
-			rating:2.5
+		name : "Ashok Lokhandwala",
+		img : "https://i.imgur.com/QptVdsp.jpg",
+		review : {
+			content : "Some quick example text to build on the card title and make up the bulk of the card's mple text to build on the card title and make up the bulk of the card's mple text to build on the card title and make up the bulk of the card's content.",
+			rating : 2.5
 		}
 	}
 
@@ -128,7 +128,7 @@ function mapReviews(rev_set, additional_class) {
 		if(reviewer !== null || reviewer !== undefined) {
 			reviews = reviews + `<div class="review-box rounded ${additional_class} bg-${bg_color[Math.floor(Math.random()*5)]}">
             <div class="card review-card border-0">
-              <div class="card-header">
+              <div class="card-header ">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex flex-column">
                     <small class="text-light reviewer-name">${reviewer.name}</small>

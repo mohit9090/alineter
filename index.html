@@ -6,7 +6,7 @@
 
   <meta link-colorarset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#EF7B45">
+  <meta name="theme-color" content="#D84727">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -306,48 +306,8 @@
 
             <div class="d-flex q-product-box" id="q-product-box">
 
-              <div class="p-4">
-                <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion.jpg" alt="product-short-detail" onerror="img_unloaded(this)">
-                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
-                  <div class="q-product-body">
-                    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="p-4">
-                <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail" onerror="img_unloaded(this)">
-                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
-                  <div class="q-product-body">
-                    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="p-4">
-                <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-1.jpg" alt="product-short-detail" onerror="img_unloaded(this)">
-                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
-                  <div class="q-product-body border-rounded">
-                    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="p-4">
-                <div class="card q-product-card load-gradient shadow">
-                  <img class="card-img-top q-product-image" src="images/fashion-illustration.png" alt="product-short-detail" onerror="img_unloaded(this)">
-                  <a href="#q-product-view" class="stretched-link" data-toggle="modal"></a>
-                  <div class="q-product-body border-rounded">
-                    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
-                  </div>
-                </div>
-              </div>
-
+            
             </div>
-
 
           </div>
         </div>
@@ -370,29 +330,39 @@
 
       </script>
 
+
       <!--Model for quick product view-->
-        <div class="modal fade" id="q-product-view" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Product Description <mark>Yet to design</mark></h5>
-                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="card q-product-card shadow">
-                  <img class="card-img-top q-product-image" src="images/men-fashion-2.jpg" alt="product-short-detail">
+      <div class="modal fade" id="q-product-view">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <p class="product_name text-richblack" id="product_name"></p>
+              <button type="button" class="btn btn-vermillion rounded-circle" data-dismiss="modal" aria-label="Close">
+                <span class="fa fa-times"></span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="product_img_wrapper d-flex flex-column">
+                <div class="card rounded border-0">
+                  <img class="card-img-top product_img" id="product_img" src="" alt="">
                 </div>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <div class="d-flex justify-content-end">
-                  <a href="buy-now" class="btn btn-primary m-2 w-50 btn-lg">Buy Now</a>
-                  <a href="add-to-cart" class="btn btn-warning m-2 w-50 btn-lg">Add to cart</a>
+                <div class="product_descp_wrapper">
+                  <p class="product_description" id="product_description"></p>
+                </div>
+                <div class="product_func_wrapper">
+                  <div class="d-flex flex-wrap justify-content-around">
+                    <a href="" class="btn btn-blue ripple-opacity-l" id="buy-now" disabled><span class="fa fa-shopping-bag"></span>&nbsp;Buy Now</a>
+                    <a href="" class="btn btn-mandarin ripple-opacity-l" id="add-to-cart"><span class="fa fa-cart-plus"></span>&nbsp;Add to Cart</a>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
+      </div>
 
 
 
@@ -662,6 +632,7 @@
 <script type="text/javascript" src="js/usp-load.js"></script>
 <script type="text/javascript" src="js/customer-review.js"></script>
 <script type="text/javascript" src="js/responsive-reviews.js"></script>
+<script type="text/javascript" src="js/quick-product.js"></script>
 
 
 <!-- <script>
