@@ -4,7 +4,7 @@ function scrollReveal() {
     window.sr = ScrollReveal();
     sr.reveal(".reveal__from-left",{
       origin:"left",
-      distance:"100px",
+      distance:"80px",
       duration:500,
       delay:400,
       mobile:false,
@@ -15,7 +15,7 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__from-right",{
       origin:"right",
-      distance:"100px",
+      distance:"80px",
       duration:500,
       delay:400,
       mobile:false,
@@ -26,9 +26,9 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__from-top",{
       origin:"top",
-      distance:"100px",
+      distance:"20px",
       duration:500,
-      delay:400,
+      delay:200,
       mobile:false,
       easing:'ease',
       afterReveal: function(el) {
@@ -37,9 +37,9 @@ function scrollReveal() {
     });
     sr.reveal(".reveal__from-bottom",{
       origin:"bottom",
-      distance:"100px",
+      distance:"20px",
       duration:500,
-      delay:400,
+      delay:200,
       mobile:false,
       easing:'ease',
       afterReveal: function(el) {
