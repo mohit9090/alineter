@@ -1,26 +1,31 @@
 
 
 /* ILLUSTRATION */
-#illustration {
+/*#illustration {
   background-image:url('../images/about-us-1.jpg');
 }
 .illustration-box {
 	width:100%;
 	background:rgba(0,0,0,0.5)
-}
+}*/
 
 
 
 
 /* ABOUT US */
-section#about-us, section#directors {
-	padding:4.5% 2%;
+section#about-us, 
+section#directors,
+section#small-description,
+section#about-products {
+	padding:var(--lg-padding);
 }
 #head .body {
 	font-family:calibri;
 }
-.big-title, .medium-title, .small-title {
-	color:#F45C24;
+.big-title, 
+.medium-title, 
+.small-title {
+	color:var(--main-secondary);
 }
 @media screen and (min-width:1000px){
 	.about-us-box {
@@ -76,21 +81,42 @@ section#about-us, section#directors {
 		width:100%;
 	}
 }
+*/
 .shop-btn {
-	color:#fff;
 	font-weight:bold;
-	background:#F45C24;
 	width:250px;
-	border-radius:0;
 	padding:2.6%;
-	opacity:0.8;
-	transition:0.3s;
-}
-.shop-btn:hover {
-	opacity:1;
-	color:#fff;
 }
 .shop-btn:active {
-	background:#F45C2490;
-	transition:background 0.3s;
-}*/
+	opacity:0.7;
+	transition:opacity 0.3s;
+}
+
+
+
+.about-us-content {
+	white-space:pre-line;
+	line-height:1.7;
+}
+
+
+.xyz {
+	width:85%;
+	height:100vh;
+}
+
+.xyz img {
+	width:100%;
+	height:100%;
+	object-fit:contain;
+}
+
+
+@media screen and (max-width:576px) {
+	.left {
+		order:2;
+	}
+	.right {
+		order:1;
+	}
+}
