@@ -256,7 +256,7 @@
         
         </div>  
       </section> -->
-      
+
 
 
 
@@ -503,23 +503,9 @@
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
 
 
-<script>
+<script type="text/javascript">
   //SPECIFIC FOR CONTACT PAGE
   /* Check is the input tag is filled or not */
-  function replaceClass(element, oldClass, newClass) {
-    element.classList.remove(oldClass);
-    element.classList.add(newClass);
-  }
-
-  function validateEmail(val) {
-    let isEmail = false;
-    if(!val.length) {
-      return isEmail;
-    }
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    isEmail =  emailRegex.test(val);
-    return isEmail;
-  }
 
   function isFilled(this_obj) {
     if(this_obj.value === "") {
@@ -528,7 +514,8 @@
     else {
       if(this_obj.getAttribute("type") === "email") {
         let isEmail = validateEmail(this_obj.value);
-        isEmail?replaceClass(this_obj, "not-filled", "filled"):replaceClass(this_obj, "filled", "not-filled");
+        // isEmail?replaceClass(this_obj, "not-filled", "filled"):replaceClass(this_obj, "filled", "not-filled");
+        switchClass(isEmail, this_obj, "filled", "not-filled");
         return;
       }
       replaceClass(this_obj, "not-filled", "filled");
