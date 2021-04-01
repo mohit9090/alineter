@@ -11,67 +11,6 @@
 
 
 /* CONTACT US SECTION */
-/*section#contact-us, section#reach-us{
-	padding:4% 2%;
-}*/
-.contact-us-box {
-	background:#FDFDFD;
-	border:2px dashed #160C28;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-@media screen and (min-width:680px) {
-	.contact-us-box {
-		width:50%;
-	}
-	.reach-us-box {
-		width:70%;
-	}
-}
-@media screen and (max-width:680px) and (min-width:480px) {
-	.contact-us-box {
-		width:70%;
-	}
-	.reach-us-box {
-		width:80%;
-	}
-}
-@media screen and (max-width:480px) {
-	.contact-us-box {
-		width:90%;
-	}
-	.reach-us-box {
-		width:100%;
-	}
-}
-
-/*.input-s-2:focus, .textarea-s-1:focus {
-	color:#160C28;
-	border-color:#160C28;
-}*/
-/*.input-s-2.filled, .textarea-s-1.filled {
-	border-color:#160C28;
-	background:rgba(140, 255, 218,0.15);
-}
-.input-s-2.not-filled, .textarea-s-1.not-filled {
-	border-color:#160C28;
-	background:rgba(236, 88, 88, 0.1);
-}*/
-.reach-us-content .left-content {
-	background-image:url("../images/black-texture-1.jpg");
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-.reach-us-content .link {
-	color:#EFCB68;
-	transition:0.3s;
-}
-.reach-us-content .link:hover {
-	color:#AEB7B3;
-	text-decoration:none;
-}
-
-
-
 section#contact-us {
 	/*height:100vh;*/
 	padding:var(--lg-padding);
@@ -82,7 +21,6 @@ section#contact-us {
 	background-position:center;
 	position:relative;
 }
-
 #contact-us :is(.overlay-bg) {
 	position:absolute;
 	top:0;
@@ -91,8 +29,11 @@ section#contact-us {
 	height:100%;
 	background:rgba(1, 22, 39, 0.8);
 }
-
-
+.reach-us,
+.contact-us {
+	margin-top:5%;
+}
+/*Input style for this section*/
 .input-s-2, 
 .textarea-s-1,
 .input-s-2:focus, 
@@ -102,19 +43,15 @@ section#contact-us {
 	border-color:var(--tertiary-light);
 	background:transparent;
 }
-
 .input-s-2::placeholder,
 .textarea-s-1::placeholder {
 	color:var(--tertiary-light);
 	opacity:0.8;
 }
-
 .input-s-2:focus::placeholder,
 .textarea-s-1:focus::placeholder {
 	opacity:1;
 }
-
-
 .input-s-2.filled, .textarea-s-1.filled {
 	border-color:rgba(140, 255, 218,0.8);
 	background:rgba(140, 255, 218,0.2);
@@ -123,25 +60,16 @@ section#contact-us {
 	border-color:rgba(236, 88, 88, 0.7);
 	background:rgba(236, 88, 88, 0.1);
 }
-
-
+/*Support Links*/
 .mail-support > a,
 .telephone-support > a {
 	color:var(--tertiary-light);
 }
-
-
 .contact-us-btn {
-	/*padding:var(--lg-padding);*/
 	font-size:1.1rem;
 	font-weight:550;
 }
-
-.reach-us,
-.contact-us {
-	margin-top:5%;
-}
-
+/*MAP*/
 .mapouter {
 	position:relative;
 	text-align:right;
@@ -150,7 +78,6 @@ section#contact-us {
 }
 .gmap_canvas {
 	overflow:hidden;
-	background:var(--main-secondary)!important;
 	height:650px;
 	width:100%;
 }
@@ -171,5 +98,23 @@ section#contact-us {
 	.mapouter,
 	.gmap_canvas {
 		height:250px;
+	}
+}
+/*Load gradient for map*/
+.load-gradient {
+	background: linear-gradient(-45deg, #2EC4B6, #20A4F3);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
 	}
 }
