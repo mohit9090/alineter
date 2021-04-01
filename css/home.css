@@ -428,7 +428,7 @@
 
 
 /* NEWSLETTER */
-@media screen and (min-width:700px) {
+/*@media screen and (min-width:700px) {
 	.newsletter-box {
 		width:75%;
 	}
@@ -470,6 +470,6 @@
 .newsletter-subscribe .input-s-1:focus {
 	color:#6C63FF;
 	border-color:#6C63FF;
-}
+}*/
 
 
