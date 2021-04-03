@@ -1,18 +1,21 @@
 
 
 /* ILLUSTRATION */
-#illustration {
+/*#illustration {
   background-image:url('../images/blog-illus.jpg');
 }
 .illustration-box {
 	width:100%;
 }
-
+*/
 
 
 /* BLOGS SECTION */
+#blogs-utility {
+	padding:var(--sm-padding);
+}
 #blogs {
-	padding:5% 1%;
+	padding:var(--lg-padding);
 }
 .blog {
 	position:relative;
@@ -125,3 +128,63 @@ Transition
 #ff7e5f->#feb47b light orange
 
 */
+
+
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width:850px) {
+	.wrapper {
+		width:70%;
+	}
+	.blogs-search-util.wrapper {
+		width:45%;
+	}
+}
+@media screen and (min-width:700px) and (max-width:850px) {
+	.wrapper {
+		width:70%;
+	}
+	.blogs-search-util.wrapper {
+		width:60%;
+	}
+}
+@media screen and (min-width:550px) and (max-width:700px) {
+	.wrapper {
+		width:80%;
+	}
+}
+@media screen and (max-width:550px) {
+	.wrapper {
+		width:100%;
+	}
+}
+
+input[name="q"] {
+	background:transparent;
+	color:var(--tertiary-light);
+	width:80%;
+	font-size:1.1rem;
+	letter-spacing:1.05px;
+	word-spacing:1.1px;
+	border-color:var(--tertiary-light);
+	transition:0.3s ease;
+}
+input[name="q"]::placeholder {
+	color:var(--tertiary-light);
+	opacity:0.3;
+}
+input[name="q"] + .fa-times {
+	cursor:pointer;
+	opacity:0;
+	pointer-events:none;
+	transition:0.2s ease;
+}

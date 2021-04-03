@@ -256,13 +256,87 @@
       </section> -->
 
 
+      <!--
+      =================== BLOGS CATEGORY ===================
+      -->
+      <section id="blogs-utility" class="w-100">
+        <div class="container">
+          <div class="blogs-search-util p-4 rounded bg-richblack wrapper mx-auto">
+            <div class="blogs-search-wrapper text-center p-0">
+              <div class="d-flex justify-content-center text-cultured">
+                <i class="fa fa-search align-self-end mr-2"></i>
+                <input type="text" id="blog-search" class="input-s-1 p-0" placeholder="Search" name="q" spellcheck="false">
+                <i class="fa fa-times" onclick="clearInput(this)"></i>
+              </div>
+            </div>
+          </div>
+          <div class="blogs-category-util w-100 bg-danger p-5 mt-3">
+          </div>
+        </div>
+      </section>
 
-      <!-- BLOGS SECTION -->
+
+      <script type="text/javascript">
+        const blogSearch = document.getElementById("blog-search");
+        const clearBtn = document.querySelector("input[name='q'] + .fa-times");
+        blogSearch.onkeyup = function() {
+          var val = this.value;
+          toggleClearBtn(val);          
+        }
+
+        function toggleClearBtn(val) {
+          (val.length > 0) ? showClearBtn() : hideClearBtn();
+        }
+
+        function showClearBtn() {
+          clearBtn.style.opacity = "1";
+          clearBtn.style.pointerEvents = "auto"; 
+        }
+
+        function hideClearBtn() {
+          clearBtn.style.opacity = "0";
+          clearBtn.style.pointerEvents = "none"; 
+        }
+
+        function clearInput(elem) {
+          blogSearch.value = "";
+          elem.style.opacity = "0";
+        }
+      </script>
+
+
+
+      <!-- 
+      =================== BLOGS SECTION ====================
+      -->
+      <section id="blogs" class="w-100 scroll-reveal-content bg-mandarin">
+
+        <div class="wrapper bg-richblack mx-auto p-3" style="height:450px">
+          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
+          </div>
+        </div>
+
+        <div class="wrapper bg-richblack mx-auto mt-5 p-3" style="height:550px">
+          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
+          </div>
+        </div>
+
+        <div class="wrapper bg-richblack mx-auto mt-5 p-3" style="height:300px">
+          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
+          </div>
+        </div>
+
+        <div class="wrapper bg-richblack mx-auto mt-5 p-3" style="height:650px">
+          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
+          </div>
+        </div>
+        
+      </section>
        
 
 
 
-<!--
+      <!--
       ================== FOOTER SECTION ====================
       -->
 
