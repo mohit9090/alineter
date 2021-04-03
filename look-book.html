@@ -354,25 +354,30 @@
             <div class="container-fluid p-0">
               <div class="d-flex flex-column">
                 
-                <div class="blog-detail">
+                <div class="blog-detail" id="blog-detail">
                   <div class="blog-author-wrap d-flex justify-content-between pl-0 pr-0 pb-2">
                     <div class="blog-author d-flex">
                       <div class="blog-author-img">
-                        <img src="images/mohit_300.png" class="rounded-circle"/>
+                        <a href="profile.html?author='mohitkumar342'"><img src="images/mohit_300.png" class="rounded-circle" alt="author name | Alineter"/></a>
                       </div>
                       <div class="ml-2 d-flex flex-column">
                         <small class="d-flex blog-author-name lead">
-                          <span>Mohit Kumar</span>&nbsp;&nbsp;
-                          <img src="images/pen-feather-xl.png" class="img-fluid" width=10 height=7 />
+                          <span>Mohit Kumar</span>&nbsp;
+                          <a href="profile.html?author='mohitkumar342'"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
+                          <script>
+                            $(document).ready(function(){
+                              $('[data-toggle="tooltip"]').tooltip();
+                            });
+                          </script>
                         </small>
                         <small class="blog-pub-date lead">Mar 22, 2020</small>
                       </div>
                     </div>
                     <div class="blog-link">
-                      <button class="btn rounded-circle"><i class="fa fa-link"></i></button>
+                      <a href="#shareLinkModal" class="btn rounded-circle" data-toggle="modal" ><i class="fa fa-link"></i></a>
                     </div>
                   </div>
-                  <div class="blog-description d-flex flex-column mt-2">
+                  <div class="blog-description d-flex flex-column mt-2" id="blog-description">
                     <div class="blog-title">
                       <h5>0.1 seconds is all it takes</h5>
                     </div>
@@ -386,13 +391,87 @@
                 <div class="hr mt-2">
                 </div>
 
-                <div class="blog-success">
+                <div class="blog-success d-flex justify-content-between mt-2 mb-2">
+                  <div class="d-flex">
+                    <small class="lead blog-report blog-views">86 views</small>
+                    <small class="lead blog-report blog-comments ml-3">3 comments</small>
+                  </div>
+                  <div class="d-flex">
+                    <small class="lead blog-report blog-likes">
+                      <span id="likes-count">15</span>&nbsp;
+                      <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this)"></span>
+                    </small>
+                  </div>
                 </div>
 
               </div>
             </div>
           </div>
         </div>
+
+
+        <div class="modal fade" id="shareLinkModal">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Share this Link</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                  <input type="text" id="blog-sharelink" class="form-control" value="www.google.com" readonly="true">
+                  <div class="input-group-btn">
+                    <button class="btn btn-light" type="button" id="copy-btn">
+                      <i class="fa fa-clipboard" id="copy-icon"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <script type="text/javascript">
+          const idSelector = ['blog-img-wrapper', 'blog-description'];
+          idSelector.map( (elem) => {
+            document.getElementById(elem).addEventListener("click", function() {
+              let url = "blog/127538/0-1-seconds";
+              window.location.href = url;
+            });
+          });
+
+
+          const copyBtn = document.getElementById("copy-btn");
+          const blogShareLink = document.getElementById("blog-sharelink");
+          const copyIcon = document.getElementById("copy-icon");
+          copyBtn.onclick = function() {
+            // console.log("clicked");
+            let blogLink = blogShareLink.getAttribute("value");
+            navigator.clipboard.writeText(blogLink).then(function(){
+              blogShareLink.select();
+              copyIcon.classList.remove("fa-clipboard");
+              copyIcon.classList.add("fa-check")
+              setTimeout(function(){
+                copyIcon.classList.remove("fa-check");
+                copyIcon.classList.add("fa-clipboard");
+              },1000)
+            });
+          };
+
+          function toggleHeart(heartBtn) {
+            // console.log("click")
+            // console.log($(heartBtn).attr("class"));
+            $(heartBtn).toggleClass("fa-heart fa-heart-o");
+            const likesCount = document.getElementById("likes-count");
+            var likes = parseInt(likesCount.innerHTML);
+            likes += 1;
+            likesCount.innerHTML = likes;
+          }
+
+        </script>
 
 
 
