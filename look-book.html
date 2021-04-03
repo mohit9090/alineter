@@ -260,18 +260,50 @@
       =================== BLOGS CATEGORY ===================
       -->
       <section id="blogs-utility" class="w-100">
-        <div class="container">
-          <div class="blogs-search-util p-4 rounded bg-richblack wrapper mx-auto">
+        <div class="container p-0">
+          
+          <!--Search Bar-->
+          <div class="blogs-search-util p-3 pb-4 rounded wrapper mx-auto">
             <div class="blogs-search-wrapper text-center p-0">
-              <div class="d-flex justify-content-center text-cultured">
-                <i class="fa fa-search align-self-end mr-2"></i>
+              <div class="d-flex justify-content-center">
+                <i class="fa fa-search blog-search-icon align-self-end mr-2"></i>
                 <input type="text" id="blog-search" class="input-s-1 p-0" placeholder="Search" name="q" spellcheck="false">
                 <i class="fa fa-times" onclick="clearInput(this)"></i>
               </div>
             </div>
           </div>
-          <div class="blogs-category-util w-100 bg-danger p-5 mt-3">
+
+          <!--Category Search-->
+          <div class="blogs-category-util w-100 p-2 mt-3">
+
+            <!--Style 1 on large screen-->
+            <div class="blogs-category-wrapper" id="blogsCategory--lg">
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-vermillion category-btn">Category&nbsp;&nbsp;<span class="fa fa-caret-right"></span></button>
+
+                <!--Categories-->
+                <button class="btn btn-outline-richblack category-item active">All Posts</button>
+                <button class="btn btn-outline-richblack category-item">clothing</button>
+                <button class="btn btn-outline-richblack category-item">men's fashion</button>
+                <button class="btn btn-outline-richblack category-item">lifestyle</button>
+                <button class="btn btn-outline-richblack category-item">research backed</button>
+              </div>
+            </div>
+
+            <!--Style 2 on small screen-->
+            <div class="blogs-category-wrapper text-center" id="blogsCategory--sm">
+              <div class="category-dropdown">
+                <button class="btn btn-vermillion category-dropbtn">Category&nbsp;&nbsp;<span class="fa fa-caret-down"></span></button>
+                <div class="category-content">
+                  <button class="btn w-100 category-item">All Posts</button>
+                  <button class="btn w-100 category-item active">clothing</button>
+                  <button class="btn w-100 category-item">men's fashion</button>
+                  <button class="btn w-100 category-item">lifestyle</button>
+                  <button class="btn w-100 category-item">research backed</button>
+                </div>
+              </div>
           </div>
+
         </div>
       </section>
 
@@ -300,7 +332,7 @@
 
         function clearInput(elem) {
           blogSearch.value = "";
-          elem.style.opacity = "0";
+          hideClearBtn();
         }
       </script>
 

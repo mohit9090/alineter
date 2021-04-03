@@ -168,23 +168,127 @@ Transition
 	}
 }
 
+
+/*Search Input*/
 input[name="q"] {
 	background:transparent;
-	color:var(--tertiary-light);
 	width:80%;
 	font-size:1.1rem;
-	letter-spacing:1.05px;
-	word-spacing:1.1px;
-	border-color:var(--tertiary-light);
+	letter-spacing:1.02px;
+	word-spacing:2px;
 	transition:0.3s ease;
 }
 input[name="q"]::placeholder {
-	color:var(--tertiary-light);
-	opacity:0.3;
+	opacity:0.5;
 }
 input[name="q"] + .fa-times {
 	cursor:pointer;
 	opacity:0;
 	pointer-events:none;
 	transition:0.2s ease;
+}
+
+@media screen and (min-width:592px) {
+	.blogs-search-util {
+		background:var(--tertiary-light);
+	}
+	.blog-search-icon,
+	input[name="q"],
+	input[name="q"]::placeholder,
+	input[name="q"] + .fa-times {
+		color:var(--main-primary);
+	}
+	input[name="q"] {
+		border-color:var(--main-primary);
+	}
+}
+@media screen and (max-width:592px) {
+	.blogs-search-util {
+		background:var(--main-primary);
+	}
+	.blog-search-icon,
+	input[name="q"],
+	input[name="q"]::placeholder,
+	input[name="q"] + .fa-times {
+		color:var(--tertiary-light);
+	}
+	input[name="q"] {
+		border-color:var(--tertiary-light);
+	}
+}
+
+/*Blogs category*/
+/*only for testing*/
+/*#blogsCategory--lg {
+	display:block;
+}
+#blogsCategory--sm {
+	display:block;
+}*/
+
+/*responsive category section*/
+@media screen and (min-width:750px) {
+	#blogsCategory--lg {
+		display:block;
+	}
+	#blogsCategory--sm {
+		display:none;
+	}
+}
+@media screen and (max-width:750px) {
+	#blogsCategory--lg {
+		display:none;
+	}
+	#blogsCategory--sm {
+		display:block;
+	}
+}
+.category-btn {
+	margin-right:0.5%;
+	pointer-events:none;
+	cursor:default;
+}
+.category-item {
+	margin-right:1.2%;
+	padding:8px 16px;
+}
+.category-item.active {
+	background:var(--main-primary);
+	color:var(--tertiary-light);
+	cursor:default;
+	pointer-events:none;
+}
+.category-item:not(.category-item.active):hover {
+	background:rgba(1, 22, 39, 0.08);
+	color:var(--main-primary);
+}
+.category-dropdown {
+  position:relative;
+  display:inline-block;
+}
+.category-dropbtn {
+  padding:13px 39px;
+  font-size:1.1rem;
+  cursor:pointer;
+}
+.category-dropbtn > .fa-caret-down {
+	transition:0.2s ease;
+}
+.category-content {
+  display:none;
+  position:absolute;
+  background-color:#f9f9f9;
+  min-width:170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+}
+.category-content button {
+  color:var(--main-primary);
+  padding:12px 16px;
+}
+.category-dropdown:hover .category-content {
+  display:block;
+}
+.category-dropdown:hover .fa-caret-down {
+	transform:rotate(180deg);
 }
