@@ -358,7 +358,7 @@ input[name="q"] + .fa-times {
 }
 .blog-author-name,
 .blog-pub-date {
-	letter-spacing:1.02px;
+	letter-spacing:1.01px;
 }
 
 .blog-link :is( button >.fa-link) {
@@ -372,13 +372,16 @@ input[name="q"] + .fa-times {
 	opacity:0.8;
 	transition:opacity 0.2s ease;
 }
+.blog-short-descp p {
+	font-size:1rem;
+}
 
 
 /*horizontal line*/
 div.hr {
 	width:100%;
 	height:0;
-	background-color:var(--tertiary-light);
-	border:1px solid var(--tertiary-light);
+	background:#bfbfbf;
+	border:0.3px solid #bfbfbf;
 	border-radius:100px;
 }
