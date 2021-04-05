@@ -178,8 +178,8 @@ function mapBlogs() {
                   </div>
                   <div class="d-flex">
                     <small class="lead blog-report blog-likes">
-                      <span id="likes-count">${blog.blog_reviews.likes}</span>&nbsp;
-                      <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this)" data-like="false"></span>
+                      <span id="likesCount--${blog.blog_id}">${blog.blog_reviews.likes}</span>&nbsp;
+                      <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this, ${blog.blog_id})" data-like="false"></span>
                     </small>
                   </div>
                 </div>
@@ -213,7 +213,6 @@ function getBlogByID(blogID) {
 
 	//Destructuring respective_blog array
 	const [blog] = respective_blog;
-
 	return blog;
 }
 
