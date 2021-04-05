@@ -342,107 +342,86 @@
       =================== BLOGS SECTION ====================
       -->
       <section id="blogs" class="w-100 scroll-reveal-content">
+        
+      </section>
 
-        <!-- <div class="modal fade" id="shareLinkModal">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Share this Link</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="input-group">
-                  <input type="text" id="blog-sharelink" class="form-control" value="www.google.com" readonly="true">
-                  <div class="input-group-btn">
-                    <button class="btn btn-light" type="button" id="copy-btn">
-                      <i class="fa fa-clipboard" id="copy-icon"></i>
-                    </button>
-                  </div>
+
+      <!--Model for Shar Blog Link-->
+      <div class="modal fade" id="shareBlogModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Share this Link</h5>
+              <button type="button" class="btn btn-vermillion rounded-circle" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group">
+                <input type="text" id="blog-sharelink" class="form-control" value="" readonly="true">
+                <div class="input-group-btn">
+                  <button class="btn btn-light" type="button" id="copy-btn" onclick="copyLink(this, document.getElementById('blog-sharelink'))">
+                    <i class="fa fa-clipboard" id="copy-icon"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
+      </div>
 
+      <script type="text/javascript">
 
-       <!--  <script type="text/javascript">
+        /*Add Link to blogs to view it*/
+        // const idSelector = ['blog-img-wrapper', 'blog-description'];
+        // idSelector.map( (elem) => {
+        //   document.getElementById(elem).addEventListener("click", function() {
+        //     let url = "blog/127538/0-1-seconds";
+        //     window.location.href = url;
+        //   });
+        // });
 
-          function replaceClass(element, oldClass, newClass) {
-            element.classList.remove(oldClass);
-            element.classList.add(newClass);
-          }
+        /* Like dislike blog */
+        // function toggleHeart(heartBtn) {
 
-          /*Add Link to blogs to view it*/
-          const idSelector = ['blog-img-wrapper', 'blog-description'];
-          idSelector.map( (elem) => {
-            document.getElementById(elem).addEventListener("click", function() {
-              let url = "blog/127538/0-1-seconds";
-              window.location.href = url;
-            });
-          });
+        //   const likesCountElem = document.getElementById("likes-count");
+        //   var likes = parseInt(likesCountElem.innerHTML);
 
+        //   const heartState = [
+        //     {
+        //       addIcon : "fa-heart",
+        //       removeIcon : "fa-heart-o",
+        //       dataLike : "true",
+        //       likeCount : 1
+        //     }, 
+        //     {
+        //       addIcon : "fa-heart-o",
+        //       removeIcon : "fa-heart",
+        //       dataLike : "false",
+        //       likeCount : -1
+        //     }
+        //   ];
 
-          /*Copy Text*/
-          const copyBtn = document.getElementById("copy-btn");
-          const blogShareLink = document.getElementById("blog-sharelink");
-          const copyIcon = document.getElementById("copy-icon");
-          copyBtn.onclick = function() {
-            // console.log("clicked");
-            let blogLink = blogShareLink.getAttribute("value");
-            navigator.clipboard.writeText(blogLink).then(function(){
-              blogShareLink.select();
-              replaceClass(copyIcon, "fa-clipboard", "fa-check");
-              setTimeout(function(){
-                replaceClass(copyIcon, "fa-check", "fa-clipboard");
-              },1000);
-            });
-          };
+        //   // Destructure HeartState
+        //   const [likeBlog, dislikeBlog] = heartState;
 
-          /* Like dislike blog */
-          function toggleHeart(heartBtn) {
+        //   function changeHeartState(state) {
+        //     replaceClass(heartBtn, state.removeIcon, state.addIcon);
+        //     heartBtn.setAttribute("data-like", state.dataLike);
+        //     likes += state.likeCount;
+        //     likesCountElem.innerHTML = likes;
+        //     //add a love click effect
+        //     heartBtn.classList.add("loveEffect");
+        //     setTimeout(function(){
+        //       heartBtn.classList.remove("loveEffect");
+        //     },700);
+        //   }
 
-            const likesCountElem = document.getElementById("likes-count");
-            var likes = parseInt(likesCountElem.innerHTML);
+        //   let isLiked = heartBtn.getAttribute("data-like");
+        //   (isLiked == "false") ? changeHeartState(likeBlog) : changeHeartState(dislikeBlog);
+        // }
 
-            const heartState = [
-              {
-                addIcon : "fa-heart",
-                removeIcon : "fa-heart-o",
-                dataLike : "true",
-                likeCount : 1
-              }, 
-              {
-                addIcon : "fa-heart-o",
-                removeIcon : "fa-heart",
-                dataLike : "false",
-                likeCount : -1
-              }
-            ];
-
-            //Destructure HeartState
-            const [likeBlog, dislikeBlog] = heartState;
-
-            function changeHeartState(state) {
-              replaceClass(heartBtn, state.removeIcon, state.addIcon);
-              heartBtn.setAttribute("data-like", state.dataLike);
-              likes += state.likeCount;
-              likesCountElem.innerHTML = likes;
-              //add a love click effect
-              heartBtn.classList.add("loveEffect");
-              setTimeout(function(){
-                heartBtn.classList.remove("loveEffect");
-              },700);
-            }
-
-            let isLiked = heartBtn.getAttribute("data-like");
-            (isLiked == "false") ? changeHeartState(likeBlog) : changeHeartState(dislikeBlog);
-          }
-
-        </script> -->
-        
-      </section>
+      </script>
        
 
 
@@ -615,6 +594,34 @@
   function ifValid(input) {
     var result = validateEmail(input.value);
     switchClass(result, input, "correct", "incorrect");
+  }
+
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+
+<script type="text/javascript">
+
+  /*
+    Copy Text to ClipBoard
+  */
+
+  function copyLink(copyBtn, copyFrom) {
+    let blogLink = copyFrom.getAttribute("value");
+    navigator.clipboard.writeText(blogLink).then(function(){
+        copyFrom.select();
+        /*
+          copyBtn.children[0] refers to the copy icon inside copy btn which is the first child of it
+        */
+        replaceClass(copyBtn.children[0], "fa-clipboard", "fa-check");
+        setTimeout(function(){
+          replaceClass(copyBtn.children[0], "fa-check", "fa-clipboard");
+        },500);
+    });
   }
 
 </script>

@@ -8,7 +8,7 @@ const blogs = [
 			mainImg : "images/blog-img--1.webp", 
 			title : "0.1 seconds is all it takes",
 			short_description : "What are the things people notice first to form a quick opinion on you? Here's your answer",
-			url : "",
+			url : "blog/0-1-seconds-is-all-it-takes",
 			blog_category : [
 				"clothing", 
 				"men's fashion", 
@@ -19,7 +19,7 @@ const blogs = [
 			name : "Mohit Kumar",
 			username : "mohitkumar3762",
 			pfImg : "images/mohit_300.png",
-			profile_url : ""
+			profile_url : "profile/mohitkumar3762"
 		},
 		blog_date : {
 			date : "22",
@@ -39,7 +39,7 @@ const blogs = [
 			mainImg : "images/men-fashion-1.jpg", 
 			title : "Backed By Science",
 			short_description : "Humans have a thing called a learning bias. No matter how wise a saying is, we are much more apt to accept it as true if we trust the source.",
-			url : "",
+			url : "blog/Backed-By-Science",
 			blog_category : [ 
 				"research backed"
 			]
@@ -48,7 +48,7 @@ const blogs = [
 			name : "Rohit Kumar",
 			username : "rohitkumar_292",
 			pfImg : "images/model_pic_1859__white_tee_park__jpeg--20.jpg",
-			profile_url : ""
+			profile_url : "profile/rohitkumar_292"
 		},
 		blog_date : {
 			date : "18",
@@ -68,7 +68,7 @@ const blogs = [
 			mainImg : "images/men-fashion-2.jpg", 
 			title : "Let Me List Them Out For You",
 			short_description : "For some reason, we like list posts. They appeal to a wide audience and inspire a lot of clicks compared to other types of articles",
-			url : "",
+			url : "blog/Let-Me-List-Them-Out-For-You",
 			blog_category : [
 				"clothing",
 				"research backed"
@@ -78,7 +78,7 @@ const blogs = [
 			name : "Sanmay Biswal",
 			username : "sanmayBiswal00",
 			pfImg : "images/pratyush_pic_no_1516_jpeg-30.jpg",
-			profile_url : ""
+			profile_url : "profile/sanmayBiswal00"
 		},
 		blog_date : {
 			date : "2",
@@ -98,7 +98,7 @@ const blogs = [
 			mainImg : "images/men-fashion-3.jpg", 
 			title : "Everyone Loves Competition",
 			short_description : "This is a powerful title option. It allows you to replace third-party, uncontrollable reviews of your product or service with reviews you can control.",
-			url : "",
+			url : "blog/Everyone-Loves-Competition",
 			blog_category : [
 				"clothing"
 			]
@@ -107,7 +107,7 @@ const blogs = [
 			name : "MD Pervez",
 			username : "PervezKhan024",
 			pfImg : "images/rahul_pic_no_1503_jpeg-30.jpg",
-			profile_url : ""
+			profile_url : "profile/PervezKhan024"
 		},
 		blog_date : {
 			date : "22",
@@ -149,17 +149,12 @@ function mapBlogs() {
                         <small class="d-flex blog-author-name lead">
                           <span>${blog.blog_author.name}</span>&nbsp;
                           <a href=""><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
-                          <script>
-                            $(document).ready(function(){
-                              $('[data-toggle="tooltip"]').tooltip();
-                            });
-                          </script>
                         </small>
                         <small class="blog-pub-date lead">${blog.blog_date.month} ${blog.blog_date.date}, ${blog.blog_date.year}</small>
                       </div>
                     </div>
                     <div class="blog-link">
-                      <a href="#shareLinkModal" class="btn rounded-circle" data-toggle="modal" ><i class="fa fa-link"></i></a>
+                      <a href="#" class="btn rounded-circle" data-toggle="modal" onclick="shareBlogModal(${blog.blog_id})"><i class="fa fa-link"></i></a>
                     </div>
                   </div>
                   <div class="blog-description d-flex flex-column mt-2" id="blog-description">
@@ -209,5 +204,19 @@ function constructBlogs() {
 function displayBlogs() {
 	constructBlogs();
 }
-
 displayBlogs();
+
+
+function shareBlogModal(blogID) {
+	const blogLinkElem = document.getElementById("blog-sharelink");
+
+	var respective_blog = blogs.filter( (blog) => {
+		return blog.blog_id == blogID;
+	});
+
+	//Destructuring respective_blog array
+	const [blog] = respective_blog;
+
+	blogLinkElem.setAttribute("value", blog.blog_detail.url);
+	$("#shareBlogModal").modal("show");
+}
