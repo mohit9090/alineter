@@ -343,74 +343,7 @@
       -->
       <section id="blogs" class="w-100 scroll-reveal-content">
 
-        <div class="blog wrapper mx-auto p-0">
-          <!--Blog Image-->
-          <div class="container-fluid blog-img-wrapper load-gradient p-0" id="blog-img-wrapper">
-            <img src="images/blog-img--1.webp" class="img-fluid blog-img" onload="document.getElementById('blog-img-wrapper').classList.remove('load-gradient')"/>
-          </div>
-
-          <!--Blog Details-->
-          <div class="container-fluid w-100 blog-detail-wrapper">
-            <div class="container-fluid p-0">
-              <div class="d-flex flex-column">
-                
-                <div class="blog-detail" id="blog-detail">
-                  <div class="blog-author-wrap d-flex justify-content-between pl-0 pr-0 pb-2">
-                    <div class="blog-author d-flex">
-                      <div class="blog-author-img">
-                        <a href="profile.html?author='mohitkumar342'"><img src="images/mohit_300.png" class="rounded-circle" alt="author name | Alineter"/></a>
-                      </div>
-                      <div class="ml-2 d-flex flex-column">
-                        <small class="d-flex blog-author-name lead">
-                          <span>Mohit Kumar</span>&nbsp;
-                          <a href="profile.html?author='mohitkumar342'"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
-                          <script>
-                            $(document).ready(function(){
-                              $('[data-toggle="tooltip"]').tooltip();
-                            });
-                          </script>
-                        </small>
-                        <small class="blog-pub-date lead">Mar 22, 2020</small>
-                      </div>
-                    </div>
-                    <div class="blog-link">
-                      <a href="#shareLinkModal" class="btn rounded-circle" data-toggle="modal" ><i class="fa fa-link"></i></a>
-                    </div>
-                  </div>
-                  <div class="blog-description d-flex flex-column mt-2" id="blog-description">
-                    <div class="blog-title">
-                      <h5>0.1 seconds is all it takes</h5>
-                    </div>
-                    <div class="blog-short-descp">
-                      <p class="lead">What are the things people notice first to form a quick opinion on you? Here's your answer</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!--Horizontal line-->
-                <div class="hr mt-2">
-                </div>
-
-                <div class="blog-success d-flex justify-content-between mt-2 mb-2">
-                  <div class="d-flex">
-                    <small class="lead blog-report blog-views">86 views</small>
-                    <small class="lead blog-report blog-comments ml-3">3 comments</small>
-                  </div>
-                  <div class="d-flex">
-                    <small class="lead blog-report blog-likes">
-                      <span id="likes-count">15</span>&nbsp;
-                      <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this)" data-like="false"></span>
-                    </small>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="modal fade" id="shareLinkModal">
+        <!-- <div class="modal fade" id="shareLinkModal">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -431,10 +364,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
-        <script type="text/javascript">
+       <!--  <script type="text/javascript">
 
           function replaceClass(element, oldClass, newClass) {
             element.classList.remove(oldClass);
@@ -507,24 +440,7 @@
             (isLiked == "false") ? changeHeartState(likeBlog) : changeHeartState(dislikeBlog);
           }
 
-        </script>
-
-
-
-        <div class="wrapper bg-richblack mx-auto mt-5 p-3" style="height:550px">
-          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
-          </div>
-        </div>
-
-        <div class="wrapper bg-richblack mx-auto mt-5 p-3" style="height:300px">
-          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
-          </div>
-        </div>
-
-        <div class="wrapper bg-richblack mx-auto mt-5 p-3" style="height:650px">
-          <div class="container-fluid" style="border:1px solid red;width:100%;height:100%">
-          </div>
-        </div>
+        </script> -->
         
       </section>
        
@@ -709,6 +625,8 @@
 <script type="text/javascript" src="js/scroll-xy.js"></script>
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
+
+<script type="text/javascript" src="js/create-blog.js"></script>
 
 
 </body>

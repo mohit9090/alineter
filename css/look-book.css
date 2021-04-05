@@ -293,6 +293,9 @@ input[name="q"] + .fa-times {
 .blog {
 	border:1px solid #BFBFBF;
 }
+.blog:not(:first-child) {
+	margin-top:5%;
+}
 .load-gradient {
 	background: linear-gradient(-45deg, #2EC4B6, #20A4F3);
 	background-size: 400% 400%;
