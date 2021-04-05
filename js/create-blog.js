@@ -130,7 +130,7 @@ function mapBlogs() {
 	blogs.map( (blog) => {
 		blog_div += `<div class="blog wrapper mx-auto p-0">
           <!--Blog Image-->
-          <div class="container-fluid blog-img-wrapper load-gradient p-0" id="blog-img-wrapper">
+          <div class="container-fluid blog-img-wrapper load-gradient p-0" id="blog-img-wrapper" onclick="viewBlog(${blog.blog_id})">
             <img src="${blog.blog_detail.mainImg}" alt="${blog.blog_detail.title}" class="img-fluid blog-img" onload="this.parentElement.classList.remove('load-gradient')"/>
           </div>
 
@@ -157,7 +157,7 @@ function mapBlogs() {
                       <a href="#" class="btn rounded-circle" data-toggle="modal" onclick="shareBlogModal(${blog.blog_id})"><i class="fa fa-link"></i></a>
                     </div>
                   </div>
-                  <div class="blog-description d-flex flex-column mt-2" id="blog-description">
+                  <div class="blog-description d-flex flex-column mt-2" id="blog-description" onclick="viewBlog(${blog.blog_id})">
                     <div class="blog-title">
                       <h5>${blog.blog_detail.title}</h5>
                     </div>
@@ -206,21 +206,35 @@ function displayBlogs() {
 }
 displayBlogs();
 
-
-function shareBlogModal(blogID) {
-	/*
-		Open Modal to get the link of blog
-	*/
-
-	const blogLinkElem = document.getElementById("blog-sharelink");
-
-	var respective_blog = blogs.filter( (blog) => {
+function getBlogByID(blogID) {
+	let respective_blog =  blogs.filter( (blog) => {
 		return blog.blog_id == blogID;
 	});
 
 	//Destructuring respective_blog array
 	const [blog] = respective_blog;
 
-	blogLinkElem.setAttribute("value", blog.blog_detail.url);
+	return blog;
+}
+
+
+function shareBlogModal(blogID) {
+	/*
+		Open Modal to get the link of blog
+	*/
+	const blogLinkElem = document.getElementById("blog-sharelink");
+
+	var respective_blog = getBlogByID(blogID);
+
+	blogLinkElem.setAttribute("value", respective_blog.blog_detail.url);
 	$("#shareBlogModal").modal("show");
+}
+
+
+function viewBlog(blogID) {
+	/*
+		View Complete blog by visiting the blog URL
+	*/
+	var respective_blog = getBlogByID(blogID);
+	window.location.href = respective_blog.blog_detail.url;
 }
