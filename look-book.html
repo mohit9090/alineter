@@ -399,7 +399,7 @@
                   <div class="d-flex">
                     <small class="lead blog-report blog-likes">
                       <span id="likes-count">15</span>&nbsp;
-                      <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this)"></span>
+                      <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this)" data-like="false"></span>
                     </small>
                   </div>
                 </div>
@@ -435,6 +435,13 @@
 
 
         <script type="text/javascript">
+
+          function replaceClass(element, oldClass, newClass) {
+            element.classList.remove(oldClass);
+            element.classList.add(newClass);
+          }
+
+          /*Add Link to blogs to view it*/
           const idSelector = ['blog-img-wrapper', 'blog-description'];
           idSelector.map( (elem) => {
             document.getElementById(elem).addEventListener("click", function() {
@@ -444,6 +451,7 @@
           });
 
 
+          /*Copy Text*/
           const copyBtn = document.getElementById("copy-btn");
           const blogShareLink = document.getElementById("blog-sharelink");
           const copyIcon = document.getElementById("copy-icon");
@@ -452,23 +460,51 @@
             let blogLink = blogShareLink.getAttribute("value");
             navigator.clipboard.writeText(blogLink).then(function(){
               blogShareLink.select();
-              copyIcon.classList.remove("fa-clipboard");
-              copyIcon.classList.add("fa-check")
+              replaceClass(copyIcon, "fa-clipboard", "fa-check");
               setTimeout(function(){
-                copyIcon.classList.remove("fa-check");
-                copyIcon.classList.add("fa-clipboard");
-              },1000)
+                replaceClass(copyIcon, "fa-check", "fa-clipboard");
+              },1000);
             });
           };
 
+          /* Like dislike blog */
           function toggleHeart(heartBtn) {
-            // console.log("click")
-            // console.log($(heartBtn).attr("class"));
-            $(heartBtn).toggleClass("fa-heart fa-heart-o");
-            const likesCount = document.getElementById("likes-count");
-            var likes = parseInt(likesCount.innerHTML);
-            likes += 1;
-            likesCount.innerHTML = likes;
+
+            const likesCountElem = document.getElementById("likes-count");
+            var likes = parseInt(likesCountElem.innerHTML);
+
+            const heartState = [
+              {
+                addIcon : "fa-heart",
+                removeIcon : "fa-heart-o",
+                dataLike : "true",
+                likeCount : 1
+              }, 
+              {
+                addIcon : "fa-heart-o",
+                removeIcon : "fa-heart",
+                dataLike : "false",
+                likeCount : -1
+              }
+            ];
+
+            //Destructure HeartState
+            const [likeBlog, dislikeBlog] = heartState;
+
+            function changeHeartState(state) {
+              replaceClass(heartBtn, state.removeIcon, state.addIcon);
+              heartBtn.setAttribute("data-like", state.dataLike);
+              likes += state.likeCount;
+              likesCountElem.innerHTML = likes;
+              //add a love click effect
+              heartBtn.classList.add("loveEffect");
+              setTimeout(function(){
+                heartBtn.classList.remove("loveEffect");
+              },700);
+            }
+
+            let isLiked = heartBtn.getAttribute("data-like");
+            (isLiked == "false") ? changeHeartState(likeBlog) : changeHeartState(dislikeBlog);
           }
 
         </script>

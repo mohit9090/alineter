@@ -390,18 +390,19 @@ input[name="q"] + .fa-times {
 	color:#E84A43;
 	font-size:0.9rem;
 	cursor:pointer;
-	animation: love 1s ease infinite;
 }
-
+.like-btn.loveEffect {
+	animation: love 0.5s ease 1;
+}
 @keyframes love {
 	0% {
-		filter:drop-shadow(0 0 0 red);
+		filter:drop-shadow(0 0 0 #E84A43);
 	}
 	50% {
-		filter:drop-shadow(0rem 0rem 1rem red);
+		filter:drop-shadow(0rem 0rem 0.6rem #E84A43);
 	}
 	100% {
-		filter:drop-shadow(0 0 0 red);
+		filter:drop-shadow(0 0 0 #E84A43);
 	}
 }
 
