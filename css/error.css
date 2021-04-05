@@ -2,7 +2,7 @@
 
 /*ERROR SECTION*/
 #error-wrapper {
-	background-color:#160C28;
+	background-color:var(--main-primary);
 	overflow-x:hidden;
 	overflow-y:auto;
 }
