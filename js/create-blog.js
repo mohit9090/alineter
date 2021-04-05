@@ -143,12 +143,12 @@ function mapBlogs() {
                   <div class="blog-author-wrap d-flex justify-content-between pl-0 pr-0 pb-2">
                     <div class="blog-author d-flex">
                       <div class="blog-author-img">
-                        <a href=""><img src="${blog.blog_author.pfImg}" alt="${blog.blog_author.name} profile pic | Alineter" class="rounded-circle" alt="author name | Alineter"/></a>
+                        <a href="${blog.blog_author.profile_url}"><img src="${blog.blog_author.pfImg}" alt="${blog.blog_author.name} profile pic | Alineter" class="rounded-circle" alt="author name | Alineter"/></a>
                       </div>
                       <div class="ml-2 d-flex flex-column">
                         <small class="d-flex blog-author-name lead">
                           <span>${blog.blog_author.name}</span>&nbsp;
-                          <a href=""><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
+                          <a href="${blog.blog_author.profile_url}"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
                         </small>
                         <small class="blog-pub-date lead">${blog.blog_date.month} ${blog.blog_date.date}, ${blog.blog_date.year}</small>
                       </div>
@@ -208,6 +208,10 @@ displayBlogs();
 
 
 function shareBlogModal(blogID) {
+	/*
+		Open Modal to get the link of blog
+	*/
+
 	const blogLinkElem = document.getElementById("blog-sharelink");
 
 	var respective_blog = blogs.filter( (blog) => {
