@@ -63,14 +63,23 @@
 
 
       <!--Copyright Section-->
-      <section class="copyright-wrapper">
-        <div class="text-center text-muted p-3" style="background-color: rgba(0, 0, 0, 0.3)">
-            <small class="font-weight-bold">© <span id="copyright-year"></span> Copyright:&nbsp;<a class="text-light" href="index.html" onmouseenter="this.style.textDecoration='none'">alineter.com</a></small>
+      <footer id="copyright-section">
+        <div class="copyright-wrapper text-center">
+          <div class="container-fluid text-cultured">
+            <small>
+              <span>&copy;2020-<span id="copyright-year"></span></span>
+              <span><a href="index.html" class="link s-2">Alineter</a></span>
+              <span>All Rights Reserved.</span>
+              <span><a href="#" class="link s-2">Terms of Use</a></span>
+              <span>|</span>
+              <span><a href="#" class="link s-2">Privacy Policy</a></span>
+            </small>
+          </div>
+         <script>
+            let year=new Date().getFullYear().toString().substr(2);document.getElementById("copyright-year").innerHTML=year;
+          </script>
         </div>
-        <script>
-          let year=new Date().getFullYear();document.getElementById("copyright-year").innerHTML=year;
-        </script>
-      </section>
+      </footer>
       
 
 

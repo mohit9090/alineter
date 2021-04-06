@@ -52,18 +52,40 @@
 
 
 /*Copyright Section*/
-.copyright-wrapper {
+#copyright-section {
 	position:absolute;
 	bottom:0;
 	width:100%;
 }
 @media screen and (min-width:500px) {
-	.copyright-wrapper {
+	#copyright-section {
 		display:block;
 	}
 }
 @media screen and (max-height:500px) {
-	.copyright-wrapper {
+	#copyright-section {
 		display:none;
 	}
+}
+
+/*Footer Copyright*/
+.copyright-wrapper {
+	padding:1%;
+	background:rgba(32,164,243,0.05);
+}
+.copyright-wrapper span:not(:last-child) {
+	margin-right:0.1rem;
+}
+
+
+/*Footer Links*/
+#copyright-section .link.s-2 {
+	color:var(--main-secondary);
+}
+#copyright-section .link.s-2:hover {
+	text-decoration:underline;
+}
+#copyright-section .link:active {
+	background:rgba(32,164,243,0.1);
+	transition:background 0.3s ease;
 }
