@@ -119,4 +119,4 @@ blogs = [
 	},
 ];
 
-jsonBlogs = JSON.stringify(blogs);
+const jsonBlogs = JSON.stringify(blogs);
