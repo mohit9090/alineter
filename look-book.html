@@ -273,69 +273,193 @@
             </div>
           </div>
 
-          <!--Category Search-->
+          <script type="text/javascript">
+            const blogSearch = document.getElementById("blog-search");
+            const clearBtn = document.querySelector("input[name='q'] + .fa-times");
+            blogSearch.onkeyup = function() {
+              var val = this.value;
+              toggleClearBtn(val);          
+            }
+
+            function toggleClearBtn(val) {
+              (val.length > 0) ? showClearBtn() : hideClearBtn();
+            }
+
+            function showClearBtn() {
+              clearBtn.style.opacity = "1";
+              clearBtn.style.pointerEvents = "auto"; 
+            }
+
+            function hideClearBtn() {
+              clearBtn.style.opacity = "0";
+              clearBtn.style.pointerEvents = "none"; 
+            }
+
+            function clearInput(elem) {
+              blogSearch.value = "";
+              hideClearBtn();
+            }
+          </script>
+
           <div class="blogs-category-util w-100 p-2 mt-3">
+            <div class="blogs-category-wrapper text-center" id="blogsCategory">
 
-            <!--Style 1 on large screen-->
-            <div class="blogs-category-wrapper" id="blogsCategory--lg">
-              <div class="d-flex justify-content-center">
-                <!-- <button class="btn btn-vermillion category-btn">Category&nbsp;&nbsp;<span class="fa fa-caret-right"></span></button> -->
-
-                <!-- Categories -->
-                <button class="btn btn-outline-richblack category-item active">All Posts</button>
-                <button class="btn btn-outline-richblack category-item">clothing</button>
-                <button class="btn btn-outline-richblack category-item">men's fashion</button>
-                <button class="btn btn-outline-richblack category-item">lifestyle</button>
-                <button class="btn btn-outline-richblack category-item">research backed</button>
-              </div>
-
+              
             </div>
-
-            <!--Style 2 on small screen-->
-            <div class="blogs-category-wrapper text-center" id="blogsCategory--sm">
-              <div class="category-dropdown">
-                <button class="btn btn-vermillion category-dropbtn">Category&nbsp;&nbsp;<span class="fa fa-caret-down"></span></button>
-                <div class="category-content">
-                  <button class="btn w-100 category-item">All Posts</button>
-                  <button class="btn w-100 category-item active">clothing</button>
-                  <button class="btn w-100 category-item">men's fashion</button>
-                  <button class="btn w-100 category-item">lifestyle</button>
-                  <button class="btn w-100 category-item">research backed</button>
-                </div>
-              </div>
           </div>
+
 
         </div>
       </section>
 
 
       <script type="text/javascript">
-        const blogSearch = document.getElementById("blog-search");
-        const clearBtn = document.querySelector("input[name='q'] + .fa-times");
-        blogSearch.onkeyup = function() {
-          var val = this.value;
-          toggleClearBtn(val);          
+
+        const categorySectionClasses = [
+          {
+            categoryDesignType : "inline",
+            categoryMenuClass : "d-flex",
+            categoryBtnClass : "btn btn-vermillion category-btn mr-1",
+            categoryIconClass : "fa fa-caret-right",
+            categoryItemWrapperClass : "d-flex justify-content-center flex-fill",
+            categoryItemBtnClass : "btn btn-outline-richblack category-item flex-grow-1",
+          },
+          {
+            categoryDesignType : "dropdown",
+            categoryMenuClass : "category-dropdown",
+            categoryBtnClass : "btn btn-vermillion category-dropbtn",
+            categoryIconClass : "fa fa-caret-down",
+            categoryItemWrapperClass : "category-content",
+            categoryItemBtnClass : "btn w-100 category-item",
+          }
+        ];
+
+        //Destructuring Category Section Classes Array
+        const [inline, dropdown] = categorySectionClasses;
+
+        function getScreenWidth() {
+          return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         }
 
-        function toggleClearBtn(val) {
-          (val.length > 0) ? showClearBtn() : hideClearBtn();
+
+        /*
+          Functions to be executed on LOAD Event
+        */
+        function constructCategorySearch(categoryStyle) {
+          let category_div = "";
+          category_div = ` 
+              <div class="${categoryStyle.categoryMenuClass}" id="categoryMenu" data-design="${categoryStyle.categoryDesignType}">
+                <button class="${categoryStyle.categoryBtnClass}" id="categoryBtn">Category&nbsp;&nbsp;<span class="${categoryStyle.categoryIconClass}" id="categoryIcon"></span></button>
+                
+                <div class="${categoryStyle.categoryItemWrapperClass}" id="categoryItemWrapper">
+                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="active">All Posts</button>
+                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">clothing</button>
+                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">men's fashion</button>
+                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">lifestyle</button>
+                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">research backed</button>
+                </div>
+              </div>`;
+          return category_div;
         }
 
-        function showClearBtn() {
-          clearBtn.style.opacity = "1";
-          clearBtn.style.pointerEvents = "auto"; 
+        function loadCategorySearch() {
+
+          let screenWidth = getScreenWidth();
+
+          const categoryContainer = document.getElementById("blogsCategory");
+
+          if(screenWidth <= 768) {
+            //screen width is less than 768px
+            /*
+              Construct Category Search Button as DROPDOWN BUTTON
+            */
+            let category_html = constructCategorySearch(dropdown);
+            categoryContainer.innerHTML = category_html;
+          } else {
+            //screen width is greater than 768px
+            /*
+              Construct Category Search Button as INLINE BUTTON
+            */
+            let category_html = constructCategorySearch(inline);
+            categoryContainer.innerHTML = category_html;
+          }
+
+        };
+
+
+        /*
+          Functions to be executed on RESIZE Event
+        */
+
+        function clearAllClass(elements) {
+          elements.map((element) => {
+            element.setAttribute("class", "");
+          });
         }
 
-        function hideClearBtn() {
-          clearBtn.style.opacity = "0";
-          clearBtn.style.pointerEvents = "none"; 
+        function redesignCategorySearch() {
+
+          let screenWidth = getScreenWidth();
+
+          var cMenu = document.getElementById("categoryMenu")
+          var cBtn = document.getElementById("categoryBtn");
+          var cIcon = document.getElementById("categoryIcon");
+          var cItemWrapper = document.getElementById("categoryItemWrapper");
+          var cItemBtn = document.querySelectorAll("button[data-self='category-item-btn']");
+
+          const categoryElements = [cMenu, cBtn, cIcon, cItemWrapper, ...cItemBtn];
+
+          function setNewClass(categoryStyle) {
+            cMenu.setAttribute("data-design", categoryStyle.categoryDesignType)
+            cMenu.setAttribute("class", categoryStyle.categoryMenuClass);
+            cBtn.setAttribute("class", categoryStyle.categoryBtnClass);
+            cIcon.setAttribute("class", categoryStyle.categoryIconClass);
+            cItemWrapper.setAttribute("class", categoryStyle.categoryItemWrapperClass);
+
+            for(i = 0; i < cItemBtn.length; i++) {
+              cItemBtn[i].setAttribute("class",categoryStyle.categoryItemBtnClass);
+            }
+          } 
+
+          if(screenWidth <= 768) {
+            //screen width is less than 768px
+            /*
+              Will execute only once at breakpoint rather than excuting regularly on resize 
+            */
+            if(cMenu.getAttribute("data-design") === "inline") {;
+
+              clearAllClass(categoryElements);
+              setNewClass(dropdown);
+            }
+
+          } else {
+            //screen width is greater than 768px
+            /*
+              Will execute only once at breakpoint rather than excuting regularly on resize
+            */
+            if(cMenu.getAttribute("data-design") === "dropdown") {
+
+              clearAllClass(categoryElements);
+              setNewClass(inline);
+            }
+          }
         }
 
-        function clearInput(elem) {
-          blogSearch.value = "";
-          hideClearBtn();
-        }
+        window.addEventListener("load", loadCategorySearch);
+        window.addEventListener("resize", redesignCategorySearch);
+
+
       </script>
+
+
+      <script type="text/javascript">
+        
+        function addActive(btn) {
+          btn.setAttribute("data-state", (btn.getAttribute("data-state")=="active")?"":"active");
+        };
+
+      </script>
+
 
 
       <!-- 
