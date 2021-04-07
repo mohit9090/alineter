@@ -5,7 +5,7 @@ const blogsContainer = document.getElementById("blogs");
 const blogs = JSON.parse(jsonBlogs);
 
 
-function mapBlogs() {
+function mapBlogs(blogs) {
 	let blog_div = "";
 
 	blogs.map( (blog) => {
@@ -75,17 +75,14 @@ function mapBlogs() {
 }
 
 
-function constructBlogs() {
+function constructBlogs(blogs) {
 	let blogs_html = "";
 
-	blogs_html = mapBlogs();
+	blogs_html = mapBlogs(blogs);
 	blogsContainer.innerHTML = blogs_html;
 }
+constructBlogs(blogs);
 
-function displayBlogs() {
-	constructBlogs();
-}
-displayBlogs();
 
 
 
@@ -120,3 +117,4 @@ function viewBlog(blogID) {
 	var respective_blog = getBlogByID(blogID);
 	window.location.href = respective_blog.blog_detail.url;
 }
+

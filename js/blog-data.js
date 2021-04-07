@@ -8,8 +8,7 @@ blogs = [
 			url : "blog/0-1-seconds-is-all-it-takes",
 			blog_category : [
 				"clothing", 
-				"men's fashion", 
-				"lifestyle"
+				"men's fashion"
 			]
 		},
 		blog_author : {

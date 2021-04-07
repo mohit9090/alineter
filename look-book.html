@@ -304,160 +304,101 @@
           <div class="blogs-category-util w-100 p-2 mt-3">
             <div class="blogs-category-wrapper text-center" id="blogsCategory">
 
+              <!--Blogs goes here-->
               
             </div>
           </div>
-
 
         </div>
       </section>
 
 
-      <script type="text/javascript">
+      <!-- <script type="text/javascript">
 
-        const categorySectionClasses = [
-          {
-            categoryDesignType : "inline",
-            categoryMenuClass : "d-flex",
-            categoryBtnClass : "btn btn-vermillion category-btn mr-1",
-            categoryIconClass : "fa fa-caret-right",
-            categoryItemWrapperClass : "d-flex justify-content-center flex-fill",
-            categoryItemBtnClass : "btn btn-outline-richblack category-item flex-grow-1",
-          },
-          {
-            categoryDesignType : "dropdown",
-            categoryMenuClass : "category-dropdown",
-            categoryBtnClass : "btn btn-vermillion category-dropbtn",
-            categoryIconClass : "fa fa-caret-down",
-            categoryItemWrapperClass : "category-content",
-            categoryItemBtnClass : "btn w-100 category-item",
-          }
-        ];
+        var filters;
 
-        //Destructuring Category Section Classes Array
-        const [inline, dropdown] = categorySectionClasses;
-
-        function getScreenWidth() {
-          return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        }
-
-
-        /*
-          Functions to be executed on LOAD Event
-        */
-        function constructCategorySearch(categoryStyle) {
-          let category_div = "";
-          category_div = ` 
-              <div class="${categoryStyle.categoryMenuClass}" id="categoryMenu" data-design="${categoryStyle.categoryDesignType}">
-                <button class="${categoryStyle.categoryBtnClass}" id="categoryBtn">Category&nbsp;&nbsp;<span class="${categoryStyle.categoryIconClass}" id="categoryIcon"></span></button>
-                
-                <div class="${categoryStyle.categoryItemWrapperClass}" id="categoryItemWrapper">
-                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="active">All Posts</button>
-                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">clothing</button>
-                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">men's fashion</button>
-                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">lifestyle</button>
-                  <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="addActive(this)" data-state="">research backed</button>
-                </div>
-              </div>`;
-          return category_div;
-        }
-
-        function loadCategorySearch() {
-
-          let screenWidth = getScreenWidth();
-
-          const categoryContainer = document.getElementById("blogsCategory");
-
-          if(screenWidth <= 768) {
-            //screen width is less than 768px
-            /*
-              Construct Category Search Button as DROPDOWN BUTTON
-            */
-            let category_html = constructCategorySearch(dropdown);
-            categoryContainer.innerHTML = category_html;
-          } else {
-            //screen width is greater than 768px
-            /*
-              Construct Category Search Button as INLINE BUTTON
-            */
-            let category_html = constructCategorySearch(inline);
-            categoryContainer.innerHTML = category_html;
-          }
-
+        resetFilter();
+        function resetFilter() {
+          filters = [];
         };
 
 
-        /*
-          Functions to be executed on RESIZE Event
-        */
+        function addFilters(filter_btn) {
+          let filter_item = filter_btn.getAttribute("data-value");
+          if(filters.indexOf(filter_item) > -1) {
+            //filter item already present in list so now delete it;
+            filters.splice(filters.indexOf(filter_item), 1);
+          } else {
+            //filter item not present so add it
+            filters.push(filter_item);
+          }
+        }
 
-        function clearAllClass(elements) {
-          elements.map((element) => {
-            element.setAttribute("class", "");
+        function clearAllActiveState(categoryItemBtnArr) {
+          /*
+            Remove active state from all category-item-btn
+          */
+          categoryItemBtnArr.map( (cItemBtn) => {
+            cItemBtn.setAttribute("data-state", "");
           });
         }
 
-        function redesignCategorySearch() {
-
-          let screenWidth = getScreenWidth();
-
-          var cMenu = document.getElementById("categoryMenu")
-          var cBtn = document.getElementById("categoryBtn");
-          var cIcon = document.getElementById("categoryIcon");
-          var cItemWrapper = document.getElementById("categoryItemWrapper");
-          var cItemBtn = document.querySelectorAll("button[data-self='category-item-btn']");
-
-          const categoryElements = [cMenu, cBtn, cIcon, cItemWrapper, ...cItemBtn];
-
-          function setNewClass(categoryStyle) {
-            cMenu.setAttribute("data-design", categoryStyle.categoryDesignType)
-            cMenu.setAttribute("class", categoryStyle.categoryMenuClass);
-            cBtn.setAttribute("class", categoryStyle.categoryBtnClass);
-            cIcon.setAttribute("class", categoryStyle.categoryIconClass);
-            cItemWrapper.setAttribute("class", categoryStyle.categoryItemWrapperClass);
-
-            for(i = 0; i < cItemBtn.length; i++) {
-              cItemBtn[i].setAttribute("class",categoryStyle.categoryItemBtnClass);
-            }
-          } 
-
-          if(screenWidth <= 768) {
-            //screen width is less than 768px
-            /*
-              Will execute only once at breakpoint rather than excuting regularly on resize 
-            */
-            if(cMenu.getAttribute("data-design") === "inline") {;
-
-              clearAllClass(categoryElements);
-              setNewClass(dropdown);
-            }
-
-          } else {
-            //screen width is greater than 768px
-            /*
-              Will execute only once at breakpoint rather than excuting regularly on resize
-            */
-            if(cMenu.getAttribute("data-design") === "dropdown") {
-
-              clearAllClass(categoryElements);
-              setNewClass(inline);
-            }
-          }
+        function addActiveState(filters) {
+          /*
+            Add active state to category-item-btn to visualize if it is selected or not
+          */
+          filters.map( (filter) => {
+            document.querySelector(`button[data-value="${filter}"]`).setAttribute("data-state", "active");
+          });
         }
-
-        window.addEventListener("load", loadCategorySearch);
-        window.addEventListener("resize", redesignCategorySearch);
-
-      </script>
-
-
-      <script type="text/javascript">
         
-        function addActive(btn) {
-          btn.setAttribute("data-state", (btn.getAttribute("data-state")=="active")?"":"active");
+        function applyFilter(filter_btn) {
+          const categoryItemBtnElem = document.querySelectorAll("button[data-self='category-item-btn']");
+
+          const categoryItemBtnArr = [...categoryItemBtnElem];
+
+          //jsonBlogs is derived from js/blog-data.js
+          all_blogs = JSON.parse(jsonBlogs);
+
+          clearAllActiveState(categoryItemBtnArr);
+
+          if(filter_btn.getAttribute("data-value").toLowerCase() === "all posts") {
+            /*
+              if All Posts is selected then restart this process from beginning
+            */
+            resetFilter();
+            filter_btn.setAttribute("data-state", "active");
+            constructBlogs(all_blogs);
+            return;
+          }
+
+          addFilters(filter_btn);
+          addActiveState(filters);
+
+          var filtered_blogs = all_blogs.filter( (blog) => {
+            return (
+                filters.some( (filter) =>{
+                  return blog.blog_detail.blog_category.includes(filter)
+                })
+              )
+          });
+
+          (filtered_blogs.length > 0) ? constructBlogs(filtered_blogs) : constructNotFound();
         };
 
-      </script>
+
+        function constructNotFound() {
+          const blogsContainer = document.getElementById("blogs");
+          blogsContainer.innerHTML = `<div class="blog wrapper mx-auto" style="padding:7%;3%">
+            <div class="container">
+              <h3 class="text-center text-richblack">No Results Found</h3>
+              <p class="text-center lead mt-4" style="font-size:0.97rem">Looks like we couldn’t find what you’re looking for. Try another search.</p>
+            </div>
+          </div>
+          `
+        }
+
+      </script> -->
 
 
 
@@ -675,80 +616,6 @@
   });
 </script>
 
-<script type="text/javascript">
-
-  function loveEffect(heartBtn) {
-    //add a love click effect
-    heartBtn.classList.add("loveEffect");
-    setTimeout(function(){
-      heartBtn.classList.remove("loveEffect");
-    },700);
-  }
-
-  function changeHeartState(state, blogID, heartBtn) {
-    
-    var likesCountElem = document.getElementById(`likesCount--${blogID}`);
-    var likes = parseInt(likesCountElem.innerHTML);
-
-    replaceClass(heartBtn, state.removeIcon, state.addIcon);
-    heartBtn.setAttribute("data-like", state.dataLike);
-
-    likes += state.likeCount;
-    likesCountElem.innerHTML = likes;
-
-    (state.stateName == "likeBlog") ? loveEffect(heartBtn) : null;
-  };
-
-  /* Like dislike blog */
-  function toggleHeart(heartBtn, blogID) {
-
-    const heartState = [
-      {
-        stateName : "likeBlog",
-        addIcon : "fa-heart",
-        removeIcon : "fa-heart-o",
-        dataLike : "true",
-        likeCount : 1
-      }, 
-      {
-        stateName : "dislikeBlog",
-        addIcon : "fa-heart-o",
-        removeIcon : "fa-heart",
-        dataLike : "false",
-        likeCount : -1
-      }
-    ];
-    // Destructure HeartState Array
-    const [likeBlog, dislikeBlog] = heartState;
-
-    var isLiked = heartBtn.getAttribute("data-like");
-    (isLiked == "false") ? changeHeartState(likeBlog, blogID, heartBtn) : changeHeartState(dislikeBlog, blogID, heartBtn);
-  }
-
-</script>
-
-
-<script type="text/javascript">
-  /*
-    Copy Text to ClipBoard
-  */
-
-  function copyLink(copyBtn, copyFrom) {
-    let blogLink = copyFrom.getAttribute("value");
-    navigator.clipboard.writeText(blogLink).then(function(){
-        copyFrom.select();
-        /*
-          copyBtn.children[0] refers to the copy icon inside copy btn which is the first child of it
-        */
-        replaceClass(copyBtn.children[0], "fa-clipboard", "fa-check");
-        setTimeout(function(){
-          replaceClass(copyBtn.children[0], "fa-check", "fa-clipboard");
-        },500);
-    });
-  }
-
-</script>
-
 
 
 <script type="text/javascript" src="js/nav.js"></script>
@@ -756,8 +623,14 @@
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
 
+<script type="text/javascript" src="js/blog-category-search-design.js"></script>
+<script type="text/javascript" src="js/blog-category-search.js"></script>
+
 <script type="text/javascript" src="js/blog-data.js"></script>
 <script type="text/javascript" src="js/create-blog.js"></script>
+<script type="text/javascript" src="js/blog-like-feature.js"></script>
+
+<script type="text/javascript" src="js/copy-to-clipboard.js"></script>
 
 
 </body>
