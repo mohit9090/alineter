@@ -263,6 +263,25 @@ body {
 	overflow:hidden;
 }
 
+/* Load Gradient */
+.load-gradient {
+	background: linear-gradient(-45deg, #f5af19, #f12711);
+	background-size: 400% 400%;
+	animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 
 /* FANCY HOVER EFFECTS */

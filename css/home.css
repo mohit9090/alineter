@@ -114,6 +114,7 @@
 }
 .usp-tag {
 	font-size:1rem;
+	font-family:var(--ff-primary)
 }
 .usp-icon,
 .usp-tag {
@@ -136,7 +137,7 @@
 /* PRODUCT-QUICK-VIEW */
 #product-quick-view {
 	padding:4% 0;
-	background-color:var(--tertiary-light);
+	background-color:rgba(112, 112, 112, 0.05);
 	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 	position:relative;
 }
@@ -153,7 +154,7 @@
   scrollbar-width:none;  
 }
 .q-product-card {
-	color:var(--tertiary-light);
+	color:var(--bg-light);
 	padding:0;
 	border:0;
 	transition:0.3s ease-in-out;
@@ -179,30 +180,14 @@
 	width:100%;
 	padding:3.5% 0;
 	font-size:1.2rem;
-	background:rgba(1, 22, 39, 0.7);
+	background:rgba(0, 0, 0, 0.6);
 	opacity:0.7;
 	transition:0.3s ease;
 }
 .q-product-card:hover .q-product-body {
 	opacity:0.8;
 }
-.q-product-card.load-gradient {
-	background: linear-gradient(-45deg, #2EC4B6, #20A4F3);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-}
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 /*
   .q-product-card
   ----------------
@@ -271,16 +256,16 @@
 	width:50px;
 	height:50px;
 	border-radius:50%;
-	color:var(--tertiary-blue);
-	background:var(--tertiary-light);
-	border:3.8px solid var(--tertiary-blue);
+	color:var(--bg-primary);
+	background:var(--bg-light);
+	border:3.8px solid var(--bg-primary);
 }
 .scroll-btn:hover {
-	color:var(--tertiary-blue);
+	color:var(--bg-primary);
 }
 .scroll-btn:active {
-	color:var(--tertiary-light);
-	background:var(--tertiary-blue);
+	color:var(--bg-light);
+	background:var(--bg-primary);
 	transition:0.3s;
 }
 .scroll-btn > i {
