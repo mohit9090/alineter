@@ -133,14 +133,14 @@
 
   <section id="body">
 
-    <!--
-      ============ NAVIGATION BAR SECTION =============
+    <!-- 
+      ============ NAVIGATION BAR SECTION =========== 
     -->   
     <nav id="navigation" class="navbar fixed-top navigation-init">
       <div class="nav-left">
         <a href="index.html" class="navbar-brand">
           <div class="d-flex flex-column p-0 text-center align-items-center">
-            <img src="images/alineter-b.png" id="brand-logo" width=50 height=50 alt="alineter logo"/>
+            <img src="images/alineter-b.png" id="brand-logo" width=47 height=47 alt="alineter logo"/>
             <small class="logo-text">ALINETER</small>
           </div>
         </a>
@@ -155,7 +155,7 @@
           </li>
           <li class="nav-item show-on-lg item-3 dropdown mr-2 my-auto">
             <button class="nav-link dropdown-toggler btn" id="about-section-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              About&nbsp;<span class="fa fa-caret-down"></span>
+              More&nbsp;<span class="fa fa-caret-down"></span>
             </button>
             <div class="dropdown-menu shadow m-0" aria-labelledby="about-section-dropdown">
               <a class="nav-link dropdown-item" href="about.html">About Us</a>
@@ -164,20 +164,20 @@
               <a class="nav-link dropdown-item" href="terms.html">Terms of Use</a>
               <a class="nav-link dropdown-item" href="oerdering-term.html">Ordering Terms</a>
               <div class="dropdown-divider"></div>
-              <a class="nav-link dropdown-item navbar-toggler" onclick="opennav()"><span class="fa fa-ellipsis-v"></span>&nbsp;&nbsp;More</a>
+              <a class="nav-link dropdown-item navbar-toggler p-2 pl-3" onclick="opennav()"><span class="fa fa-ellipsis-v"></span>&nbsp;&nbsp;More</a>
             </div>
           </li>
           <li class="nav-item mr-3 my-auto user-func">
             <div class="d-flex">
-              <a href="signup.html" class="btn btn-outline-richblack ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
+              <a href="signup.html" class="btn btn-o-tertiary ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
 
               <!-- when user is logged in -->
-             <!--  <a href="" class="nav-link">
-                <span class="fa fa-user-circle-o" style="font-size:1.3rem"></span>
+              <!-- <a href="" class="nav-link">
+                <span class="fa fa-user-circle-o txt-tertiary" style="font-size:1.3rem"></span>
               </a>
 
               <a href="" class="nav-link">
-                <span class="fa fa-opencart text-mandarin">&nbsp;<span>0</span></span>
+                <span class="fa fa-opencart txt-tertiary">&nbsp;<span>0</span></span>
               </a> -->
             </div>
           </li> 
@@ -192,10 +192,12 @@
 
     </nav>
 
+
+    <!-- OVERLAY EFFECT -->
     <section id="overlay-effect" onclick="closenav()">
     </section>
 
-    
+
 
     <!--
       ======== SLIDE NAVIGATION ==========
@@ -204,7 +206,7 @@
       <div class="container-fluid w-100 h-100 position-relative">
         <div class="slidenav-wrapper w-100">
 
-          <div class="user-section text-center sticky-top bg-richblack">
+          <div class="user-section text-center sticky-top fill-tertiary txt-light">
 
             <div class="user-section-main">
               <!--Nav Controller-->
@@ -216,7 +218,7 @@
                 <div class="user-info d-flex">
                   <div class="mr-3 my-auto pfimg-holder">
                     <img src="./images/avatar.png" class="pfimg"/>
-                    <!-- <img src="./images/fashion-illustration.png" class="pfimg"/> -->
+                    <!-- <img src="./images/mohit_300.png" class="pfimg"/> -->
                   </div>
                   <div class="my-auto">
                     <p class="lead text-cultured">Hey, User</p>
@@ -225,7 +227,7 @@
                 </div>
                 <div class="user-function">
                   <div class="d-flex justify-content-between">
-                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-plus"></span>&nbsp;Create Account</a>
+                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-id-badge"></span>&nbsp;Create Account</a>
                     <a href="#login" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
                     <!-- <a href="#my-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-user"></span>&nbsp;My Account</a>
                     <a href="#logout" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Logout</a> -->
@@ -250,6 +252,7 @@
         </div>
       </div>
     </section>
+    
 
     <section id="page-content" class="position-relative">
 

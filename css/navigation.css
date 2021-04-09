@@ -1,12 +1,12 @@
 /* NAVIGATION */
 #navigation {
-	background:var(--tertiary-light);
+	background:var(--bg-light);
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 9px 0px;
 	z-index:2;
 	transition:0.3s ease;
 }
 #navigation.navigation-init {
-	padding:1.4%;
+	padding:var(--sm-padding-inverse);
 }
 #navigation .nav-right {
 	-webkit-animation-name: increaseOpacity;
@@ -16,14 +16,15 @@
     animation-timing-function: ease-in;
 }
 .logo-text {
-	color:var(--main-primary);
-	font-weight:bold;
+	color:var(--bg-secondary);
+	font-family:var(--ff-tertiary);
+	font-weight:600;
 	position:relative;
-	letter-spacing:1.2px;
+	letter-spacing:1.02px;
 	transition:0.3s ease;
 }
 .navbar-brand:hover .logo-text {
-	color:var(--tertiary-orange);
+	color:var(--bg-primary);
 	text-decoration:none;
 }
 @media screen and (min-width:670px) {
@@ -60,7 +61,7 @@
 		display:block;
 	}
 	.logo-text {
-		top:-10px;
+		top:-8px;
 		font-size:0.55rem;
 	}
 }
@@ -84,7 +85,7 @@
 /* NAVBAR TOGGLER BUTTON */
 .toggler-btn {
   padding:1.3em;
-  background:var(--tertiary-tiffany-blue);
+  background:var(--bg-tertiary);
   border-radius:100px;
   position:relative;
   text-align:center;
@@ -96,8 +97,8 @@
 	transform:translateX(-50%);
 	position:absolute;
   	height:3.29px;
-  	padding: 0;
-  	background-color:var(--tertiary-light);  	
+  	padding:0;
+  	background-color:var(--bg-primary);  	
 }
 .toggle-btn,
 .bar {
@@ -115,7 +116,7 @@
 }
 .toggler-btn:hover,
 .toggler-btn:focus {
-	background-color:var(--tertiary-blue)
+	filter:brightness(110%);
 }
 .toggler-btn:focus .bar-1 {
 	left:40%;         
@@ -128,29 +129,32 @@
 /* Navlinks CSS */
 #navigation .nav-link,
 .site-links .nav-link {
-	color:var(--main-primary);
-	font-size:1.1rem;
-	font-weight:365;
+	color:var(--bg-tertiary);
+	font-size:1.08rem;
+	letter-spacing:1.02px;
+	font-weight:300;
 	transition:0.3s ease-in-out;
+}
+#navigation .nav-link.dropdown-item {
+	font-size:0.88rem;
 }
 #navigation .nav-link.dropdown-item,
 .site-links .nav-link {
 	border:3.5px solid transparent;
-	font-size:0.85rem;
 }
 .site-links .nav-link {
 	padding:0.9rem;
-	font-size:1.1rem;
 }
 #navigation .nav-link.navbar-toggler {
-	color:var(--tertiary-blue);
+	color:var(--bg-primary);
 	cursor:pointer;
 }
+
 
 /* Hovering Effects on Navlinks */
 #navigation .nav-link:hover,
 .site-links .nav-link:hover {
-	background:rgba(1, 22, 39, 0.1);
+	background:rgba(112, 112, 112, 0.07);
 }
 #navigation .nav-link.dropdown-item:not(.navbar-toggler):hover,
 .site-links .nav-link:hover {
@@ -159,12 +163,12 @@
 		navbar-toggler inside dropdown content
 		Hover effect on site-links inside slide-navbar
 	*/
-	border-color:transparent transparent transparent var(--tertiary-blue);
+	border-color:transparent transparent transparent var(--bg-primary);
 }
 #navigation .nav-link:active,
 .site-links .nav-link:active {
 	/* navlink when clicked */
-	background:rgba(1, 22, 39, 0.2);
+	background:rgba(112, 112, 112, 0.3);
 	transition:background 0.3s;
 }
 
@@ -178,7 +182,7 @@
   z-index:5;
   top:0;
   left:-100%;
-  background-color:var(--tertiary-light);
+  background-color:var(--bg-light);
   overflow-x:hidden;
   overflow-y:auto;
   transition: 0.2s ease-in-out;
@@ -200,7 +204,7 @@
 	right:0;
 }
 .nav-controller .close-sidenav {
-	color:var(--tertiary-light);
+	color:var(--bg-light);
 	border-radius:50%;
 }
 .user-section-wrapper > .user-info {
@@ -210,7 +214,7 @@
 	width:45px;
 	height:45px;
 	border-radius:50%;
-	background:var(--main-secondary);
+	background:var(--bg-primary);
 }
 .pfimg-holder .pfimg {
 	width:100%;
@@ -220,22 +224,22 @@
 }
 .user-function > div {
 	padding:0.6rem;
-	background:rgba(32, 164, 243, 0.1); 
+	background:var(--bg-primary)
 }
 /*user-function-link hover effects*/
 .user-function--link {
-	color:var(--tertiary-light);
-	opacity:0.8;
+	color:var(--bg-light);
+	opacity:0.9;
 	transition:0.3s ease;
 }
 .user-function--link:hover {
-	color:var(--tertiary-light);
+	color:var(--bg-light);
 	opacity:1;
 	text-decoration:none;
 }
 /*set bg for fancy hover effect*/
 .user-function--link.fancy-effects.slide_line::after {
-	background:var(--tertiary-light);
+	background:var(--bg-light);
 }
 
 
