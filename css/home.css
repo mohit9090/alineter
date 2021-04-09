@@ -2,8 +2,9 @@
 
 /* ILLUSTRATION */
 #illustration {
-  background-color:var(--main-primary);
-  background-image:url('../images/main-bg-img.webp');
+  background-color:var(--bg-tertiary);
+  background-image:url('../images/model_web_2--50.jpg');
+  background-position:right;
 }
 .illustration-box::-webkit-scrollbar {
 	display:none;
@@ -18,6 +19,10 @@
 	#illustration .illustration-box{
 		width:100%;
 	}
+}
+.illustration-head h2 {
+	font-family:var(--ff-tertiary);
+	font-weight:800;
 }
 /*Responsive illustration head*/
 @media screen and (min-width:720px) {
@@ -34,15 +39,15 @@
 	width:50%;
 	border-radius:100px;
 	padding:0.8rem 0;
-	font-size:1.12rem;
-	color:var(--tertiary-light);
-	background:var(--tertiary-orange);
-	border:1.3px solid var(--tertiary-orange);
+	font-size:1.1rem;
+	color:var(--bg-light);
+	background:var(--bg-secondary);
+	border:1.5px solid var(--bg-primary);
 }
 .store-btn:hover {
-	color:var(--tertiary-light);
-	border:1.3px solid var(--main-secondary);
-	background:var(--main-secondary);
+	color:var(--bg-light);
+	border:1.5px solid var(--bg-primary);
+	background:var(--bg-primary);
 }
 
 
