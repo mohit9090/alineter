@@ -59,7 +59,7 @@
 }
 .usp-box {
 	border-radius:5px;
-	border:0.05px solid rgba(1, 22, 39, 0.15);
+	border:0.05px solid rgba(112, 112, 112, 0.2);
 	transition:0.3s ease;
 	margin:0.5rem;
 }
@@ -99,7 +99,7 @@
 	}
 }
 .usp-box:hover {
-	background:var(--main-primary);
+	background:var(--bg-secondary);
 	transition-delay:0.1s;
 	transform:translateY(-10px);
 }

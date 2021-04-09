@@ -14,35 +14,35 @@
     {
       icon:truck,
       tag:'Free shipping of all products',
-      textColor:'text-mandarin'
+      textColor:''
     },
     {
       icon:cotton_fabric,
       tag:'Moisturised cotton fabric',
-      textColor:'text-tiffany'
+      textColor:''
     },
     {
       icon:india,
       tag:'Made in India',
-      textColor:'text-mandarin'
+      textColor:''
     },
     {
       icon:personalised,
       tag:'Personalised modern designs',
-      textColor:'text-blue'
+      textColor:''
     }
   ]
 
   uspList.map( usp => {
     document.getElementById("usp-wrapper").innerHTML += `
-      <div class="card text-center usp-box reveal__opacity mx-auto">
+      <div class="card text-center usp-box reveal__from-bottom mx-auto">
         <div class="card-body">
           <div class="my-auto">
             <div class="mx-auto icon-filler">
               <!--icon-->
               ${usp.icon}
             </div><br>
-            <small class="${usp.textColor} usp-tag">${usp.tag}</small>
+            <small class="txt-primary usp-tag">${usp.tag}</small>
           </div>
         </div>
       </div>
