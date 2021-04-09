@@ -1,12 +1,13 @@
 
 /* Common Frame on Input Tag */
 
-.input-s-1, .input-s-2, .textarea-s-1  {
-	font-family:calibri;
+.input-s-1, 
+.input-s-2, 
+.textarea-s-1  {
+	font-family:var(--ff-roboto);
 	padding:2%;
 	border:0;
 	border-style:solid;
-	border-color:#AEB7B3;
 	transition:0.3s;
 }
 /* Remove arrows from input[type="number"] */
@@ -25,8 +26,9 @@ input[type=number] {
 	border-bottom-width:2px;
 	text-align:center;
 }
-.input-s-1::placeholder, .input-s-2::placeholder , .textarea-s-1::placeholder{
-	color:#AEB7B395;
+.input-s-1::placeholder, 
+.input-s-2::placeholder,
+.textarea-s-1::placeholder{
 	transition:0.3s;
 }
 .input-s-1:focus {
