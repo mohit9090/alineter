@@ -4,15 +4,15 @@ const categorySectionClasses = [
   {
     categoryDesignType : "inline",
     categoryMenuClass : "d-flex",
-    categoryBtnClass : "btn btn-vermillion category-btn mr-1",
+    categoryBtnClass : "btn btn-i-tertiary category-btn mr-1",
     categoryIconClass : "fa fa-caret-right",
     categoryItemWrapperClass : "d-flex justify-content-center flex-fill",
-    categoryItemBtnClass : "btn btn-outline-richblack category-item flex-grow-1",
+    categoryItemBtnClass : "btn btn-o-primary category-item flex-grow-1",
   },
   {
     categoryDesignType : "dropdown",
     categoryMenuClass : "category-dropdown",
-    categoryBtnClass : "btn btn-vermillion category-dropbtn",
+    categoryBtnClass : "btn btn-i-tertiary category-dropbtn",
     categoryIconClass : "fa fa-caret-down",
     categoryItemWrapperClass : "category-content",
     categoryItemBtnClass : "btn w-100 category-item",

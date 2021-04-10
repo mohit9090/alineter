@@ -274,7 +274,7 @@
             <div class="blogs-search-wrapper text-center p-0">
               <div class="d-flex justify-content-center">
                 <i class="fa fa-search blog-search-icon align-self-end mr-2"></i>
-                <input type="text" id="blog-search" class="input-s-1 p-0" placeholder="Search" name="q" spellcheck="false">
+                <input type="text" id="blog-search" class="input-s-1 p-0" placeholder="Search Blogs" name="q" spellcheck="false">
                 <i class="fa fa-times" onclick="clearInput(this)"></i>
               </div>
             </div>
@@ -320,94 +320,6 @@
       </section>
 
 
-      <!-- <script type="text/javascript">
-
-        var filters;
-
-        resetFilter();
-        function resetFilter() {
-          filters = [];
-        };
-
-
-        function addFilters(filter_btn) {
-          let filter_item = filter_btn.getAttribute("data-value");
-          if(filters.indexOf(filter_item) > -1) {
-            //filter item already present in list so now delete it;
-            filters.splice(filters.indexOf(filter_item), 1);
-          } else {
-            //filter item not present so add it
-            filters.push(filter_item);
-          }
-        }
-
-        function clearAllActiveState(categoryItemBtnArr) {
-          /*
-            Remove active state from all category-item-btn
-          */
-          categoryItemBtnArr.map( (cItemBtn) => {
-            cItemBtn.setAttribute("data-state", "");
-          });
-        }
-
-        function addActiveState(filters) {
-          /*
-            Add active state to category-item-btn to visualize if it is selected or not
-          */
-          filters.map( (filter) => {
-            document.querySelector(`button[data-value="${filter}"]`).setAttribute("data-state", "active");
-          });
-        }
-        
-        function applyFilter(filter_btn) {
-          const categoryItemBtnElem = document.querySelectorAll("button[data-self='category-item-btn']");
-
-          const categoryItemBtnArr = [...categoryItemBtnElem];
-
-          //jsonBlogs is derived from js/blog-data.js
-          all_blogs = JSON.parse(jsonBlogs);
-
-          clearAllActiveState(categoryItemBtnArr);
-
-          if(filter_btn.getAttribute("data-value").toLowerCase() === "all posts") {
-            /*
-              if All Posts is selected then restart this process from beginning
-            */
-            resetFilter();
-            filter_btn.setAttribute("data-state", "active");
-            constructBlogs(all_blogs);
-            return;
-          }
-
-          addFilters(filter_btn);
-          addActiveState(filters);
-
-          var filtered_blogs = all_blogs.filter( (blog) => {
-            return (
-                filters.some( (filter) =>{
-                  return blog.blog_detail.blog_category.includes(filter)
-                })
-              )
-          });
-
-          (filtered_blogs.length > 0) ? constructBlogs(filtered_blogs) : constructNotFound();
-        };
-
-
-        function constructNotFound() {
-          const blogsContainer = document.getElementById("blogs");
-          blogsContainer.innerHTML = `<div class="blog wrapper mx-auto" style="padding:7%;3%">
-            <div class="container">
-              <h3 class="text-center text-richblack">No Results Found</h3>
-              <p class="text-center lead mt-4" style="font-size:0.97rem">Looks like we couldn’t find what you’re looking for. Try another search.</p>
-            </div>
-          </div>
-          `
-        }
-
-      </script> -->
-
-
 
       <!-- 
       =================== BLOGS SECTION ====================
@@ -425,7 +337,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Share this Link</h5>
-              <button type="button" class="btn btn-vermillion rounded-circle" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="btn btn-i-primary rounded-circle" data-dismiss="modal" aria-label="Close">
                 <span class="fa fa-times"></span>
               </button>
             </div>
@@ -634,7 +546,7 @@
 <script type="text/javascript" src="js/blog-category-search.js"></script>
 
 <script type="text/javascript" src="js/blog-data.js"></script>
-<script type="text/javascript" src="js/create-blog.js"></script>
+<script type="text/javascript" src="js/blog-load.js"></script>
 <script type="text/javascript" src="js/blog-like-feature.js"></script>
 
 <script type="text/javascript" src="js/copy-to-clipboard.js"></script>

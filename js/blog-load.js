@@ -27,11 +27,11 @@ function mapBlogs(blogs) {
                         <a href="${blog.blog_author.profile_url}"><img src="${blog.blog_author.pfImg}" alt="${blog.blog_author.name} profile pic | Alineter" class="rounded-circle" alt="author name | Alineter"/></a>
                       </div>
                       <div class="ml-2 d-flex flex-column">
-                        <small class="d-flex blog-author-name lead">
+                        <small class="d-flex blog-author-name">
                           <span>${blog.blog_author.name}</span>&nbsp;
                           <a href="${blog.blog_author.profile_url}"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
                         </small>
-                        <small class="blog-pub-date lead">${blog.blog_date.month} ${blog.blog_date.date}, ${blog.blog_date.year}</small>
+                        <small class="blog-pub-date">${blog.blog_date.month} ${blog.blog_date.date}, ${blog.blog_date.year}</small>
                       </div>
                     </div>
                     <div class="blog-link">
@@ -43,7 +43,7 @@ function mapBlogs(blogs) {
                       <h5>${blog.blog_detail.title}</h5>
                     </div>
                     <div class="blog-short-descp">
-                      <p class="lead">${blog.blog_detail.short_description}</p>
+                      <p>${blog.blog_detail.short_description}</p>
                     </div>
                   </div>
                 </div>
@@ -54,11 +54,11 @@ function mapBlogs(blogs) {
 
                 <div class="blog-success d-flex justify-content-between mt-2 mb-2">
                   <div class="d-flex">
-                    <small class="lead blog-report blog-views">${blog.blog_reviews.views} views</small>
-                    <small class="lead blog-report blog-comments ml-3">${blog.blog_reviews.comments} comments</small>
+                    <small class="blog-report blog-views">${blog.blog_reviews.views} views</small>
+                    <small class="blog-report blog-comments ml-3">${blog.blog_reviews.comments} comments</small>
                   </div>
                   <div class="d-flex">
-                    <small class="lead blog-report blog-likes">
+                    <small class="blog-report blog-likes">
                       <span id="likesCount--${blog.blog_id}">${blog.blog_reviews.likes}</span>&nbsp;
                       <span class="fa fa-heart-o like-btn" onclick="toggleHeart(this, ${blog.blog_id})" data-like="false"></span>
                     </small>

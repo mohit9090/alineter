@@ -75,8 +75,8 @@ function constructNotFound() {
   const blogsContainer = document.getElementById("blogs");
   blogsContainer.innerHTML = `<div class="blog wrapper mx-auto" style="padding:7%;3%">
     <div class="container">
-      <h3 class="text-center text-richblack">No Results Found</h3>
-      <p class="text-center lead mt-4" style="font-size:0.97rem">Looks like we couldn’t find what you’re looking for. Try another search.</p>
+      <h3 class="text-center txt-tertiary" style="font-family:'Roboto', sans-serif;font-weight:600">No Results Found</h3>
+      <p class="text-center txt-grey mt-4" style="font-family:'Roboto', sans-serif;font-size:0.97rem">Looks like we couldn't find what you're looking for. Try another search.</p>
     </div>
   </div>
   `

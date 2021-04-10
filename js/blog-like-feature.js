@@ -19,7 +19,7 @@ function changeHeartState(state, blogID, heartBtn) {
 	likes += state.likeCount;
 	likesCountElem.innerHTML = likes;
 
-	(state.stateName == "likeBlog") ? loveEffect(heartBtn) : null;
+	// (state.stateName == "likeBlog") ? loveEffect(heartBtn) : null;
 };
 
 /* Like dislike blog */

@@ -58,6 +58,12 @@ div.hr {
 
 
 /* BLOGS SEARCH INPUT SECTION */
+.blogs-search-util {
+	background:var(--bg-secondary);
+}
+.blog-search-icon {
+	color:var(--bg-primary);
+}
 input[name="q"] {
 	background:transparent;
 	width:80%;
@@ -66,8 +72,16 @@ input[name="q"] {
 	word-spacing:2px;
 	transition:0.3s ease;
 }
+input[name="q"],
+input[name="q"]::placeholder,
+input[name="q"] + .fa-times {
+	color:var(--bg-light);
+}
+input[name="q"] {
+	border-color:var(--bg-light);
+}
 input[name="q"]::placeholder {
-	opacity:0.5;
+	opacity:0.4;
 }
 input[name="q"] + .fa-times {
 	cursor:pointer;
@@ -76,37 +90,8 @@ input[name="q"] + .fa-times {
 	transition:0.2s ease;
 }
 
-@media screen and (min-width:592px) {
-	.blogs-search-util {
-		background:var(--tertiary-light);
-	}
-	.blog-search-icon,
-	input[name="q"],
-	input[name="q"]::placeholder,
-	input[name="q"] + .fa-times {
-		color:var(--main-primary);
-	}
-	input[name="q"] {
-		border-color:var(--main-primary);
-	}
-}
-@media screen and (max-width:592px) {
-	.blogs-search-util {
-		background:var(--main-primary);
-	}
-	.blog-search-icon,
-	input[name="q"],
-	input[name="q"]::placeholder,
-	input[name="q"] + .fa-times {
-		color:var(--tertiary-light);
-	}
-	input[name="q"] {
-		border-color:var(--tertiary-light);
-	}
-}
 
 /* BLOGS CATEGORY SEARCH SECTION*/
-
 .category-btn {
 	margin-right:0.5%;
 	pointer-events:none;
@@ -117,12 +102,12 @@ input[name="q"] + .fa-times {
 	padding:8px 16px;
 }
 .category-item[data-state="active"] {
-	background:var(--main-primary);
-	color:var(--tertiary-light);
+	background:var(--bg-primary);
+	color:var(--bg-light);
 }
 .category-item:not(.category-item[data-state="active"]):hover {
-	background:rgba(1, 22, 39, 0.08);
-	color:var(--main-primary);
+	background:rgba(112, 112, 112, 0.08);
+	color:var(--bg-primary);
 }
 .category-dropdown {
   position:relative;
@@ -132,6 +117,12 @@ input[name="q"] + .fa-times {
   padding:13px 39px;
   font-size:1.1rem;
   cursor:pointer;
+}
+#categoryBtn,
+.category-item,
+.category-content button {
+	font-family:var(--ff-primary);
+	letter-spacing:1.01px;
 }
 .category-dropbtn > .fa-caret-down {
 	transition:0.2s ease;
@@ -145,7 +136,7 @@ input[name="q"] + .fa-times {
   z-index:1;
 }
 .category-content button {
-  color:var(--main-primary);
+  color:var(--bg-tertiary);
   padding:12px 16px;
 }
 .category-dropdown:hover .category-content {
@@ -157,33 +148,16 @@ input[name="q"] + .fa-times {
 
 
 
-
 /* BLOGS SECTION */
 .blog {
-	border:1px solid #BFBFBF;
+	border:1px solid rgba(112, 112, 112, 0.4);
 }
 .blog:not(:first-child) {
 	margin-top:5%;
 }
-.load-gradient {
-	background: linear-gradient(-45deg, #2EC4B6, #20A4F3);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 .blog-img-wrapper {
 	width:100%;
-	background:var(--tertiary-light);
+	background:var(--bg-light);
 }
 @media screen and (min-width:1200px) {
 	.blog-img-wrapper {
@@ -205,16 +179,33 @@ input[name="q"] + .fa-times {
 	height:100%;
 	object-fit:cover;
 }
-
 .blog-detail-wrapper {
 	padding:var(--lg-padding-inverse);
+}
+
+/* ---- Fonts ---- */
+.blog-author-name span,
+.blog-pub-date {
+	font-family:var(--ff-roboto);
+}
+.blog-title h5 { 
+	font-family:var(--ff-primary);
+	font-weight:600;
+}
+.blog-short-descp p {
+	font-family:var(--ff-secondary);
+	font-weight:300;
+}
+#shareBlogModal .modal-title,
+#shareBlogModal #blog-sharelink {
+	font-family:var(--ff-tertiary);
+	font-weight:400;
 }
 
 .blog-description,
 .blog-img-wrapper {
 	cursor:pointer;
 }
-
 .blog-author-img {
 	width:32px;
 	height:32px;
@@ -228,7 +219,6 @@ input[name="q"] + .fa-times {
 }
 .blog-author-name {
 	font-size:0.85rem;
-	font-weight:450;
 }
 .blog-pub-date {
 	font-size:0.7rem;
@@ -237,13 +227,19 @@ input[name="q"] + .fa-times {
 .blog-pub-date {
 	letter-spacing:1.01px;
 }
-
+.blog-detail {
+	color:var(--bg-tertiary);
+}
+.blog-author,
+.blog-success {
+	color:var(--bg-grey);
+}
 .blog-link :is( a >.fa-link) {
-	color:var(--main-primary);
+	color:var(--bg-secondar);
 	transform:rotateX(180deg);
 }
 .blog-link a:hover {
-	background:var(--tertiary-light);
+	background:rgba(112, 112, 112, 0.1);
 }
 .blog-link a:active {
 	opacity:0.8;
@@ -263,6 +259,7 @@ input[name="q"] + .fa-times {
 	font-size:0.9rem;
 	cursor:pointer;
 }
+/*
 .like-btn.loveEffect {
 	animation: love 0.5s ease 1;
 }
@@ -277,3 +274,4 @@ input[name="q"] + .fa-times {
 		filter:drop-shadow(0 0 0 #E84A43);
 	}
 }
+*/
