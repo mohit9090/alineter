@@ -10,8 +10,6 @@
 }*/
 
 
-
-
 /* ABOUT US */
 section#about-us, 
 section#directors,
@@ -19,13 +17,12 @@ section#small-description,
 section#about-products {
 	padding:var(--lg-padding);
 }
-#head .body {
-	font-family:calibri;
-}
 .big-title, 
 .medium-title, 
 .small-title {
-	color:var(--main-secondary);
+	font-family:var(--ff-tertiary);
+	font-weight:600;
+	color:var(--bg-primary);
 }
 .about-us-content {
 	white-space:pre-line;
@@ -53,6 +50,12 @@ section#about-products {
 }
 
 
+.about-us-content,
+.profile-cards .director-bio {
+	font-family:var(--ff-secondary);
+	color:var(--bg-grey);
+}
+
 
 /* DIRECTORS */
 .profile-cards .profile-card {
@@ -60,11 +63,9 @@ section#about-products {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 0px;
 }
 .profile-cards .director-designation {
-	font-style:italic;
-	color:#AEB7B3;
-}
-.profile-cards .director-bio {
-	color:#6C757D;
+	font-family:var(--ff-roboto);
+	font-weight:600;
+	color:rgba(112, 112, 112, 0.7);
 }
 
 
@@ -89,8 +90,11 @@ section#about-products {
 	object-fit:contain;
 }
 .shop-btn {
-	font-weight:bold;
-	width:250px;
+	font-family:var(--ff-primary);
+	font-weight:800;
+	font-size:1.1rem;
+	letter-spacing:1.02px;
+	width:220px;
 	padding:2.6%;
 }
 .shop-btn:active {
