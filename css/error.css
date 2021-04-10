@@ -2,7 +2,7 @@
 
 /*ERROR SECTION*/
 #error-wrapper {
-	background-color:var(--main-primary);
+	background-color:var(--bg-secondary);
 	overflow-x:hidden;
 	overflow-y:auto;
 }
@@ -49,6 +49,15 @@
 	}
 }
 
+.error-code {
+	font-family:var(--ff-tertiary);
+	font-weight:600;
+}
+.error-text {
+	font-family:var(--ff-primary);
+	line-height:2;
+	word-spacing:2.5px;
+}
 
 
 /*Copyright Section*/
@@ -71,7 +80,8 @@
 /*Footer Copyright*/
 .copyright-wrapper {
 	padding:1%;
-	background:rgba(32,164,243,0.05);
+	background:rgba(112, 112, 112, 0.15);
+	color:var(--bg-light);
 }
 .copyright-wrapper span:not(:last-child) {
 	margin-right:0.1rem;
@@ -80,12 +90,12 @@
 
 /*Footer Links*/
 #copyright-section .link.s-2 {
-	color:var(--main-secondary);
+	color:var(--bg-primary);
 }
 #copyright-section .link.s-2:hover {
 	text-decoration:underline;
 }
 #copyright-section .link:active {
-	background:rgba(32,164,243,0.1);
+	background:rgba(112, 112, 112, 0.2);
 	transition:background 0.3s ease;
 }
