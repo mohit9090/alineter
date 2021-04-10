@@ -167,7 +167,7 @@
           </li>
           <li class="nav-item mr-3 my-auto user-func">
             <div class="d-flex">
-              <a href="signup.html" class="btn btn-o-tertiary ripple-opacity-l"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
+              <a href="signup.html" class="btn btn-o-tertiary ripple-opacity-l rounded"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;Sign Up</a>
 
               <!-- when user is logged in -->
               <!-- <a href="" class="nav-link">
@@ -448,7 +448,7 @@
       <!--
       ================== FOOTER SECTION ====================
       -->
-
+      
       <!-- Button to Scroll Up -->
       <div class="container text-center">
         <div class="scroll-horizontal to-top">
@@ -465,7 +465,7 @@
       </script>
 
       <footer id="footer" class="w-100">
-        <div class="container-fluid pt-4 pb-4 text-cultured">
+        <div class="container-fluid pt-4 pb-4 txt-light">
           <div class="row m-0 p-0">
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-footer text-center">
@@ -478,7 +478,7 @@
                   <form method="post" action=".">
                     <div class="d-flex flex-column">
                       <div class="d-flex justify-content-center">
-                        <input type="email" name="subscriber-email" id="subscriber-email" class="input-s-2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="your-email@example.com"/>
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input-s-2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
                         <div class="input-group-append" style="z-index:0">
                           <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
                         </div>
@@ -488,7 +488,7 @@
 
                 </div>
                 <div class="section third">
-                  <h5 class="font-weight-light">Follow Us</h5>
+                  <h5 class="title">Follow Us</h5>
                   <a href="https://twitter.com/alineterindia" class="social-link"><i class="fa fa-twitter-square"></i></a>
                   <a href="https://www.instagram.com/alineterindia/" class="social-link"><i class="fa fa-instagram"></i></a>
                   <a href="https://www.facebook.com/alineterindia" class="social-link"><i class="fa fa-facebook-square"></i></a>
@@ -497,7 +497,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12 col-footer">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-footer m-0">
               <div class="row">
                 <div class="col-6">
                   <div class="d-flex flex-column">
@@ -531,12 +531,12 @@
                     </div>
                   </div>                  
                 </div>
-                <div class="col-6">
+                <div class="col-6 m-0" style="overflow:hidden;">
                   <div class="d-flex flex-column">
                     <div class="d-flex flex-column section first">
                       <div class="row m-0 mb-2 contact-us">
                         <div class="col-2 p-0">
-                          <i class="fa fa-envelope" style="font-size:1.2rem"></i>
+                          <i class="fa fa-envelope"></i>
                         </div>
                         <div class="col-10 p-0">
                           <a href="mailto:info@alineter.com" class="link s-3">info@alineter.com</a>
@@ -544,7 +544,7 @@
                       </div>
                       <div class="row m-0 contact-us">
                         <div class="col-2 p-0">
-                          <i class="fa fa-phone-square" style="font-size:1.2rem"></i>
+                          <i class="fa fa-phone-square"></i>
                         </div>
                         <div class="col-10 p-0">
                           <a href="tel:8895738760" class="link s-3">(91) 8895738760</a>
@@ -552,12 +552,12 @@
                       </div>
                     </div>
                     <div class="section second">
-                      <h6 class="font-weight-light">Accepted Payments</h6>
+                      <h5 class="title">Accepted Payments</h5>
                       <div class="d-flex flex-wrap payment-method">
                         <img src="./images/cc-amex.png" width=40 height=20 class="img-fluid"/>
                         <img src="./images/cc-mastercard.png" width=40 height=20 class="img-fluid"/>
                         <img src="./images/cc-visa.png" width=40 height=20 class="img-fluid"/>
-                        <img src="./images/cc-cod.png" width=40 height=20 class="img-fluid"/>
+                        <!-- <img src="./images/cc-cod.png" width=40 height=20 class="img-fluid"/> -->
                       </div>
                     </div>
                   </div>
@@ -568,7 +568,7 @@
           </div>
         </div>
         <div class="copyright-wrapper text-center">
-          <div class="container-fluid text-cultured">
+          <div class="container-fluid txt-light">
             <small>
               <span>&copy;2020-<span id="copyright-year"></span></span>
               <span><a href="index.html" class="link s-2">Alineter</a></span>
@@ -578,7 +578,7 @@
               <span><a href="#" class="link s-2">Privacy Policy</a></span>
             </small>
           </div>
-          <script>
+         <script>
             let year=new Date().getFullYear().toString().substr(2);document.getElementById("copyright-year").innerHTML=year;
           </script>
         </div>

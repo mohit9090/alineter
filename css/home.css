@@ -278,7 +278,7 @@
 /* TESTIMONIALS */
 #testimonial {
 	padding:var(--sm-padding);
-	background-color:var(--main-primary);
+	background-color:var(--bg-tertiary);
 	position:relative;
 	z-index:1;
 }
