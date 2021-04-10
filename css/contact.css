@@ -12,9 +12,8 @@
 
 /* CONTACT US SECTION */
 section#contact-us {
-	/*height:100vh;*/
 	padding:var(--lg-padding);
-	background-color:var(--main-primary);
+	background-color:var(--bg-secondary);
 	background-image:url("../images/explorer-bg-1-1280.jpg");
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -27,47 +26,60 @@ section#contact-us {
 	left:0;
 	width:100%;
 	height:100%;
-	background:rgba(1, 22, 39, 0.8);
+	background:rgba(0, 0, 0, 0.7);
 }
 .reach-us,
 .contact-us {
 	margin-top:5%;
 }
+.contact-us .head > h1 {
+	font-family:var(--ff-tertiary);
+	font-weight:800;
+	color:var(--bg-primary);
+}
+.support-detail p {
+	color:var(--bg-light);
+}
 /*Input style for this section*/
-.input-s-2, 
-.textarea-s-1,
-.input-s-2:focus, 
-.textarea-s-1:focus {
-	color:var(--tertiary-light);
+.mail-us :is( .user-input) {
+	color:var(--bg-light);
 	border-width:1.5px;
 	border-color:var(--bg-light);
+	letter-spacing:1.02px;
 	background:transparent;
 }
-.input-s-2::placeholder,
-.textarea-s-1::placeholder {
-	color:var(--tertiary-light);
+
+.mail-us :is( .user-input)::placeholder {
+	color:var(--bg-light);
 	opacity:0.8;
 }
-.input-s-2:focus::placeholder,
-.textarea-s-1:focus::placeholder {
+.mail-us :is( .user-input):focus::placeholder {
 	opacity:1;
 }
-.input-s-2.filled, .textarea-s-1.filled {
-	border-color:rgba(140, 255, 218,0.8);
+.mail-us :is( .user-input).filled {
+	border-color:rgba(140, 255, 218,0.9);
 	background:rgba(140, 255, 218,0.1);
 }
-.input-s-2.not-filled, .textarea-s-1.not-filled {
-	border-color:rgba(236, 88, 88, 0.7);
+.mail-us :is( .user-input).not-filled {
+	border-color:rgba(236, 88, 88, 0.9);
 	background:rgba(236, 88, 88, 0.1);
 }
 /*Support Links*/
 .mail-support > a,
 .telephone-support > a {
-	color:var(--tertiary-light);
+	color:var(--bg-light);
 }
 .contact-us-btn {
+	width:120px;
+	font-family:var(--ff-primary);
+	font-weight:600;
 	font-size:1.1rem;
-	font-weight:550;
+	letter-spacing:1.02px;
+	background:var(--bg-light);
+	color:var(--bg-secondary);
+}
+.contact-us-btn:hover {
+	filter:brightness(90%);
 }
 /*MAP*/
 .mapouter {
@@ -98,23 +110,5 @@ section#contact-us {
 	.mapouter,
 	.gmap_canvas {
 		height:250px;
-	}
-}
-/*Load gradient for map*/
-.load-gradient {
-	background: linear-gradient(-45deg, #2EC4B6, #20A4F3);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
 	}
 }
