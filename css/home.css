@@ -278,7 +278,7 @@
 /* TESTIMONIALS */
 #testimonial {
 	padding:var(--sm-padding);
-	background-color:var(--bg-tertiary);
+	background:var(--bg-tertiary);
 	position:relative;
 	z-index:1;
 }
@@ -294,18 +294,20 @@
 	opacity:0.4;
 }
 .fa-quote-left {
-	color:var(--tertiary-light);
-	opacity:0.5;
+	color:var(--bg-light);
+	opacity:0.3;
 }
 #testimonial .heading {
-	font-family: "Times New Roman", Times, serif;
-	color:var(--tertiary-light);	
+	font-weight:800;
+	font-family:var(--ff-tertiary);
+	color:var(--bg-light);	
 }
 #testimonial .rating-icon {
-	color:var(--main-secondary);
+	color:var(--bg-primary);
 }
 .rating-icon.sm {
 	font-size:1rem;
+	color:var(--bg-grey);
 }
 /*Responsive testimonial header*/
 @media screen and (min-width:1300px){
@@ -313,7 +315,7 @@
 		font-size:10rem;
 	}
 	#testimonial .heading {
-		font-size:3rem;
+		font-size:3.2rem;
 	}
 	.rating-icon.lg,
 	.rating-count {
@@ -325,7 +327,7 @@
 		font-size:8rem;
 	}
 	#testimonial .heading {
-		font-size:2.4rem;
+		font-size:2.6rem;
 	}
 	.rating-icon.lg,
 	.rating-count {
@@ -358,18 +360,35 @@
 }
 .review-box {
 	margin:auto;
-	margin-top:1em;
+	margin-top:3.5em;
 }
-.review-card {
+/*.review-card {
 	width:100%;
-	background:rgba(22,12,40,0.3);
+	background:rgba(22, 22, 22, 0);
 	transition:0.3s ease;
 }
 .review-card:hover {
-	background-color:rgba(22,12,40,0.2);
+	background-color:rgba(22, 22, 22, 0.);
+}*/
+.review-card :is( .card-header) {
+	background:var(--bg-primary);
+	border-bottom:1.5px solid var(--bg-light);
+}
+.review-card .reviewer-name {
+	color:var(--bg-secondary);
+	font-family:var(--ff-tertiary);
+	font-weight:600;
+}
+.review-card :is( .card-body) {
+	background:var(--bg-secondary);
 }
 .reviewer-says {
+	font-family:var(--ff-primary);
+	letter-spacing:1.001px;
+	word-spacing:1.2px;
+	line-height:1.8;
 	white-space:pre-line;
+	color:var(--bg-grey);
 }
 /*Responsive Wrapper*/
 @media screen and (min-width:850px) {
@@ -394,23 +413,23 @@
 }
 /*show-more button*/
 .show-more-btn {
+	font-family:var(--ff-primary);
 	padding:2% 4%;
 	font-size:1.2rem;
-	border:1px solid var(--tertiary-blue);
-	color:var(--tertiary-blue);
+	border:1px solid var(--bg-primary);
+	color:var(--bg-primary);
 	background:transparent;
 	transition:0.3s;
 }
 .show-more-btn:hover {
-	background:rgba(32,164,243,0.1);
-	color:var(--tertiary-blue);
+	background:rgba(241, 90, 36, 0.1);
+	color:var(--bg-primary);
 }
 .show-more-btn:focus {
 	background:transparent;
 }
 .show-more-btn:active {
-	color:var(--tertiary-light);
-	background:var(--tertiary-blue);
+	filter:brightness(90%);
 	transition:0.3s;
 }
 

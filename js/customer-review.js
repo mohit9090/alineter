@@ -49,8 +49,8 @@ const [close_div] = footer;
 //Destructuring Reviewers
 const [firstReviewer, secondReviewer, thirdReviewer, fourthReviewer, fifthReviewer, sixthReviewer] = reviewers;
 
-const bg_color = ["blue", "mandarin", "tiffany", "primary", "vermillion"];
-
+// const bg_color = ["blue", "mandarin", "tiffany", "primary", "vermillion"];
+// const bg_color = ["primary", "secondary", "light"]
 
 function addRatingStar(rating) {
 	let ratingIcon = "";
@@ -60,13 +60,13 @@ function addRatingStar(rating) {
 	
 
 	for(let i=0; i<fullStar; i++) {
-		ratingIcon += `<i class="fa fa-star rating-icon sm"></i>`;
+		ratingIcon += `<i class="fa fa-star rating-icon sm" style="color:#FEFEFE"></i>`;
 	}
 	for(let i=0; i<halfStar; i++) {
-		ratingIcon += `<i class="fa fa-star-half-o rating-icon sm"></i>`;
+		ratingIcon += `<i class="fa fa-star-half-o rating-icon sm" style="color:#FEFEFE"></i>`;
 	}
 	for(let i=0; i<noStar; i++) {
-		ratingIcon += `<i class="fa fa-star-o rating-icon sm"></i>`;
+		ratingIcon += `<i class="fa fa-star-o rating-icon sm" style="color:#FEFEFE"></i>`;
 	}
 
 	return ratingIcon
@@ -76,12 +76,12 @@ function mapReviews(rev_set, additional_class) {
 	let reviews = ""
 	rev_set.map( (reviewer) => {
 		if(reviewer !== null || reviewer !== undefined) {
-			reviews = reviews + `<div class="review-box rounded ${additional_class} bg-${bg_color[Math.floor(Math.random()*5)]}">
+			reviews = reviews + `<div class="review-box rounded ${additional_class}">
             <div class="card review-card border-0">
-              <div class="card-header ">
+              <div class="card-header">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex flex-column">
-                    <small class="text-light reviewer-name">${reviewer.name}</small>
+                    <small class="reviewer-name">${reviewer.name}</small>
                     <div class="d-flex">` + 
                     
                     addRatingStar(reviewer.review.rating)
