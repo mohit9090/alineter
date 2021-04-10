@@ -40,7 +40,7 @@ section#contact-us {
 .textarea-s-1:focus {
 	color:var(--tertiary-light);
 	border-width:1.5px;
-	border-color:var(--tertiary-light);
+	border-color:var(--bg-light);
 	background:transparent;
 }
 .input-s-2::placeholder,
