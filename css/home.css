@@ -37,7 +37,7 @@
 }
 .store-btn {
 	width:50%;
-	border-radius:100px;
+	border-radius:5px;
 	padding:0.8rem 0;
 	font-size:1.1rem;
 	color:var(--bg-light);
