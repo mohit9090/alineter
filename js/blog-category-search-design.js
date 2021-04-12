@@ -1,4 +1,5 @@
 
+const categoryContainer = document.getElementById("blogsCategory");
 
 const categorySectionClasses = [
   {
@@ -47,17 +48,21 @@ function constructCategorySearch(categoryStyle) {
 }
 
 function addCategoryItemBtn(categoryItemWrapperElem, categoryStyle) {
+  let categoryItemButton_html = "";
+
   categoriesAvailable.map(category => {
-    categoryItemWrapperElem.innerHTML += `
+    categoryItemButton_html += `
       <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="applyFilter(this)" data-state="" data-value="${category}" data-parent="false">${category}</button>
     `
   });
+
+  categoryItemWrapperElem.innerHTML += categoryItemButton_html;
 }
 
-function onSuccessConstruction(categoryContainer, categoryHTML, categoryStyle) {
+function onSuccessConstruction(categoryHTML, categoryStyle) {
   categoryContainer.innerHTML = categoryHTML;
 
-  var categoryItemWrapperElem = document.getElementById("categoryItemWrapper");
+  const categoryItemWrapperElem = document.getElementById("categoryItemWrapper");
 
   addCategoryItemBtn(categoryItemWrapperElem, categoryStyle);
 }
@@ -66,18 +71,16 @@ function loadCategorySearch() {
 
   let screenWidth = getScreenWidth();
 
-  const categoryContainer = document.getElementById("blogsCategory");
-
   if(screenWidth <= 768) {
     //screen width is less than 768px
     /* Construct Category Search Button as DROPDOWN BUTTON */
     var category_html = constructCategorySearch(dropdown); 
-    onSuccessConstruction(categoryContainer, category_html, dropdown);  
+    onSuccessConstruction(category_html, dropdown);  
   } else {
     //screen width is greater than 768px
     /* Construct Category Search Button as INLINE BUTTON  */
     var category_html = constructCategorySearch(inline);
-    onSuccessConstruction(categoryContainer, category_html, inline);
+    onSuccessConstruction(category_html, inline);
   }
 };
 
