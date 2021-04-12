@@ -1,5 +1,5 @@
 
-const revContainer = document.querySelector("#reviews-container .row");
+const reviewsContainer = document.querySelector("#reviews-container .row");
 
 //jsonReviewers is derived from js/customerReview-data.js
 const reviewers = JSON.parse(jsonReviewers);
@@ -49,8 +49,6 @@ const [close_div] = footer;
 //Destructuring Reviewers
 const [firstReviewer, secondReviewer, thirdReviewer, fourthReviewer, fifthReviewer, sixthReviewer] = reviewers;
 
-// const bg_color = ["blue", "mandarin", "tiffany", "primary", "vermillion"];
-// const bg_color = ["primary", "secondary", "light"]
 
 function addRatingStar(rating) {
 	let ratingIcon = "";
@@ -107,12 +105,12 @@ function mapReviews(rev_set, additional_class) {
 function recursiveMapping(set, times, open_div) {
 	for(var i=0; i<times; i++) {
 		let reviews = mapReviews(set[i], "w-100");
-		revContainer.innerHTML = revContainer.innerHTML + open_div + reviews + close_div;	
+		reviewsContainer.innerHTML = reviewsContainer.innerHTML + open_div + reviews + close_div;	
 	}
 }
 
 function constructReviews(numOfReviews) {
-	if(numOfReviews == 1 || numOfReviews == 2 || numOfReviews ==3) {
+	if(numOfReviews == 1 || numOfReviews == 2 || numOfReviews == 3) {
 		/*
 			Map All Reviews to a string reviews
 		*/
@@ -120,7 +118,7 @@ function constructReviews(numOfReviews) {
 		/*
 			Display the string reviews in the markup document
 		*/
-		revContainer.innerHTML = revContainer.innerHTML + open_div_1 + reviews + close_div;
+		reviewsContainer.innerHTML = reviewsContainer.innerHTML + open_div_1 + reviews + close_div;
 
 	} else if(numOfReviews == 4) {
 		/* 
@@ -152,12 +150,13 @@ function constructReviews(numOfReviews) {
 		recursiveMapping(set, set.length, open_div_3);
 
 	}
-}	
+}
+
 
 function displayReviews() {
 	const numOfReviews = reviewers.length;
 	constructReviews(numOfReviews);
 }
-
-
 displayReviews();
+
+

@@ -364,7 +364,7 @@
 }
 .review-box {
 	margin:auto;
-	margin-top:3.5em;
+	margin-top:5%;
 }
 /*.review-card {
 	width:100%;
@@ -486,3 +486,29 @@
 }*/
 
 
+
+#more-reviews-overlay {
+	position:fixed;
+	top:0;
+	/*display:none;*/
+	width:0;
+	height:100%;
+	background:rgba(28, 28, 28, 0.85);
+	z-index:5;
+	overflow-y:hidden;
+	transition:width 0.1s ease-in-out;
+}
+
+.more-reviews-wrapper {
+	opacity:0;
+	/*transition-delay:1s;*/
+	transition:opacity 0.3s ease-in-out;
+}
+
+.close-btn-wrapper {
+	position: sticky;
+  	top: 0;
+  	z-index:6;
+  	background:rgba(28, 28, 28, 1);
+  	border-bottom:1px solid white;
+}

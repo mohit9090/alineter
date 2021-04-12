@@ -203,6 +203,17 @@
     <section id="overlay-effect" onclick="closenav()">
     </section>
 
+    <section id="more-reviews-overlay" class="scroll-reveal-content">
+      <div class="container-fluid text-right p-2 close-btn-wrapper">
+        <button class="btn btn-i-primary" id="close-btn" onclick="close_more__Reviews()">Close</button>
+      </div>
+      <div class="container more-reviews-wrapper pb-4" id="more-reviews-container">
+        <div class="row">
+        </div>
+      </div>
+    </section>
+
+
 
 
     <!--
@@ -227,7 +238,7 @@
                     <!-- <img src="./images/mohit_300.png" class="pfimg"/> -->
                   </div>
                   <div class="my-auto">
-                    <p class="lead text-cultured">Hey, User</p>
+                    <p class="lead txt-light">Hey, User</p>
                     <!-- <p class="lead text-cultured">Hey, Mohit</p> -->
                   </div>
                 </div>
@@ -409,12 +420,11 @@
 
           <!-- Show More Button -->
           <div class="container p-3 pt-5 text-center">
-            <a href="show-more-reviews.html" class="btn show-more-btn reveal__scale-up">Show More</a>
+            <a href="javascript:void(0)" class="btn show-more-btn reveal__scale-up" onclick="show_more__Reviews()">Show More</a>
           </div>
 
         </div>
       </section>
-
 
       <br><br><br>
 
@@ -646,7 +656,8 @@
 
 <script type="text/javascript" src="js/customerReview-data.js"></script>
 <script type="text/javascript" src="js/customer-review.js"></script>
-<script type="text/javascript" src="js/responsive-reviews.js"></script>
+<script type="text/javascript" src="js/CustomerResponsive-review.js"></script>
+<script type="text/javascript" src="js/show-more-review.js"></script>
 
 
 <!-- <script>
