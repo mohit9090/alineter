@@ -98,11 +98,6 @@
 		width:128px;
 	}
 }
-.usp-box:hover {
-	background:var(--bg-secondary);
-	transition-delay:0.1s;
-	transform:translateY(-10px);
-}
 .icon-filler {
 	width:40%;
 	height:40%;
@@ -121,12 +116,21 @@
 	filter:grayscale(100%);
 	transition:0.3s ease;
 }
-.usp-box:hover :is(.usp-tag, .usp-icon) {
+/* Icon Animation */
+.usp-box:not(.mobile-device):hover,
+.usp-box.clicked {
+	background:var(--bg-secondary);
+	transition-delay:0.1s;
+	transform:translateY(-10px);
+}
+.usp-box:not(.mobile-device):hover :is( .usp-tag, .usp-icon),
+.usp-box.clicked :is( .usp-tag, .usp-icon) {
 	transition-delay:0.2s;
 	filter:grayscale(0);
 	cursor:default;
 }
-.usp-box:hover .usp-icon {
+.usp-box:not(.mobile-device):hover .usp-icon,
+.usp-box.clicked .usp-icon {
 	transform:translateY(15px);
 }
 
