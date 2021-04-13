@@ -26,10 +26,10 @@ function sortbyLength(a, b, type) {
 	return 0;
 }
 
-/* reviewers is derived from js/customerReview-data.js */
-var reviewers = JSON.parse(jsonReviewers);
+/* all_reviewers is derived from js/customerReview-data.js */
+var all_reviewers = JSON.parse(jsonReviewers);
 
-reviewers.sort( function(a, b) {
+all_reviewers.sort( function(a, b) {
 	return sortbyLength(a, b, 1);
 });
 
@@ -69,7 +69,7 @@ function toggleReviewContent(toggle_state) {
 function mapOverlayReviews() {
 	let moreReviews_div = "";
 
-	reviewers.map(reviewer => {
+	all_reviewers.map(reviewer => {
 		moreReviews_div += `<div class="col-lg-4 col-md-6 col-sm-12"><div class="review-box rounded">
             <div class="card review-card border rounded">
               <div class="card-header">

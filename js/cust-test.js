@@ -45,10 +45,6 @@ for(i=0, j=reviewers.length-1; i<reviewers.length, j>=0; i++, j--) {
 /* Reassign reviewers to reorder_reviewers */
 reviewers = reorder_reviewers;
 
-/* num of reviews that is displayed in landing page */
-/* It might change according to screen size. This below one will be the default(starting) one */
-var shownReviews = reviewers.length;
-
 
 const header = [
 	// Header Selection
@@ -207,10 +203,18 @@ function constructReviews(numOfReviews) {
 	}
 }
 
+// function constructShowMoreBtn(numOfReviews) {
+// 	if(numOfReviews < totalReviews) {
+// 		showMoreBtn.innerHTML = `<a href="javascript:void(0)" class="btn show-more-btn reveal__from-bottom" onclick="show_more__Reviews()">Show More</a>`
+// 	}
+// } 
+
 
 function displayReviews() {
-	const numOfReviews = reviewers.length;
-	constructReviews(numOfReviews);
+	/* Number of Reviews that are actually shown */
+	var shownReviews = reviewers.length;
+	constructReviews(shownReviews);
+	constructShowMoreBtn(shownReviews);
 }
 displayReviews();
 
