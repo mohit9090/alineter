@@ -418,7 +418,7 @@
 /*show-more button*/
 .show-more-btn {
 	font-family:var(--ff-primary);
-	padding:2% 4%;
+	padding:1rem 2rem;
 	font-size:1.2rem;
 	border:1px solid var(--bg-primary);
 	color:var(--bg-primary);
@@ -487,28 +487,37 @@
 
 
 
+/* More Reviews */
 #more-reviews-overlay {
 	position:fixed;
 	top:0;
-	/*display:none;*/
 	width:0;
 	height:100%;
 	background:rgba(28, 28, 28, 0.85);
 	z-index:5;
 	overflow-y:hidden;
-	transition:width 0.1s ease-in-out;
 }
-
-.more-reviews-wrapper {
+.reviews-nav {
+	position: sticky;
+  	top:0;
+  	z-index:6;
+  	background:rgba(28, 28, 28, 0.9);
+  	border-bottom:1px solid white;
+}
+.reviews-nav,
+.more-reviews-container {
 	opacity:0;
-	/*transition-delay:1s;*/
 	transition:opacity 0.3s ease-in-out;
 }
-
-.close-btn-wrapper {
-	position: sticky;
-  	top: 0;
-  	z-index:6;
-  	background:rgba(28, 28, 28, 1);
-  	border-bottom:1px solid white;
+.reviews-nav h5,
+.reviews-nav button {
+	font-family:var(--ff-primary);
+}
+.reviews-nav button {
+	padding:0.5rem 2rem;
+	font-size:1.1rem;
+}
+.reviews-nav button:active {
+	opacity:0.8;
+	transition:opacity 0.3s;
 }

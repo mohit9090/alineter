@@ -1,7 +1,4 @@
 
-
-// const reviewers = JSON.parse(jsonReviewers);
-
 function sortbyLength(a, b, type) {
 	/*
 		type = 0 --> Ascending Order
@@ -29,20 +26,49 @@ function sortbyLength(a, b, type) {
 	return 0;
 }
 
+/* reviewers is derived from js/customerReview-data.js */
 reviewers.sort( function(a, b) {
 	return sortbyLength(a, b, 1);
 });
 
-function show_more__Reviews() {
-	document.getElementById("more-reviews-overlay").style.width="100%";
-	document.body.style.overflowY="hidden";
-	const moreReviewsContainer = document.querySelector("#more-reviews-container > .row");
+const moreReviewOverlayElem = document.getElementById("more-reviews-overlay");
+const reviewsNavElem = document.querySelector(".reviews-nav");
+const moreReviewsContainer = document.getElementById("more-reviews-container");
+const moreReviewsContainer__row = document.querySelector("#more-reviews-container > .row");
 
-	let moreReviews_html = ""
+function toggleReviewOverlay(toggle_state) {
+	/*
+		toggle_state = 1 (true) => Show
+		toggle_state = 0 (false) => Hide
+	*/
+
+	moreReviewOverlayElem.style.width = (toggle_state) ? "100%" : "0";
+	
+	//Restrict the body to scroll when overlay effect is turned on
+	document.body.style.overflowY = (toggle_state) ? "hidden" : "auto";
+}
+
+function toggleReviewContent(toggle_state) {
+	/*
+		toggle_state = 1 (true) => Show
+		toggle_state = 0 (false) => Hide
+	*/
+
+	const elems = [reviewsNavElem, moreReviewsContainer];
+	elems.map( elem => {
+		elem.style.opacity = (toggle_state) ? "1" : "0";
+	});
+
+	//Make the contents overflow as scrolling when they appear only
+	moreReviewOverlayElem.style.overflowY = (toggle_state) ? "auto" : "hidden";
+}
+
+function mapOverlayReviews() {
+	let moreReviews_div = "";
 
 	reviewers.map(reviewer => {
-		moreReviews_html += `<div class="col-lg-4 col-md-6 col-sm-12"><div class="review-box rounded">
-            <div class="card review-card border rounded reveal__from-bottom">
+		moreReviews_div += `<div class="col-lg-4 col-md-6 col-sm-12"><div class="review-box rounded">
+            <div class="card review-card border rounded">
               <div class="card-header">
                 <div class="d-flex justify-content-between">
                   <div class="d-flex flex-column">
@@ -66,19 +92,27 @@ function show_more__Reviews() {
          </div>`
 	});
 
-	moreReviewsContainer.innerHTML = moreReviews_html;
+	return moreReviews_div;
+}
+
+function show_more__Reviews() {
+	let toggle_state = 1;
+	toggleReviewOverlay(toggle_state);
+
+	let moreReviews_html = ""
+	moreReviews_html = mapOverlayReviews();
+	moreReviewsContainer__row.innerHTML = moreReviews_html;
 
 	setTimeout(function() {
-		document.getElementById("more-reviews-container").style.opacity="1";
-		document.getElementById("more-reviews-overlay").style.overflowY="auto";
-	}, 500);
+		toggleReviewContent(toggle_state);
+	}, 300);
 
 }
 function close_more__Reviews() {
-	document.getElementById("more-reviews-container").style.opacity="0";
-	document.getElementById("more-reviews-overlay").style.overflowY="hidden";
+	let toggle_state = 0;
+	toggleReviewContent(toggle_state);
+
 	setTimeout(function() {
-		document.getElementById("more-reviews-overlay").style.width="0";
-		document.body.style.overflowY="auto";
-	}, 250);
+		toggleReviewOverlay(toggle_state);
+	}, 300);
 }

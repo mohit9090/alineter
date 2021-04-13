@@ -198,24 +198,6 @@
 
     </nav>
 
-
-    <!-- OVERLAY EFFECT -->
-    <section id="overlay-effect" onclick="closenav()">
-    </section>
-
-    <section id="more-reviews-overlay" class="scroll-reveal-content">
-      <div class="container-fluid text-right p-2 close-btn-wrapper">
-        <button class="btn btn-i-primary" id="close-btn" onclick="close_more__Reviews()">Close</button>
-      </div>
-      <div class="container more-reviews-wrapper pb-4" id="more-reviews-container">
-        <div class="row">
-        </div>
-      </div>
-    </section>
-
-
-
-
     <!--
       ======== SLIDE NAVIGATION ==========
     -->
@@ -268,6 +250,39 @@
           </div>
         </div>
       </div>
+    </section>
+
+
+    <!--
+    ============= OVERLAYS ==============
+    -->
+
+    <!-- OVERLAY EFFECT NAVIGATION -->
+    <section id="overlay-effect" onclick="closenav()">
+    </section>
+
+
+    <!-- MORE REVIEWS OVERLAY CONTENT -->
+    <section id="more-reviews-overlay" class="scroll-reveal-content">
+      
+      <div class="w-100 more-reviews-wrapper">
+        <!--Reviews Navbar-->
+        <div class="container-fluid p-2 pl-4 pr-4 reviews-nav">
+          <div class="d-flex justify-content-between">
+            <h5 class="txt-light align-self-end">Customer Reviews</h5>
+            <button class="btn btn-i-primary align-self-center" id="close-btn" onclick="close_more__Reviews()">Close</button>
+          </div>
+        </div>
+
+        <!--Reviews-->
+        <div class="container more-reviews-container pb-4" id="more-reviews-container">
+          <div class="row">
+            <!--More Reviews goes here-->
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
 
@@ -420,7 +435,7 @@
 
           <!-- Show More Button -->
           <div class="container p-3 pt-5 text-center">
-            <a href="javascript:void(0)" class="btn show-more-btn reveal__scale-up" onclick="show_more__Reviews()">Show More</a>
+            <a href="javascript:void(0)" class="btn show-more-btn reveal__from-bottom" onclick="show_more__Reviews()">Show More</a>
           </div>
 
         </div>
