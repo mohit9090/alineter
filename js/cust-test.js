@@ -1,8 +1,54 @@
 
 const reviewsContainer = document.querySelector("#reviews-container .row");
+const showMoreBtn = document.querySelector(".show-more-btn--div");
+
 
 //jsonReviewers is derived from js/customerReview-data.js
 var reviewers = JSON.parse(jsonReviewers);
+
+/* Actual number of reviews */
+const totalReviews = reviewers.length;
+
+
+/* Get At most 6 reviews, PS: Dont make it more than 6 */
+const max_reviews = 6;
+reviewers.splice(max_reviews, reviewers.length-max_reviews);
+
+
+/* Reviewers array is sorted by the length of review content in ascending order */
+reviewers.sort( function(a, b) {
+	return sortbyLength(a, b, 0);
+});
+
+
+/*
+	map smallest element with largest and store it
+	order = [1, 2, 3, 4, 5, 6]
+	reoder = [1, 6, 2, 5, 3, 4]
+*/
+const reorder_reviewers = [];
+for(i=0, j=reviewers.length-1; i<reviewers.length, j>=0; i++, j--) {
+	if(i > j) {
+		break;
+	} else {
+		if(i == j) {
+			/* Both refers the same element so push it once */
+			reorder_reviewers.push(reviewers[i])
+		} else {
+			/* Both refers two different element so push both of them */
+			reorder_reviewers.push(reviewers[i]);
+			reorder_reviewers.push(reviewers[j]);
+		}
+	}
+}
+
+/* Reassign reviewers to reorder_reviewers */
+reviewers = reorder_reviewers;
+
+/* num of reviews that is displayed in landing page */
+/* It might change according to screen size. This below one will be the default(starting) one */
+var shownReviews = reviewers.length;
+
 
 const header = [
 	// Header Selection
@@ -73,7 +119,7 @@ function addRatingStar(rating) {
 function mapReviews(rev_set, additional_class) {
 	let reviews = ""
 	rev_set.map( (reviewer) => {
-		if(reviewer !== null || reviewer !== undefined) {
+		if(reviewer !== null && reviewer !== undefined) {
 			reviews = reviews + `<div class="review-box rounded ${additional_class}">
             <div class="card review-card border-0">
               <div class="card-header">
@@ -135,7 +181,7 @@ function constructReviews(numOfReviews) {
 		*/
 		recursiveMapping(set, set.length, open_div_2);
 		
-	} else {
+	} else if(numOfReviews > 4) {
 		/* 
 			Six reviews will be divided into three sets
 		*/
@@ -149,6 +195,15 @@ function constructReviews(numOfReviews) {
 
 		recursiveMapping(set, set.length, open_div_3);
 
+	} else {
+		/*
+			No Reviewers are there i.e. numOfReviews = 0
+		*/
+		document.getElementById("testimonial").innerHTML = `<div class="no-reviewer-wrapper text-center">
+            <h3 class="txt-light">There are no Reviews</h3>
+            <p class="lead txt-primary">Be the FIRST One to </p>
+            <a href="#" class="btn show-more-btn reveal__from-bottom"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Write About Us</a>
+          </div>`;
 	}
 }
 
@@ -159,44 +214,16 @@ function displayReviews() {
 }
 displayReviews();
 
-/* reviewers is derived from js/customerReview-data.js */
-reviewers.sort( function(a, b) {
-	return sortbyLength(a, b, 1);
-});
-
-
-var arr = [20, 30, 40, 50 , 60];
-var arr2 = [20, 30, 40, 50 , 60, 70];
-var arr3 = [30];
-var narr = [];
-
-
-for(i=0, j=arr3.length-1 ;i<arr3.length, j>=0; i++, j--) {
-	if(i>j) {
-		break;
-	} else {
-		if(i==j) {
-			narr.push(arr3[i])
-		} else {
-			narr.push(arr3[i]);
-			narr.push(arr3[j]);
-		}
-	}
-}
-
-console.log(narr);
-
-
 
 
 
 /*
 ------TODO-------
 
-When there are no reviews then show something else
+When there are no reviews then show something else --> completed
 
 Show more btn should actually appear when there are more reviews than it has been shown in screen
 
-Reconstruct the customer review according to new algo
+Reconstruct the customer review according to new algo --> completed
 
 */

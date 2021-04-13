@@ -27,9 +27,12 @@ function sortbyLength(a, b, type) {
 }
 
 /* reviewers is derived from js/customerReview-data.js */
+var reviewers = JSON.parse(jsonReviewers);
+
 reviewers.sort( function(a, b) {
 	return sortbyLength(a, b, 1);
 });
+
 
 const moreReviewOverlayElem = document.getElementById("more-reviews-overlay");
 const reviewsNavElem = document.querySelector(".reviews-nav");
@@ -59,7 +62,7 @@ function toggleReviewContent(toggle_state) {
 		elem.style.opacity = (toggle_state) ? "1" : "0";
 	});
 
-	//Make the contents overflow as scrolling when they appear only
+	//Enable Scrolling of Review Content when it has been displayed
 	moreReviewOverlayElem.style.overflowY = (toggle_state) ? "auto" : "hidden";
 }
 
@@ -96,6 +99,10 @@ function mapOverlayReviews() {
 }
 
 function show_more__Reviews() {
+	/*
+		Opens the Overlay to show More Reviews By Customer
+		toggle_state = 1 means to show 
+	*/
 	let toggle_state = 1;
 	toggleReviewOverlay(toggle_state);
 
@@ -109,6 +116,10 @@ function show_more__Reviews() {
 
 }
 function close_more__Reviews() {
+	/*
+		Close the Overlay to hide More Reviews By Customer
+		toggle_state = 0 means to hide 
+	*/
 	let toggle_state = 0;
 	toggleReviewContent(toggle_state);
 
