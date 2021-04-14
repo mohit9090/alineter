@@ -203,18 +203,17 @@ function constructReviews(numOfReviews) {
 	}
 }
 
-// function constructShowMoreBtn(numOfReviews) {
-// 	if(numOfReviews < totalReviews) {
-// 		showMoreBtn.innerHTML = `<a href="javascript:void(0)" class="btn show-more-btn reveal__from-bottom" onclick="show_more__Reviews()">Show More</a>`
-// 	}
-// } 
-
+function buildShowMoreBtn() {
+	if(reviewers.length >= 4) {
+		showMoreBtn.innerHTML = `<a href="javascript:void(0)" class="btn show-more-btn reveal__from-bottom" onclick="show_more__Reviews()">Show More</a>`;
+	}
+}
 
 function displayReviews() {
 	/* Number of Reviews that are actually shown */
 	var shownReviews = reviewers.length;
 	constructReviews(shownReviews);
-	constructShowMoreBtn(shownReviews);
+	buildShowMoreBtn();
 }
 displayReviews();
 
