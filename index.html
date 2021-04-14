@@ -330,7 +330,7 @@
 
         <!-- Left Scroll -->
         <div class="scroll-vertical left reveal__from-left">
-          <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-caret-left scroll-icon"></i></button>
+          <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="left" onclick="scrollX(this)"><i class="fa fa-angle-left scroll-icon"></i></button>
         </div>
 
          <div class="container-fluid">  
@@ -346,11 +346,10 @@
 
         <!-- Right Scroll -->
         <div class="scroll-vertical right reveal__from-right">
-          <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-caret-right scroll-icon"></i></button>
+          <button type="button" class="btn scroll-btn" data-scroll="q-product-box" scroll-direction="right" onclick="scrollX(this)"><i class="fa fa-angle-right scroll-icon"></i></button>
         </div>
 
       </section>
-
 
       <script type="text/javascript">
 
@@ -674,6 +673,15 @@
 <script type="text/javascript" src="js/show-more-review.js"></script>
 <script type="text/javascript" src="js/customer-review.js"></script>
 <script type="text/javascript" src="js/CustomerResponsive-review.js"></script>
+
+
+<script type="text/javascript">
+    
+  let isMobile = detectMob();
+  isMobile ? addMobile__Class([...document.querySelectorAll(".scroll-btn")]) : removeMobile__Class([...document.querySelectorAll(".scroll-btn")]);
+
+</script>
+
 
 
 <!-- <script>

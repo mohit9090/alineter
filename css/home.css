@@ -245,13 +245,14 @@
 	height:100%;
 	position:absolute;
 	top:0;
-	padding-left:0.5rem;
 }
 .scroll-vertical.left {
 	left:0;
+	padding-left:0.5rem;
 }
 .scroll-vertical.right {
 	right:0;
+	padding-right:0.5em;
 }
 .scroll-btn {
 	position:relative;
@@ -260,16 +261,22 @@
 	width:50px;
 	height:50px;
 	border-radius:50%;
-	color:var(--bg-primary);
 	background:var(--bg-light);
-	border:3.8px solid var(--bg-primary);
+	color:var(--bg-grey);
+	border:0.2px solid var(--bg-grey);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 0px;
 }
 .scroll-btn:hover {
+	/* For All Devices */
+	color:var(--bg-grey);
+}
+.scroll-btn:not(.mobile-device):hover {
+	/* All Devices Except Mobile Devices */
 	color:var(--bg-primary);
+	border-color:var(--bg-primary);
 }
 .scroll-btn:active {
-	color:var(--bg-light);
-	background:var(--bg-primary);
+	filter:brightness(90%);
 	transition:0.3s;
 }
 .scroll-btn > i {
