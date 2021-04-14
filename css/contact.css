@@ -82,12 +82,7 @@ section#contact-us {
 	filter:brightness(90%);
 }
 /*MAP*/
-.mapouter {
-	position:relative;
-	text-align:right;
-	height:650px;
-	width:100%;
-}
+
 .gmap_canvas {
 	overflow:hidden;
 	height:650px;
@@ -95,7 +90,6 @@ section#contact-us {
 }
 
 @media screen and (max-width:768px) and (min-width:576px) {
-	.mapouter,
 	.gmap_canvas {
 		height:250px;
 	}	
@@ -107,7 +101,6 @@ section#contact-us {
 	.right {
 		order:1;
 	}
-	.mapouter,
 	.gmap_canvas {
 		height:250px;
 	}
