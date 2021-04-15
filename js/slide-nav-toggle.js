@@ -10,7 +10,7 @@ function opennav() {
 	document.body.style.overflowY="hidden";
 }
 function closenav() {
-	slideNavigation.style.left = "-100%";
+	slideNavigation.style.left = "-120%";
 	overlayEffect.style.width = "0";
 	//turn on the body scrolling effect
 	document.body.style.overflowY="auto";

@@ -15,14 +15,14 @@ function mapProducts() {
 	let products_div = "";
 	products.map( (product) => {
 		products_div += `<div class="p-4">
-	<div class="card q-product-card load-gradient shadow" id="product-${product.product_id}">
-	  <img class="card-img-top q-product-image" src="${product.product_detail.img}" alt="${product.product_detail.name}" onerror="img_unloaded(this)" onload="this.parentElement.classList.remove('load-gradient')">
-	  <a href="#" class="stretched-link" data-toggle="modal" onclick="viewProduct(${product.product_id})" data-prod-id="${product.product_id}"></a>
-	  <div class="q-product-body">
-	    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
-	  </div>
-	</div>
-</div>`
+			<div class="card q-product-card load-gradient shadow" id="product-${product.product_id}">
+			  <img class="card-img-top q-product-image" src="${product.product_detail.img}" alt="${product.product_detail.name}" onerror="img_unloaded(this)" onload="this.parentElement.classList.remove('load-gradient')">
+			  <a href="#" class="stretched-link" data-toggle="modal" onclick="viewProduct(${product.product_id})" data-prod-id="${product.product_id}"></a>
+			  <div class="q-product-body">
+			    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
+			  </div>
+			</div>
+		</div>`
 	});
 
 	return products_div;
@@ -36,7 +36,7 @@ function constructProducts() {
 }
 
 function displayProducts() {
-	const numOfProds = products.length;
+	// const numOfProds = products.length;
 	constructProducts();
 }
 
@@ -47,7 +47,6 @@ const prodImgElem = document.getElementById("product_img");
 const prodDescpElem = document.getElementById("product_description");
 const buyNowElem = document.getElementById("buy-now");
 const addToCartElem = document.getElementById("add-to-cart");
-
 
 
 function viewProduct(prod_id) {
@@ -93,3 +92,33 @@ function viewProduct(prod_id) {
 }
 
 
+function func() {
+	let productContainerWidth = quickProductContainer.offsetWidth;
+	// console.log(productContainerWidth)
+	// console.log($(".q-product-card").css("width").replace("px",""))
+}
+
+/* NOTE: do this after product construction */
+var _events = ["load", "resize"];
+_events.map( event => {
+	window.addEventListener(event, func)
+});
+
+
+var p = ["p1", "p2", "p3", "p4", "p5", ""]
+var n = 3;
+var s = Math.ceil(p.length/n);
+
+var p_set = [];
+
+for(i=0;i<s;i++) {
+	p_set.push(p.slice(0,n))
+	p.splice(0,n);
+} 
+console.log(p_set)
+
+/*
+
+https://www.geeksforgeeks.org/how-to-use-dynamic-variable-names-in-javascript/
+
+*/

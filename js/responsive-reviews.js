@@ -3,7 +3,7 @@ const colReviews = document.getElementsByClassName("col-reviews");
 // Destructuring colReviews
 const [firstCol, secondCol, thirdCol] = colReviews;
 
-function fun() {
+function resizeReview() {
 
 	let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
@@ -20,5 +20,5 @@ function fun() {
 const events = ["load", "resize"];
 
 events.map( (event) => {
-	window.addEventListener(event, fun);
+	window.addEventListener(event, resizeReview);
 });

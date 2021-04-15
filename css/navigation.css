@@ -177,11 +177,11 @@
 /* SLIDE NAVIGATION */
 #slide-navigation {
   height:100%;
-  min-width:285px;
+  min-width:255px;
   position:fixed;
   z-index:5;
   top:0;
-  left:-100%;
+  left:-120%;
   background-color:var(--bg-light);
   overflow-x:hidden;
   overflow-y:auto;

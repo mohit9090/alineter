@@ -140,12 +140,15 @@
 
 /* PRODUCT-QUICK-VIEW */
 #product-quick-view {
-	padding:4% 0;
+	padding:var(--sm-padding);
+	padding-left:0;
+	padding-right:0;
 	background-color:rgba(112, 112, 112, 0.05);
 	background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
 	position:relative;
 }
-.q-product-box{
+/*.q-product-box{
+	background:red;
 	z-index:0;
 	overflow-x:auto;
 }
@@ -153,10 +156,10 @@
     display:none;
 }
 .q-product-box {
-  /* Hide scrollbar for IE, Edge and Firefox */
+   Hide scrollbar for IE, Edge and Firefox 
   -ms-overflow-style:none;
   scrollbar-width:none;  
-}
+}*/
 .q-product-card {
 	color:var(--bg-light);
 	padding:0;
@@ -197,10 +200,136 @@
   ----------------
   height: width - 7vw;
 */
+
+
+/* scroll button for quick products */
+.scroll-vertical {
+	z-index:2;
+	height:100%;
+	position:absolute;
+	top:0;
+}
+.scroll-vertical.left {
+	left:0;
+	padding-left:0.5rem;
+}
+.scroll-vertical.right {
+	right:0;
+	padding-right:0.5em;
+}
+.scroll-btn {
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	width:45px;
+	height:45px;
+	border-radius:50%;
+	background:var(--bg-light);
+	color:var(--bg-grey);
+	border:0.3px solid var(--bg-grey);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 0px;
+}
+.scroll-btn:hover {
+	/* For All Devices */
+	color:var(--bg-grey);
+}
+.scroll-btn:not(.mobile-device):hover {
+	/* All Devices Except Mobile Devices */
+	color:var(--bg-primary);
+	border-color:var(--bg-primary);
+}
+.scroll-btn:active {
+	filter:brightness(90%);
+	transition:0.3s;
+}
+.scroll-btn > i {
+	font-size:1.5rem;
+}
+
+
+
+/* UNDER TEST */
+
+.q-product-box {
+	width:100%;
+	padding:0;
+	padding-left:2%;
+	padding-right:2%;
+	z-index:0;
+	display:flex;
+/*justify-content:space-around;*/
+	overflow-x:scroll;
+}
+.q-product-box::-webkit-scrollbar {
+    display:none;
+}
+.q-product-box {
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style:none;
+  scrollbar-width:none;  
+}
+.q-product-card {
+	flex-grow:0;
+	flex-shrink:0;
+}
+.q-product-card:not(:last-child) {
+	margin-right:1%;
+}
+
+/*@media screen and (min-width:1400px) {
+	.q-product-card {
+		flex-basis:390px;
+		height:380px;
+	}
+}
+@media screen and (min-width:1200px) and (max-width:1400px) {
+	.q-product-card {
+		flex-basis:330px;
+		height:320px;
+	}
+}
+@media screen and (min-width:992px) and (max-width:1200px) {
+	.q-product-card {
+		flex-basis:300px;
+		height:290px;
+	}
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+	.q-product-card {
+		flex-basis:270px;
+		height:260px;
+	}
+}
+@media screen and (min-width:576px) and (max-width:768px) {
+	.q-product-card {
+		flex-basis:250px;
+		height:240px;
+	}
+}
+@media screen and (min-width:360px) and (max-width:576px) {
+	.q-product-card {
+		flex-basis:240px;
+		height:230px;
+	}
+}
+@media screen and (min-width:260px) and (max-width:360px) {
+	.q-product-card {
+		flex-basis:220px;
+		height:210px;
+	}	
+}
+@media screen and (max-width:260px) {
+	.q-product-card {
+		flex-basis:150px;
+		height:140px;
+	}
+}*/
+/*
 @media screen and (min-width:1500px) {
 	.q-product-card {
-		width:30vw;
-		height:23vw;
+		Width and Height Fixed beyond 1500px
+		width:390px;
+		height:383px;
 	}
 }
 @media screen and (min-width:1272px) and (max-width:1500px) {
@@ -235,53 +364,23 @@
 }
 @media screen and (max-width:436px) {
 	.q-product-card {
-		width:58vw;
+		width:60vw;
 		height:51vw;
 	}
-}
-/* scroll button for quick products */
-.scroll-vertical {
-	z-index:1;
-	height:100%;
-	position:absolute;
-	top:0;
-}
-.scroll-vertical.left {
-	left:0;
-	padding-left:0.5rem;
-}
-.scroll-vertical.right {
-	right:0;
-	padding-right:0.5em;
-}
-.scroll-btn {
-	position:relative;
-	top:50%;
-	transform:translateY(-50%);
-	width:50px;
-	height:50px;
-	border-radius:50%;
-	background:var(--bg-light);
-	color:var(--bg-grey);
-	border:0.2px solid var(--bg-grey);
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 0px;
-}
-.scroll-btn:hover {
-	/* For All Devices */
-	color:var(--bg-grey);
-}
-.scroll-btn:not(.mobile-device):hover {
-	/* All Devices Except Mobile Devices */
-	color:var(--bg-primary);
-	border-color:var(--bg-primary);
-}
-.scroll-btn:active {
-	filter:brightness(90%);
-	transition:0.3s;
-}
-.scroll-btn > i {
-	font-size:1.5rem;
-}
+}*/
+
+/*#buy-now,#add-to-cart {
+	padding:var(--lg-padding-inverse);
+}*/
+
+
+
+
+
+
+
+
+
 
 
 
