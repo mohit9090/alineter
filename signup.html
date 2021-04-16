@@ -272,7 +272,7 @@
             <form id="user-registration-form" action="verify-account.html" method="post">
 
               <div class="mb-3 d-flex flex-column justify-content-center">
-                <h2 class="text-center page-title">Registration</h2>
+                <h2 class="text-center auth-title">Registration</h2>
                 <!-- Circles which indicates the steps of the form: -->
                 <div >
                   <div style="text-align:center">
@@ -286,20 +286,20 @@
               <!-- Tab 1 -->
               <div class="tab form-group">
                 <div class="d-flex flex-column mb-3 input-wrapper">
-                  <label for="user-fName" class="font-weight-bold">First Name</label>
-                  <input type="text" class="input-s-2 w-100 user-input signup-input user-input--tab0" name="user-fName" id="user-fName" placeholder="Mohit" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
+                  <label for="user-fName" class="font-weight-bold auth-label">First Name</label>
+                  <input type="text" class="input-s-2 w-100 auth-input auth-input user-input--tab0" name="user-fName" id="user-fName" placeholder="Mohit" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex flex-column mb-3 input-wrapper">
-                  <label for="user-lName" class="font-weight-bold">Last Name</label>
-                  <input type="text" class="input-s-2 w-100 user-input signup-input user-input--tab0" name="user-lName" id="user-lName" placeholder="Kumar" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
+                  <label for="user-lName" class="font-weight-bold auth-label">Last Name</label>
+                  <input type="text" class="input-s-2 w-100 auth-input auth-input user-input--tab0" name="user-lName" id="user-lName" placeholder="Kumar" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0, 0)" data-tab="0">
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex flex-column input-wrapper">
-                  <label for="user-mobileNum" class="font-weight-bold">Mobile Number</label>
-                  <input type="number" class="input-s-2 w-100 user-input signup-input user-input--tab0" name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1, 0)" data-tab="0">
+                  <label for="user-mobileNum" class="font-weight-bold auth-label">Mobile Number</label>
+                  <input type="number" class="input-s-2 w-100 auth-input auth-input user-input--tab0" name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1, 0)" data-tab="0">
                   <small class="help-text"></small>
                 </div>
               </div>
@@ -308,20 +308,20 @@
               <!-- Tab 2 -->
               <div class="tab form-group">
                 <div class="d-flex flex-column mb-3 input-wrapper">
-                  <label for="user-email" class="font-weight-bold">Email</label>
-                  <input type="email" class="input-s-2 w-100 user-input signup-input user-input--tab1" name="user-email" id="user-email" placeholder="mohit8756kumar@gmail.com" required spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 2, 1)" data-tab="1">
+                  <label for="user-email" class="font-weight-bold auth-label">Email</label>
+                  <input type="email" class="input-s-2 w-100 auth-input auth-input user-input--tab1" name="user-email" id="user-email" placeholder="mohit8756kumar@gmail.com" required spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 2, 1)" data-tab="1">
                   <small class="help-text"></small>
                 </div>
                 
                 <div class="d-flex flex-column mb-3 input-wrapper">
-                  <label for="user-password" class="font-weight-bold">Password</label>
+                  <label for="user-password" class="font-weight-bold auth-label">Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 user-input signup-input password user-input--tab1" name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3, 1)" data-tab="1">
+                    <input type="password" class="input-s-2 w-100 auth-input auth-input password user-input--tab1" name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3, 1)" data-tab="1">
                     <div class="input-group-append" style="z-index:0">
-                      <button type="button" class="btn toggle-pwd" id="toggleUserPwd" onclick="togglePwd(this, 'user-password')"><i class="fa fa-eye-slash"></i></button>
+                      <button type="button" class="btn toggle-pwd-eye" id="toggleUserPwd" onclick="togglePwd(this, 'user-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
                   </div>
-                  <small class="help-text text-muted">
+                  <small class="help-text txt-grey">
                     <div class="d-flex">
                       <ul>
                         <li class="pwd-requirement" id="lowerLetter">A Lower Letter</li>
@@ -336,11 +336,11 @@
                 </div>
 
                 <div class="d-flex flex-column input-wrapper">
-                  <label for="user-password" class="font-weight-bold">Recheck Password</label>
+                  <label for="user-password" class="font-weight-bold auth-label">Recheck Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 user-input signup-input password user-input--tab1" name="recheck-password" id="recheck-password" placeholder="Recheck Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
+                    <input type="password" class="input-s-2 w-100 auth-input auth-input password user-input--tab1" name="recheck-password" id="recheck-password" placeholder="Recheck Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
                     <div class="input-group-append" style="z-index:0">
-                      <button type="button" class="btn toggle-pwd" id="toggleRecheckPwd" onclick="togglePwd(this, 'recheck-password')"><i class="fa fa-eye-slash"></i></button>
+                      <button type="button" class="btn toggle-pwd-eye" id="toggleRecheckPwd" onclick="togglePwd(this, 'recheck-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
                   </div>
                   <small class="help-text"></small>
@@ -353,28 +353,28 @@
               <div class="tab form-group">
 
                 <div class="d-flex flex-column input-wrapper mb-3">
-                  <label for="user-street-address" class="font-weight-bold">Street Address</label>
-                  <textarea class="textarea-s-1 w-100 user-input signup-input user-input--tab2" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0, 2)"></textarea>
+                  <label for="user-street-address" class="font-weight-bold auth-label">Street Address</label>
+                  <textarea class="textarea-s-1 w-100 auth-input auth-input user-input--tab2" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0, 2)"></textarea>
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex mb-3 w-100 justify-content-between">
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
-                    <label for="user-city" class="font-weight-bold">City</label>
-                    <input type="text" class="input-s-2 user-input signup-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
+                    <label for="user-city" class="font-weight-bold auth-label">City</label>
+                    <input type="text" class="input-s-2 auth-input auth-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
                     <small class="help-text"></small>
                   </div>
                   <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
-                    <label for="user-pincode" class="font-weight-bold">Pincode</label>
-                    <input type="text" class="input-s-2 user-input signup-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
+                    <label for="user-pincode" class="font-weight-bold auth-label">Pincode</label>
+                    <input type="text" class="input-s-2 auth-input auth-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
                     <small class="help-text"></small>
                   </div>
                 </div>
 
                 <div class="d-flex mb-3 w-100 justify-content-between">
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
-                    <label for="user-state" class="font-weight-bold">State</label>
-                    <select class="input-s-2 w-100 correct user-input signup-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
+                    <label for="user-state" class="font-weight-bold auth-label">State</label>
+                    <select class="input-s-2 w-100 correct auth-input auth-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
                       <option value="Odisha">Odisha</option>
                       <option value="West Bengal">West Bengal</option>
                       <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -383,16 +383,16 @@
                     <small class="help-text text-primary">Available States</small>
                   </div>
                   <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
-                    <label for="user-country" class="font-weight-bold">Country</label>
-                    <input type="text" class="input-s-2 user-input signup-input correct text-capitalize user-input--tab2" id="user-country" name="user-country" value="India" disabled>
+                    <label for="user-country" class="font-weight-bold auth-label">Country</label>
+                    <input type="text" class="input-s-2 auth-input auth-input correct text-capitalize user-input--tab2" id="user-country" name="user-country" value="India" disabled>
                     <small class="help-text text-primary">We deliver only in India</small>
                   </div>
                 </div>
 
                 <div class="d-flex input-wrapper">
                   <div class="form-check">
-                    <input class="form-check-input user-input user-input--tab2" type="checkbox" name="accept-tnc" id="accept-tnc" onclick="ifValid(this, 5, 2)" required>
-                    <label class="form-check-label" for="accept-tnc">
+                    <input class="form-check-input auth-input user-input--tab2" type="checkbox" name="accept-tnc" id="accept-tnc" onclick="ifValid(this, 5, 2)" required>
+                    <label class="form-check-label auth-label" for="accept-tnc">
                       I accept to the <a href="#">Terms and Conditions</a>
                     </label>
                   </div>
@@ -477,8 +477,8 @@
           if(currentTab >= tab.length) {
             slideUp(-$(window).height())
             toggleVisibility(afterRegistration, registrationForm);
-            var userInputFields = document.querySelectorAll(".user-input");
-            var correctInputFields = document.querySelectorAll(".user-input.correct");
+            var userInputFields = document.querySelectorAll(".auth-input");
+            var correctInputFields = document.querySelectorAll(".auth-input.correct");
             if (userInputFields.length != correctInputFields.length) {
               //some fields are still invalid
               setTimeout(function() {
@@ -684,7 +684,6 @@
             switchClass(result, input, "correct", "incorrect");
           }
         }
-
 
       </script>
 

@@ -1,7 +1,7 @@
 
 /*Authentication Section Padding*/
 .auth-section {
-	padding:5% 2%;
+	padding:var(--lg-padding);
 }
 /*Responsive Wrapper*/
 @media screen and (min-width:850px) {
@@ -30,15 +30,16 @@
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #sign-up .auth-wrapper, 
-.verification-card .card-header, 
-.verification-card .card-footer {
-	background:#fff;
+.verification-card :is( .card-header, .card-footer) {
+	background:var(--bg-light);
 }
-.page-title {
-	font-family:Raleway;
+.auth-title {
+	font-family:var(--ff-secondary);
+}
+.auth-label {
+	font-family:var(--ff-primary);
 }
 .auth-btn {
-	color:#f8f1f1;
 	border-radius:0;
 	border-width:0.5px;
 	border-style:solid;
@@ -46,39 +47,40 @@
 .auth-btn:disabled {
 	cursor:not-allowed;
 }
-.auth-btn.bg-inverse {
-	border-color:#160C28;
-	color:#160C28;
-}
-.auth-btn.bg-inverse:hover {
-	background:#160C28;
-	color:#f8f1f1;
-}
+
+
 /*Input Fields*/ 
-.user-input {
-	font-size:1.1rem;
-	border-color:#160C28;
+.input-s-2,
+.textarea-s-1,
+.input-s-2:focus,
+.textarea-s-1:focus {
+	border-width:1px;
+}
+.auth-input {
+	font-family:var(--ff-secondary);
+	font-size:1.08rem;
+	font-weight:300;
+	border-color:rgba(112, 112, 112, 0.7);
 	border-radius:2px;
+	color:var(--bg-secondary);
 	padding:2%;
-	font-weight:lighter;
 	letter-spacing:1.1px;
 	word-spacing:1.8px;
 }
-.user-input.input-s-2,
-.user-input.textarea-s-1 {
-	border-width:0.4px;
+.auth-input::placeholder {
+	color:rgba(112, 112, 112, 0.5);
 }
-.user-input:disabled,
-.signup-input.password:disabled ~ div .toggle-pwd:not(.correct):not(.incorrect){
+.auth-input:disabled,
+.auth-input.password:disabled ~ div .toggle-pwd-eye:not(.correct):not(.incorrect){
 	cursor:not-allowed;
-	background:#160C2810;
+	background:rgba(112, 112, 112, 0.15);
 }
 
 
 
 /*Specific for SIGNUP SECTION*/
 #sign-up .auth-wrapper {
-	padding:3% 2%;
+	padding:var(--md-padding);
 	overflow:hidden;
 	position:relative;
 }
@@ -86,28 +88,42 @@
 	display:none;
 }
 /*TAB-1, TAB-2, TAB-3*/
-.toggle-pwd {
+.toggle-pwd-eye {
+	/*
+		Eye for toggling password
+	*/
 	border-width:0.4px 0.4px 0.4px 0;
 	border-style:solid;
-	border-color:#160C28;
+	border-color:rgba(112, 112, 112, 0.7);
 	border-radius:2px;
 	border-top-left-radius:0;
 	border-bottom-left-radius:0;
 	transition:0.3s;
 }
-.signup-input.correct, .toggle-pwd.correct {
-	background:rgba(140, 255, 218,0.1);	
+.toggle-pwd-eye,
+.toggle-pwd-eye:hover {
+	color:rgba(112, 112, 112, 0.7);
+}
+.auth-input.correct, 
+.toggle-pwd-eye.correct {
+	background:rgba(140, 255, 218,0.3);	
 	border-color:rgba(140, 255, 218,1);
 }
-.signup-input.incorrect, .toggle-pwd.incorrect {
-	background:rgba(236, 88, 88, 0.1);
+.auth-input.incorrect, 
+.toggle-pwd-eye.incorrect {
+	background:rgba(236, 88, 88, 0.2);
 	border-color:rgba(236, 88, 88, 1);
 }
-.signup-input.password {
+.auth-input.password {
+	/* 
+		Specific for password field, this is so to make space for the eye icon 
+	*/
 	border-right:0;
 	border-top-right-radius:0;
 	border-bottom-right-radius:0
 }
+
+
 /*COMPONENTS*/
 /*step marker component*/
 .step {
@@ -115,28 +131,35 @@
 	height:10px;
 	width:10px;
 	margin:0 2px;
-	background-color:#19456B;
+	background-color:rgba(112, 112, 112, 0.4);
 	border:none;  
 	border-radius:50%;
-	opacity:0.35;
+	opacity:0.4;
 	transition:0.3s;
 }
 .step.active {
-  opacity: 1;
+  opacity:1;
   transform:scale(1.4);
 }
 .step.finish-correct {
-  background-color:#16C79A;
+  background:rgba(140, 255, 218, 1);
 }
 .step.finish-incorrect {
-	background-color:#ff4c68;
+  background:rgba(236, 88, 88, 1);
 }
+
+
 /*password requirements component*/
+.help-text,
+.pwd-requirement {
+	font-family:var(--ff-secondary);
+	color:var(--bg-grey);
+}
 .pwd-requirement.fulfilled {
-	color:#16C79A;
+	color:rgba(0, 155, 102, 0.8);
 }
 .pwd-requirement.not-fulfilled {
-	color:#ea4638;
+	color:rgba(236, 88, 88, 1)
 }
 .pwd-requirement.fulfilled::after {
 	font-family: "FontAwesome";
@@ -150,36 +173,46 @@
 	margin-left:8px;
 	color:inherit;
 }
+
+
 /*button component*/
-.prevNextBtn:hover {
-	opacity:0.84;
-	color:#f8f1f1;
+.auth-btn {
+	font-family:var(--ff-primary);
+	font-size:1.1rem;
+	border-color:var(--bg-primary);
+	background:var(--bg-primary);
+	color:var(--bg-light);
+	filter:brightness(97%);
+}
+.auth-btn:hover {
+	color:var(--bg-light);
+	filter:brightness(110%);
 }
 #prevBtn {
-	border-color:#19456B;
-	background:#19456B;
+	background:var(--bg-secondary);
+	border-color:var(--bg-secondary);
 }
+#prevBtn,
 #nextBtn {
-	border-color:#16C79A;
-	background:#16C79A;
+	padding:0.4rem 1.2rem;
 }
 
-/*Specific for SIGNIN SECTION*/
 
 
 /*Specific for VERIFICATION SECTION*/
-.otp-input {
+.auth-input.otp {
 	font-size:1.6rem;
 	font-weight:bold;
 	letter-spacing:5px;
 	padding:1%;
-	opacity:0.5;
+	opacity:0.6;
 }
-.otp-input:focus {
-	/*border-width:0 0 1.5px 0;*/
+.auth-input.otp:focus {
 	opacity:1;
 }
-
+.auth-input.otp::placeholder {
+	color:rgba(112, 112, 112, 0.3);
+}
 
 /*Specific for PROFILEPIC SECTION*/
 .pfImage > div{
