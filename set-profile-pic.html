@@ -259,7 +259,7 @@
 
       
       <!-- PROFILE PIC SECTION -->
-      <section id="profile-pic" class="w-100 auth-section">
+      <!-- <section id="profile-pic" class="w-100 auth-section">
         <div class="container auth-wrapper">
           <div class="card auth-card mx-auto border-0 verification-card" style="">
             <div class="card-header text-center border-0">
@@ -277,7 +277,9 @@
                     <input type="file" class="custom-file-input" name="profile-img" id="profile-img" required onchange="return validateImage()">
                     <label class="custom-file-label auth-label" for="profile-img">No Image</label>
                   </div>
+
                   <div>
+                    <button onclick="openDialog()">opne</button>
                     <button type="submit" class="btn auth-btn">Done</button>
                   </div>
                 </div>
@@ -288,16 +290,75 @@
             </div>
           </div>
         </div>
+      </section> -->
+
+
+      <section id="profile-pic" class="w-100 auth-section">
+        <div class="container auth-wrapper">
+          <div class="card auth-card mx-auto border-0 verification-card" style="">
+            
+            <div class="card-header text-center border-0">
+              <h3 class="auth-title">Change Profile Photo</h3>
+            </div>
+
+            <div class="card-body mx-auto w-100">
+              <div class="row">
+                
+
+                <div class="col-6 border-right">
+                  <div class="position-relative cy">
+                    <div class="pfImg_wrapper mx-auto">
+                      <img src="./images/avatar.png" class="pfimg" id="display-pfImage"/>
+                    </div>
+                    <div class="text-center"> 
+                      <small class="help-text font-weight-bold" id="upload-helptext">model_pic-150.jpg</small>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div class="col-6">
+                  <form method="get" action="set-profile-pic.html" enctype="multipart/form-data" class="position-relative cy">
+                    <div class="d-flex flex-column">
+                      
+                      <div class="custom-file d-none mr-1">
+                        <input type="file" class="custom-file-input" name="profile-img" id="profile-img" required onchange="return validateImage()">
+                        <label class="custom-file-label auth-label" for="profile-img">No Image</label>
+                      </div>
+
+                      <div class="upload-media-wrapper mx-auto mb-2">
+                        <button type="button" class="btn d-flex flex-column btn-i-secondary rounded upload-media-btn" onclick="document.getElementById('profile-img').click()">
+                          <img src="images/upload-media-64.png" class="img-fluid mx-auto" width=60 height=60/>
+                          <p class="mx-auto auth-label">Set Photo</p>
+                        </button>
+                      </div>
+
+                      <div class="submit-media-wrapper mx-auto w-100">
+                        <button type="submit" class="btn auth-btn upload-media-submit w-100 auth-label">Skip & Continue</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </section>
+
 
       <script type="text/javascript">
 
         function placeFilename(message, fileExt) {
-          if(message.length > 15) {
+          if(message.length > 22) {
             let ext = fileExt
-            message = message.substr(0,12) + `<b>(${ext})</b>`;
+            message = message.substr(0,18) + `(${ext})`;
           }
-          $(".custom-file-label").html(message);
+          $("#upload-helptext").html(message);
         }
 
         function validateImage() {
@@ -317,6 +378,7 @@
               var reader = new FileReader();
               reader.onload = function(e) {
                 document.getElementById("display-pfImage").setAttribute("src",e.target.result);
+                document.getElementsByClassName("upload-media-submit")[0].innerHTML = "Upload"
               };
               reader.readAsDataURL(fileInput.files[0]);
             }
@@ -503,6 +565,51 @@
 <script type="text/javascript" src="js/scroll-xy.js"></script>
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
+<script type="text/javascript" src="js/detect-mobile.js"></script>
+
+<script type="text/javascript">
+
+  function removeClass(elem, __classList) {
+  /*
+    Remove classes from desired Element(elem)
+    __classList is passed as an ARRAY
+  */
+    elem.classList.remove(__classList);
+  }
+
+  function addClass(elem, __classList) {
+    /*
+      Add classes from desired Element(elem)
+      __classList is passed as an ARRAY
+    */
+    elem.classList.add(__classList);
+  }
+
+  function addMobile__Class(elemList) {
+  /*
+    Add mobile-device class to Specified Elements List
+  */
+    elemList.map( elem => {
+      addClass(elem, ["mobile-device"]);
+    });
+  };
+
+  function removeMobile__Class(elemList) {
+    /*
+      Remove mobile-device class to Specified Elements List
+      if it contains mobile-device class
+    */
+    elemList.map( elem => {
+      if(classContains(elem, "mobile-device")) {
+        removeClass(elem, ["mobile-device"]);
+      }
+    })
+  };
+    
+  let isMobile = detectMob();
+  isMobile ? addMobile__Class([document.querySelector(".upload-media-btn")]) : removeMobile__Class([document.querySelector(".upload-media-btn")]);
+
+</script>
 
 
 </body>
