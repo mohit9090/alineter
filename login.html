@@ -273,14 +273,14 @@
       <!-- LOGIN SECTION -->
       <section id="sign-in" class="w-100 auth-section">
         <div class="container auth-wrapper">
-          <div class="card auth-card border-0 mx-auto verification-card" style="">
-            <div class="card-header text-center border-0">
-              <!-- <img src="images/login.png" class="img-fluid" width=130 height=130> -->
-              <h2 class="auth-title">Login</h2>
-            </div><hr>
+          <div class="card auth-card border-0 mx-auto verification-card">
             <div class="card-body w-100 rounded">
               <div class="p-2">
                 <form method="post" action=".">
+                  <div class="card-header text-center border-0">
+                    <h2 class="auth-title">Login</h2>
+                  </div><hr>
+                  
                   <div class="form-group">
                     <label for="login-uniqueField" class="font-weight-bold auth-label">Email / Mobile Num</label>
                     <input type="text" class="input-s-2 auth-input signin-input w-100 email p-2" name="login-uniqueField" id="login-uniqueField" required autocomplete="off" spellcheck="false" placeholder="Email or Mobile number" style="padding:1%">

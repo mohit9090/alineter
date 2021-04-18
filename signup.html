@@ -260,12 +260,12 @@
       <!-- SIGNUP SECTION -->    
       <section id="sign-up" class="w-100 auth-section">
         <div class="container-fluid w-100">
-          <div class="auth-wrapper auth-card mx-auto border-0 rounded">
+          <div class="auth-wrapper auth-card mx-auto border rounded">
 
             <!-- After Registration --> 
             <div class="container text-center after-registration" id="after-registration">
               <div class="my-auto">
-                <h5 class="loading-img medium-title">Verifying Details ...</h5>
+                <h5 class="loading-img small-title auth-label">Verifying Details</h5>
               </div>
             </div>
 
@@ -274,7 +274,7 @@
               <div class="mb-3 d-flex flex-column justify-content-center">
                 <h2 class="text-center auth-title">Registration Page</h2>
                 <!-- Circles which indicates the steps of the form: -->
-                <div >
+                <div class="step-marker">
                   <div style="text-align:center">
                     <span class="step"></span>
                     <span class="step"></span>
@@ -355,12 +355,28 @@
                 <div class="d-flex mb-3 w-100 justify-content-between">
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
                     <label for="user-state" class="font-weight-bold auth-label">State</label>
-                    <select class="input-s-2 w-100 correct auth-input auth-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
-                      <option value="Odisha">Odisha</option>
+                    <select class="d-none input-s-2 w-100 correct auth-input auth-input user-input--tab2" id="user-state" name="user-state" value="Odisha">
+                     <!--  <option value="Odisha">Odisha</option>
                       <option value="West Bengal">West Bengal</option>
                       <option value="Andhra Pradesh">Andhra Pradesh</option>
-                      <option value="Chhattisgarh">Chhattisgarh</option>
+                      <option value="Chhattisgarh">Chhattisgarh</option> -->
                     </select>
+
+
+                    <div class="states-dropdown w-100">
+                      <button type="button" class="btn states-dropbtn d-flex correct justify-content-between" onclick="showStates()">
+                        <span class="state-display-value">Odisha</span>
+                        <i class="fa fa-caret-down align-self-center"></i>
+                      </button>
+                      <div class="states-content hide" id="states-content">
+                        <a href="javascript:void(0)" class="state" value="Odisha" onclick="setState(this)">Odisha</a>
+                        <a href="javascript:void(0)" class="state" value="West Bengal" onclick="setState(this)">West Bengal</a>
+                        <a href="javascript:void(0)" class="state" value="Andhra Pradesh" onclick="setState(this)">Andhra Pradesh</a>
+                        <a href="javascript:void(0)" class="state" value="Chhattisgarh" onclick="setState(this)">Chhattisgarh</a>
+                      </div>
+                    </div>
+                    
+
                     <small class="help-text text-primary">Available States</small>
                   </div>
                   <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
@@ -410,9 +426,7 @@
                   </div>
                 </div><hr>
                 <div class="d-flex justify-content-end">
-                  <div>
-                    <small class="float-right"><a href="login.html" class="card-link">Already an User?</a></small>
-                  </div>
+                  <small class="float-right"><a href="login.html" class="card-link">Already an User?</a></small>
                 </div>
               </div>
             
@@ -426,7 +440,7 @@
         const registrationForm = document.getElementById("user-registration-form");
         const afterRegistration = document.getElementById("after-registration");
 
-        var currentTab = 0; //default tab
+        var currentTab = 2; //default tab
 
         showTab(currentTab);
         sortStates();
@@ -530,8 +544,8 @@
 
         function sortStates() {
           /*Sort States Field*/
-          var states = $('select#user-state');
-          states.html(states.find('option').sort(function(x, y) {
+          var states = $("#states-content");
+          states.html(states.find(".state").sort(function(x, y) {
             return $(x).text() > $(y).text() ? 1 : -1;
           }));
         }
@@ -684,6 +698,29 @@
             // result ? replaceClass(input, "incorrect", "correct") : replaceClass(input, "correct", "incorrect");
             switchClass(result, input, "correct", "incorrect");
           }
+        }
+
+
+        function setState(state) {
+          let get_state = state.getAttribute("value");
+          document.getElementById("user-state").setAttribute("value", get_state);
+          document.getElementsByClassName("state-display-value")[0].innerHTML = get_state;
+          hideStates();
+        }
+
+
+        function classContains(elem, className) {
+          return elem.classList.contains(className);
+        }
+
+        function hideStates() {
+          let states_content = document.getElementsByClassName("states-content")[0];
+          replaceClass(states_content, "show", "hide");
+        }
+
+        function showStates() {
+          var states_content = document.getElementsByClassName("states-content")[0];
+          switchClass(classContains(states_content, "hide"), states_content, "show", "hide");
         }
 
       </script>
@@ -868,6 +905,51 @@
 <script type="text/javascript" src="js/scroll-xy.js"></script>
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
+<script type="text/javascript" src="js/detect-mobile.js"></script>
+
+<script type="text/javascript">
+
+  function removeClass(elem, __classList) {
+  /*
+    Remove classes from desired Element(elem)
+    __classList is passed as an ARRAY
+  */
+    elem.classList.remove(__classList);
+  }
+
+  function addClass(elem, __classList) {
+    /*
+      Add classes from desired Element(elem)
+      __classList is passed as an ARRAY
+    */
+    elem.classList.add(__classList);
+  }
+
+  function addMobile__Class(elemList) {
+  /*
+    Add mobile-device class to Specified Elements List
+  */
+    elemList.map( elem => {
+      addClass(elem, ["mobile-device"]);
+    });
+  };
+
+  function removeMobile__Class(elemList) {
+    /*
+      Remove mobile-device class to Specified Elements List
+      if it contains mobile-device class
+    */
+    elemList.map( elem => {
+      if(classContains(elem, "mobile-device")) {
+        removeClass(elem, ["mobile-device"]);
+      }
+    })
+  };
+    
+  let isMobile = detectMob();
+  isMobile ? addMobile__Class([...document.querySelectorAll(".state")]) : removeMobile__Class([...document.querySelectorAll(".state")]);
+
+</script>
 
 
 </body>
