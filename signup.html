@@ -336,11 +336,11 @@
                 </div>
 
                 <div class="d-flex flex-column input-wrapper">
-                  <label for="user-password" class="font-weight-bold auth-label">Recheck Password</label>
+                  <label for="user-password" class="font-weight-bold auth-label">Confirm Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 auth-input auth-input password user-input--tab1" name="recheck-password" id="recheck-password" placeholder="Recheck Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
+                    <input type="password" class="input-s-2 w-100 auth-input auth-input password user-input--tab1" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required spellcheck="false" onkeyup="ifValid(this, 4, 1)" data-tab="1" disabled>
                     <div class="input-group-append" style="z-index:0">
-                      <button type="button" class="btn toggle-pwd-eye" id="toggleRecheckPwd" onclick="togglePwd(this, 'recheck-password')"><i class="fa fa-eye-slash"></i></button>
+                      <button type="button" class="btn toggle-pwd-eye" id="toggleRecheckPwd" onclick="togglePwd(this, 'confirm-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
                   </div>
                   <small class="help-text"></small>
@@ -351,25 +351,6 @@
 
               <!-- Tab 3 -->
               <div class="tab form-group">
-
-                <div class="d-flex flex-column input-wrapper mb-3">
-                  <label for="user-street-address" class="font-weight-bold auth-label">Street Address</label>
-                  <textarea class="textarea-s-1 w-100 auth-input auth-input user-input--tab2" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0, 2)"></textarea>
-                  <small class="help-text"></small>
-                </div>
-
-                <div class="d-flex mb-3 w-100 justify-content-between">
-                  <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
-                    <label for="user-city" class="font-weight-bold auth-label">City</label>
-                    <input type="text" class="input-s-2 auth-input auth-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
-                    <small class="help-text"></small>
-                  </div>
-                  <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
-                    <label for="user-pincode" class="font-weight-bold auth-label">Pincode</label>
-                    <input type="text" class="input-s-2 auth-input auth-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
-                    <small class="help-text"></small>
-                  </div>
-                </div>
 
                 <div class="d-flex mb-3 w-100 justify-content-between">
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
@@ -388,6 +369,26 @@
                     <small class="help-text text-primary">We deliver only in India</small>
                   </div>
                 </div>
+
+                <div class="d-flex mb-3 w-100 justify-content-between">
+                  <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
+                    <label for="user-city" class="font-weight-bold auth-label">City</label>
+                    <input type="text" class="input-s-2 auth-input auth-input user-input--tab2" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0, 2)">
+                    <small class="help-text"></small>
+                  </div>
+                  <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
+                    <label for="user-pincode" class="font-weight-bold auth-label">Pincode</label>
+                    <input type="text" class="input-s-2 auth-input auth-input user-input--tab2" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1, 2)">
+                    <small class="help-text"></small>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-column input-wrapper mb-3">
+                  <label for="user-street-address" class="font-weight-bold auth-label">Street Address</label>
+                  <textarea class="textarea-s-1 w-100 auth-input auth-input user-input--tab2" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0, 2)"></textarea>
+                  <small class="help-text"></small>
+                </div>
+
 
                 <div class="d-flex input-wrapper">
                   <div class="form-check">
@@ -425,7 +426,7 @@
         const registrationForm = document.getElementById("user-registration-form");
         const afterRegistration = document.getElementById("after-registration");
 
-        var currentTab = 0; //default tab
+        var currentTab = 2; //default tab
 
         showTab(currentTab);
         sortStates();
@@ -553,7 +554,7 @@
         const capitalLetter = document.getElementById("capitalLetter");
         const number = document.getElementById("number");
         const min8 = document.getElementById("min8");
-        const recheckPassword = document.getElementById("recheck-password");
+        const recheckPassword = document.getElementById("confirm-password");
         const userPassword = document.getElementById("user-password");
         const toggleUserPwd = document.getElementById("toggleUserPwd");
         const toggleRecheckPwd = document.getElementById("toggleRecheckPwd");
