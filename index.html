@@ -460,12 +460,12 @@
                 <div class="d-flex flex-column">
                   <div class="row m-2">
                     <div class="col-lg-5 col-md-4 col-sm-12 p-1">
-                      <input type="name" name="subscriber-name" class="input-s-1 w-100 name-1" placeholder="Name" data-num="1" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
-                      <input type="name" name="subscriber-name" class="input-s-1 w-100 name-1" placeholder="Name" data-num="1" spellcheck="false" autocomplete="off"/>
+                      <input type="name" name="subscriber-name" class="input--s1 w-100 name-1" placeholder="Name" data-num="1" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
+                      <input type="name" name="subscriber-name" class="input--s1 w-100 name-1" placeholder="Name" data-num="1" spellcheck="false" autocomplete="off"/>
                     </div>
                     <div class="col-lg-5 col-md-4 col-sm-12 p-1">
-                      <input type="email" name="subscriber-email" class="input-s-1 w-100 email-1" placeholder="Email" data-num="1" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
-                      <input type="email" name="subscriber-email" class="input-s-1 w-100 email-1" placeholder="Email" data-num="1" spellcheck="false" autocomplete="off"/>
+                      <input type="email" name="subscriber-email" class="input--s1 w-100 email-1" placeholder="Email" data-num="1" spellcheck="false" autocomplete="off" onchange="isFilled(this,this.getAttribute('data-num'),this.getAttribute('type'))"/>
+                      <input type="email" name="subscriber-email" class="input--s1 w-100 email-1" placeholder="Email" data-num="1" spellcheck="false" autocomplete="off"/>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-12 align-self-center text-center">
                       <button type="submit" name="subscribe" class="btn bg-purple text-light ripple-opacity-l">Subscribe</button>
@@ -513,7 +513,7 @@
                   <form method="post" action=".">
                     <div class="d-flex flex-column">
                       <div class="d-flex justify-content-center">
-                        <input type="email" name="subscriber-email" id="subscriber-email" class="input-s-2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
                         <div class="input-group-append" style="z-index:0">
                           <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
                         </div>
@@ -705,12 +705,12 @@
     }
   }
   function fillAlternateName(this_obj,data_num) {
-    let fillAlternate = document.querySelector(".input-s-1.name-"+Number(!data_num));
+    let fillAlternate = document.querySelector(".input--s1.name-"+Number(!data_num));
     fillAlternate.value = this_obj.value;
     fillAlternate.classList.add("filled");
   }
   function fillAlternateEmail(this_obj,data_num) {
-    let fillAlternate = document.querySelector(".input-s-1.email-"+Number(!data_num));
+    let fillAlternate = document.querySelector(".input--s1.email-"+Number(!data_num));
     fillAlternate.value = this_obj.value;
     fillAlternate.classList.add("filled");
   }

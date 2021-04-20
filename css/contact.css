@@ -57,12 +57,12 @@ section#contact-us {
 	opacity:1;
 }
 .mail-us :is( .user-input).filled {
-	border-color:rgba(140, 255, 218,0.9);
-	background:rgba(140, 255, 218,0.1);
+	border-color:rgba(140, 255, 218, 1);
+	background:rgba(140, 255, 218, 0.15);
 }
 .mail-us :is( .user-input).not-filled {
-	border-color:rgba(236, 88, 88, 0.9);
-	background:rgba(236, 88, 88, 0.1);
+	border-color:rgba(236, 88, 88, 1);
+	background:rgba(236, 88, 88, 0.15);
 }
 /*Support Links*/
 .mail-support > a,

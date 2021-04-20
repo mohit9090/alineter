@@ -3,33 +3,12 @@
 .auth-section {
 	padding:var(--lg-padding);
 }
-/*Responsive Wrapper*/
-@media screen and (min-width:850px) {
-	.normal-wrapper {
-		width:50%;
-	}
-}
-@media screen and (min-width:700px) and (max-width:850px) {
-	.normal-wrapper {
-		width:60%;
-	}
-}
-@media screen and (min-width:550px) and (max-width:700px) {
-	.normal-wrapper {
-		width:80%;
-	}
-}
-@media screen and (max-width:550px) {
-	.normal-wrapper {
-		width:100%;
-	}
-}
 
 /*GLOBAL CSS for Auth Section*/
 .auth-card {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-#sign-up .normal-wrapper, 
+#sign-up .auth-card, 
 .verification-card :is( .card-header, .card-footer) {
 	background:var(--bg-light);
 }
@@ -51,10 +30,10 @@
 
 
 /*Input Fields*/ 
-.input-s-2,
-.textarea-s-1,
-.input-s-2:focus,
-.textarea-s-1:focus {
+.input--s2,
+.textarea--s1,
+.input--s2:focus,
+.textarea--s1:focus {
 	border-width:1px;
 }
 .auth-input {
@@ -80,14 +59,14 @@
 
 
 /*Specific for SIGNUP SECTION*/
-#sign-up .normal-wrapper {
+#sign-up .auth-card {
 	overflow:hidden;
 	position:relative;
 }
 #sign-up {
 	padding:var(--md-padding);
 }
-.normal-wrapper {
+.auth-card {
 	padding:1rem 1.2rem;
 }
 .after-registration, .tab  {
@@ -111,13 +90,14 @@
 	color:rgba(112, 112, 112, 0.7);
 }
 .auth-input.correct, 
-.toggle-pwd-eye.correct {
-	background:rgba(140, 255, 218, 0.3);	
+.toggle-pwd-eye.correct,
+.states-dropbtn.correct {
+	background:rgba(140, 255, 218, 0.15);	
 	border-color:rgba(140, 255, 218, 1);
 }
 .auth-input.incorrect, 
 .toggle-pwd-eye.incorrect {
-	background:rgba(236, 88, 88, 0.2);
+	background:rgba(236, 88, 88, 0.15);
 	border-color:rgba(236, 88, 88, 1);
 }
 .auth-input.password {
@@ -140,12 +120,10 @@
   font-size:1.05rem;
   color:var(--bg-secondary);
   padding:2.1% 1.2em 2.1% 0.3em;
-  border-radius:3px;
+  border-style:solid;
+  border-width:1px;
+  border-radius:2px;
 }
-.states-dropbtn.correct {
-  background-color:rgba(140, 255, 218, 0.3);
-  border:1px solid rgba(140, 255, 218, 1);
-} 
 .states-content {
   position:absolute;
   background-color:var(--bg-light);

@@ -287,19 +287,19 @@
               <div class="tab form-group">
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-fName" class="font-weight-bold auth-label">First Name</label>
-                  <input type="text" class="input-s-2 w-100 auth-input" name="user-fName" id="user-fName" placeholder="Mohit" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="0" >
+                  <input type="text" class="input--s2 w-100 auth-input" name="user-fName" id="user-fName" placeholder="Mohit" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="0" >
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-lName" class="font-weight-bold auth-label">Last Name</label>
-                  <input type="text" class="input-s-2 w-100 auth-input " name="user-lName" id="user-lName" placeholder="Kumar" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="0" >
+                  <input type="text" class="input--s2 w-100 auth-input " name="user-lName" id="user-lName" placeholder="Kumar" autocomplete="off" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="0" >
                   <small class="help-text"></small>
                 </div>
 
                 <div class="d-flex flex-column input-wrapper">
                   <label for="user-mobileNum" class="font-weight-bold auth-label">Mobile Number</label>
-                  <input type="number" class="input-s-2 w-100 auth-input " name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1)" data-tab="0" >
+                  <input type="number" class="input--s2 w-100 auth-input " name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1)" data-tab="0" >
                   <small class="help-text"></small>
                 </div>
               </div>
@@ -309,14 +309,14 @@
               <div class="tab form-group">
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-email" class="font-weight-bold auth-label">Email</label>
-                  <input type="email" class="input-s-2 w-100 auth-input " name="user-email" id="user-email" placeholder="mohit8756kumar@gmail.com" required spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 2)" data-tab="1" >
+                  <input type="email" class="input--s2 w-100 auth-input " name="user-email" id="user-email" placeholder="mohit8756kumar@gmail.com" required spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 2)" data-tab="1" >
                   <small class="help-text"></small>
                 </div>
                 
                 <div class="d-flex flex-column mb-3 input-wrapper">
                   <label for="user-password" class="font-weight-bold auth-label">Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 auth-input password " name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3)" data-tab="1" >
+                    <input type="password" class="input--s2 w-100 auth-input password " name="user-password" id="user-password" placeholder="Password" required spellcheck="false" onkeyup="ifValid(this, 3)" data-tab="1" >
                     <div class="input-group-append" style="z-index:0">
                       <button type="button" class="btn toggle-pwd-eye" id="toggleUserPwd" onclick="togglePwdVisibility(this, 'user-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
@@ -338,7 +338,7 @@
                 <div class="d-flex flex-column input-wrapper">
                   <label for="user-password" class="font-weight-bold auth-label">Confirm Password</label>
                   <div class="d-flex">
-                    <input type="password" class="input-s-2 w-100 auth-input password " name="confirm-password" id="confirm-password" placeholder="Confirm Password" required spellcheck="false" onkeyup="ifValid(this, 4)" data-tab="1" disabled >
+                    <input type="password" class="input--s2 w-100 auth-input password " name="confirm-password" id="confirm-password" placeholder="Confirm Password" required spellcheck="false" onkeyup="ifValid(this, 4)" data-tab="1" disabled >
                     <div class="input-group-append" style="z-index:0">
                       <button type="button" class="btn toggle-pwd-eye" id="toggleRecheckPwd" onclick="togglePwdVisibility(this, 'confirm-password')"><i class="fa fa-eye-slash"></i></button>
                     </div>
@@ -356,14 +356,14 @@
 
                   <div class="d-flex flex-column input-wrapper ml-1" style="width:48%">
                     <label for="user-country" class="font-weight-bold auth-label">Country</label>
-                    <input type="text" class="input-s-2 auth-input correct text-capitalize" id="user-country" name="user-country" value="India" disabled data-tab="2" data-fulfill="true">
+                    <input type="text" class="input--s2 auth-input correct text-capitalize" id="user-country" name="user-country" value="India" disabled data-tab="2" data-fulfill="true">
                     <small class="help-text text-primary">We deliver only in India</small>
                   </div>
                   
 
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
                     <label for="user-state" class="font-weight-bold auth-label">State</label>
-                    <select class="d-none input-s-2 w-100 correct auth-input auth-input " id="user-state" name="user-state" value="Odisha" data-tab="2" data-fulfill="true">
+                    <select class="d-none input--s2 w-100 correct auth-input auth-input " id="user-state" name="user-state" value="Odisha" data-tab="2" data-fulfill="true">
                      <!--  <option value="Odisha">Odisha</option>
                       <option value="West Bengal">West Bengal</option>
                       <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -392,19 +392,19 @@
                 <div class="d-flex mb-3 w-100 justify-content-between">
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
                     <label for="user-city" class="font-weight-bold auth-label">City</label>
-                    <input type="text" class="input-s-2 auth-input " id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0)" data-tab="2" >
+                    <input type="text" class="input--s2 auth-input " id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0)" data-tab="2" >
                     <small class="help-text"></small>
                   </div>
                   <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
                     <label for="user-pincode" class="font-weight-bold auth-label">Pincode</label>
-                    <input type="text" class="input-s-2 auth-input " id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1)" data-tab="2" >
+                    <input type="text" class="input--s2 auth-input " id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1)" data-tab="2" >
                     <small class="help-text"></small>
                   </div>
                 </div>
 
                 <div class="d-flex flex-column input-wrapper mb-3">
                   <label for="user-street-address" class="font-weight-bold auth-label">Street Address</label>
-                  <textarea class="textarea-s-1 w-100 auth-input " rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="2" ></textarea>
+                  <textarea class="textarea--s1 w-100 auth-input " rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="2" ></textarea>
                   <small class="help-text"></small>
                 </div>
 
@@ -790,7 +790,7 @@
                   <form method="post" action=".">
                     <div class="d-flex flex-column">
                       <div class="d-flex justify-content-center">
-                        <input type="email" name="subscriber-email" id="subscriber-email" class="input-s-2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
                         <div class="input-group-append" style="z-index:0">
                           <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
                         </div>

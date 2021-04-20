@@ -1,9 +1,9 @@
 
 /* Common Frame on Input Tag */
 
-.input-s-1, 
-.input-s-2, 
-.textarea-s-1  {
+.input--s1, 
+.input--s2, 
+.textarea--s1  {
 	font-family:var(--ff-roboto);
 	padding:2%;
 	border:0;
@@ -22,16 +22,16 @@ input[type=number] {
 
 
 /*Input Style #1 */
-.input-s-1 {
+.input--s1 {
 	border-bottom-width:2px;
 	text-align:center;
 }
-.input-s-1::placeholder, 
-.input-s-2::placeholder,
-.textarea-s-1::placeholder{
+.input--s1::placeholder, 
+.input--s2::placeholder,
+.textarea--s1::placeholder{
 	transition:0.3s;
 }
-.input-s-1:focus {
+.input--s1:focus {
 	outline:none;
 	border-bottom-width:2px; 
 	border-style:solid;
@@ -40,11 +40,11 @@ input[type=number] {
 
 
 /* Input Style #2 */
-.input-s-2 {
+.input--s2 {
 	border-width:0.5px;
 	border-radius:3px;
 }
-.input-s-2:focus, .textarea-s-1:focus {
+.input--s2:focus, .textarea--s1:focus {
 	outline:none;
 	border-width:0.5px; 
 	border-style:solid;
@@ -52,7 +52,7 @@ input[type=number] {
 
 
 /* Textarea Style #1 */
-.textarea-s-1 {
+.textarea--s1 {
 	border-width:0.5px;
 	border-radius:3px;
 }
@@ -63,3 +63,13 @@ input:-webkit-autofill
 {
  -webkit-box-shadow: 0 0 0 30px #F3FFFB inset !important;
 }
+
+
+
+/* Input Field Validation Color */
+/*.fulfilled--s1 {
+
+}
+.not-fulfilled {
+
+}*/
