@@ -188,7 +188,9 @@ body {
 	font-size:1rem;
 	font-family:calibri;
 }
-.big-title, .small-title, .medium-title{
+.big-title, 
+.small-title, 
+.medium-title{
 	font-family:var(--ff-tertiary);
 }
 
@@ -269,7 +271,6 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 6s ease infinite;
 }
-
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -279,6 +280,29 @@ body {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+
+/* Wrapper Box */ 
+@media screen and (min-width:850px) {
+	.normal-wrapper {
+		width:50%;
+	}
+}
+@media screen and (min-width:700px) and (max-width:850px) {
+	.normal-wrapper {
+		width:60%;
+	}
+}
+@media screen and (min-width:550px) and (max-width:700px) {
+	.normal-wrapper {
+		width:80%;
+	}
+}
+@media screen and (max-width:550px) {
+	.normal-wrapper {
+		width:100%;
 	}
 }
 

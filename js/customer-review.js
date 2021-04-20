@@ -156,7 +156,7 @@ function constructReviews(numOfReviews) {
 		/*
 			Map All Reviews to a string reviews
 		*/
-		let reviews = mapReviews(reviewers, "wrapper");
+		let reviews = mapReviews(reviewers, "normal-wrapper");
 		/*
 			Display the string reviews in the markup document
 		*/

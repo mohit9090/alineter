@@ -5,22 +5,22 @@
 }
 /*Responsive Wrapper*/
 @media screen and (min-width:850px) {
-	.auth-wrapper {
+	.normal-wrapper {
 		width:50%;
 	}
 }
 @media screen and (min-width:700px) and (max-width:850px) {
-	.auth-wrapper {
+	.normal-wrapper {
 		width:60%;
 	}
 }
 @media screen and (min-width:550px) and (max-width:700px) {
-	.auth-wrapper {
+	.normal-wrapper {
 		width:80%;
 	}
 }
 @media screen and (max-width:550px) {
-	.auth-wrapper {
+	.normal-wrapper {
 		width:100%;
 	}
 }
@@ -29,7 +29,7 @@
 .auth-card {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-#sign-up .auth-wrapper, 
+#sign-up .normal-wrapper, 
 .verification-card :is( .card-header, .card-footer) {
 	background:var(--bg-light);
 }
@@ -80,14 +80,14 @@
 
 
 /*Specific for SIGNUP SECTION*/
-#sign-up .auth-wrapper {
+#sign-up .normal-wrapper {
 	overflow:hidden;
 	position:relative;
 }
 #sign-up {
 	padding:var(--md-padding);
 }
-.auth-wrapper {
+.normal-wrapper {
 	padding:1rem 1.2rem;
 }
 .after-registration, .tab  {
