@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/input-styles.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/look-book.css">
+  <link rel="stylesheet" type="text/css" href="css/input-validation.css">
 
   <style type="text/css">
 
@@ -526,7 +527,7 @@
 
   function ifValid(input) {
     var result = validateEmail(input.value);
-    switchClass(result, input, "correct", "incorrect");
+    switchClass(result, input, "fulfilled--all", "not-fulfilled--all");
   }
 
 </script>

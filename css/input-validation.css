@@ -1,0 +1,29 @@
+
+
+/* Input Field Validation Color */
+.fulfilled--all {
+	background:rgba(140, 255, 218, 0.15);	
+	border-color:rgba(140, 255, 218, 1);
+}
+.not-fulfilled--all {
+	background:rgba(236, 88, 88, 0.15);
+	border-color:rgba(236, 88, 88, 1);
+}
+.fulfilled--bg {
+ 	background-color:rgba(128, 191, 128, 1);
+}
+.not-fulfilled--bg {
+	background-color:rgba(236, 88, 88, 1)
+}
+.fulfilled--txt {
+ 	color:rgba(128, 191, 128, 1);
+}
+.not-fulfilled--txt {
+	color:rgba(236, 88, 88, 1)
+}
+.fulfilled--border {
+ 	border-color:rgba(128, 191, 128, 1);
+}
+.not-fulfilled--border {
+	border-color:rgba(236, 88, 88, 1)
+}

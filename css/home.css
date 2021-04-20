@@ -352,14 +352,6 @@
 	margin:auto;
 	margin-top:5%;
 }
-/*.review-card {
-	width:100%;
-	background:rgba(22, 22, 22, 0);
-	transition:0.3s ease;
-}
-.review-card:hover {
-	background-color:rgba(22, 22, 22, 0.);
-}*/
 .review-card :is( .card-header) {
 	background:var(--bg-primary);
 	border-bottom:1.5px solid var(--bg-light);
@@ -380,27 +372,6 @@
 	white-space:pre-line;
 	color:var(--bg-grey);
 }
-/*Responsive Wrapper*/
-/*@media screen and (min-width:850px) {
-	.review-box.wrapper {
-		width:50%;
-	}
-}
-@media screen and (min-width:700px) and (max-width:850px) {
-	.review-box.wrapper {
-		width:60%;
-	}
-}
-@media screen and (min-width:550px) and (max-width:700px) {
-	.review-box.wrapper {
-		width:80%;
-	}
-}
-@media screen and (max-width:550px) {
-	.review-box.wrapper {
-		width:100%;
-	}
-}*/
 /*show-more button*/
 .show-more-btn {
 	font-family:var(--ff-primary);
@@ -460,13 +431,13 @@
 .newsletter-subscribe .newsletter-subscribe-form{
 	border-left:5px solid #6C63FF;
 }
-.newsletter-subscribe .input-s-1 {
+.newsletter-subscribe .input--s1 {
 	background:transparent;
 }
-.newsletter-subscribe .input-s-1.filled {
+.newsletter-subscribe .input--s1.filled {
 	color:#6C63FF;
 }
-.newsletter-subscribe .input-s-1:focus {
+.newsletter-subscribe .input--s1:focus {
 	color:#6C63FF;
 	border-color:#6C63FF;
 }*/

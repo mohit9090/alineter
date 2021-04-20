@@ -89,17 +89,6 @@
 .toggle-pwd-eye:hover {
 	color:rgba(112, 112, 112, 0.7);
 }
-.auth-input.correct, 
-.toggle-pwd-eye.correct,
-.states-dropbtn.correct {
-	background:rgba(140, 255, 218, 0.15);	
-	border-color:rgba(140, 255, 218, 1);
-}
-.auth-input.incorrect, 
-.toggle-pwd-eye.incorrect {
-	background:rgba(236, 88, 88, 0.15);
-	border-color:rgba(236, 88, 88, 1);
-}
 .auth-input.password {
 	/* 
 		Specific for password field, this is so to make space for the eye icon 
@@ -172,12 +161,6 @@
   opacity:1;
   transform:scale(1.3);
 }
-.step.finish-correct {
-  background-color:rgba(128, 191, 128, 1);
-}
-.step.finish-incorrect {
-  background:rgba(236, 88, 88, 1);
-}
 
 
 /*password requirements component*/
@@ -186,19 +169,13 @@
 	font-family:var(--ff-secondary);
 	color:var(--bg-grey);
 }
-.pwd-requirement.fulfilled {
-	color:rgba(128, 191, 128, 1);
-}
-.pwd-requirement.not-fulfilled {
-	color:rgba(236, 88, 88, 1)
-}
-.pwd-requirement.fulfilled::after {
+.pwd-requirement.fulfilled--txt::after {
 	font-family: "FontAwesome";
    	content: "\f058";
 	margin-left:8px;
 	color:inherit;
 }
-.pwd-requirement.not-fulfilled::after {
+.pwd-requirement.not-fulfilled--txt::after {
 	font-family: "FontAwesome";
 	content:"\f05c";
 	margin-left:8px;

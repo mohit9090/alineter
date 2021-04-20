@@ -41,28 +41,23 @@ section#contact-us {
 	color:var(--bg-light);
 }
 /*Input style for this section*/
-.mail-us :is( .user-input) {
+.user-input {
 	color:var(--bg-light);
 	border-width:1.5px;
 	border-color:var(--bg-light);
 	letter-spacing:1.02px;
 	background:transparent;
 }
+.user-input:focus {
+	border-width:1.5px;
+}
 
-.mail-us :is( .user-input)::placeholder {
+.user-input::placeholder {
 	color:var(--bg-light);
 	opacity:0.8;
 }
-.mail-us :is( .user-input):focus::placeholder {
+.user-input:focus::placeholder {
 	opacity:1;
-}
-.mail-us :is( .user-input).filled {
-	border-color:rgba(140, 255, 218, 1);
-	background:rgba(140, 255, 218, 0.15);
-}
-.mail-us :is( .user-input).not-filled {
-	border-color:rgba(236, 88, 88, 1);
-	background:rgba(236, 88, 88, 0.15);
 }
 /*Support Links*/
 .mail-support > a,

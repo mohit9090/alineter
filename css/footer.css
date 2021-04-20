@@ -78,16 +78,6 @@
 .subscribe-btn:active {
 	opacity:0.7;
 }
-.subscriber-email.incorrect {
-	color:var(--bg-light);
-	background:rgba(236, 88, 88, 0.15);
-	border-color:rgba(236, 88, 88, 1);
-}
-.subscriber-email.correct {
-	color:var(--bg-light);
-	background:rgba(140, 255, 218,0.15);
-	border-color:rgba(140, 255, 218,1);
-}
 
 
 /*Footer Links*/

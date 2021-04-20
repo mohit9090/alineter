@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/input-styles.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/input-validation.css">
   
 
   <style type="text/css">
@@ -335,6 +336,25 @@
         </div>
       </section>
 
+      <script type="text/javascript">
+        //SPECIFIC FOR CONTACT PAGE
+        /* Check is the input tag is filled or not */
+
+        function isFilled(this_obj) {
+          if(this_obj.value === "") {
+            replaceClass(this_obj, "fulfilled--all", "not-fulfilled--all");
+          }
+          else {
+            if(this_obj.getAttribute("type") === "email") {
+              let isEmail = validateEmail(this_obj.value);
+              switchClass(isEmail, this_obj, "fulfilled--all", "not-fulfilled--all");
+              return;
+            }
+            replaceClass(this_obj, "not-fulfilled--all", "fulfilled--all");
+          }
+        }
+      </script>
+
 
 
 
@@ -505,7 +525,7 @@
 
   function ifValid(input) {
     var result = validateEmail(input.value);
-    switchClass(result, input, "correct", "incorrect");
+    switchClass(result, input, "fulfilled--all", "not-fulfilled--all");
   }
 
 </script>
@@ -514,26 +534,6 @@
 <script type="text/javascript" src="js/scroll-xy.js"></script>
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
-
-
-<script type="text/javascript">
-  //SPECIFIC FOR CONTACT PAGE
-  /* Check is the input tag is filled or not */
-
-  function isFilled(this_obj) {
-    if(this_obj.value === "") {
-      replaceClass(this_obj, "filled", "not-filled");
-    }
-    else {
-      if(this_obj.getAttribute("type") === "email") {
-        let isEmail = validateEmail(this_obj.value);
-        switchClass(isEmail, this_obj, "filled", "not-filled");
-        return;
-      }
-      replaceClass(this_obj, "not-filled", "filled");
-    }
-  }
-</script>
 
 
 </body>
