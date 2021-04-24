@@ -39,22 +39,56 @@
 
     /* Loading Animation */
 
-    .loading-img {
-      animation-name:animate;
-      animation-duration: 0.8s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out; 
+    #loading {
+      width:100%;
+      height:100vh;
     }
+    .loading-wrapper {
+      position:relative;
+      top:50%;
+      transform:translateY(-50%);
+      -webkit-transform:translateY(-50%);
+    }
+    .spinner {
+      position:relative;
+      width:60px;
+      height:60px;
+      left:50%;
+      transform:translateX(-50%);
+      -webkit-transform:translateX(-50%);
+    }
+    .cube {
+      position:absolute;
+      top:0;
+      left:0;
+      width:20px;
+      height:20px;
+      border:0;
+      border-radius:2px;
+      -webkit-animation: loading-cubemove 1.8s infinite ease-in-out;
+      animation: loading-cubemove 1.8s infinite ease-in-out;
+    }
+    .cube-1 {
+      background-color:#F15A24;
+    }
+    .cube-2 {
+      background-color:#000000;
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s;
 
-    @keyframes animate {
-      0% {
-        opacity:1;
-      }
-      50% {
-        opacity:0;
-      }
-      100% {
-        opacity:1;
+    }
+    @-webkit-keyframes loading-cubemove {
+      25% { -webkit-transform:translateX(42px) rotate(-90deg) scale(0.5) }
+      50% { -webkit-transform:translateX(42px) translateY(42px) rotate(-180deg) }
+      75% { -webkit-transform:translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+      100% { -webkit-transform:rotate(-360deg) }
+    }
+    @keyframes loading-cubemove {
+      25% { transform:translateX(42px) rotate(-90deg) scale(0.5); -webkit-transform:translateX(42px) rotate(-90deg) scale(0.5);
+      } 50% { transform:translateX(42px) translateY(42px) rotate(-179deg); -webkit-transform:translateX(42px) translateY(42px) rotate(-179deg);
+      } 50.1% { transform:translateX(42px) translateY(42px) rotate(-180deg); -webkit-transform:translateX(42px) translateY(42px) rotate(-180deg);
+      } 75% { transform:translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); -webkit-transform:translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+      } 100% { transform:rotate(-360deg); -webkit-transform:rotate(-360deg);
       }
     }
 
@@ -122,13 +156,12 @@
 <body>
 
   <section id="loading">
-    <div class="position-static" id="loading-animation">
-      <div class="position-absolute cxy">
-        <div>
-          <img src="images/alineter-b.png" class="img-fluid loading-img" width=90 height=90 alt="alineter logo">
-        </div>
-      </div> 
-    </div>
+    <div class="loading-wrapper">
+      <div class="spinner">
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+      </div>
+    </div> 
   </section>
 
   <section id="body">    

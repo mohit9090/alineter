@@ -108,7 +108,11 @@ function show_more__Reviews() {
 
 	let moreReviews_html = ""
 	moreReviews_html = mapOverlayReviews();
-	moreReviewsContainer__row.innerHTML = moreReviews_html;
+	
+	setTimeout(function() {
+		moreReviewsContainer__row.innerHTML = moreReviews_html;
+	},1500)
+	// moreReviewsContainer__row.innerHTML = moreReviews_html;
 
 	setTimeout(function() {
 		toggleReviewContent(toggle_state);

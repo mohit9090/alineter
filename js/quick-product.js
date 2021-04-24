@@ -277,6 +277,9 @@ function constructProducts(pagecontent, cardWidth, cardHeight) {
 	let products_html = "";
 
 	products_html = mapProducts(pagecontent, cardWidth, cardHeight);
+	// setTimeout(function(){
+	// 	quickProductContainer.innerHTML = products_html;
+	// },5000);
 	quickProductContainer.innerHTML = products_html;
 }
 

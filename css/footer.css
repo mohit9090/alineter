@@ -120,6 +120,7 @@
 .contact-us .fa {
 	color:var(--bg-grey);
 	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
 }
 .contact-us .link {
 	font-size:0.9rem;

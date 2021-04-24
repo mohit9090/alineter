@@ -34,15 +34,18 @@ body {
 .cxy {
   top:50%;
   left:50%;
-  transform:translate(-50%,-50%);
+  transform:translate(-50%, -50%);
+  -webkit-transform:translate(-50%, -50%);
 }
 .cx {
   left:50%;
   transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
 }
 .cy {
 	top:50%;
 	transform:translateY(-50%);
+	-webkit-transform:translateY(-50%);
 }
 
 
@@ -318,6 +321,7 @@ body {
 .fancy-effects.slide_bg_left::after,
 .fancy-effects.slide_line::after {
 	transform:scaleX(0);
+	-webkit-transform:scaleX(0);
 }
 
 .fancy-effects.slide_both:hover::after,
@@ -325,6 +329,7 @@ body {
 .fancy-effects.slide_bg_left:hover::after,
 .fancy-effects.slide_line:hover::after  {
 	transform:scaleX(1);
+	-webkit-transform:scaleX(1);
 }
 
 .fancy-effects.slide_both::after,
@@ -359,10 +364,12 @@ body {
 /* Bg expanding from top-left */
 .fancy-effects.slide_bg_topLeft::after {
 	transform:scale(0);
+	-webkit-transform:scale(0);
 	transform-origin:top left;
 }
 .fancy-effects.slide_bg_topLeft:hover::after {
 	transform:scale(1);
+	-webkit-transform:scale(1);
 }
 
 /* expanding line from center */
@@ -370,12 +377,5 @@ body {
 	bottom:0;
 	width:100%;
 	height:2px;
-}
-
-
-/* Smooth Transition */
-.btn,
-.fancy-effects::after {
-	transition:0.3s ease-in-out;
 }
 

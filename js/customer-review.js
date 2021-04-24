@@ -145,10 +145,17 @@ function mapReviews(rev_set, additional_class) {
 }
 
 function recursiveMapping(set, times, open_div) {
+	let reviewsHTML = ""; 
+
 	for(var i=0; i<times; i++) {
 		let reviews = mapReviews(set[i], "w-100");
-		reviewsContainer.innerHTML = reviewsContainer.innerHTML + open_div + reviews + close_div;	
+		reviewsHTML = reviewsHTML + open_div + reviews + close_div;	
 	}
+
+	// setTimeout(function(){
+	// 	reviewsContainer.innerHTML = reviewsHTML;
+	// },5000);
+	reviewsContainer.innerHTML = reviewsHTML;
 }
 
 function constructReviews(numOfReviews) {
@@ -160,7 +167,11 @@ function constructReviews(numOfReviews) {
 		/*
 			Display the string reviews in the markup document
 		*/
-		reviewsContainer.innerHTML = reviewsContainer.innerHTML + open_div_1 + reviews + close_div;
+
+		// setTimeout(function() {
+		// 	reviewsContainer.innerHTML = open_div_1 + reviews + close_div;
+		// },5000);
+		reviewsContainer.innerHTML = open_div_1 + reviews + close_div;
 
 	} else if(numOfReviews == 4) {
 		/* 
@@ -206,6 +217,8 @@ function constructReviews(numOfReviews) {
 function buildShowMoreBtn() {
 	if(reviewers.length >= 4) {
 		showMoreBtn.innerHTML = `<a href="javascript:void(0)" class="btn show-more-btn reveal__from-bottom" onclick="show_more__Reviews()">Show More</a>`;
+	} else {
+		showMoreBtn.innerHTML = "";
 	}
 }
 
