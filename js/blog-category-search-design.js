@@ -60,8 +60,8 @@ function addCategoryItemBtn(categoryItemWrapperElem, categoryStyle) {
 }
 
 function onSuccessConstruction(categoryHTML, categoryStyle) {
+  
   categoryContainer.innerHTML = categoryHTML;
-
   const categoryItemWrapperElem = document.getElementById("categoryItemWrapper");
 
   addCategoryItemBtn(categoryItemWrapperElem, categoryStyle);

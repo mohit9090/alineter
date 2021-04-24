@@ -138,6 +138,7 @@ input[name="q"] + .fa-times {
 }
 .category-dropdown:hover .fa-caret-down {
 	transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
 }
 
 
@@ -151,7 +152,7 @@ input[name="q"] + .fa-times {
 }
 .blog-img-wrapper {
 	width:100%;
-	background:var(--bg-light);
+	/*background:var(--bg-grey);*/
 }
 @media screen and (min-width:1200px) {
 	.blog-img-wrapper {
@@ -220,6 +221,7 @@ input[name="q"] + .fa-times {
 .blog-link :is( a >.fa-link) {
 	color:var(--bg-secondar);
 	transform:rotateX(180deg);
+	-webkit-transform:rotateX(180deg);
 }
 .blog-link a:hover {
 	background:rgba(112, 112, 112, 0.1);

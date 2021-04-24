@@ -12,7 +12,7 @@ function mapBlogs(blogs) {
 		blog_div += `<div class="blog wrapper mx-auto p-0">
           <!--Blog Image-->
           <div class="container-fluid blog-img-wrapper load-gradient p-0" id="blog-img-wrapper" onclick="viewBlog(${blog.blog_id})">
-            <img src="${blog.blog_detail.mainImg}" alt="${blog.blog_detail.title}" class="img-fluid blog-img img-cover" onload="this.parentElement.classList.remove('load-gradient')"/>
+            <img src="${blog.blog_detail.mainImg}" alt="${blog.blog_detail.title}" class="img-fluid blog-img img-cover" onload="this.parentElement.classList.remove('load-gradient');this.style.backgroundColor='#FEFEFE'"/>
           </div>
 
           <!--Blog Details-->
@@ -79,7 +79,10 @@ function constructBlogs(blogs) {
 	let blogs_html = "";
 
 	blogs_html = mapBlogs(blogs);
-	blogsContainer.innerHTML = blogs_html;
+  setTimeout(function(){
+    blogsContainer.innerHTML = blogs_html;
+  },1500);
+	// blogsContainer.innerHTML = blogs_html;
 }
 constructBlogs(blogs);
 
