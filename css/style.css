@@ -215,7 +215,7 @@ body {
   background-position:center;
 }
 .illustration-box {
-	background:rgba(0, 0, 0, 0.5);/*Default Value*/
+	background:rgba(0, 0, 0, 0.6);/*Default Value*/
 	overflow:auto;	
 	-ms-overflow-style:none;
   	scrollbar-width:none; 
@@ -267,9 +267,9 @@ body {
 
 /* Load Gradient */
 .load-gradient {
-	background: linear-gradient(-45deg, #f5af19, #f12711);
+	background: linear-gradient(-45deg, #f4f9f9, #e7e6e1, #f7f6e7);
 	background-size: 400% 400%;
-	animation: gradient 6s ease infinite;
+	animation: gradient 12s ease infinite;
 }
 @keyframes gradient {
 	0% {

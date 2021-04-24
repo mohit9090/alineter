@@ -321,6 +321,32 @@
           
         </div>
       </section>
+
+      <style type="text/css">
+        .loader {
+          position:relative;
+          left:50%;
+          transform:translateX(-50%);
+          border: 10px solid rgba(112, 112, 112, 0.8);
+          border-radius: 50%;
+          border-top: 10px solid #F15A24;
+          width: 60px;
+          height: 60px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 1s linear infinite;
+        }
+
+        /* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+      </style>
      
 
 
@@ -337,6 +363,7 @@
         <div class="container-fluid q-product-box" id="q-product-box">
 
           <!-- Here goes the product -->
+          <div class="loader"></div>
 
         </div>
 

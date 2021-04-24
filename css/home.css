@@ -38,10 +38,12 @@
 .store-btn {
 	width:50%;
 	border-radius:5px;
-	padding:0.8rem 0;
-	font-size:1.1rem;
+	padding:0.8em 0.2em;
+	font-size:1.2rem;
+	letter-spacing:1.01px;
 	color:var(--bg-light);
-	background:var(--bg-secondary);
+	/*background:var(--bg-secondary);*/
+	background-color:transparent;
 	border:1.5px solid var(--bg-primary);
 }
 .store-btn:hover {
@@ -191,7 +193,7 @@
 	transition:0.3s ease;
 }
 .q-product-card:hover > img {
-	transform:scale(1.2);
+	transform:scale(1.15);
 	filter:brightness(70%);
 }
 .q-product-card, 
