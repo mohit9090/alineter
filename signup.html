@@ -688,8 +688,9 @@
           let gteMin = satisfyMinLength(val); // greater than 8 characters
           
           if(recheckPassword.value.length > 0) {
-            var recheckPwdLength = validateRecheckPassword(recheckPassword.value);
-            switchClass(recheckPwdLength, recheckPassword, "fulfilled--all", "not-fulfilled--all");
+            let isRecheckPwdMatched = validateRecheckPassword(recheckPassword.value);
+            isRecheckPwdMatched ? recheckPassword.setAttribute("data-fulfill", "true") : recheckPassword.setAttribute("data-fulfill", "false");
+            switchClass(isRecheckPwdMatched, recheckPassword, "fulfilled--all", "not-fulfilled--all");
           }
 
           if(isLower && isUpper && isNumber && gteMin) {
@@ -726,7 +727,7 @@
           if (validatorID >= 0) {
             var result = validators[parseInt(validatorID)].validate(input.value);
             switchClass(result, input, "fulfilled--all", "not-fulfilled--all");
-            result ? input.setAttribute("data-fulfill", "true") : input.setAttribute("data-fulfill", "false") 
+            result ? input.setAttribute("data-fulfill", "true") : input.setAttribute("data-fulfill", "false");
           }
         }
 
