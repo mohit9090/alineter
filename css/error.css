@@ -50,11 +50,9 @@
 }
 
 .error-code {
-	font-family:var(--ff-tertiary);
 	font-weight:600;
 }
 .error-text {
-	font-family:var(--ff-primary);
 	line-height:2;
 	word-spacing:2.5px;
 }
@@ -95,6 +93,17 @@
 #copyright-section .link.s-2:hover {
 	text-decoration:underline;
 }
+
+
+/* Fonts */
+.error-code {
+	font-family:var(--ff-tertiary);
+}
+.error-text {
+	font-family:var(--ff-primary);
+}
+
+/* :active selector */
 #copyright-section .link:active {
 	background:rgba(112, 112, 112, 0.2);
 	transition:background 0.3s ease;

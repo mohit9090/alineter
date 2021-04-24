@@ -4,11 +4,9 @@
 .input--s1, 
 .input--s2, 
 .textarea--s1  {
-	font-family:var(--ff-roboto);
 	padding:2%;
 	border:0;
 	border-style:solid;
-	transition:0.3s;
 }
 /* Remove arrows from input[type="number"] */
 input::-webkit-outer-spin-button,
@@ -25,11 +23,6 @@ input[type=number] {
 .input--s1 {
 	border-bottom-width:2px;
 	text-align:center;
-}
-.input--s1::placeholder, 
-.input--s2::placeholder,
-.textarea--s1::placeholder{
-	transition:0.3s;
 }
 .input--s1:focus {
 	outline:none;
@@ -64,3 +57,21 @@ input:-webkit-autofill
  -webkit-box-shadow: 0 0 0 30px #F3FFFB inset !important;
 }
 
+
+
+/* Smooth Transition */
+.input--s1, 
+.input--s2, 
+.textarea--s1,
+.input--s1::placeholder, 
+.input--s2::placeholder,
+.textarea--s1::placeholder {
+	transition:0.2s ease-in-out;
+}
+
+/* Fonts */
+.input--s1, 
+.input--s2, 
+.textarea--s1 {
+	font-family:var(--ff-roboto);
+}

@@ -12,7 +12,7 @@ function mapBlogs(blogs) {
 		blog_div += `<div class="blog wrapper mx-auto p-0">
           <!--Blog Image-->
           <div class="container-fluid blog-img-wrapper load-gradient p-0" id="blog-img-wrapper" onclick="viewBlog(${blog.blog_id})">
-            <img src="${blog.blog_detail.mainImg}" alt="${blog.blog_detail.title}" class="img-fluid blog-img" onload="this.parentElement.classList.remove('load-gradient')"/>
+            <img src="${blog.blog_detail.mainImg}" alt="${blog.blog_detail.title}" class="img-fluid blog-img img-cover" onload="this.parentElement.classList.remove('load-gradient')"/>
           </div>
 
           <!--Blog Details-->
@@ -23,8 +23,8 @@ function mapBlogs(blogs) {
                 <div class="blog-detail" id="blog-detail">
                   <div class="blog-author-wrap d-flex justify-content-between pl-0 pr-0 pb-2">
                     <div class="blog-author d-flex">
-                      <div class="blog-author-img">
-                        <a href="${blog.blog_author.profile_url}"><img src="${blog.blog_author.pfImg}" alt="${blog.blog_author.name} profile pic | Alineter" class="rounded-circle" alt="author name | Alineter"/></a>
+                      <div class="blog-author-img-holder">
+                        <a href="${blog.blog_author.profile_url}"><img src="${blog.blog_author.pfImg}" alt="${blog.blog_author.name} profile pic | Alineter" class="blog-author-img img-cover" alt="author name | Alineter"/></a>
                       </div>
                       <div class="ml-2 d-flex flex-column">
                         <small class="d-flex blog-author-name">

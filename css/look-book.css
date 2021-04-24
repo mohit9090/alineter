@@ -70,7 +70,6 @@ input[name="q"] {
 	font-size:1.1rem;
 	letter-spacing:1.02px;
 	word-spacing:2px;
-	transition:0.3s ease;
 }
 input[name="q"],
 input[name="q"]::placeholder,
@@ -87,7 +86,6 @@ input[name="q"] + .fa-times {
 	cursor:pointer;
 	opacity:0;
 	pointer-events:none;
-	transition:0.2s ease;
 }
 
 
@@ -121,11 +119,7 @@ input[name="q"] + .fa-times {
 #categoryBtn,
 .category-item,
 .category-content button {
-	font-family:var(--ff-primary);
 	letter-spacing:1.01px;
-}
-.category-dropbtn > .fa-caret-down {
-	transition:0.2s ease;
 }
 .category-content {
   display:none;
@@ -174,11 +168,6 @@ input[name="q"] + .fa-times {
 		height:270px;
 	}
 }
-.blog-img {
-	width:100%;
-	height:100%;
-	object-fit:cover;
-}
 .blog-detail-wrapper {
 	padding:var(--lg-padding-inverse);
 }
@@ -186,19 +175,15 @@ input[name="q"] + .fa-times {
 /* ---- Fonts ---- */
 .blog-author-name span,
 .blog-pub-date {
-	font-family:var(--ff-roboto);
 }
 .blog-title h5 { 
-	font-family:var(--ff-primary);
 	font-weight:600;
 }
 .blog-short-descp p {
-	font-family:var(--ff-secondary);
 	font-weight:300;
 }
 #shareBlogModal .modal-title,
 #shareBlogModal #blog-sharelink {
-	font-family:var(--ff-tertiary);
 	font-weight:400;
 }
 
@@ -206,16 +191,14 @@ input[name="q"] + .fa-times {
 .blog-img-wrapper {
 	cursor:pointer;
 }
-.blog-author-img {
-	width:32px;
-	height:32px;
+.blog-author-img-holder {
+	width:35px;
+	height:35px;
 	position:relative;
 	top:3px;
 }
-.blog-author-img :is( img) {
-	width:100%;
-	height:100%;
-	object-fit:cover;
+.blog-author-img {
+	border-radius:50%;
 }
 .blog-author-name {
 	font-size:0.85rem;
@@ -240,10 +223,6 @@ input[name="q"] + .fa-times {
 }
 .blog-link a:hover {
 	background:rgba(112, 112, 112, 0.1);
-}
-.blog-link a:active {
-	opacity:0.8;
-	transition:opacity 0.2s ease;
 }
 .blog-short-descp p {
 	font-size:1rem;
@@ -275,3 +254,38 @@ input[name="q"] + .fa-times {
 	}
 }
 */
+
+
+/* Smooth Transition */
+input[name="q"],
+input[name="q"] + .fa-times,
+.category-dropbtn > .fa-caret-down  {
+	transition:0.2s ease-in-out;
+}
+
+
+/* Fonts */
+#categoryBtn,
+.category-item,
+.category-content button,
+.blog-title h5 {
+	font-family:var(--ff-primary);
+}
+.blog-short-descp p {
+	font-family:var(--ff-secondary);
+}
+#shareBlogModal .modal-title,
+#shareBlogModal #blog-sharelink {
+	font-family:var(--ff-tertiary);
+}
+.blog-author-name span,
+.blog-pub-date {
+	font-family:var(--ff-roboto);
+}
+
+
+/* :active selector */
+.blog-link a:active {
+	opacity:0.8;
+	transition:opacity 0.2s ease;
+}

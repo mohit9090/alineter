@@ -3,7 +3,6 @@
 	background:var(--bg-light);
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 9px 0px;
 	z-index:2;
-	transition:0.3s ease;
 }
 #navigation.navigation-init {
 	padding:var(--sm-padding-inverse);
@@ -17,11 +16,9 @@
 }
 .logo-text {
 	color:var(--bg-secondary);
-	font-family:var(--ff-tertiary);
 	font-weight:600;
 	position:relative;
 	letter-spacing:1.02px;
-	transition:0.3s ease;
 }
 .navbar-brand:hover .logo-text {
 	color:var(--bg-primary);
@@ -100,10 +97,6 @@
   	padding:0;
   	background-color:var(--bg-primary);  	
 }
-.toggle-btn,
-.bar {
-	transition:0.3s ease;
-}
 .bar-1 {
 	top:40%;
 	border-top-left-radius:100px;
@@ -133,7 +126,6 @@
 	font-size:1.08rem;
 	letter-spacing:1.02px;
 	font-weight:300;
-	transition:0.3s ease-in-out;
 }
 #navigation .nav-link.dropdown-item {
 	font-size:0.88rem;
@@ -165,13 +157,6 @@
 	*/
 	border-color:transparent transparent transparent var(--bg-primary);
 }
-#navigation .nav-link:active,
-.site-links .nav-link:active {
-	/* navlink when clicked */
-	background:rgba(112, 112, 112, 0.3);
-	transition:background 0.3s;
-}
-
 
 
 /* SLIDE NAVIGATION */
@@ -185,7 +170,6 @@
   background-color:var(--bg-light);
   overflow-x:hidden;
   overflow-y:auto;
-  transition: 0.2s ease-in-out;
 }
 .slidenav-wrapper {
 	position:absolute;
@@ -216,11 +200,8 @@
 	border-radius:50%;
 	background:var(--bg-primary);
 }
-.pfimg-holder .pfimg {
-	width:100%;
-	height:100%;
+.pfimg-holder .pfImg {
 	border-radius:50%;
-	object-fit:cover;
 }
 .user-function > div {
 	padding:0.6rem;
@@ -230,7 +211,6 @@
 .user-function--link {
 	color:var(--bg-light);
 	opacity:0.9;
-	transition:0.3s ease;
 }
 .user-function--link:hover {
 	color:var(--bg-light);
@@ -254,3 +234,23 @@
 }
 */
 
+
+/* Smooth Transition */
+#navigation,
+#slide-navigation,
+#navigation .nav-link,
+.site-links .nav-link,
+.logo-text,
+.toggle-btn,
+.bar {
+	transition:0.2s ease-in-out;
+}
+
+
+/* :active selector */
+#navigation .nav-link:active,
+.site-links .nav-link:active {
+	/* navlink when clicked */
+	background:rgba(112, 112, 112, 0.3);
+	transition:background 0.3s;
+}

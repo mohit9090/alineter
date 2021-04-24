@@ -33,7 +33,6 @@ section#contact-us {
 	margin-top:5%;
 }
 .contact-us .head > h1 {
-	font-family:var(--ff-tertiary);
 	font-weight:800;
 	color:var(--bg-primary);
 }
@@ -66,7 +65,6 @@ section#contact-us {
 }
 .contact-us-btn {
 	width:120px;
-	font-family:var(--ff-primary);
 	font-weight:600;
 	font-size:1.1rem;
 	letter-spacing:1.02px;
@@ -99,4 +97,13 @@ section#contact-us {
 	.gmap_canvas {
 		height:250px;
 	}
+}
+
+
+/* Fonts */
+.contact-us .head > h1 {
+	font-family:var(--ff-tertiary);
+}
+.contact-us-btn {
+	font-family:var(--ff-primary);
 }

@@ -264,7 +264,7 @@ function mapProducts(pagecontent, cardWidth, cardHeight) {
 	let products_div = "";
 	pagecontent.map( (product) => {
 		products_div += `<div class="card q-product-card load-gradient shadow" id="product-${product.product_id}" style="width:${cardWidth}px;height:${cardHeight}px">
-		  <img class="card-img-top q-product-image" src="${product.product_detail.img}" alt="${product.product_detail.name}" onerror="img_unloaded(this)" onload="this.parentElement.classList.remove('load-gradient')">
+		  <img class="card-img-top q-product-img img-cover" src="${product.product_detail.img}" alt="${product.product_detail.name}" onerror="img_unloaded(this)" onload="this.parentElement.classList.remove('load-gradient')">
 		  <a href="#" class="stretched-link" data-toggle="modal" onclick="viewProduct(${product.product_id})" data-prod-id="${product.product_id}"></a>
 		  <div class="q-product-body">
 		    <p class="card-text text-center"><i class="fa fa-eye"></i></p>
