@@ -142,23 +142,3 @@ section#about-products {
 	width:220px;
 	padding:2.6%;
 }
-
-
-
-/* Fonts */
-.about-us-content,
-.profile-cards .director-bio {
-	font-family:var(--ff-secondary);
-}
-.profile-cards .director-designation  {
-	font-family:var(--ff-roboto);
-}
-.shop-btn {
-	font-family:var(--ff-primary);
-}
-
-/* :active selector*/
-.shop-btn:active {
-	opacity:0.7;
-	transition:opacity 0.3s;
-}

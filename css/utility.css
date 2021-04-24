@@ -1,0 +1,167 @@
+
+/*
+	This CSS File contains style common to some particular elements like transition, font-family, :active selector
+*/
+
+
+/* SMOOTH TRANSITION */
+
+/*style*/
+.btn,
+.fancy-effects::after,
+/*input*/
+.input--s1, 
+.input--s2, 
+.textarea--s1,
+.input--s1::placeholder, 
+.input--s2::placeholder,
+.textarea--s1::placeholder,
+/*navigation*/
+#navigation,
+#slide-navigation,
+#navigation .nav-link,
+.site-links .nav-link,
+.logo-text,
+.toggle-btn,
+.bar,
+/*footer*/
+.scroll-horizontal.to-top > .btn, 
+#footer .link,
+/*home*/
+.usp-box,
+.usp-icon,
+.usp-tag,
+.q-product-card,
+.q-product-body,
+.q-product-card .q-product-img,
+.reviews-nav,
+.more-reviews-container,
+/*blogs*/
+input[name="q"],
+input[name="q"] + .fa-times,
+.category-dropbtn > .fa-caret-down {
+	transition:0.2s ease-in-out;
+}
+
+
+
+
+/* FONT FAMILY */
+
+/* --font-primary-- */
+/*home*/
+.usp-tag,
+.reviewer-says,
+.show-more-btn,
+.reviews-nav h5,
+.reviews-nav button,
+/*contact*/
+.contact-us-btn,
+/*about*/
+.shop-btn,
+/*auth*/
+.auth-label,
+.states-dropbtn,
+.states-content .state,
+.auth-btn,
+/*blogs*/
+#categoryBtn,
+.category-item,
+.category-content button,
+.blog-title h5 {
+	font-family:var(--ff-primary);
+}
+
+/* --font-secondary-- */
+/*about*/
+.about-us-content,
+.profile-cards .director-bio,
+/*auth*/
+.auth-title,
+.auth-input,
+.help-text,
+.pwd-requirement,
+/*blog*/
+.blog-short-descp p {
+	font-family:var(--ff-secondary);
+}
+
+/* --font-tertiary-- */
+/*footer*/
+#footer,
+.subscriber-email,
+.big-title, 
+.small-title, 
+.medium-title,
+.smaller-title,
+/*home*/
+.illustration-head h2,
+#testimonial .heading,
+.review-card .reviewer-name,
+/*contact*/
+.contact-us .head > h1,
+/*blogs*/
+#shareBlogModal .modal-title,
+#shareBlogModal #blog-sharelink {
+	font-family:var(--ff-tertiary);
+}
+
+/* --font-roboto-- */
+body,
+/*input*/
+.input--s1, 
+.input--s2, 
+.textarea--s1,
+/*about*/
+.profile-cards .director-designation,
+/*blogs*/
+.blog-author-name span,
+.blog-pub-date {
+	font-family:var(--ff-roboto);
+}
+
+
+
+
+
+/* :ACTIVE SELECTOR */
+
+/* --style-1-- */
+.ripple-opacity-l:active,
+/*footer*/
+.subscribe-btn:active,
+/*home*/
+.reviews-nav button:active,
+/*about*/
+.shop-btn:active,
+/*blogs*/
+.blog-link a:active,
+/*auth*/
+.upload-media-btn:active {
+  opacity:0.7;
+  transition:opacity 0.2s ease-in-out;
+}
+.ripple-opacity-d:active {
+  opacity:0.9;
+  transition:opacity 0.2s ease-in-out;
+}
+
+/* --style-2-- */
+.scroll-btn:active,
+.show-more-btn:active {
+	filter:brightness(90%);
+	transition:0.3s;
+}
+
+/* --style-3-- */
+/*navigation*/
+#navigation .nav-link:active,
+.site-links .nav-link:active,
+/*footer*/
+#footer .link:active,
+/*auth*/
+.states-content .state:not(.mobile-device):active,
+.states-content .state.mobile-device:active {
+	background:rgba(112, 112, 112, 0.3);
+	transition:background 0.2s;
+}

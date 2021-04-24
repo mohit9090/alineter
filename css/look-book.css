@@ -255,37 +255,3 @@ input[name="q"] + .fa-times {
 }
 */
 
-
-/* Smooth Transition */
-input[name="q"],
-input[name="q"] + .fa-times,
-.category-dropbtn > .fa-caret-down  {
-	transition:0.2s ease-in-out;
-}
-
-
-/* Fonts */
-#categoryBtn,
-.category-item,
-.category-content button,
-.blog-title h5 {
-	font-family:var(--ff-primary);
-}
-.blog-short-descp p {
-	font-family:var(--ff-secondary);
-}
-#shareBlogModal .modal-title,
-#shareBlogModal #blog-sharelink {
-	font-family:var(--ff-tertiary);
-}
-.blog-author-name span,
-.blog-pub-date {
-	font-family:var(--ff-roboto);
-}
-
-
-/* :active selector */
-.blog-link a:active {
-	opacity:0.8;
-	transition:opacity 0.2s ease;
-}

@@ -56,22 +56,3 @@ input:-webkit-autofill
 {
  -webkit-box-shadow: 0 0 0 30px #F3FFFB inset !important;
 }
-
-
-
-/* Smooth Transition */
-.input--s1, 
-.input--s2, 
-.textarea--s1,
-.input--s1::placeholder, 
-.input--s2::placeholder,
-.textarea--s1::placeholder {
-	transition:0.2s ease-in-out;
-}
-
-/* Fonts */
-.input--s1, 
-.input--s2, 
-.textarea--s1 {
-	font-family:var(--ff-roboto);
-}

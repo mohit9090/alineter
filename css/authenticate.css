@@ -123,6 +123,9 @@
 .states-content.hide {
   display:none;
 }
+.states-content .state:not(.mobile-device):hover {
+	background-color:rgba(112, 112, 112, 0.1);
+}
 
 
 /*COMPONENTS*/
@@ -254,33 +257,4 @@
 .step,
 .upload-media-btn :is( img, p) {
 	transition:0.2s ease-in-out;
-}
-
-
-/* Fonts */
-.auth-title,
-.auth-input,
-.help-text,
-.pwd-requirement {
-	font-family:var(--ff-secondary);
-}
-.auth-label,
-.states-dropbtn,
-.states-content .state,
-.auth-btn {
-	font-family:var(--ff-primary);
-}
-
-/* :active selector */
-.states-content .state:not(.mobile-device):hover {
-	background-color:rgba(112, 112, 112, 0.1);
-}
-.states-content .state:not(.mobile-device):active,
-.states-content .state.mobile-device:active {
-	background-color:rgba(112, 112, 112, 0.4);
-	transition:0.4s ease;
-}
-.upload-media-btn:active {
-	opacity:0.8;
-	transition:0.2s ease;
 }

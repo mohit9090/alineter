@@ -140,25 +140,3 @@
 	margin-right:0.1rem;
 }
 
-
-/* Smooth Transition effect */
-.scroll-horizontal.to-top > .btn, 
-#footer .link {
-	transition:0.3s ease;
-}
-
-/* Fonts */
-#footer,
-.subscriber-email {
-	font-family:var(--ff-primary);
-}
-
-/* :active selector*/
-.subscribe-btn:active {
-	opacity:0.7;
-	transition:opacity 0.2s ease-in-out;
-}
-#footer .link:active {
-	background:rgba(112, 112, 112, 0.2);
-	transition:background 0.3s ease;
-}

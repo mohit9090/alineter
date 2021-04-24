@@ -234,23 +234,3 @@
 }
 */
 
-
-/* Smooth Transition */
-#navigation,
-#slide-navigation,
-#navigation .nav-link,
-.site-links .nav-link,
-.logo-text,
-.toggle-btn,
-.bar {
-	transition:0.2s ease-in-out;
-}
-
-
-/* :active selector */
-#navigation .nav-link:active,
-.site-links .nav-link:active {
-	/* navlink when clicked */
-	background:rgba(112, 112, 112, 0.3);
-	transition:background 0.3s;
-}

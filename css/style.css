@@ -187,17 +187,6 @@ body {
 }
 
 
-/* Ripple Effect */
-.ripple-opacity-l:active {
-  opacity:0.7;
-  transition: opacity 0.2s;
-}
-.ripple-opacity-d:active {
-  opacity:0.9;
-  transition: opacity 0.2s;
-}
-
-
 /* Illustration */
 #illustration {
   padding:0;
@@ -390,14 +379,3 @@ body {
 	transition:0.3s ease-in-out;
 }
 
-
-/* Fonts */ 
-body {
-	font-family:var(--ff-roboto);
-}
-.big-title, 
-.small-title, 
-.medium-title,
-.smaller-title {
-	font-family:var(--ff-tertiary);
-}

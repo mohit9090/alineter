@@ -98,12 +98,3 @@ section#contact-us {
 		height:250px;
 	}
 }
-
-
-/* Fonts */
-.contact-us .head > h1 {
-	font-family:var(--ff-tertiary);
-}
-.contact-us-btn {
-	font-family:var(--ff-primary);
-}
