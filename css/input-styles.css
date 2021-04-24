@@ -4,7 +4,7 @@
 .input--s1, 
 .input--s2, 
 .textarea--s1  {
-	padding:2%;
+	padding:0.7em;
 	border:0;
 	border-style:solid;
 }
@@ -32,23 +32,24 @@ input[type=number] {
 
 
 
-/* Input Style #2 */
-.input--s2 {
-	border-width:0.5px;
+/* 
+  Input Style #2 
+  Textarea Style #1
+*/
+.input--s2,
+.textarea--s1 {
+	border-width:1px;
 	border-radius:3px;
 }
-.input--s2:focus, .textarea--s1:focus {
+.input--s2:focus, 
+.textarea--s1:focus {
 	outline:none;
-	border-width:0.5px; 
+	border-width:1px; 
 	border-style:solid;
 }
 
 
 /* Textarea Style #1 */
-.textarea--s1 {
-	border-width:0.5px;
-	border-radius:3px;
-}
 
 
 /*Change Background color in autofill textbox*/
