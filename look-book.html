@@ -120,36 +120,6 @@
 
   </style>
 
-  <script>
-    // Loading Animation
-    // Things to get activated while page loads
-    setTimeout(activate,250);
-    function activate() {
-      showPage();
-      setPageContentPos();
-      scrollReveal();
-    }
-    function showPage() {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("body").style.display = "block";
-    }
-    function setPageContentPos() {
-      /* Set the Top Position of #page-content on load */
-      $(function(){
-          let navHeight = document.getElementById("navigation").offsetHeight;
-          document.getElementById("page-content").style.top = navHeight+"px";
-      });
-    }
-  </script>
-
-  <script>
-    /*In every Page except home page*/
-    $(window).on("resize",function() {
-      setPageContentPos()
-    })
-  </script>
-
-
 
 </head>
 
@@ -372,12 +342,12 @@
       <section id="blogs" class="w-100 scroll-reveal-content">
 
         <!-- Loading animation before Blog Loads -->
-        <div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
+        <!-- <div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
           <div class="spinner">
             <div class="cube cube-1"></div>
             <div class="cube cube-2"></div>
           </div>
-        </div> 
+        </div> --> 
             
         <!--All Blogs goes here-->
 
@@ -589,9 +559,9 @@
 </script>
 
 
-
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/activate-page.js"></script>
+<!-- <script type="text/javascript" src="js/nav.js"></script> -->
+<!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
 

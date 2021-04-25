@@ -113,6 +113,7 @@ function animateIcon(icon) {
   */
   let uspIcons = getUSP_DIV();
   
+  /*If "clicked" class is already there them remove it first */
   uspIcons.map(u_icon => {
     if(classContains(u_icon, "clicked")) {
       removeClass(u_icon, ["clicked"]);
@@ -132,6 +133,7 @@ function onSuccessAddClass() {
     This func will encounter both on load and on resize
   */
   let uspIcons = getUSP_DIV();
+
 
   let isMobile = detectMob();
   isMobile ? addMobile__Class(uspIcons) : removeMobile__Class(uspIcons);

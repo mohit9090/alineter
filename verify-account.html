@@ -120,37 +120,6 @@
 
   </style>
 
-  <script>
-    // Loading Animation
-    // Things to get activated while page loads
-    setTimeout(activate,100);
-    function activate() {
-      showPage();
-      setPageContentPos();
-      scrollReveal();
-    }
-    function showPage() {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("body").style.display = "block";
-    }
-    function setPageContentPos() {
-      /* Set the Top Position of #page-content on load */
-      $(function(){
-          let navHeight = document.getElementById("navigation").offsetHeight;
-          document.getElementById("page-content").style.top = navHeight+"px";
-      });
-    }
-  </script>
-
-  <script>
-    /*In every Page except home page*/
-    $(window).on("resize",function() {
-      setPageContentPos()
-    })
-  </script>
-
-
-
 </head>
 
 <body>
@@ -522,9 +491,9 @@
 </script>
  -->
 
-
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/activate-page.js"></script>
+<!-- <script type="text/javascript" src="js/nav.js"></script> -->
+<!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
 

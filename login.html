@@ -120,36 +120,6 @@
 
   </style>
 
-  <script>
-    // Loading Animation
-    // Things to get activated while page loads
-    setTimeout(activate,100);
-    function activate() {
-      showPage();
-      setPageContentPos();
-      scrollReveal();
-    }
-    function showPage() {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("body").style.display = "block";
-    }
-    function setPageContentPos() {
-      /* Set the Top Position of #page-content on load */
-      $(function(){
-          let navHeight = document.getElementById("navigation").offsetHeight;
-          document.getElementById("page-content").style.top = navHeight+"px";
-      });
-    }
-  </script>
-
-  <script>
-    /*In every Page except home page*/
-    $(window).on("resize",function() {
-      setPageContentPos()
-    })
-  </script>
-
-
 
 </head>
 
@@ -337,23 +307,6 @@
         </div>
       </section>
 
-   <!--    <div class="modal fade" id="message-modal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p class="lead">OTP didn't match with the one we have sent to you.</p>
-              <p>You might have typed wrong OTP or your Mail Id is not appropriate</p>
-              <a href="signup.html" class="card-link">Go to Signup</a>
-              <a href="#" class="card-link">Resend OTP</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
 
 
 
@@ -530,9 +483,9 @@
 </script>
 
 
-
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/activate-page.js"></script>
+<!-- <script type="text/javascript" src="js/nav.js"></script> -->
+<!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
 

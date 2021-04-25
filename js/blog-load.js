@@ -78,6 +78,13 @@ function mapBlogs(blogs) {
 function constructBlogs(blogs) {
 	let blogs_html = "";
 
+  blogsContainer.innerHTML = `<div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
+          <div class="spinner">
+            <div class="cube cube-1"></div>
+            <div class="cube cube-2"></div>
+          </div>
+        </div>`;
+
 	blogs_html = mapBlogs(blogs);
   setTimeout(function(){
     blogsContainer.innerHTML = blogs_html;
