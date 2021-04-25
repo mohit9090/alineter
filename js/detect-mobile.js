@@ -14,3 +14,6 @@ function detectMob() {
       return navigator.userAgent.match(toMatchItem);
   });
 };
+
+
+//add, remove MOBILE CLASS from usp-load.js

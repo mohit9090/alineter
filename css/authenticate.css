@@ -54,7 +54,8 @@
 .auth-card {
 	padding:1rem 1.2rem;
 }
-.after-registration, .tab  {
+.after-registration, 
+.tab  {
 	display:none;
 }
 /*TAB-1, TAB-2, TAB-3*/
@@ -91,7 +92,7 @@
   width:100%;
   font-size:1.05rem;
   color:var(--bg-secondary);
-  padding:2.1% 1.2em 2.1% 0.3em;
+  padding:0.77rem 1.2rem 0.77rem 0.3rem;
   border-style:solid;
   border-width:1px;
   border-radius:2px;
