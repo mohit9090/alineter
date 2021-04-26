@@ -14,3 +14,26 @@ function detectMob() {
       return navigator.userAgent.match(toMatchItem);
   });
 };
+
+
+// add/remove (mobile-device) CLASS from elements
+function addMobile__Class(elemList) {
+  /*
+    Add mobile-device class to Specified Elements List
+  */
+  elemList.map( elem => {
+    addClass(elem, ["mobile-device"]);
+  });
+};
+
+function removeMobile__Class(elemList) {
+  /*
+    Remove mobile-device class to Specified Elements List
+    if it contains mobile-device class
+  */
+  elemList.map( elem => {
+    if(classContains(elem, "mobile-device")) {
+      removeClass(elem, ["mobile-device"]);
+    }
+  })
+};

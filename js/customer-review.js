@@ -91,26 +91,7 @@ const [close_div] = footer;
 //Destructuring Reviewers
 const [firstReviewer, secondReviewer, thirdReviewer, fourthReviewer, fifthReviewer, sixthReviewer] = reviewers;
 
-
-function addRatingStar(rating) {
-	let ratingIcon = "";
-	const fullStar = Math.floor(rating);
-	const halfStar = rating - fullStar;
-	const noStar = 5 - Math.ceil(rating);
-	
-
-	for(let i=0; i<fullStar; i++) {
-		ratingIcon += `<i class="fa fa-star rating-icon sm" style="color:#FEFEFE"></i>`;
-	}
-	for(let i=0; i<halfStar; i++) {
-		ratingIcon += `<i class="fa fa-star-half-o rating-icon sm" style="color:#FEFEFE"></i>`;
-	}
-	for(let i=0; i<noStar; i++) {
-		ratingIcon += `<i class="fa fa-star-o rating-icon sm" style="color:#FEFEFE"></i>`;
-	}
-
-	return ratingIcon
-}
+// NOTE: addRatingStar() is defined in utility.js
 
 function mapReviews(rev_set, additional_class) {
 	let reviews = ""

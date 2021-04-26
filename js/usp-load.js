@@ -57,46 +57,7 @@ function mapUSP(uspList) {
   return usp_div;
 };
 
-function classContains(elem, className) {
-  return elem.classList.contains(className);
-}
 
-function removeClass(elem, __classList) {
-  /*
-    Remove classes from desired Element(elem)
-    __classList is passed as an ARRAY
-  */
-  elem.classList.remove(__classList);
-}
-
-function addClass(elem, __classList) {
-  /*
-    Add classes from desired Element(elem)
-    __classList is passed as an ARRAY
-  */
-  elem.classList.add(__classList);
-}
-
-function addMobile__Class(elemList) {
-  /*
-    Add mobile-device class to Specified Elements List
-  */
-  elemList.map( elem => {
-    addClass(elem, ["mobile-device"]);
-  });
-};
-
-function removeMobile__Class(elemList) {
-  /*
-    Remove mobile-device class to Specified Elements List
-    if it contains mobile-device class
-  */
-  elemList.map( elem => {
-    if(classContains(elem, "mobile-device")) {
-      removeClass(elem, ["mobile-device"]);
-    }
-  })
-};
 
 function getUSP_DIV() {
   let uspIconsElem = document.querySelectorAll(".usp-box");
@@ -113,6 +74,7 @@ function animateIcon(icon) {
   */
   let uspIcons = getUSP_DIV();
   
+  /*If "clicked" class is already there them remove it first */
   uspIcons.map(u_icon => {
     if(classContains(u_icon, "clicked")) {
       removeClass(u_icon, ["clicked"]);
@@ -133,6 +95,7 @@ function onSuccessAddClass() {
   */
   let uspIcons = getUSP_DIV();
 
+
   let isMobile = detectMob();
   isMobile ? addMobile__Class(uspIcons) : removeMobile__Class(uspIcons);
 };
@@ -147,7 +110,7 @@ function constructUSP() {
 
   uspContainer.innerHTML = usp_html;
 
-  const events = ["load", "resize"];
+  // events is defined in utility.js, events = ["load", "resize"]
   events.map(event => {
     window.addEventListener(event, onSuccessAddClass)
   });

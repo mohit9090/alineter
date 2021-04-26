@@ -120,36 +120,6 @@
 
   </style>
 
-  <script>
-    // Loading Animation
-    // Things to get activated while page loads
-    setTimeout(activate,250);
-    function activate() {
-      showPage();
-      setPageContentPos();
-      scrollReveal();
-    }
-    function showPage() {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("body").style.display = "block";
-    }
-    function setPageContentPos() {
-      /* Set the Top Position of #page-content on load */
-      $(function(){
-          let navHeight = document.getElementById("navigation").offsetHeight;
-          document.getElementById("page-content").style.top = navHeight+"px";
-      });
-    }
-  </script>
-
-  <script>
-    /*In every Page except home page*/
-    $(window).on("resize",function() {
-      setPageContentPos()
-    })
-  </script>
-
-
 
 </head>
 
@@ -317,33 +287,6 @@
             </div>
           </div>
 
-          <script type="text/javascript">
-            const blogSearch = document.getElementById("blog-search");
-            const clearBtn = document.querySelector("input[name='q'] + .fa-times");
-            blogSearch.onkeyup = function() {
-              var val = this.value;
-              toggleClearBtn(val);          
-            }
-
-            function toggleClearBtn(val) {
-              (val.length > 0) ? showClearBtn() : hideClearBtn();
-            }
-
-            function showClearBtn() {
-              clearBtn.style.opacity = "1";
-              clearBtn.style.pointerEvents = "auto"; 
-            }
-
-            function hideClearBtn() {
-              clearBtn.style.opacity = "0";
-              clearBtn.style.pointerEvents = "none"; 
-            }
-
-            function clearInput(elem) {
-              blogSearch.value = "";
-              hideClearBtn();
-            }
-          </script>
 
           <div class="blogs-category-util w-100 p-2 mt-3">
             <div class="blogs-category-wrapper text-center" id="blogsCategory">
@@ -372,12 +315,12 @@
       <section id="blogs" class="w-100 scroll-reveal-content">
 
         <!-- Loading animation before Blog Loads -->
-        <div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
+        <!-- <div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
           <div class="spinner">
             <div class="cube cube-1"></div>
             <div class="cube cube-2"></div>
           </div>
-        </div> 
+        </div> --> 
             
         <!--All Blogs goes here-->
 
@@ -417,7 +360,7 @@
       <!-- Button to Scroll Up -->
       <div class="container text-center">
         <div class="scroll-horizontal to-top">
-            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
+            <button type="button" class="scroll-btn btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
         </div>
       </div>
 
@@ -443,7 +386,7 @@
                   <form method="post" action=".">
                     <div class="d-flex flex-column">
                       <div class="d-flex justify-content-center">
-                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this, 2)" placeholder="Enter Email" />
                         <div class="input-group-append" style="z-index:0">
                           <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
                         </div>
@@ -554,33 +497,6 @@
 
   </section><!--Body-->
 
-<script type="text/javascript">
-
-  function replaceClass(element, oldClass, newClass) {
-    element.classList.remove(oldClass);
-    element.classList.add(newClass);
-  }
-
-  function switchClass(isTrue, element, trueClass, falseClass) {
-    isTrue ? replaceClass(element, falseClass, trueClass) : replaceClass(element, trueClass, falseClass);
-  }
-
-  function validateEmail(val) {
-    let isEmail = false;
-    if(!val.length) {
-      return isEmail;
-    }
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    isEmail =  emailRegex.test(val);
-    return isEmail;
-  }
-
-  function ifValid(input) {
-    var result = validateEmail(input.value);
-    switchClass(result, input, "fulfilled--all", "not-fulfilled--all");
-  }
-
-</script>
 
 <script>
   $(document).ready(function(){
@@ -589,12 +505,17 @@
 </script>
 
 
-
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/scroll-xy.js"></script>
+<script type="text/javascript" src="js/activate-page.js"></script>
+<!-- <script type="text/javascript" src="js/nav.js"></script> -->
+<!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
+<script type="text/javascript" src="js/utility.js"></script>
+<script type="text/javascript" src="js/verification.js"></script>
 
+<script type="text/javascript" src="js/detect-mobile.js"></script>
+
+<script type="text/javascript" src="js/blog-search.js"></script>
 <script type="text/javascript" src="js/blog-category-search-design.js"></script>
 <script type="text/javascript" src="js/blog-category-search.js"></script>
 
@@ -603,6 +524,15 @@
 <script type="text/javascript" src="js/blog-like-feature.js"></script>
 
 <script type="text/javascript" src="js/copy-to-clipboard.js"></script>
+
+<script type="text/javascript">
+
+  const scrollBtn = document.querySelectorAll(".scroll-btn");
+    
+  let isMobile = detectMob();
+  isMobile ? addMobile__Class([...scrollBtn]) : removeMobile__Class([...scrollBtn]);
+
+</script>
 
 
 </body>

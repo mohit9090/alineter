@@ -31,6 +31,8 @@
 	color:var(--bg-secondary);
 	letter-spacing:1.1px;
 	word-spacing:1.8px;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
 }
 .auth-input::placeholder {
 	color:rgba(112, 112, 112, 0.5);
@@ -54,7 +56,8 @@
 .auth-card {
 	padding:1rem 1.2rem;
 }
-.after-registration, .tab  {
+.after-registration, 
+.tab  {
 	display:none;
 }
 /*TAB-1, TAB-2, TAB-3*/
@@ -91,7 +94,7 @@
   width:100%;
   font-size:1.05rem;
   color:var(--bg-secondary);
-  padding:2.1% 1.2em 2.1% 0.3em;
+  padding:0.77rem 1.2rem 0.77rem 0.3rem;
   border-style:solid;
   border-width:1px;
   border-radius:2px;
@@ -245,10 +248,3 @@
 }
 
 
-
-/* Smooth Transition */
-.toggle-pwd-eye,
-.step,
-.upload-media-btn :is( img, p) {
-	transition:0.2s ease-in-out;
-}

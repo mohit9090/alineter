@@ -215,7 +215,7 @@
 	right:0;
 	padding-right:0.5em;
 }
-.scroll-btn {
+.scroll-vertical > .scroll-btn {
 	position:relative;
 	top:50%;
 	transform:translateY(-50%);
@@ -228,16 +228,12 @@
 	border:0.3px solid var(--bg-grey);
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 0px;
 }
-.scroll-btn:hover {
-	/* For All Devices */
-	color:var(--bg-grey);
-}
-.scroll-btn:not(.mobile-device):hover {
+.scroll-vertical > .scroll-btn:not(.mobile-device):hover {
 	/* All Devices Except Mobile Devices */
 	color:var(--bg-primary);
 	border-color:var(--bg-primary);
 }
-.scroll-btn > i {
+.scroll-vertical > .scroll-btn > i {
 	font-size:1.5rem;
 }
 

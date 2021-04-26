@@ -155,9 +155,8 @@ function alignProductContainer(len) {
 }
 
 
-function getScreenWidth() {
-  return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-}
+// NOTE: getScreenWidth() is defined in utitly.js
+
 function getBreakPointMetrics() {
 	var screenWidth = getScreenWidth();
 	if(screenWidth > 1400) {
@@ -329,8 +328,8 @@ function nextPrevPage(jump) {
 }
 
 var page_num = 0;
-var _events = ["load", "resize"];
-_events.map( event => {
+// events is defined in utility.js, events = ["load", "resize"]
+events.map( event => {
 	window.addEventListener(event, function() {
 		displayProducts(page_num)
 	})
