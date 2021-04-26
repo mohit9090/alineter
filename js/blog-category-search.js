@@ -36,6 +36,12 @@ function addActiveState(filters) {
   });
 }
 
+function applyNoFilter(filter_btn, all_blogs) {
+    resetFilter();
+    filter_btn.setAttribute("data-state", "active");
+    constructBlogs(all_blogs);
+}
+
 function applyFilter(filter_btn) {
   const categoryItemBtnElem = document.querySelectorAll("button[data-self='category-item-btn']");
 
@@ -50,13 +56,20 @@ function applyFilter(filter_btn) {
     /*
       if All Posts is selected then restart this process from beginning
     */
-    resetFilter();
-    filter_btn.setAttribute("data-state", "active");
-    constructBlogs(all_blogs);
+    applyNoFilter(filter_btn, all_blogs);
     return;
   }
 
   addFilters(filter_btn);
+  
+  if(!filters.length) {
+    /*
+      If filters list is empty the by default turn into default filter i.e. "ALL POSTS"
+    */
+    applyNoFilter(document.querySelector("button[data-parent='true']"), all_blogs);
+    return;
+  }
+
   addActiveState(filters);
 
   var filtered_blogs = all_blogs.filter( (blog) => {
@@ -72,12 +85,25 @@ function applyFilter(filter_btn) {
 
 
 function constructNotFound() {
+
   const blogsContainer = document.getElementById("blogs");
-  blogsContainer.innerHTML = `<div class="blog wrapper mx-auto" style="padding:7%;3%">
+
+  // Loading animation before blog load
+  blogsContainer.innerHTML = `<div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
+          <div class="spinner">
+            <div class="cube cube-1"></div>
+            <div class="cube cube-2"></div>
+          </div>
+        </div>`;
+
+  setTimeout(function(){
+    blogsContainer.innerHTML = `<div class="blog wrapper mx-auto" style="padding:7%;3%">
     <div class="container">
       <h3 class="text-center txt-tertiary" style="font-family:'Roboto', sans-serif;font-weight:600">No Results Found</h3>
       <p class="text-center txt-grey mt-4" style="font-family:'Roboto', sans-serif;font-size:0.97rem">Looks like we couldn't find what you're looking for. Try another search.</p>
     </div>
-  </div>
-  `
+    </div>
+    `
+  }, 700);
+  
 }

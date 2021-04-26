@@ -78,6 +78,7 @@ function mapBlogs(blogs) {
 function constructBlogs(blogs) {
 	let blogs_html = "";
 
+  // Loading animation before blog load
   blogsContainer.innerHTML = `<div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
           <div class="spinner">
             <div class="cube cube-1"></div>
@@ -88,7 +89,7 @@ function constructBlogs(blogs) {
 	blogs_html = mapBlogs(blogs);
   setTimeout(function(){
     blogsContainer.innerHTML = blogs_html;
-  },1500);
+  }, 1000);
 	// blogsContainer.innerHTML = blogs_html;
 }
 constructBlogs(blogs);
