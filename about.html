@@ -453,7 +453,7 @@
                   <form method="post" action=".">
                     <div class="d-flex flex-column">
                       <div class="d-flex justify-content-center">
-                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this, 2)" placeholder="Enter Email" />
                         <div class="input-group-append" style="z-index:0">
                           <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
                         </div>
@@ -564,39 +564,14 @@
 
   </section><!--Body-->
 
-<script type="text/javascript">
-
-  function replaceClass(element, oldClass, newClass) {
-    element.classList.remove(oldClass);
-    element.classList.add(newClass);
-  }
-
-  function switchClass(isTrue, element, trueClass, falseClass) {
-    isTrue ? replaceClass(element, falseClass, trueClass) : replaceClass(element, trueClass, falseClass);
-  }
-
-  function validateEmail(val) {
-    let isEmail = false;
-    if(!val.length) {
-      return isEmail;
-    }
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    isEmail =  emailRegex.test(val);
-    return isEmail;
-  }
-
-  function ifValid(input) {
-    var result = validateEmail(input.value);
-    switchClass(result, input, "fulfilled--all", "not-fulfilled--all");
-  }
-
-</script>
 
 <script type="text/javascript" src="js/activate-page.js"></script>
 <!-- <script type="text/javascript" src="js/nav.js"></script> -->
 <!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
+<script type="text/javascript" src="js/utility.js"></script>
+<script type="text/javascript" src="js/verification.js"></script>
 
 
 </body>

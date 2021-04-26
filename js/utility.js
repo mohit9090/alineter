@@ -1,10 +1,11 @@
 
+/*
+	This js file contains the function which are common requirement for all pages
+*/
 
 /*From
 	usp-load.js (events),
 	quick_product.js (_events),
-	customerResponsivereview.js (events),
-	activate-page.js (evts)
 */
 const events = ["load", "resize"];
 

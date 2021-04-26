@@ -315,16 +315,16 @@
                   <form method="post">
                     <div class="d-flex flex-column">
                       <div class="reveal__from-bottom">
-                        <input type="text" name="mailer-name" class="user-input input--s2 w-100" placeholder="Name" spellcheck="false" onkeyup="isFilled(this)"/>
+                        <input type="text" name="mailer-name" class="user-input input--s2 w-100" placeholder="Name" spellcheck="false" onkeyup="ifValid(this, 0)"/>
                       </div><br>
                       <div class="reveal__from-bottom">
-                        <input type="email" name="mailer-email" class="user-input input--s2 w-100" placeholder="Email" spellcheck="false" onkeyup="isFilled(this)"/>
+                        <input type="email" name="mailer-email" class="user-input input--s2 w-100" placeholder="Email" spellcheck="false" onkeyup="ifValid(this, 2)"/>
                       </div><br>
                       <div class="reveal__from-bottom">
-                        <input type="text" name="mail-subject" class="user-input input--s2 w-100" placeholder="Subject" spellcheck="false" autocomplete="off" onkeyup="isFilled(this)"/>
+                        <input type="text" name="mail-subject" class="user-input input--s2 w-100" placeholder="Subject" spellcheck="false" autocomplete="off" onkeyup="ifValid(this, 0)"/>
                       </div><br>
                       <div class="reveal__from-bottom">
-                        <textarea class="user-input textarea--s1 w-100 rounded-0" name="mail-content" spellcheck="false" rows=6 placeholder="Type your message here...." onkeyup="isFilled(this)"></textarea>
+                        <textarea class="user-input textarea--s1 w-100 rounded-0" name="mail-content" spellcheck="false" rows=6 placeholder="Type your message here...." onkeyup="ifValid(this, 0)"></textarea>
                       </div><br>
                       <div class="align-self-end reveal__from-bottom">
                         <button type="submit" name="send-message" class="btn contact-us-btn pt-2 pb-2 pl-4 pr-4 ripple-opacity-l">Submit</button>
@@ -338,26 +338,6 @@
           </div>
         </div>
       </section>
-
-      <script type="text/javascript">
-        //SPECIFIC FOR CONTACT PAGE
-        /* Check is the input tag is filled or not */
-
-        function isFilled(this_obj) {
-          if(this_obj.value === "") {
-            replaceClass(this_obj, "fulfilled--all", "not-fulfilled--all");
-          }
-          else {
-            if(this_obj.getAttribute("type") === "email") {
-              let isEmail = validateEmail(this_obj.value);
-              switchClass(isEmail, this_obj, "fulfilled--all", "not-fulfilled--all");
-              return;
-            }
-            replaceClass(this_obj, "not-fulfilled--all", "fulfilled--all");
-          }
-        }
-      </script>
-
 
 
 
@@ -394,7 +374,7 @@
                   <form method="post" action=".">
                     <div class="d-flex flex-column">
                       <div class="d-flex justify-content-center">
-                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this)" placeholder="Enter Email" />
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this, 2)" placeholder="Enter Email" />
                         <div class="input-group-append" style="z-index:0">
                           <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
                         </div>
@@ -505,39 +485,14 @@
 
   </section><!--Body-->
 
-<script type="text/javascript">
-
-  function replaceClass(element, oldClass, newClass) {
-    element.classList.remove(oldClass);
-    element.classList.add(newClass);
-  }
-
-  function switchClass(isTrue, element, trueClass, falseClass) {
-    isTrue ? replaceClass(element, falseClass, trueClass) : replaceClass(element, trueClass, falseClass);
-  }
-
-  function validateEmail(val) {
-    let isEmail = false;
-    if(!val.length) {
-      return isEmail;
-    }
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    isEmail =  emailRegex.test(val);
-    return isEmail;
-  }
-
-  function ifValid(input) {
-    var result = validateEmail(input.value);
-    switchClass(result, input, "fulfilled--all", "not-fulfilled--all");
-  }
-
-</script>
 
 <script type="text/javascript" src="js/activate-page.js"></script>
 <!-- <script type="text/javascript" src="js/nav.js"></script> -->
 <!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
 <script type="text/javascript" src="js/slide-nav-toggle.js"></script>
 <script type="text/javascript" src="js/scroll-reveal.js"></script>
+<script type="text/javascript" src="js/utility.js"></script>
+<script type="text/javascript" src="js/verification.js"></script>
 
 
 </body>
