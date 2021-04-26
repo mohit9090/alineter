@@ -321,10 +321,10 @@
       </section>
 
       <script>
-  $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-  });
-</script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+      </script>
 
       <!--
       ================== FOOTER SECTION ====================
@@ -333,7 +333,7 @@
       <!-- Button to Scroll Up -->
       <div class="container text-center">
         <div class="scroll-horizontal to-top">
-            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
+            <button type="button" class="scroll-btn btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
         </div>
       </div>
 
@@ -484,9 +484,12 @@
 <script type="text/javascript" src="js/set-profile-pic.js"></script>
 
 <script type="text/javascript">
+
+  const scrollBtn = document.querySelectorAll(".scroll-btn");
+  const uploadBtn = document.querySelector(".upload-media-btn");
     
   let isMobile = detectMob();
-  isMobile ? addMobile__Class([document.querySelector(".upload-media-btn")]) : removeMobile__Class([document.querySelector(".upload-media-btn")]);
+  isMobile ? addMobile__Class([...scrollBtn, uploadBtn]) : removeMobile__Class([...scrollBtn, uploadBtn]);
 
 </script>
 

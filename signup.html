@@ -461,7 +461,7 @@
       <!-- Button to Scroll Up -->
       <div class="container text-center">
         <div class="scroll-horizontal to-top">
-            <button type="button" class="btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
+            <button type="button" class="scroll-btn btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
         </div>
       </div>
 
@@ -611,9 +611,12 @@
 <script type="text/javascript" src="js/signup.js"></script>
 
 <script type="text/javascript">
+
+  const scrollBtn = document.querySelectorAll(".scroll-btn");
+  const stateDropContentBtn = document.querySelectorAll(".state");
     
   let isMobile = detectMob();
-  isMobile ? addMobile__Class([...document.querySelectorAll(".state")]) : removeMobile__Class([...document.querySelectorAll(".state")]);
+  isMobile ? addMobile__Class([...scrollBtn, ...stateDropContentBtn]) : removeMobile__Class([...scrollBtn, ...stateDropContentBtn]);
 
 </script>
 

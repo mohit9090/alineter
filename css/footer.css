@@ -9,7 +9,7 @@
 	position:relative;
 	top:13px;
 }
-.scroll-horizontal.to-top > .btn:hover {
+.scroll-horizontal.to-top > .btn:not(.mobile-device):hover {
 	color:var(--bg-light);
 	background:var(--bg-tertiary);
 }
