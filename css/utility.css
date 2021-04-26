@@ -36,6 +36,10 @@
 .q-product-card .q-product-img,
 .reviews-nav,
 .more-reviews-container,
+/*auth*/
+.toggle-pwd-eye,
+.step,
+.upload-media-btn :is( img, p),
 /*blogs*/
 input[name="q"],
 input[name="q"] + .fa-times,

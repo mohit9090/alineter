@@ -279,26 +279,24 @@
       <section id="sign-in" class="w-100 auth-section">
         <div class="container normal-wrapper">
           <div class="card auth-card border-0 mx-auto verification-card">
-            <div class="card-body w-100 rounded">
-              <div class="p-2">
-                <form method="post" action=".">
-                  <div class="card-header text-center border-0">
-                    <h2 class="auth-title">Login</h2>
-                  </div><hr>
-                  
-                  <div class="form-group">
-                    <label for="login-uniqueField" class="font-weight-bold auth-label">Email / Mobile Num</label>
-                    <input type="text" class="input--s2 auth-input w-100 email" name="login-uniqueField" id="login-uniqueField" required autocomplete="off" spellcheck="false" placeholder="Email or Mobile number">
-                  </div>
-                  <div class="form-group">
-                    <label for="login-pwd" class="font-weight-bold auth-label">Password</label>
-                    <input type="password" class="input--s2 auth-input w-100 pwd" name="login-pwd" id="login-pwd" required autocomplete="off" placeholder="Password">
-                  </div>
-                  <div class="form-group text-center">
-                    <button type="submit" class="btn auth-btn w-50">Login</button>
-                  </div>
-                </form>
-              </div>
+            <div class="card-body w-100 rounded p-0">
+              <form method="post" action=".">
+                <div class="card-header text-center border-0">
+                  <h2 class="auth-title">Login</h2>
+                </div><hr>
+                
+                <div class="form-group">
+                  <label for="login-uniqueField" class="font-weight-bold auth-label">Email / Mobile Num</label>
+                  <input type="text" class="input--s2 auth-input w-100 email" name="login-uniqueField" id="login-uniqueField" required autocomplete="off" spellcheck="false" placeholder="Email or Mobile number">
+                </div>
+                <div class="form-group">
+                  <label for="login-pwd" class="font-weight-bold auth-label">Password</label>
+                  <input type="password" class="input--s2 auth-input w-100 pwd" name="login-pwd" id="login-pwd" required autocomplete="off" placeholder="Password">
+                </div>
+                <div class="form-group text-center">
+                  <button type="submit" class="btn auth-btn w-50">Login</button>
+                </div>
+              </form> 
             </div>
             <div class="card-footer">
               <small class="float-right"><a href="signup.html" class="card-link" style="letter-spacing:1.1px">Don't have an account?&nbsp;No Worries</a></small>

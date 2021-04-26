@@ -247,10 +247,3 @@
 }
 
 
-
-/* Smooth Transition */
-.toggle-pwd-eye,
-.step,
-.upload-media-btn :is( img, p) {
-	transition:0.2s ease-in-out;
-}
