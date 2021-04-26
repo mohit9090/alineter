@@ -7,9 +7,6 @@
 const events = ["load", "resize"];
 
 
-/*From 
-	blog-cate-searc-design.js, 
-*/
 function getScreenWidth() {
 	/*
 		Get the width of the screen
@@ -19,9 +16,7 @@ function getScreenWidth() {
 
 
 
-/*From 
-	signup.js
-*/
+
 function classContains(elem, className) {
 	/*
 		Checks whether the elemenst consists the class or not
@@ -48,10 +43,6 @@ function removeClass(elem, __classList) {
 
 
 
-
-/*From 
-	blog-cate-searc-design.js
-*/
 function clearAllClass(elements) {
 	/*
 		Clear the Classlist of specified elements
@@ -63,11 +54,6 @@ function clearAllClass(elements) {
 };
 
 
-
-/*From 
-	signup.html, 
-	and many more (#TRENDING CLASS)
-*/
 function replaceClass(element, oldClass, newClass) {
   // element.classList.remove(oldClass);
   // element.classList.add(newClass);
@@ -79,10 +65,6 @@ function replaceClass(element, oldClass, newClass) {
 }
 
 
-/*From 
-	signup.html, 
-	and many more (#TRENDING CLASS)
-*/
 function switchClass(isTrue, element, trueClass, falseClass) {
 	/*
 		It will replace the Class of the element based on certain condition specified by isTrue variable
@@ -94,9 +76,6 @@ function switchClass(isTrue, element, trueClass, falseClass) {
 
 
 
-/*From 
-	customer-review.js
-*/
 function addRatingStar(rating) {
 	/*
 		Dynamically generate star icon based on ratings given

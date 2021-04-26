@@ -25,10 +25,6 @@ const [inline, dropdown] = categorySectionClasses;
 
 const categoriesAvailable = ["clothing", "men's fashion", "lifestyle", "research backed"];
 
-function getScreenWidth() {
-  return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-}
-
 
 /*
   Functions to be executed on LOAD Event
@@ -89,11 +85,6 @@ function loadCategorySearch() {
   Functions to be executed on RESIZE Event
 */
 
-function clearAllClass(elements) {
-  elements.map((element) => {
-    element.setAttribute("class", "");
-  });
-};
 
 function redesignCategorySearch() {
 

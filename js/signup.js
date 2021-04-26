@@ -171,11 +171,10 @@ function setState(state) {
   let get_state = state.getAttribute("value");
   document.getElementById("user-state").setAttribute("value", get_state);
   document.getElementsByClassName("state-display-value")[0].innerHTML = get_state;
+  
   hideStates();
 }
-function classContains(elem, className) {
-  return elem.classList.contains(className);
-}
+
 function hideStates() {
   /*
 	Hide the states dropdown menu
@@ -188,6 +187,7 @@ function showStates() {
 	Show the states dropdown menu
   */
   var states_content = document.getElementsByClassName("states-content")[0];
+  //toggling show/hide the states dropdown content
   switchClass(classContains(states_content, "hide"), states_content, "show", "hide");
 }
 

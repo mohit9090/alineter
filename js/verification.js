@@ -8,14 +8,6 @@ const userPassword = document.getElementById("user-password");
 const toggleUserPwd = document.getElementById("toggleUserPwd");
 const toggleRecheckPwd = document.getElementById("toggleRecheckPwd");
 
-function replaceClass(element, oldClass, newClass) {
-  element.classList.remove(oldClass);
-  element.classList.add(newClass);
-}
-
-function switchClass(isTrue, element, trueClass, falseClass) {
-  isTrue ? replaceClass(element, falseClass, trueClass) : replaceClass(element, trueClass, falseClass);
-}
 
 const validators = [
   {

@@ -287,33 +287,6 @@
             </div>
           </div>
 
-          <script type="text/javascript">
-            const blogSearch = document.getElementById("blog-search");
-            const clearBtn = document.querySelector("input[name='q'] + .fa-times");
-            blogSearch.onkeyup = function() {
-              var val = this.value;
-              toggleClearBtn(val);          
-            }
-
-            function toggleClearBtn(val) {
-              (val.length > 0) ? showClearBtn() : hideClearBtn();
-            }
-
-            function showClearBtn() {
-              clearBtn.style.opacity = "1";
-              clearBtn.style.pointerEvents = "auto"; 
-            }
-
-            function hideClearBtn() {
-              clearBtn.style.opacity = "0";
-              clearBtn.style.pointerEvents = "none"; 
-            }
-
-            function clearInput(elem) {
-              blogSearch.value = "";
-              hideClearBtn();
-            }
-          </script>
 
           <div class="blogs-category-util w-100 p-2 mt-3">
             <div class="blogs-category-wrapper text-center" id="blogsCategory">
@@ -540,7 +513,7 @@
 <script type="text/javascript" src="js/utility.js"></script>
 <script type="text/javascript" src="js/verification.js"></script>
 
-
+<script type="text/javascript" src="js/blog-search.js"></script>
 <script type="text/javascript" src="js/blog-category-search-design.js"></script>
 <script type="text/javascript" src="js/blog-category-search.js"></script>
 
