@@ -31,6 +31,8 @@
 	color:var(--bg-secondary);
 	letter-spacing:1.1px;
 	word-spacing:1.8px;
+	padding-left:0.3rem;
+	padding-right:0.3rem;
 }
 .auth-input::placeholder {
 	color:rgba(112, 112, 112, 0.5);

@@ -514,43 +514,6 @@
 <script type="text/javascript" src="js/detect-mobile.js"></script>
 
 <script type="text/javascript">
-
-  function removeClass(elem, __classList) {
-  /*
-    Remove classes from desired Element(elem)
-    __classList is passed as an ARRAY
-  */
-    elem.classList.remove(__classList);
-  }
-
-  function addClass(elem, __classList) {
-    /*
-      Add classes from desired Element(elem)
-      __classList is passed as an ARRAY
-    */
-    elem.classList.add(__classList);
-  }
-
-  function addMobile__Class(elemList) {
-  /*
-    Add mobile-device class to Specified Elements List
-  */
-    elemList.map( elem => {
-      addClass(elem, ["mobile-device"]);
-    });
-  };
-
-  function removeMobile__Class(elemList) {
-    /*
-      Remove mobile-device class to Specified Elements List
-      if it contains mobile-device class
-    */
-    elemList.map( elem => {
-      if(classContains(elem, "mobile-device")) {
-        removeClass(elem, ["mobile-device"]);
-      }
-    })
-  };
     
   let isMobile = detectMob();
   isMobile ? addMobile__Class([document.querySelector(".upload-media-btn")]) : removeMobile__Class([document.querySelector(".upload-media-btn")]);

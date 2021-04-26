@@ -3,16 +3,12 @@
 	This js file contains the function which are common requirement for all pages
 */
 
-/*From
-	usp-load.js (events),
-	quick_product.js (_events),
-*/
+
 const events = ["load", "resize"];
 
 
 /*From 
 	blog-cate-searc-design.js, 
-	quick-product.js
 */
 function getScreenWidth() {
 	/*
@@ -24,8 +20,6 @@ function getScreenWidth() {
 
 
 /*From 
-	usp-load.js,
-	quick-product.js,
 	signup.js
 */
 function classContains(elem, className) {
@@ -36,10 +30,6 @@ function classContains(elem, className) {
 }
 
 
-/*From 
-	usp-load.js,
-	quick-product.js
-*/
 function addClass(elem, __classList) {
   /*
     Add classes from desired Element(elem)
@@ -48,11 +38,6 @@ function addClass(elem, __classList) {
   elem.classList.add(__classList);
 }
 
-
-/*From 
-	usp-load.js,
-	quick-product.js
-*/
 function removeClass(elem, __classList) {
   /*
     Remove classes from desired Element(elem)
