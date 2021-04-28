@@ -16,6 +16,7 @@ section#directors,
 section#small-description,
 section#about-products {
 	padding:var(--lg-padding);
+	background:var(--bg-tertiary);
 }
 .big-title, 
 .medium-title, 
@@ -24,6 +25,8 @@ section#about-products {
 	color:var(--bg-primary);
 }
 .about-us-content {
+	color:var(--bg-light);
+	opacity:0.9;
 	white-space:pre-line;
 	line-height:1.7;
 }
@@ -96,11 +99,9 @@ section#about-products {
 }	
 
 
-.about-us-content,
 .profile-cards .director-bio {
 	color:var(--bg-grey);
 }
-
 
 /* DIRECTORS */
 .profile-cards .profile-card {
