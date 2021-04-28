@@ -29,13 +29,13 @@ function mapBlogs(blogs) {
                       <div class="ml-2 d-flex flex-column">
                         <small class="d-flex blog-author-name">
                           <span>${blog.blog_author.name}</span>&nbsp;
-                          <a href="${blog.blog_author.profile_url}"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10 data-toggle="tooltip" data-placement="top" title="Writer"/></a>
+                          <a href="${blog.blog_author.profile_url}" data-toggle="tooltip" data-placement="top" title="Writer"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10/></a>
                         </small>
                         <small class="blog-pub-date">${blog.blog_date.month} ${blog.blog_date.date}, ${blog.blog_date.year}</small>
                       </div>
                     </div>
                     <div class="blog-link">
-                      <a href="#" class="btn rounded-circle" data-toggle="modal" onclick="shareBlogModal(${blog.blog_id})"><i class="fa fa-link"></i></a>
+                      <a href="#" class="btn rounded-circle" data-toggle="modal" title="Share" onclick="shareBlogModal(${blog.blog_id})"><i class="fa fa-share"></i></a>
                     </div>
                   </div>
                   <div class="blog-description d-flex flex-column mt-2" id="blog-description" onclick="viewBlog(${blog.blog_id})">
