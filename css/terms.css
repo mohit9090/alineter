@@ -28,9 +28,18 @@
 .name4 {
 	margin-bottom:2.2rem;
 }
+.name8 {
+	margin-bottom:3.5rem;
+}
 .name4 h1 {
 	font-family:var(--ff-tertiary);
 	font-size:2rem;
+	font-weight:600;
+	color:var(--bg-primary);
+}
+.name7 h1 {
+	font-family:var(--ff-tertiary);
+	font-size:1.2rem;
 	font-weight:600;
 	color:var(--bg-primary);
 }
@@ -53,4 +62,10 @@
 }
 .name6-link:hover {
 	color:var(--bg-primary);
+}
+
+
+.tnc-btn {
+	font-family:var(--ff-primary);
+	padding:0.7rem 1.2rem;
 }
