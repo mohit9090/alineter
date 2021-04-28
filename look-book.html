@@ -342,18 +342,18 @@
             <div class="modal-body">
 
               <div class="social-share-plugin w-100 d-flex justify-content-center flex-wrap mb-3">
-                <button type="button" class="btn social-share-btn" data-socialsite="facebook" data-socialabbr="fb"><i class="fa fa-facebook"></i></button>
-                <button type="button" class="btn social-share-btn" data-socialsite="twitter" data-socialabbr="tw"><i class="fa fa-twitter"></i></button>
-                <button type="button" class="btn social-share-btn" data-socialsite="linkedin" data-socialabbr="in"><i class="fa fa-linkedin"></i></button>
-                <button type="button" class="btn social-share-btn" data-socialsite="pinterest" data-socialabbr="pr"><i class="fa fa-pinterest"></i></button>
-                <button type="button" class="btn social-share-btn" data-socialsite="whatsapp" data-socialabbr="wa"><i class="fa fa-whatsapp"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="facebook" endpoint-url="https://www.facebook.com/sharer/sharer.php?u=" blog-link="" data-toggle="tooltip" title="facebook" onclick="share(this)"><i class="fa fa-facebook"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="twitter" endpoint-url="https://twitter.com/intent/tweet?url=" blog-link="" data-toggle="tooltip" title="twitter" onclick="share(this)"><i class="fa fa-twitter"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="linkedin" endpoint-url="https://www.linkedin.com/shareArticle?mini=true&url=" blog-link="" data-toggle="tooltip" title="linkedin" onclick="share(this)"><i class="fa fa-linkedin"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="pinterest" endpoint-url="https://pinterest.com/pin/create/button/?url=" blog-link="" data-toggle="tooltip" title="pinterest" onclick="share(this)"><i class="fa fa-pinterest"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="whatsapp" endpoint-url="https://wa.me/?text=" blog-link="" data-toggle="tooltip" title="whatsapp" onclick="share(this)"><i class="fa fa-whatsapp"></i></button>
               </div>
 
 
               <div class="input-group">
                 <input type="text" id="blog-sharelink" class="form-control" value="" readonly="true">
                 <div class="input-group-btn">
-                  <button class="btn btn-i-tertiary" type="button" id="copy-btn" onclick="copyLink(this, document.getElementById('blog-sharelink'))">
+                  <button class="btn btn-i-tertiary" type="button" id="copy-btn" onclick="copyLink(this, document.getElementById('blog-sharelink'))" data-toggle="tooltip" title="Copy">
                     <i class="fa fa-clipboard" id="copy-icon"></i>
                   </button>
                 </div>
@@ -364,6 +364,25 @@
           </div>
         </div>
       </div>
+
+      <script type="text/javascript">
+          
+        function share(shareBtn) {
+          let endpoint_url = shareBtn.getAttribute("endpoint-url");
+          let blog_link = shareBtn.getAttribute("blog-link");
+
+          var shareURL = `${endpoint_url}${encodeURIComponent(blog_link)}`;
+
+          var popupWidth  = screen.width/2;
+          var popupHeight = screen.height-100;
+
+          var leftPadding = (screen.width/2)-(popupWidth/2);
+          var topPadding = (screen.height/2)-(popupHeight/2);
+        
+          var myWindow = window.open(shareURL, "SocialShareWindow", 'height=' + popupHeight + ',width=' + popupWidth + ',left=' + leftPadding + ',top=' + topPadding + ',resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes');
+        }
+
+      </script>
 
 
 

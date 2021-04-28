@@ -29,7 +29,7 @@ function mapBlogs(blogs) {
                       <div class="ml-2 d-flex flex-column">
                         <small class="d-flex blog-author-name">
                           <span>${blog.blog_author.name}</span>&nbsp;
-                          <a href="${blog.blog_author.profile_url}" data-toggle="tooltip" data-placement="top" title="Writer"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10/></a>
+                          <a href="${blog.blog_author.profile_url}" data-toggle="tooltip" title="Writer"><img src="images/pen-feather-xl.png" class="img-fluid" width=15 height=10/></a>
                         </small>
                         <small class="blog-pub-date">${blog.blog_date.month} ${blog.blog_date.date}, ${blog.blog_date.year}</small>
                       </div>
@@ -113,8 +113,15 @@ function shareBlogModal(blogID) {
 		Open Modal to get the link of blog
 	*/
 	const blogLinkElem = document.getElementById("blog-sharelink");
+  const socialShareBtn = [...document.querySelectorAll(".social-share-btn")];
 
 	var respective_blog = getBlogByID(blogID);
+
+  socialShareBtn.map( shareBtn => {
+    let trialURL = "https://www.alineter.com/post/0-1-seconds-is-all-it-takes"
+    shareBtn.setAttribute("blog-link", trialURL)
+    // shareBtn.setAttribute("blog-link", respective_blog.blog_detail.url)
+  });
 
 	blogLinkElem.setAttribute("value", respective_blog.blog_detail.url);
 	$("#shareBlogModal").modal("show");
@@ -128,5 +135,3 @@ function viewBlog(blogID) {
 	var respective_blog = getBlogByID(blogID);
 	window.location.href = respective_blog.blog_detail.url;
 }
-
-$("#shareBlogModal").modal("show");
