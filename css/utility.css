@@ -43,7 +43,9 @@
 /*blogs*/
 input[name="q"],
 input[name="q"] + .fa-times,
-.category-dropbtn > .fa-caret-down {
+.category-dropbtn > .fa-caret-down,
+/*link in policy-pg-design.css*/
+.helpline {
 	transition:0.2s ease-in-out;
 }
 
@@ -72,7 +74,10 @@ input[name="q"] + .fa-times,
 #categoryBtn,
 .category-item,
 .category-content button,
-.blog-title h5 {
+.blog-title h5,
+/*policy-pg-design*/
+.policy-body :is( p, ul),
+.tnc-btn {
 	font-family:var(--ff-primary);
 }
 
@@ -105,7 +110,11 @@ input[name="q"] + .fa-times,
 .contact-us .head > h1,
 /*blogs*/
 #shareBlogModal .modal-title,
-#shareBlogModal #blog-sharelink {
+#shareBlogModal #blog-sharelink,
+/*policy-pg-design*/
+.policy-head--s1 h1,
+.policy-head--s2 h1,
+.policy-body h1 {
 	font-family:var(--ff-tertiary);
 }
 
@@ -142,7 +151,9 @@ body,
 /*blogs*/
 .blog-link a:active,
 /*auth*/
-.upload-media-btn:active {
+.upload-media-btn:active,
+/*policy-pg-design*/
+.tnc-btn:active {
   opacity:0.7;
   transition:opacity 0.2s ease-in-out;
 }

@@ -298,6 +298,22 @@ body {
 	}
 }
 
+@media screen and (min-width:1000px){
+	.secondary-wrapper {
+		width:65%;
+	}
+}
+@media screen and (min-width:520px) and (max-width:1000px) {
+	.secondary-wrapper {
+		width:70%;
+	}
+}
+@media screen and (max-width:520px) {
+	.secondary-wrapper {
+		width:100%;
+	}
+}
+
 /* Image Responsive */
 .img-cover {
 	width:100%;

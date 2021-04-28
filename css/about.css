@@ -30,26 +30,6 @@ section#about-products {
 	white-space:pre-line;
 	line-height:1.7;
 }
-@media screen and (min-width:1000px){
-	.about-us-box {
-		width:60%;
-	}
-}
-@media screen and (min-width:520px) and (max-width:1000px) {
-	.about-us-box {
-		width:70%;
-	}
-}
-@media screen and (max-width:520px) {
-	.about-us-box {
-		width:100%;
-	}
-}
-@media screen and (max-width:760px) {
-	.big-title {
-		font-size:3rem;
-	}
-}
 
 
 /* Responsive Profile Card Width */
