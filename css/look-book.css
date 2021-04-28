@@ -257,3 +257,34 @@ input[name="q"] + .fa-times {
 }
 */
 
+/* social share button */
+.social-share-btn {
+	padding:0.5rem 0.9rem;
+	filter:brightness(105%);
+	border-radius:3px;
+}
+.social-share-btn:not(:last-child) {
+	margin-right:1.3%;
+}
+.social-share-btn[data-socialsite="facebook"] {
+	background:var(--facebook);
+}
+.social-share-btn[data-socialsite="twitter"] {
+	background:var(--twitter);
+}
+.social-share-btn[data-socialsite="linkedin"] {
+	background:var(--linkedin);
+}
+.social-share-btn[data-socialsite="pinterest"] {
+	background:var(--pinterest);
+}
+.social-share-btn[data-socialsite="whatsapp"] {
+	background:var(--whatsapp);
+}
+.social-share-btn:hover {
+	filter:brightness(80%);
+}
+.social-share-btn i {
+	color:var(--bg-light);
+	font-size:1.5rem;
+}

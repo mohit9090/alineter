@@ -129,3 +129,4 @@ function viewBlog(blogID) {
 	window.location.href = respective_blog.blog_detail.url;
 }
 
+$("#shareBlogModal").modal("show");

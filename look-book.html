@@ -315,12 +315,6 @@
       <section id="blogs" class="w-100 scroll-reveal-content">
 
         <!-- Loading animation before Blog Loads -->
-        <!-- <div class="w-100" style="transform:scale(0.7);-webkit-transform:scale(0.7)">
-          <div class="spinner">
-            <div class="cube cube-1"></div>
-            <div class="cube cube-2"></div>
-          </div>
-        </div> --> 
             
         <!--All Blogs goes here-->
 
@@ -346,14 +340,26 @@
               </button>
             </div>
             <div class="modal-body">
+
+              <div class="social-share-plugin w-100 d-flex justify-content-center flex-wrap mb-3">
+                <button type="button" class="btn social-share-btn" data-socialsite="facebook" data-socialabbr="fb"><i class="fa fa-facebook"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="twitter" data-socialabbr="tw"><i class="fa fa-twitter"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="linkedin" data-socialabbr="in"><i class="fa fa-linkedin"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="pinterest" data-socialabbr="pr"><i class="fa fa-pinterest"></i></button>
+                <button type="button" class="btn social-share-btn" data-socialsite="whatsapp" data-socialabbr="wa"><i class="fa fa-whatsapp"></i></button>
+              </div>
+
+
               <div class="input-group">
                 <input type="text" id="blog-sharelink" class="form-control" value="" readonly="true">
                 <div class="input-group-btn">
-                  <button class="btn btn-light" type="button" id="copy-btn" onclick="copyLink(this, document.getElementById('blog-sharelink'))">
+                  <button class="btn btn-i-tertiary" type="button" id="copy-btn" onclick="copyLink(this, document.getElementById('blog-sharelink'))">
                     <i class="fa fa-clipboard" id="copy-icon"></i>
                   </button>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
