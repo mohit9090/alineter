@@ -1,49 +1,49 @@
 
-#name1 {
+/*wrapper*/
+#company-policy-wrapper {
 	padding:5.5rem 2.4%;
 	background-color:var(--bg-tertiary);	
 }
-
 @media screen and (min-width:1000px){
-	.second-wrapper {
+	.secondary-wrapper {
 		width:65%;
 	}
 }
 @media screen and (min-width:520px) and (max-width:1000px) {
-	.second-wrapper {
+	.secondary-wrapper {
 		width:70%;
 	}
 }
 @media screen and (max-width:520px) {
-	.second-wrapper {
+	.secondary-wrapper {
 		width:100%;
 	}
 }
 
 
-.name3 {
-	/*background:red;*/
+.policy-container {
 	margin-bottom:7.5rem;
 }
-.name4 {
+.policy-head--s1 {
 	margin-bottom:2.2rem;
 }
-.name8 {
+.faq-wrapper {
 	margin-bottom:3.5rem;
 }
-.name4 h1 {
+.policy-head--s1 h1,
+.policy-body h1 {
 	font-family:var(--ff-tertiary);
 	font-size:2rem;
 	font-weight:600;
 	color:var(--bg-primary);
 }
-.name7 h1 {
+.policy-head--s2 h1 {
 	font-family:var(--ff-tertiary);
 	font-size:1.2rem;
 	font-weight:600;
 	color:var(--bg-primary);
 }
-.name5 :is( p, ul) {
+.policy-body :is( p, ul) {
 	font-family:var(--ff-primary);
 	font-size:1rem;
 	font-weight:400;
@@ -51,20 +51,23 @@
 	margin-bottom:1.8rem;
 	color:var(--bg-light);
 }
-.name5 p {
+.policy-body h1 {
+	margin-bottom:1rem;
+}
+.policy-body p {
 	white-space:pre-line;
 	line-height:1.7;
 }
-.name6-link {
+/*link*/
+.helpline {
 	color:inherit;
 	text-decoration:underline;
 	transition:0.2s ease-in-out;
 }
-.name6-link:hover {
+.helpline:hover {
 	color:var(--bg-primary);
 }
-
-
+/*button*/
 .tnc-btn {
 	font-family:var(--ff-primary);
 	padding:0.7rem 1.2rem;
