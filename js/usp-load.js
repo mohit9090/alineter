@@ -104,9 +104,9 @@ function constructUSP() {
   let usp_html = "";
 
   usp_html = mapUSP(uspList);
-  // setTimeout(function() {
-  //   uspContainer.innerHTML = usp_html;
-  // },5000);
+  setTimeout(function() {
+    uspContainer.innerHTML = usp_html;
+  },5000);
 
   uspContainer.innerHTML = usp_html;
 

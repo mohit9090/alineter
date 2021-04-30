@@ -46,8 +46,24 @@
     .loading-wrapper {
       position:relative;
       top:50%;
-      transform:translateY(-50%);
-      -webkit-transform:translateY(-50%);
+      transform:translateY(-50%) scale(1);
+      -webkit-transform:translateY(-50%) scale(1);
+    }
+    .cube-spinner-nm {
+      transform:scale(1);
+      -webkit-transform:scale(1);
+    }
+    .cube-spinner-lg {
+      transform:scale(1.1);
+      -webkit-transform:scale(1.1);
+    }
+    .cube-spinner-md {
+      transform:scale(0.8);
+      -webkit-transform:scale(0.8);
+    }
+    .cube-spinner-sm {
+      transform:scale(0.6);
+      -webkit-transform:scale(0.6);
     }
     .spinner {
       position:relative;
@@ -329,7 +345,7 @@
         <div class="container-fluid d-flex flex-lg-nowrap flex-md-nowrap flex-sm-wrap flex-wrap p-0" id="usp-wrapper">
 
           <!-- Loading animation before USP Loads -->
-          <div class="w-100" style="transform:scale(0.8);-webkit-transform:scale(0.8)">
+          <div class="w-100 cube-spinner-md">
             <div class="spinner">
               <div class="cube cube-1"></div>
               <div class="cube cube-2"></div>
@@ -355,7 +371,7 @@
         <div class="container-fluid q-product-box" id="q-product-box">
 
           <!-- Loading animation before Product Loads -->
-          <div class="w-100" style="transform:scale(0.8);-webkit-transform:scale(0.8)">
+          <div class="w-100 cube-spinner-md">
             <div class="spinner">
               <div class="cube cube-1"></div>
               <div class="cube cube-2"></div>
@@ -452,7 +468,7 @@
             <div class="row">
 
               <!-- Loading animation before Testimonial Loads -->
-              <div class="w-100" style="transform:scale(0.8);-webkit-transform:scale(0.8)">
+              <div class="w-100 cube-spinner-md">
                 <div class="spinner">
                   <div class="cube cube-1"></div>
                   <div class="cube cube-2" style="background-color:#FEFEFE"></div>
@@ -469,7 +485,7 @@
           <div class="container p-3 pt-5 text-center show-more-btn--div">
             
             <!-- Loading animation before Show More Btn Loads -->
-            <div class="w-100" style="transform:scale(0.6);-webkit-transform:scale(0.6)">
+            <div class="w-100 cube-spinner-sm">
               <div class="spinner">
                 <div class="cube cube-1"></div>
                 <div class="cube cube-2" style="background-color:#FEFEFE"></div>
