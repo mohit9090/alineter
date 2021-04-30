@@ -44,8 +44,9 @@
 input[name="q"],
 input[name="q"] + .fa-times,
 .category-dropbtn > .fa-caret-down,
-/*link in policy-pg-design.css*/
-.helpline {
+/*policy-pg-design.css*/
+.helpline,
+.rating-icon {
 	transition:0.2s ease-in-out;
 }
 

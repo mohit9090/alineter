@@ -78,9 +78,6 @@
 	letter-spacing:1.001px;
 	border-radius:0;
 }
-.auth-input[type="file"] {
-	cursor:pointer;
-}
 .help-text {
 	color:var(--bg-primary);
 	opacity:0.75;
@@ -91,8 +88,6 @@
 .rating-icon {
 	font-size:2.4rem;
 	color:var(--bg-grey);
-	cursor:pointer;
-	transition:0.2s ease-in-out;
 }
 .rating-icon:not(:last-child) {
 	margin-right:0.5rem;
@@ -106,8 +101,12 @@
 	color:var(--bg-primary);
 }
 .rating-icon.hover {
-	opacity:0.4;
+	opacity:0.5;
 }
 .rating-icon.selected {
 	opacity:1;
+}
+.auth-input[type="file"],
+.rating-icon {
+	cursor:pointer;
 }
