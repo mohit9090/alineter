@@ -12,7 +12,8 @@
 .policy-head--s1 {
 	margin-bottom:2.2rem;
 }
-.faq-wrapper {
+.faq-wrapper,
+.wba-container {
 	margin-bottom:3.5rem;
 }
 
@@ -57,6 +58,56 @@
 	color:var(--bg-primary);
 }
 /*button*/
-.tnc-btn {
+.tnc-btn,
+.review-btn {
 	padding:0.7rem 1.2rem;
+}
+
+
+/*write about us page*/
+.wba-form-wrapper .form-group {
+	margin-bottom:2rem;
+}
+.auth-label {
+	color:var(--bg-light);
+}
+.auth-input {
+	color:var(--bg-light);
+	border-color:var(--bg-light);
+	background:transparent;
+	letter-spacing:1.001px;
+	border-radius:0;
+}
+.auth-input[type="file"] {
+	cursor:pointer;
+}
+.help-text {
+	color:var(--bg-primary);
+	opacity:0.75;
+}
+.rating-box {
+	margin-top:0.7rem;
+}
+.rating-icon {
+	font-size:2.4rem;
+	color:var(--bg-grey);
+	cursor:pointer;
+	transition:0.2s ease-in-out;
+}
+.rating-icon:not(:last-child) {
+	margin-right:0.5rem;
+}
+.review-btn {
+	font-size:1.2rem;
+	letter-spacing:1.01px;
+}
+.rating-icon.hover,
+.rating-icon.selected {
+	color:var(--bg-primary);
+}
+.rating-icon.hover {
+	opacity:0.4;
+}
+.rating-icon.selected {
+	opacity:1;
 }

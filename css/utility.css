@@ -77,7 +77,8 @@ input[name="q"] + .fa-times,
 .blog-title h5,
 /*policy-pg-design*/
 .policy-body :is( p, ul),
-.tnc-btn {
+.tnc-btn,
+.review-btn {
 	font-family:var(--ff-primary);
 }
 

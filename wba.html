@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Write About Us | Alineter</title>
+
+  <meta link-colorarset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="images/alineter-b.png">
+
+  <!-- SCROLL REVEAL LINK -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  <!-- FONT AWESOME LINK -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&family=Nunito:wght@200;300;400;700;800&family=Open+Sans:wght@300;400;600;800&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+
+  <!-- EXTERNAL CSS LINKS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/input-styles.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/policy-pg-design.css">
+  <link rel="stylesheet" type="text/css" href="css/input-validation.css">
+  <link rel="stylesheet" type="text/css" href="css/utility.css">
+
+
+  <style type="text/css">
+
+    /* Loading Animation */
+
+    #loading {
+      width:100%;
+      height:100vh;
+    }
+    .loading-wrapper {
+      position:relative;
+      top:50%;
+      transform:translateY(-50%);
+      -webkit-transform:translateY(-50%);
+    }
+    .spinner {
+      position:relative;
+      width:60px;
+      height:60px;
+      left:50%;
+      transform:translateX(-50%);
+      -webkit-transform:translateX(-50%);
+    }
+    .cube {
+      position:absolute;
+      top:0;
+      left:0;
+      width:20px;
+      height:20px;
+      border:0;
+      border-radius:2px;
+      -webkit-animation: loading-cubemove 1.8s infinite ease-in-out;
+      animation: loading-cubemove 1.8s infinite ease-in-out;
+    }
+    .cube-1 {
+      background-color:#F15A24;
+    }
+    .cube-2 {
+      background-color:#000000;
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s;
+
+    }
+    @-webkit-keyframes loading-cubemove {
+      25% { -webkit-transform:translateX(42px) rotate(-90deg) scale(0.5) }
+      50% { -webkit-transform:translateX(42px) translateY(42px) rotate(-180deg) }
+      75% { -webkit-transform:translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+      100% { -webkit-transform:rotate(-360deg) }
+    }
+    @keyframes loading-cubemove {
+      25% { transform:translateX(42px) rotate(-90deg) scale(0.5); -webkit-transform:translateX(42px) rotate(-90deg) scale(0.5);
+      } 50% { transform:translateX(42px) translateY(42px) rotate(-179deg); -webkit-transform:translateX(42px) translateY(42px) rotate(-179deg);
+      } 50.1% { transform:translateX(42px) translateY(42px) rotate(-180deg); -webkit-transform:translateX(42px) translateY(42px) rotate(-180deg);
+      } 75% { transform:translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); -webkit-transform:translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+      } 100% { transform:rotate(-360deg); -webkit-transform:rotate(-360deg);
+      }
+    }
+
+    section#body {
+      display:none;
+      -webkit-animation-name: increaseOpacity;
+      -webkit-animation-duration:1.3s;
+      animation-name: increaseOpacity;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+    }
+
+    @-webkit-keyframes increaseOpacity {
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+    @keyframes increaseOpacity { 
+      from {
+        opacity:0 
+      } 
+      to {
+        opacity:1 
+      }
+    }
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+  <section id="loading">
+    <div class="loading-wrapper">
+      <div class="spinner">
+        <div class="cube cube-1"></div>
+        <div class="cube cube-2"></div>
+      </div>
+    </div> 
+  </section>
+
+  <section id="body">    
+
+    <!--
+      ============ NAVIGATION BAR SECTION =============
+    -->
+    <nav id="navigation" class="navbar fixed-top navigation-init">
+      <div class="nav-left">
+        <a href="index.html" class="navbar-brand">
+          <div class="d-flex flex-column p-0 text-center align-items-center">
+            <img src="images/alineter-b.png" id="brand-logo" width=47 height=47 alt="alineter logo"/>
+            <small class="logo-text">ALINETER</small>
+          </div>
+        </a>
+      </div>
+      <div class="nav-right ml-auto">
+        <ul class="d-flex my-auto" style="list-style:none">
+          <li class="nav-item show-on-lg item-1 my-auto mr-1">
+            <a href="store.html" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item show-on-lg item-2 my-auto mr-1">
+            <a href="look-book.html" class="nav-link">Blogs</a>
+          </li>
+          <li class="nav-item show-on-lg item-3 dropdown mr-2 my-auto">
+            <button class="nav-link dropdown-toggler btn" id="more-section-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More&nbsp;<span class="fa fa-caret-down"></span>
+            </button>
+            <div class="dropdown-menu shadow m-0" aria-labelledby="more-section-dropdown">
+              <a class="nav-link dropdown-item" href="about.html">About Us</a>
+              <a class="nav-link dropdown-item" href="contact.html">Contact Us</a>
+              <a class="nav-link dropdown-item" href="faq.html">FAQs</a>
+              <a class="nav-link dropdown-item" href="#write-about-us">Write About Us</a>
+              <a class="nav-link dropdown-item" href="terms.html">Terms of Use</a>
+              <a class="nav-link dropdown-item" href="oerdering-term.html">Ordering Terms</a>
+              <a class="nav-link dropdown-item" href="#about-us">Privacy Policy</a>
+              <!-- <div class="dropdown-divider"></div>
+              <a class="nav-link dropdown-item navbar-toggler p-2 pl-3" onclick="opennav()"><span class="fa fa-ellipsis-v"></span>&nbsp;&nbsp;More</a> -->
+            </div>
+          </li>
+          <li class="nav-item mr-3 my-auto user-func">
+            <div class="d-flex">
+              <a href="signup.html" class="btn btn-o-tertiary ripple-opacity-l rounded pl-4 pr-4">Sign Up</a>
+
+              <!-- when user is logged in -->
+              <!-- <a href="" class="nav-link">
+                <span class="fa fa-user-circle-o txt-tertiary" style="font-size:1.3rem"></span>
+              </a>
+
+              <a href="" class="nav-link">
+                <span class="fa fa-opencart txt-tertiary">&nbsp;<span>0</span></span>
+              </a> -->
+            </div>
+          </li> 
+          <li class="nav-item show-on-sm my-auto">
+            <button type="button" class="btn toggler-btn ripple-opacity-d" onclick="opennav()">
+              <div class="bar bar-1"></div>
+              <div class="bar bar-2"></div>
+            </button> 
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+
+
+    <!-- OVERLAY EFFECT -->
+    <section id="overlay-effect" onclick="closenav()">
+    </section>
+
+
+
+    <!--
+      ======== SLIDE NAVIGATION ==========
+    -->
+    <section id="slide-navigation">
+      <div class="container-fluid w-100 h-100 position-relative">
+        <div class="slidenav-wrapper w-100">
+
+          <div class="user-section text-center sticky-top fill-tertiary txt-light">
+
+            <div class="user-section-main">
+              <!--Nav Controller-->
+              <div class="nav-controller">
+                  <button onclick="closenav()" class="btn close-sidenav"><span class="fa fa-times"></span></button>
+              </div>
+
+              <div class="user-section-wrapper">
+                <div class="user-info d-flex">
+                  <div class="mr-3 my-auto pfimg-holder">
+                    <img src="./images/avatar.png" class="pfImg img-cover"/>
+                    <!-- <img src="./images/mohit_300.png" class="pfimg"/> -->
+                  </div>
+                  <div class="my-auto">
+                    <p class="lead text-cultured">Hey, User</p>
+                    <!-- <p class="lead text-cultured">Hey, Mohit</p> -->
+                  </div>
+                </div>
+                <div class="user-function">
+                  <div class="d-flex justify-content-between">
+                    <a href="#create-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-id-badge"></span>&nbsp;Create Account</a>
+                    <a href="#login" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Login</a>
+                    <!-- <a href="#my-account" class="user-function--link fancy-effects slide_line"><span class="fa fa-user"></span>&nbsp;My Account</a>
+                    <a href="#logout" class="user-function--link fancy-effects slide_line"><span class="fa fa-sign-in"></span>&nbsp;Logout</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>        
+
+          <div class="site-links p-0 pb-5">
+            <a href="index.html" class="nav-link"><span class="fa fa-home"></span>&nbsp;&nbsp;Home</a>
+            <a href="store.html" class="nav-link"><span class="fa fa-shopping-bag"></span>&nbsp;&nbsp;Store</a>
+            <a href="look-book.html" class="nav-link"><span class="fa fa-picture-o"></span>&nbsp;&nbsp;Blogs</a>
+            <a href="about.html" class="nav-link"><span class="fa fa-address-card"></span>&nbsp;&nbsp;About Us</a>
+            <a href="contact.html" class="nav-link"><span class="fa fa-paper-plane"></span>&nbsp;&nbsp;Contact Us</a>
+            <a href="faq.html" class="nav-link"><span class="fa fa-question-circle"></span>&nbsp;&nbsp;FAQ</a>
+            <a href="#write-about-us" class="nav-link"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Write About Us</a>
+            <a href="#look-book" class="nav-link"><span class="fa fa-file"></span>&nbsp;&nbsp;Terms of Use</a>
+            <a href="#about-us" class="nav-link"><span class="fa fa-lock"></span>&nbsp;&nbsp;Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="page-content" class="position-relative">
+
+      <section id="company-policy-wrapper" class="write-about-us w-100 scroll-reveal-content">
+        <div class="container-fluid">
+
+          <div class="secondary-wrapper mx-auto p-0">
+            
+            <div class="wba-container text-center">
+              <div class="policy-head--s1 reveal__from-bottom">
+                <h1>Write About Us</h1>
+              </div>
+            </div>
+
+            <div class="wba-form-wrapper">
+              <form id="wba-form" method="post" action=".">
+                
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group reveal__from-bottom">
+                      <label for="reviewer-name" class="auth-label">Your Name</label>
+                      <input type="text" class="input--s2 w-100 auth-input reviewer-name" name="reviewer-name" id="reviewer-name" placeholder="Your Name" required spellcheck="false" onkeyup="ifValid(this, 0)">
+                      <small class="help-text" for="reviewer-name"></small>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group reveal__from-bottom">
+                      <label for="reviewer-email" class="auth-label">Your Email</label>
+                      <input type="email" class="input--s2 w-100 auth-input reviewer-email" name="reviewer-email" id="reviewer-email" placeholder="Your Email" required spellcheck="false">
+                      <small class="help-text" for="reviewer-email"></small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group reveal__from-bottom">
+                      <label for="reviewer-designation" class="auth-label">Your Designation</label>
+                      <input type="text" class="input--s2 w-100 auth-input reviewer-designation" name="reviewer-designation" id="reviewer-designation" placeholder="Your Designation" required spellcheck="false">
+                      <small class="help-text" for="reviewer-designation"></small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group reveal__from-bottom">
+                      <label for="reviewer-profilepic" class="auth-label">Profile Photo (optional)</label>
+                      <input type="file" class="input--s2 w-100 auth-input reviewer-profilepic" name="reviewer-profilepic" id="reviewer-profilepic" onchange="validateImage()">
+                      <small class="help-text" for="reviewer-profilepic">Allowed file format are jpg, jpeg and png</small>
+                    </div>
+                  </div>
+                </div>
+
+                <script type="text/javascript">
+
+                  function validateImage() {
+                    /*
+                      Validate whether the uploaded file is image or not
+                    */
+                    const fileInput = document.getElementById("reviewer-profilepic");
+                    const fileHelpText =  document.querySelector(".help-text[for='reviewer-profilepic']");
+                    const filePath = fileInput.value;
+                    const allowedExtension = /(\.jpg|\.jpeg|\.png)$/i;
+                    if(!allowedExtension.exec(filePath)) {
+                      fileInput.value = "";
+                      fileHelpText.innerHTML = "Chose wrong file format"
+                      return false;
+                    } else {
+                      fileHelpText.innerHTML = "Correct file format"
+                      return true;
+                    }
+                  }
+                </script>
+
+                 <div class="row">
+                  <div class="col-12">
+                    <div class="form-group reveal__from-bottom">
+                      <label for="reviewer-thought" class="auth-label">Your Experience with Us</label>
+                      <textarea class="textarea--s1 w-100 auth-input reviewer-thought" rows=7 name="reviewer-thought" id="reviewer-thought" placeholder="In less than two small paragraphs, describe your expreience about using our website Alineter" required spellcheck="false"></textarea>
+                      <small class="help-text" for="reviewer-thought"></small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group reveal__from-bottom text-center">
+                      <label for="reviewer-rating" class="auth-label">Leave us a Rating</label>
+                      <input type="number" class="input--s2 w-100 d-none auth-input" name="reviewer-rating" id="reviewer-rating">
+                      <div class="rating-box mx-auto">
+                        <div class="d-flex justify-content-center flex-wrap">
+                          <i class="fa fa-star rating-icon" data-rating="1" onmouseover="starHover__on(this)" onmouseout="starHover__off(this)" onclick="selectStar(this)"></i>
+                          <i class="fa fa-star rating-icon" data-rating="2" onmouseover="starHover__on(this)" onmouseout="starHover__off(this)" onclick="selectStar(this)"></i>
+                          <i class="fa fa-star rating-icon" data-rating="3" onmouseover="starHover__on(this)" onmouseout="starHover__off(this)" onclick="selectStar(this)"></i>
+                          <i class="fa fa-star rating-icon" data-rating="4" onmouseover="starHover__on(this)" onmouseout="starHover__off(this)" onclick="selectStar(this)"></i>
+                          <i class="fa fa-star rating-icon" data-rating="5" onmouseover="starHover__on(this)" onmouseout="starHover__off(this)" onclick="selectStar(this)"></i>
+                        </div>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mt-5">
+                  <div class="col-12">
+                    <div class="form-group reveal__from-bottom text-center">
+                      <button type="submit" class="btn review-btn btn-i-primary w-50">Submit</button>
+                    </div>
+                  </div>
+                </div>
+
+              </form>              
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <script type="text/javascript">
+        
+        const ratingStars = [...document.querySelectorAll(".rating-icon")];
+        const reviewRating = document.getElementById("reviewer-rating");
+
+        function getStarRating(elem) {
+          /* Rating of a particual star mentioned by elem */
+          return parseInt(elem.getAttribute("data-rating"), 10);
+        }
+        
+        function starHover__on(star) {
+          /*
+            On hovering the mouse on star add HOVER CLASS to all the stars having a rating less than equal to the star that is hovered on
+          */
+          let mouseOnStar = getStarRating(star);
+
+          ratingStars.map( ratingStar => {
+            if(getStarRating(ratingStar) <= mouseOnStar) {
+              addClass(ratingStar, ["hover"]);
+            } else {
+              removeClass(ratingStar, ["hover"]);
+            }
+          });
+        }
+
+        function starHover__off(star) {
+          /*
+            Remove the class hover from all stars when mouse is not over it
+          */
+          ratingStars.map( ratingStar => {
+            removeClass(ratingStar, ["hover"]);
+          });
+        }
+
+        function selectStar(star) {
+          /*
+            Add the class SELECTED to all the stars less than equal to the star that is clicked on and set the value of reviewer-rating input to the rating same as the star that was clicked upon 
+          */
+          let mouseOnStar = getStarRating(star);
+
+          ratingStars.map( ratingStar => {
+            if(getStarRating(ratingStar) <= mouseOnStar) {
+              addClass(ratingStar, ["selected"]);
+            } else {
+              removeClass(ratingStar, ["selected"]);
+            }
+            reviewRating.setAttribute("value", mouseOnStar);
+          })
+        }
+
+      </script>
+
+
+      <!--
+      ================== FOOTER SECTION ====================
+      -->
+
+      <!-- Button to Scroll Up -->
+      <div class="container text-center">
+        <div class="scroll-horizontal to-top">
+            <button type="button" class="scroll-btn btn pt-2 ripple-opacity-d" onclick="slideUp()" ><i class="fa fa-caret-up"></i></button>
+        </div>
+      </div>
+
+      <script>
+        /* Slide the page back to top */
+        function slideUp() {
+          let windowHeight = $(window).height();
+          $("html,body").animate({scrollTop:-windowHeight},1000);
+        }
+      </script>
+
+      <footer id="footer" class="w-100">
+        <div class="container-fluid pt-4 pb-4 txt-light">
+          <div class="row m-0 p-0">
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-footer text-center">
+              <div class="d-flex flex-column">
+                <div class="section first">
+                  <h4 class="title">Ready For Every Moment</h4>
+                </div>
+                <div class="section second">
+
+                  <form method="post" action=".">
+                    <div class="d-flex flex-column">
+                      <div class="d-flex justify-content-center">
+                        <input type="email" name="subscriber-email" id="subscriber-email" class="input--s2 subscriber-email" required spellcheck="false" onkeyup="ifValid(this, 2)" placeholder="Enter Email" />
+                        <div class="input-group-append" style="z-index:0">
+                          <button type="button" name="subscribe-btn" class="btn subscribe-btn" >SUBSCRIBE</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="section third">
+                  <h5 class="title">Follow Us</h5>
+                  <a href="https://twitter.com/alineterindia" class="social-link"><i class="fa fa-twitter-square"></i></a>
+                  <a href="https://www.instagram.com/alineterindia/" class="social-link"><i class="fa fa-instagram"></i></a>
+                  <a href="https://www.facebook.com/alineterindia" class="social-link"><i class="fa fa-facebook-square"></i></a>
+                  <a href="https://www.linkedin.com/company/alineter" class="social-link"><i class="fa fa-linkedin-square"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-footer m-0">
+              <div class="row">
+                <div class="col-6">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex flex-column section first">
+                      <div>
+                        <a href="#" class="link s-1">Ordering & Payment Terms</a>
+                      </div>
+                      <div>
+                        <a href="#" class="link s-1">Shipping</a>
+                      </div>
+                      <div>
+                        <a href="#" class="link s-1">Sizing Guide</a>
+                      </div>
+                      <div>
+                        <a href="#" class="link s-1">FAQs</a>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column section second">
+                      <div>
+                        <a href="#" class="link s-1">Privacy Policy</a>
+                      </div>
+                      <div>
+                        <a href="#" class="link s-1">Terms of Use</a>
+                      </div>
+                      <div>
+                        <a href="#" class="link s-1">Return Policy</a>
+                      </div>
+                      <div>
+                        <a href="#" class="link s-1">Cancellation & Refund</a>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                <div class="col-6 m-0" style="overflow:hidden;">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex flex-column section first">
+                      <div class="row m-0 mb-2 contact-us">
+                        <div class="col-2 p-0">
+                          <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="col-10 p-0">
+                          <a href="mailto:info@alineter.com" class="link s-3">info@alineter.com</a>
+                        </div>
+                      </div>
+                      <div class="row m-0 contact-us">
+                        <div class="col-2 p-0">
+                          <i class="fa fa-phone-square"></i>
+                        </div>
+                        <div class="col-10 p-0">
+                          <a href="tel:8895738760" class="link s-3">(91) 8895738760</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section second">
+                      <h5 class="title">Accepted Payments</h5>
+                      <div class="d-flex flex-wrap payment-method">
+                        <img src="./images/cc-amex.png" width=40 height=20 class="img-fluid"/>
+                        <img src="./images/cc-mastercard.png" width=40 height=20 class="img-fluid"/>
+                        <img src="./images/cc-visa.png" width=40 height=20 class="img-fluid"/>
+                        <!-- <img src="./images/cc-cod.png" width=40 height=20 class="img-fluid"/> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="copyright-wrapper text-center">
+          <div class="container-fluid txt-light">
+            <small>
+              <span>&copy;2020-<span id="copyright-year"></span></span>
+              <span><a href="index.html" class="link s-2">Alineter</a></span>
+              <span>All Rights Reserved.</span>
+              <span><a href="#" class="link s-2">Terms of Use</a></span>
+              <span>|</span>
+              <span><a href="#" class="link s-2">Privacy Policy</a></span>
+            </small>
+          </div>
+         <script>
+            let year=new Date().getFullYear().toString().substr(2);document.getElementById("copyright-year").innerHTML=year;
+          </script>
+        </div>
+      </footer>
+
+
+    </section><!--Page Content-->
+
+  </section><!--Body-->
+
+
+
+<script type="text/javascript" src="js/activate-page.js"></script>
+<!-- <script type="text/javascript" src="js/nav.js"></script> -->
+<!-- <script type="text/javascript" src="js/scroll-xy.js"></script> -->
+<script type="text/javascript" src="js/slide-nav-toggle.js"></script>
+<script type="text/javascript" src="js/scroll-reveal.js"></script>
+<script type="text/javascript" src="js/utility.js"></script>
+<script type="text/javascript" src="js/verification.js"></script>
+<script type="text/javascript" src="js/detect-mobile.js"></script>
+
+<script type="text/javascript">
+
+  const scrollBtn = document.querySelectorAll(".scroll-btn");
+    
+  let isMobile = detectMob();
+  isMobile ? addMobile__Class([...scrollBtn]) : removeMobile__Class([...scrollBtn]);
+
+</script>
+
+
+</body>
+</html>
+
