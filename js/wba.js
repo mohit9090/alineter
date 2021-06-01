@@ -41,7 +41,7 @@ function starHover__on(star) {
   */
   let mouseOnStar = getStarRating(star);
 
-  ratingStars.map( ratingStar => {
+  ratingStars.forEach( ratingStar => {
     getStarRating(ratingStar) <= mouseOnStar ? addClass(ratingStar, ["hover"]) : removeClass(ratingStar, ["hover"]);
   });
 }
@@ -50,7 +50,7 @@ function starHover__off(star) {
   /*
     Remove the class hover from all stars when mouse is not over it
   */
-  ratingStars.map( ratingStar => {
+  ratingStars.forEach( ratingStar => {
     removeClass(ratingStar, ["hover"]);
   });
 }
@@ -61,7 +61,7 @@ function selectStar(star) {
   */
   let mouseOnStar = getStarRating(star);
 
-  ratingStars.map( ratingStar => {
+  ratingStars.forEach( ratingStar => {
     getStarRating(ratingStar) <= mouseOnStar ? addClass(ratingStar, ["selected"]) : removeClass(ratingStar, ["selected"]);
     reviewRating.setAttribute("value", mouseOnStar);
     reviewRating.setAttribute("data-fulfill", "true");

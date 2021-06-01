@@ -22,7 +22,7 @@ function clearAllActiveState(categoryItemBtnArr) {
   /*
     Remove active state from all category-item-btn
   */
-  categoryItemBtnArr.map( (cItemBtn) => {
+  categoryItemBtnArr.forEach( cItemBtn => {
     cItemBtn.setAttribute("data-state", "");
   });
 }
@@ -31,7 +31,7 @@ function addActiveState(filters) {
   /*
     Add active state to category-item-btn to visualize if it is selected or not
   */
-  filters.map( (filter) => {
+  filters.forEach( filter => {
     document.querySelector(`button[data-value="${filter}"]`).setAttribute("data-state", "active");
   });
 }

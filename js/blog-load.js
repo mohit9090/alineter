@@ -8,7 +8,7 @@ const blogs = JSON.parse(jsonBlogs);
 function mapBlogs(blogs) {
 	let blog_div = "";
 
-	blogs.map( (blog) => {
+	blogs.forEach( blog => {
 		blog_div += `<div class="blog wrapper mx-auto p-0">
           <!--Blog Image-->
           <div class="container-fluid blog-img-wrapper load-gradient p-0" id="blog-img-wrapper" onclick="viewBlog(${blog.blog_id})">
@@ -117,7 +117,7 @@ function shareBlogModal(blogID) {
 
 	var respective_blog = getBlogByID(blogID);
 
-  socialShareBtn.map( shareBtn => {
+  socialShareBtn.forEach( shareBtn => {
     let trialURL = "https://www.alineter.com/post/0-1-seconds-is-all-it-takes"
     shareBtn.setAttribute("blog-link", trialURL)
     // shareBtn.setAttribute("blog-link", respective_blog.blog_detail.url)

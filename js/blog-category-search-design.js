@@ -46,7 +46,7 @@ function constructCategorySearch(categoryStyle) {
 function addCategoryItemBtn(categoryItemWrapperElem, categoryStyle) {
   let categoryItemButton_html = "";
 
-  categoriesAvailable.map(category => {
+  categoriesAvailable.forEach(category => {
     categoryItemButton_html += `
       <button class="${categoryStyle.categoryItemBtnClass}" data-self="category-item-btn" onclick="applyFilter(this)" data-state="" data-value="${category}" data-parent="false">${category}</button>
     `

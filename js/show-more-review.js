@@ -58,7 +58,7 @@ function toggleReviewContent(toggle_state) {
 	*/
 
 	const elems = [reviewsNavElem, moreReviewsContainer];
-	elems.map( elem => {
+	elems.forEach( elem => {
 		elem.style.opacity = (toggle_state) ? "1" : "0";
 	});
 
@@ -69,7 +69,7 @@ function toggleReviewContent(toggle_state) {
 function mapOverlayReviews() {
 	let moreReviews_div = "";
 
-	all_reviewers.map(reviewer => {
+	all_reviewers.forEach(reviewer => {
 		moreReviews_div += `<div class="col-lg-4 col-md-6 col-sm-12"><div class="review-box rounded">
             <div class="card review-card border rounded">
               <div class="card-header">

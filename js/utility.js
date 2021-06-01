@@ -48,7 +48,7 @@ function clearAllClass(elements) {
 		Clear the Classlist of specified elements
 		elements is passed as an ARRAY
 	*/
-    elements.map((element) => {
+    elements.forEach( element => {
     	element.setAttribute("class", "");
     });
 };

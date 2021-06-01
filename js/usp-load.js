@@ -40,7 +40,7 @@
 function mapUSP(uspList) {
   let usp_div = "";
 
-  uspList.map( (usp) => {
+  uspList.forEach( usp => {
     usp_div += `<div class="card text-center usp-box reveal__from-bottom mx-auto" onclick="animateIcon(this)">
       <div class="card-body">
         <div class="my-auto">
@@ -75,7 +75,7 @@ function animateIcon(icon) {
   let uspIcons = getUSP_DIV();
   
   /*If "clicked" class is already there them remove it first */
-  uspIcons.map(u_icon => {
+  uspIcons.forEach(u_icon => {
     if(classContains(u_icon, "clicked")) {
       removeClass(u_icon, ["clicked"]);
     }
@@ -111,7 +111,7 @@ function constructUSP() {
   uspContainer.innerHTML = usp_html;
 
   // events is defined in utility.js, events = ["load", "resize"]
-  events.map(event => {
+  events.forEach( event => {
     window.addEventListener(event, onSuccessAddClass)
   });
 };

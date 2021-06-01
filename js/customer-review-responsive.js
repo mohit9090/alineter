@@ -26,6 +26,6 @@ function toggleColumnVisibility() {
 
 
 // events is defined in utility.js, events = ["load", "resize"]
-events.map( (event) => {
+events.forEach( event => {
 	window.addEventListener(event, toggleColumnVisibility);
 });

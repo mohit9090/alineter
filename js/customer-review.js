@@ -95,7 +95,7 @@ const [firstReviewer, secondReviewer, thirdReviewer, fourthReviewer, fifthReview
 
 function mapReviews(rev_set, additional_class) {
 	let reviews = ""
-	rev_set.map( (reviewer) => {
+	rev_set.forEach( reviewer => {
 		if(reviewer !== null && reviewer !== undefined) {
 			reviews = reviews + `<div class="review-box rounded ${additional_class}">
             <div class="card review-card border-0">
