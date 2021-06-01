@@ -330,7 +330,7 @@
 
                 <div class="d-flex flex-column input-wrapper">
                   <label for="user-mobileNum" class="font-weight-bold auth-label">Mobile Number</label>
-                  <input type="number" class="input--s2 w-100 auth-input " name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 1)" data-tab="0" >
+                  <input type="number" class="input--s2 w-100 auth-input " name="user-mobileNum" id="user-mobileNum" placeholder="8480743694" required min=0 onkeyup="ifValid(this, 6)" data-tab="0" >
                   <small class="help-text"></small>
                 </div>
               </div>
@@ -360,7 +360,7 @@
                       </ul>
                       <ul>
                         <li class="pwd-requirement" id="number">A Number</li>
-                        <li class="pwd-requirement" id="minPwdLength">Minimum 12 characters</li>
+                        <li class="pwd-requirement" id="minPwdLength">Minimum 8 characters</li>
                       </ul>
                     </div>
                   </small>
@@ -423,26 +423,26 @@
                 <div class="d-flex mb-3 w-100 justify-content-between">
                   <div class="d-flex flex-column input-wrapper mr-1" style="width:49%">
                     <label for="user-city" class="font-weight-bold auth-label">City</label>
-                    <input type="text" class="input--s2 auth-input " id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0)" data-tab="2" >
+                    <input type="text" class="input--s2 auth-input" id="user-city" name="user-city" placeholder="Bhubaneswar" required onkeyup="ifValid(this, 0)" data-tab="2" >
                     <small class="help-text"></small>
                   </div>
                   <div class="d-flex flex-column input-wrapper ml-1" style="width:49%">
                     <label for="user-pincode" class="font-weight-bold auth-label">Pincode</label>
-                    <input type="text" class="input--s2 auth-input " id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 1)" data-tab="2" >
+                    <input type="text" class="input--s2 auth-input" id="user-pincode" name="user-pincode" placeholder="751003" required onkeyup="ifValid(this, 7)" data-tab="2" >
                     <small class="help-text"></small>
                   </div>
                 </div>
 
                 <div class="d-flex flex-column input-wrapper mb-3">
                   <label for="user-street-address" class="font-weight-bold auth-label">Street Address</label>
-                  <textarea class="textarea--s1 w-100 auth-input " rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="2" ></textarea>
+                  <textarea class="textarea--s1 w-100 auth-input" rows=3 placeholder="1136/8591, PATITAPABAN NAGAR, CANAL ROAD, Kalpana Rd" id="user-street-address" name="user-street-address" spellcheck="false" required onkeyup="ifValid(this, 0)" data-tab="2" ></textarea>
                   <small class="help-text"></small>
                 </div>
 
 
                 <div class="d-flex input-wrapper">
                   <div class="form-check">
-                    <input class="form-check-input auth-input " type="checkbox" name="accept-tnc" id="accept-tnc" onclick="ifValid(this, 5)" data-tab="2" required >
+                    <input class="form-check-input auth-input" type="checkbox" name="accept-tnc" id="accept-tnc" onclick="ifValid(this, 5)" data-tab="2" required >
                     <label class="form-check-label auth-label" for="accept-tnc">
                       I accept to the <a href="#">Terms and Conditions</a>
                     </label>

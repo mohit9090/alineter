@@ -27,6 +27,12 @@ const validators = [
   },
   {
     validate : (val) => { return validateCheckbox(val); }
+  },
+  {
+    validate : (val) => { return validateMobileNum(val); }
+  },
+  {
+    validate : (val) => { return validatePIN(val); }
   }
 ];
 
@@ -72,7 +78,7 @@ function hasNumbers(val) {
 }
 
 function satisfyMinLength(val) {
-  let gteMin = (val.length >= 12);
+  let gteMin = (val.length >= 8);
   switchClass(gteMin, minPwdLength, "fulfilled--txt", "not-fulfilled--txt");
   return gteMin;
 }
@@ -119,6 +125,15 @@ function validateCheckbox(val) {
   const tnc_checkbox = document.getElementById("accept-tnc");
   return tnc_checkbox.checked;
 }
+
+function validateMobileNum(val) {
+  return val.length === 10 ? true : false;
+}
+
+function validatePIN(val) {
+  return val.length === 6 ? true : false;
+}
+
 
 function ifValid(input, validatorID) {
   if (validatorID >= 0) {

@@ -70,6 +70,8 @@
 }
 .auth-label {
 	color:var(--bg-light);
+	position: relative;
+	left: 8.5px;
 }
 .auth-input {
 	color:var(--bg-light);

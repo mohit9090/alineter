@@ -42,11 +42,7 @@ function starHover__on(star) {
   let mouseOnStar = getStarRating(star);
 
   ratingStars.map( ratingStar => {
-    if(getStarRating(ratingStar) <= mouseOnStar) {
-      addClass(ratingStar, ["hover"]);
-    } else {
-      removeClass(ratingStar, ["hover"]);
-    }
+    getStarRating(ratingStar) <= mouseOnStar ? addClass(ratingStar, ["hover"]) : removeClass(ratingStar, ["hover"]);
   });
 }
 
@@ -66,11 +62,7 @@ function selectStar(star) {
   let mouseOnStar = getStarRating(star);
 
   ratingStars.map( ratingStar => {
-    if(getStarRating(ratingStar) <= mouseOnStar) {
-      addClass(ratingStar, ["selected"]);
-    } else {
-      removeClass(ratingStar, ["selected"]);
-    }
+    getStarRating(ratingStar) <= mouseOnStar ? addClass(ratingStar, ["selected"]) : removeClass(ratingStar, ["selected"]);
     reviewRating.setAttribute("value", mouseOnStar);
     reviewRating.setAttribute("data-fulfill", "true");
   })
