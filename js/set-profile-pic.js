@@ -21,7 +21,7 @@ function validateImage() {
   */
   const fileInput = document.getElementById("profile-img");
   const filePath = fileInput.value;
-  const allowedExtension = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+  const allowedExtension = /(\.jpg|\.jpeg|\.png|\.gif|\.webp)$/i;
   if(!allowedExtension.exec(filePath)) {
     placeFilename("Invalid Format","");
     fileInput.value = "";
@@ -35,7 +35,9 @@ function validateImage() {
       var reader = new FileReader();
       reader.onload = function(e) {
         document.getElementById("display-pfImage").setAttribute("src",e.target.result);
-        document.getElementsByClassName("upload-media-submit")[0].innerHTML = "Upload"
+        document.getElementsByClassName("upload-media-submit")[0].innerHTML = "Upload";
+
+        replaceClass(document.getElementsByClassName("upload-media-submit")[0], ['skip'], ['upload']);
       };
       reader.readAsDataURL(fileInput.files[0]);
     }

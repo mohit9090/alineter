@@ -288,7 +288,7 @@
             </div>
 
             <div class="card-body mx-auto w-100">
-              <div class="row">
+              <!-- <div class="row">
                 
 
                 <div class="col-6 border-right">
@@ -300,8 +300,7 @@
                       <small class="help-text font-weight-bold" id="upload-helptext" data-toggle="tooltip" data-placement="bottom"></small>
                     </div>
                   </div>
-                </div>
-                
+                </div>        
 
                 <div class="col-6">
                   <form method="get" action="set-profile-pic.html" enctype="multipart/form-data" class="position-relative cy">
@@ -327,8 +326,40 @@
                   </form>
                 </div>
 
+              </div> -->
 
-              </div>
+
+
+              <div class="col-12">
+                
+                <div class="upper-section">
+                  <div class="pfimg-holder mx-auto">
+                    <img src="./images/avatar.png" class="pfImg img-cover" id="display-pfImage" onclick="document.getElementById('profile-img').click()"/>
+                  </div>
+                  <div class="text-center"> 
+                    <small class="help-text font-weight-bold" id="upload-helptext" data-toggle="tooltip" data-placement="bottom"></small>
+                  </div>
+                </div>
+
+                <div class="lower-section">
+                  <form method="get" action="set-profile-pic.html" enctype="multipart/form-data">
+                    <div class="d-flex flex-column">
+                      
+                      <div class="custom-file d-none mr-1">
+                        <input type="file" class="custom-file-input" name="profile-img" id="profile-img" required onchange="return validateImage()">
+                        <label class="custom-file-label auth-label" for="profile-img">No Image</label>
+                      </div>
+
+                      <div class="normal-wrapper mx-auto text-center">
+                        <button type="submit" class="btn upload-media-submit skip w-100 auth-label ripple-opacity-l">Skip & Continue</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>        
+
+
             </div>
 
 

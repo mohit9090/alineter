@@ -226,25 +226,30 @@
 	overflow:hidden;
 }
 
-.upload-media-btn:not(.mobile-device) > img {
-	position:relative;
-	top:20px;
-	left:5px;
-}
-.upload-media-btn:not(.mobile-device) > p {
-	position:relative;
-	top:-10px;
-	opacity:0;
-}
-.upload-media-btn:not(.mobile-device):hover {
-	background-color:#1c1a1a;
-	border-color:#1c1a1a;
-}
-.upload-media-btn:not(.mobile-device):hover > img {
-	top:-28px;
-}
-.upload-media-btn:not(.mobile-device):hover > p {
-	opacity:1;
+.upper-section {
+	margin-bottom: 2.2rem;
 }
 
+.pfImg {
+	cursor: pointer;
+}
 
+.upload-media-submit.skip {
+	font-size:1.1rem;
+	color: var(--bg-secindary);
+	background: #e2e2e290;
+}
+.upload-media-submit.skip:hover {
+	background: #e2e2e2;
+}
+.upload-media-submit.upload {
+	font-size:1.1rem;
+	border-color:var(--bg-primary);
+	background:var(--bg-primary);
+	color:var(--bg-light);
+	filter:brightness(97%);
+}
+.upload-media-submit.upload:hover {
+	color:var(--bg-light);
+	filter:brightness(110%);
+}
